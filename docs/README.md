@@ -14,37 +14,3 @@ Building on the content-focused outcomes of the first ELFIE, the Second ELFIE (S
 1. [Take part in discussions in the issues.](https://github.com/opengeospatial/SELFIE/issues) 
 
 As SELFIE progresses, there will be opportunities to implement experimental contributions using data and use cases important to you and your stakeholders.
-
-## Repository plan
-
-This repository will be used to house sample data as well as SELFIE web resources. As was the case in the first [ELFIE](https://opengeospatial.github.io/ELFIE/), many IE outcomes will be static web resources that will be available as long as the opengeospatial.github.io hosting is available.
-
-### `data/`
-All example data (that can be checked in) that used or referred to in the SELFIE project, will be housed in the `data/` folder. The aim is for SELFIE examples and demonstrations to be based on reproducible code and small sample datasets. Some examples will require running web-servers and/or notebooks.
-
-### `docs/`
-The [https://opengeospatial.github.io/SELFIE/](https://opengeospatial.github.io/SELFIE/) resouces are housed in the `docs/` folder.
-
-### `er/`
-The Engineering Report will be drafted in AsciiDoc within the `er/` folder.
-
-### `tools/`
-All software tools will be housed in the `tools/` folder. Jupyter notebook source files, docker containers, javascript apps, etc. will all be housed here as a record of work done for SELFIE.
-
-## Contributing
-
-All contributions should be made through the fork/pull request workflow common to open source github projects. There are many tutorials on the workflow and the basic tools needed for it. To make a contribution, 
-
-1. Fork this repository
-1. Clone your fork to a local repository
-1. Add this repository as upstream
-1. Make changes -- commit them
-1. Push changes to your personal fork
-1. Open a pull request
-1. Get review
-1. Address review
-1. Pull request gets merged by someone with privileges
-1. Pull changes from upstream to your local repository
-
-Feel free to ask questions in the issues if you need help.
-
