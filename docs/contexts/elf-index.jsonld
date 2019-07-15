@@ -1,0 +1,21 @@
+{
+    "@context": {
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "dc": "http://purl.org/dc/",
+        "dct": "http://purl.org/dc/terms/",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "schema": "http://schema.org/",
+        "name": "schema:name",
+        "description": "schema:description",
+        "geo": "schema:geo",
+        "polygon": "schema:polygon",
+        "image": {
+            "@id": "schema:image",
+            "@type": "@id"
+        },
+        "subjectOf": "schema:subjectOf",
+        "sameAs": "owl:sameAs",
+        "label": "rdfs:label",
+        "note": "http://www.w3.org/2004/02/skos/core#note"
+    }
+}

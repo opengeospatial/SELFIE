@@ -1,0 +1,6 @@
+{
+    "@context": {
+        "gw": "https://www.opengis.net/def/gwml2#",
+        "gwAquiferSystemPart": "https://www.opengis.net/def/gwml2#gwAquiferSystemPart"
+    }
+}
