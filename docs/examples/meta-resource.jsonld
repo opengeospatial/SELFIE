@@ -97,7 +97,7 @@
             "url": "http://gin.gw-info.net/service/api_ngwds:gin2/en/data/standard.hydrogeologicunit.html?ID=3",
             "dctType": "gw:GW_AquiferSystem",
             "format": [
-                "text/html",
+                "text/html"
             ],
             "provider": "http://x.self.ie/id/party/nrcan"
         },
@@ -105,7 +105,7 @@
             "url": "https://geoconnex.ca/data/aquifer/gwml/gwml/GIN/Richelieu3?f=geojson",
             "dctType": "gw:GW_AquiferSystem",
             "format": [
-                "application/vnd.geo+json",
+                "application/vnd.geo+json"
             ],
             "provider": "http://x.self.ie/id/party/nrcan"
         }
