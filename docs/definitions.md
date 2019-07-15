@@ -6,7 +6,7 @@
 
 **_Information Resource:_** A digital resource that can be sent as a message over the internet using a protocol such as HTTP. Located using a Uniform Resource Locator (URL).
 
-**_Information Index Resource_**: An information resource that provides an index of annotated (metadata) links to information and non-information resources that describe or are related to the non-information resource of interest.
+**_Meta Information Resource_**: (was Information Index Resource) An information resource that provides an index of annotated (metadata) links to information and non-information resources that describe or are related to the non-information resource of interest.
 
 **_HyperText Transfer Protocol Uniform Resource Identifier (HTTP URI)_**: An identifier with the potential to be used with the HTTP protocol to dereference (look up) the identified resource.
 
