@@ -1,6 +1,6 @@
 {
     "@context": [
-        "https://opengeospatial.github.io/SELFIE/context/elf-data.jsonld"
+        "https://opengeospatial.github.io/SELFIE/contexts/elf-data.jsonld"
     ],
     "@id": "https://lab.scinfo.org.nz/selfie/data/aquifersystem/richelieu",
     "@type": "xxx:Document",
