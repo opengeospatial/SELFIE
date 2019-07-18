@@ -108,6 +108,14 @@
                 "application/vnd.geo+json"
             ],
             "provider": "http://x.self.ie/id/party/nrcan"
+        },
+        {
+            "url": "https://opengeospatial.github.io/SELFIE/examples/meta-resource.jsonld",
+            "format": [
+                "application/ld+json",
+                "text/html"
+            ],
+            "provider": "https://opengeospatial.github.io/SELFIE/"
         }
     ]
 }
