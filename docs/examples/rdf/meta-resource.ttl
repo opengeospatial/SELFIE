@@ -1,0 +1,79 @@
+# Generated from SELFIE JSON-LD using http://www.easyrdf.org/converter.
+# schema:spatialCoverage values were not converted - nested array issue?
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix gw: <https://www.opengis.net/def/gwml2#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+
+<https://lab.scinfo.org.nz/selfie/id/aquifersystem/richelieu>
+  a gw:GW_AquiferSystem ;
+  schema:description "Aquifer system comprising the Appalachian Internal and External Zones, Northern and Southern St Lawrence Platforms and the Monteregian intrusions" ;
+  schema:image <http://external.opengis.org/twiki_public/pub/HydrologyDWG/05-08May2014--GW2IEMeeting18/GW2IE_Vienna2014_Photo2.JPG> ;
+  schema:name "Aquifer system : Richelieu" ;
+  schema:subjectOf <https://lab.scinfo.org.nz/selfie/data/aquifersystem/richelieu>,
+    [
+      dct:conformsTo <https://www.opengis.net/def/gwml2> ;
+      dct:format "application/gml+xml", "application/ld+json", "text/ttl" ;
+      dct:type gw:GW_AquiferSystem ;
+      schema:provider <https://opengeospatial.github.io/SELFIE/> ;
+      schema:url <https://lab.scinfo.org.nz/selfie/data/aquifersystem/richelieu>
+    ],
+  [
+    dct:conformsTo <https://www.opengis.net/def/gwml2> ;
+    dct:format "application/vnd.geo+json", "text/html" ;
+    dct:type gw:GW_AquiferSystem ;
+    schema:provider <https://opengeospatial.github.io/SELFIE/> ;
+    schema:url <https://lab.scinfo.org.nz/selfie/api/data/items/aquifersystem-richelieu>
+  ],
+  [
+    dct:conformsTo <https://www.opengis.net/def/gwml2> ;
+    dct:format "application/vnd.geo+json" ;
+    dct:type gw:GW_AquiferSystem ;
+    schema:provider <https://opengeospatial.github.io/SELFIE/> ;
+    schema:url <https://lab.scinfo.org.nz/selfie/representations/richelieu.geojson>
+  ],
+  [
+    dct:conformsTo <https://www.opengis.net/def/gwml2> ;
+    dct:format "text/html" ;
+    dct:type gw:GW_AquiferSystem ;
+    schema:provider <https://opengeospatial.github.io/SELFIE/> ;
+    schema:url <https://lab.scinfo.org.nz/selfie/representations/richelieu.html>
+  ] ;
+  rdfs:label "Aquifer system : Richelieu"@en, "Systeme aquifere : Richelieu"@fr ;
+  owl:sameAs <https://geoconnex.ca/gsip/id/aquiferSystems/Richelieu> ;
+  gw:gwAquiferSystemPart <https://lab.scinfo.org.nz/selfie/id/hydrogeounit/richelieu-1>, <https://lab.scinfo.org.nz/selfie/id/hydrogeounit/richelieu-2>,
+                         <https://lab.scinfo.org.nz/selfie/id/hydrogeounit/richelieu-3>, <https://lab.scinfo.org.nz/selfie/id/hydrogeounit/richelieu-4>,
+                         <https://lab.scinfo.org.nz/selfie/id/hydrogeounit/richelieu-5> .
+
+<https://geoconnex.ca/gsip/id/aquiferSystems/Richelieu>
+  a rdfs:Resource, owl:Thing, gw:GW_AquiferSystem, gw:GW_AquiferUnit, gw:GW_HydrogeoUnit ;
+  schema:name "Aquifer system : Richelieu"@en, "Systeme aquifere : Richelieu"@fr .
+
+<https://lab.scinfo.org.nz/selfie/data/aquifersystem/richelieu>
+  a <xxx:Document> ;
+  dct:conformsTo <https://www.opengis.net/def/gwml2> ;
+  dct:format "application/ld+json", "application/rdf+xml", "text/turtle" ;
+  dct:type gw:GW_AquiferSystem ;
+  schema:provider <https://opengeospatial.github.io/SELFIE/> .
+
+<https://lab.scinfo.org.nz/selfie/id/hydrogeounit/richelieu-1>
+  a gw:GW_HydrogeoUnit ;
+  schema:name "Southern St Lawrence Platform" .
+
+<https://lab.scinfo.org.nz/selfie/id/hydrogeounit/richelieu-2>
+  a gw:GW_HydrogeoUnit ;
+  schema:name "Northern St Lawrence Platform" .
+
+<https://lab.scinfo.org.nz/selfie/id/hydrogeounit/richelieu-3>
+  a gw:GW_HydrogeoUnit ;
+  schema:name "Appalachian External zone" .
+
+<https://lab.scinfo.org.nz/selfie/id/hydrogeounit/richelieu-4>
+  a gw:GW_HydrogeoUnit ;
+  schema:name "Appalachian Internal zone" .
+
+<https://lab.scinfo.org.nz/selfie/id/hydrogeounit/richelieu-5>
+  a gw:GW_HydrogeoUnit ;
+  schema:name "Monteregian intrusions" .

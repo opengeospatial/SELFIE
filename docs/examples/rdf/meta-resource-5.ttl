@@ -1,0 +1,49 @@
+# Generated from SELFIE JSON-LD using http://www.easyrdf.org/converter.
+# schema:spatialCoverage values were not converted - nested array issue?
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix gw: <https://www.opengis.net/def/gwml2#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+
+<https://lab.scinfo.org.nz/selfie/id/hydrogeounit/richelieu-5>
+  a gw:GW_HydrogeoUnit ;
+  schema:description "The Monteregian intrusions is a Hydrogeologic Unit within the Richelieu Aquifer System." ;
+  schema:image <https://www.nzc.nz/media/12834/bates_headshot_2018.jpg> ;
+  schema:name "Hydrogeologic unit : Monteregian intrusions" ;
+  schema:subjectOf [
+    dct:conformsTo <https://www.opengis.net/def/gwml2> ;
+    dct:format "application/ld+json", "text/ttl" ;
+    dct:type <gw:GW_HydrogeoUnit> ;
+    schema:provider <https://opengeospatial.github.io/SELFIE/> ;
+    schema:url <https://lab.scinfo.org.nz/selfie/data/hydrogeounit/richelieu-5>
+  ],
+  [
+    dct:conformsTo <https://www.opengis.net/def/gwml2> ;
+    dct:format "application/vnd.geo+json", "text/html" ;
+    dct:type <gw:GW_HydrogeoUnit> ;
+    schema:provider <https://opengeospatial.github.io/SELFIE/> ;
+    schema:url <https://lab.scinfo.org.nz/selfie/api/data/items/hydrogeounit-richelieu-5>
+  ],
+  [
+    dct:conformsTo <https://www.opengis.net/def/gwml2> ;
+    dct:format "application/vnd.geo+json" ;
+    dct:type <gw:GW_HydrogeoUnit> ;
+    schema:provider <https://opengeospatial.github.io/SELFIE/> ;
+    schema:url <https://lab.scinfo.org.nz/selfie/representations/richelieu-5.geojson>
+  ],
+  [
+    dct:conformsTo <https://www.opengis.net/def/gwml2> ;
+    dct:format "text/html" ;
+    dct:type <gw:GW_HydrogeoUnit> ;
+    schema:provider <https://opengeospatial.github.io/SELFIE/> ;
+    schema:url <https://lab.scinfo.org.nz/selfie/representations/richelieu-5.html>
+  ] ;
+  rdfs:label "Hydrogeologic unit : Monteregian intrusions"@en, "Unite hydrogeologique : Intrusions Monteregiennes"@fr ;
+  owl:sameAs <https://geoconnex.ca/id/hydrogeounits/Richelieu5> .
+
+<https://geoconnex.ca/id/hydrogeounits/Richelieu5>
+  a gw:GW_HydrogeoUnit, owl:Thing, rdfs:Resource ;
+  schema:name "Hydrogeologic unit : Monteregian intrusions"@en, "Unite hydrogeologique : Intrusions Monteregiennes"@fr .
+
