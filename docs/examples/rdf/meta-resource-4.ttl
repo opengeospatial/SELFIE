@@ -1,0 +1,49 @@
+# Generated from SELFIE JSON-LD using http://www.easyrdf.org/converter.
+# schema:spatialCoverage values were not converted - nested array issue?
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix gw: <https://www.opengis.net/def/gwml2#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+
+<https://lab.scinfo.org.nz/selfie/id/hydrogeounit/richelieu-4>
+  a gw:GW_HydrogeoUnit ;
+  schema:description "The Appalachian Internal zone is a Hydrogeologic Unit within the Richelieu Aquifer System." ;
+  schema:image <https://www.nzc.nz/media/15494/ross-taylor_01.jpg> ;
+  schema:name "Hydrogeologic unit : Appalachian Internal zone" ;
+  schema:subjectOf [
+    dct:conformsTo <https://www.opengis.net/def/gwml2> ;
+    dct:format "application/ld+json", "text/ttl" ;
+    dct:type <gw:GW_HydrogeoUnit> ;
+    schema:provider <https://opengeospatial.github.io/SELFIE/> ;
+    schema:url <https://lab.scinfo.org.nz/selfie/data/hydrogeounit/richelieu-4>
+  ],
+  [
+    dct:conformsTo <https://www.opengis.net/def/gwml2> ;
+    dct:format "application/vnd.geo+json", "text/html" ;
+    dct:type <gw:GW_HydrogeoUnit> ;
+    schema:provider <https://opengeospatial.github.io/SELFIE/> ;
+    schema:url <https://lab.scinfo.org.nz/selfie/api/data/items/hydrogeounit-richelieu-4>
+  ],
+  [
+    dct:conformsTo <https://www.opengis.net/def/gwml2> ;
+    dct:format "application/vnd.geo+json" ;
+    dct:type <gw:GW_HydrogeoUnit> ;
+    schema:provider <https://opengeospatial.github.io/SELFIE/> ;
+    schema:url <https://lab.scinfo.org.nz/selfie/representations/richelieu-4.geojson>
+  ],
+  [
+    dct:conformsTo <https://www.opengis.net/def/gwml2> ;
+    dct:format "text/html" ;
+    dct:type <gw:GW_HydrogeoUnit> ;
+    schema:provider <https://opengeospatial.github.io/SELFIE/> ;
+    schema:url <https://lab.scinfo.org.nz/selfie/representations/richelieu-4.html>
+  ] ;
+  rdfs:label "Hydrogeologic unit : Appalachian Internal zone"@en, "Unite hydrogeologique : Zone interne des Appalaches"@fr ;
+  owl:sameAs <https://geoconnex.ca/id/hydrogeounits/Richelieu4> .
+
+<https://geoconnex.ca/id/hydrogeounits/Richelieu4>
+  a gw:GW_HydrogeoUnit, owl:Thing, rdfs:Resource ;
+  schema:name "Hydrogeologic unit : Appalachian Internal zone"@en, "Unite hydrogeologique : Zone interne des Appalaches"@fr .
+
