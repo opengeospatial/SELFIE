@@ -10,6 +10,7 @@
                     "https://opengeospatial.github.io/SELFIE/contexts/elf-data.jsonld",
                     "https://opengeospatial.github.io/SELFIE/contexts/gw.jsonld"
                 ],
+                "fid": "hydrogeounit-richelieu-4",
                 "id": "https://lab.scinfo.org.nz/selfie/id/hydrogeounit/richelieu-4",
                 "type": "gw:GW_HydrogeoUnit",
                 "label": [
