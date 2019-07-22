@@ -1,0 +1,31 @@
+{
+    "@context": [
+        "https://opengeospatial.github.io/SELFIE/contexts/elf-index.jsonld",
+        "https://opengeospatial.github.io/SELFIE/contexts/elf-data.jsonld",
+        "https://opengeospatial.github.io/SELFIE/contexts/gw.jsonld"
+    ],
+    "@id": "https://lab.scinfo.org.nz/selfie/id/hydrogeounit/richelieu-3",
+    "@type": "gw:GW_HydrogeoUnit",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "polygon": "45.01441501,-73.08950188 45.01441501,-72.325447084 45.91212580,-72.325447084 45.91212580,-73.08950188 45.01441501,-73.08950188"
+        }
+    },
+    "label": [
+        {
+            "@language": "en",
+            "@value": "Hydrogeologic unit : Appalachian External zone"
+        },
+        {
+            "@language": "fr",
+            "@value": "Unite hydrogeologique : Zone externe des Appalaches"
+        }
+    ],
+    "gwAquiferSystem": {
+        "@id": "https://lab.scinfo.org.nz/selfie/id/aquifersystem/richelieu",
+        "@type": "gw:GW_AquiferSystem",
+        "name": "Aquifer system : Richelieu"
+    }
+}
