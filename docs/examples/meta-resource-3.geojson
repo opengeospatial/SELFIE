@@ -1,0 +1,129 @@
+{
+    "@context": "https://geojson.org/geojson-ld/geojson-context.jsonld",
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "@context": [
+                    "https://opengeospatial.github.io/SELFIE/contexts/elf-index.jsonld",
+                    "https://opengeospatial.github.io/SELFIE/contexts/elf-data.jsonld",
+                    "https://opengeospatial.github.io/SELFIE/contexts/gw.jsonld"
+                ],
+                "fid": "hydrogeounit-richelieu-3",
+                "id": "https://lab.scinfo.org.nz/selfie/id/hydrogeounit/richelieu-3",
+                "type": "gw:GW_HydrogeoUnit",
+                "name": "Hydrogeologic unit : Appalachian External zone",
+                "description": "The Appalachian External zone is a Hydrogeologic Unit within the Richelieu Aquifer System.",
+                "image": "https://www.nzc.nz/media/12842/kerr_headshot_2018.jpg",
+                "spatialCoverage": {
+                    "@type": "Place",
+                    "geo": {
+                        "@type": "GeoShape",
+                        "polygon": "45.01441501,-73.08950188 45.01441501,-72.325447084 45.91212580,-72.325447084 45.91212580,-73.08950188 45.01441501,-73.08950188"
+                    }
+                },
+                "label": [
+                    {
+                        "@language": "en",
+                        "@value": "Hydrogeologic unit : Appalachian External zone"
+                    },
+                    {
+                        "@language": "fr",
+                        "@value": "Unite hydrogeologique : Zone externe des Appalaches"
+                    }
+                ],
+                "gwAquiferSystem": {
+                    "@id": "https://lab.scinfo.org.nz/selfie/id/aquifersystem/richelieu",
+                    "@type": "gw:GW_AquiferSystem",
+                    "name": "Aquifer system : Richelieu"
+                },
+                "sameAs": {
+                    "@id": "https://geoconnex.ca/id/hydrogeounits/Richelieu3",
+                    "@type": [
+                        "gw:GW_HydrogeoUnit",
+                        "owl:Thing",
+                        "rdfs:Resource"
+                    ],
+                    "name": [
+                        {
+                            "@language": "en",
+                            "@value": "Hydrogeologic unit : Appalachian External zone"
+                        },
+                        {
+                            "@language": "fr",
+                            "@value": "Unite hydrogeologique : Zone externe des Appalaches"
+                        }
+                    ]
+                },
+                "subjectOf": [
+                    {
+                        "url": "https://lab.scinfo.org.nz/selfie/data/hydrogeounit/richelieu-3",
+                        "dctType": "gw:GW_HydrogeoUnit",
+                        "format": [
+                            "text/ttl",
+                            "application/ld+json"
+                        ],
+                        "conformsTo": "https://www.opengis.net/def/gwml2",
+                        "provider": "https://opengeospatial.github.io/SELFIE/"
+                    },
+                    {
+                        "url": "https://lab.scinfo.org.nz/selfie/api/data/items/hydrogeounit-richelieu-3",
+                        "dctType": "gw:GW_HydrogeoUnit",
+                        "format": [
+                            "application/vnd.geo+json",
+                            "text/html"
+                        ],
+                        "conformsTo": "https://www.opengis.net/def/gwml2",
+                        "provider": "https://opengeospatial.github.io/SELFIE/"
+                    },
+                    {
+                        "url": "https://lab.scinfo.org.nz/selfie/representations/richelieu-3.geojson",
+                        "dctType": "gw:GW_AquiferSystem",
+                        "format": [
+                            "application/vnd.geo+json"
+                        ],
+                        "conformsTo": "https://www.opengis.net/def/gwml2",
+                        "provider": "https://opengeospatial.github.io/SELFIE/"
+                    },
+                    {
+                        "url": "https://lab.scinfo.org.nz/selfie/representations/richelieu-3.html",
+                        "dctType": "gw:GW_AquiferSystem",
+                        "format": [
+                            "text/html"
+                        ],
+                        "conformsTo": "https://www.opengis.net/def/gwml2",
+                        "provider": "https://opengeospatial.github.io/SELFIE/"
+                    }
+                ]
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            -73.08950188,
+                            45.01441501
+                        ],
+                        [
+                            -72.325447084,
+                            45.01441501
+                        ],
+                        [
+                            -72.325447084,
+                            45.91212580
+                        ],
+                        [
+                            -73.08950188,
+                            45.91212580
+                        ],
+                        [
+                            -72.08950188,
+                            45.01441501
+                        ]
+                    ]
+                ]
+            }
+        }
+    ]
+}
