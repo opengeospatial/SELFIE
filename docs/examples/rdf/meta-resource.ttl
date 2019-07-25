@@ -25,7 +25,7 @@
     dct:format "application/vnd.geo+json", "text/html" ;
     dct:type gw:GW_AquiferSystem ;
     schema:provider <https://opengeospatial.github.io/SELFIE/> ;
-    schema:url <https://lab.scinfo.org.nz/selfie/api/data/items/aquifersystem-richelieu>
+    schema:url <https://lab.scinfo.org.nz/service/selfie/api/collections/data/items/aquifersystem-richelieu>
   ],
   [
     dct:conformsTo <https://www.opengis.net/def/gwml2> ;

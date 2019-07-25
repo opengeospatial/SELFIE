@@ -102,7 +102,7 @@
             "provider": "https://opengeospatial.github.io/SELFIE/"
           },
           {
-            "url": "https://lab.scinfo.org.nz/selfie/api/data/items/aquifersystem-richelieu",
+            "url": "https://lab.scinfo.org.nz/service/selfie/api/collections/data/items/aquifersystem-richelieu",
             "dctType": "gw:GW_AquiferSystem",
             "format": [
               "application/vnd.geo+json",
