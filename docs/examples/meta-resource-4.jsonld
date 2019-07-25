@@ -61,7 +61,7 @@
             "provider": "https://opengeospatial.github.io/SELFIE/"
         },
         {
-            "url": "https://lab.scinfo.org.nz/selfie/api/data/items/hydrogeounit-richelieu-4",
+            "url": "https://lab.scinfo.org.nz/service/selfie/api/collections/data/items/hydrogeounit-richelieu-4",
             "dctType": "gw:GW_HydrogeoUnit",
             "format": [
                 "application/vnd.geo+json",

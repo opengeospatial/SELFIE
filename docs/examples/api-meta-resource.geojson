@@ -102,7 +102,7 @@
             "provider": "https://opengeospatial.github.io/SELFIE/"
           },
           {
-            "url": "https://lab.scinfo.org.nz/selfie/api/data/items/aquifersystem-richelieu",
+            "url": "https://lab.scinfo.org.nz/service/selfie/api/collections/data/items/aquifersystem-richelieu",
             "dctType": "gw:GW_AquiferSystem",
             "format": [
               "application/vnd.geo+json",
@@ -174,7 +174,7 @@
           "https://opengeospatial.github.io/SELFIE/contexts/elf-data.jsonld",
           "https://opengeospatial.github.io/SELFIE/contexts/gw.jsonld"
         ],
-        "fid": "hydrogeounit/richelieu-1",
+        "fid": "hydrogeounit-richelieu-1",
         "id": "https://lab.scinfo.org.nz/selfie/id/hydrogeounit/richelieu-1",
         "type": "gw:GW_HydrogeoUnit",
         "name": "Hydrogeologic unit : Southern St Lawrence Platform",
@@ -232,7 +232,7 @@
             "provider": "https://opengeospatial.github.io/SELFIE/"
           },
           {
-            "url": "https://lab.scinfo.org.nz/selfie/api/data/items/hydrogeounit-richelieu-1",
+            "url": "https://lab.scinfo.org.nz/service/selfie/api/collections/data/items/hydrogeounit-richelieu-1",
             "dctType": "gw:GW_HydrogeoUnit",
             "format": [
               "application/vnd.geo+json",
@@ -355,7 +355,7 @@
             "provider": "https://opengeospatial.github.io/SELFIE/"
           },
           {
-            "url": "https://lab.scinfo.org.nz/selfie/api/data/items/hydrogeounit-richelieu-2",
+            "url": "https://lab.scinfo.org.nz/service/selfie/api/collections/data/items/hydrogeounit-richelieu-2",
             "dctType": "gw:GW_HydrogeoUnit",
             "format": [
               "application/vnd.geo+json",
@@ -478,7 +478,7 @@
             "provider": "https://opengeospatial.github.io/SELFIE/"
           },
           {
-            "url": "https://lab.scinfo.org.nz/selfie/api/data/items/hydrogeounit-richelieu-3",
+            "url": "https://lab.scinfo.org.nz/service/selfie/api/collections/data/items/hydrogeounit-richelieu-3",
             "dctType": "gw:GW_HydrogeoUnit",
             "format": [
               "application/vnd.geo+json",
@@ -601,7 +601,7 @@
             "provider": "https://opengeospatial.github.io/SELFIE/"
           },
           {
-            "url": "https://lab.scinfo.org.nz/selfie/api/data/items/hydrogeounit-richelieu-4",
+            "url": "https://lab.scinfo.org.nz/service/selfie/api/collections/data/items/hydrogeounit-richelieu-4",
             "dctType": "gw:GW_HydrogeoUnit",
             "format": [
               "application/vnd.geo+json",
@@ -723,7 +723,7 @@
             "provider": "https://opengeospatial.github.io/SELFIE/"
           },
           {
-            "url": "https://lab.scinfo.org.nz/selfie/api/data/items/hydrogeounit-richelieu-5",
+            "url": "https://lab.scinfo.org.nz/service/selfie/api/collections/data/items/hydrogeounit-richelieu-5",
             "dctType": "gw:GW_HydrogeoUnit",
             "format": [
               "application/vnd.geo+json",
