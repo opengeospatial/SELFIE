@@ -13,6 +13,7 @@
             "@id": "schema:image",
             "@type": "@id"
         },
+        "report": "schema:report",
         "subjectOf": "schema:subjectOf",
         "sameAs": "owl:sameAs",
         "label": "rdfs:label",
