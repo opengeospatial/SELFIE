@@ -42,7 +42,7 @@
 	],
 	"subjectOf": [
 		{
-			"url": "https://id.cerdi.edu.au/gwml2/feature/well/101094",
+			"url": "https://id.cerdi.edu.au/cerdi/data/gwml2/gw_well/101094",
 			"dctType": "gw:GW_Well",
 			"format": [
 				"application/ld+json",
@@ -52,7 +52,7 @@
 			"provider": "https://www.cerdi.edu.au"
 		},
 		{
-			"url": "https://id.cerdi.edu.au/gwml2/feature/borehole/101094",
+			"url": "https://id.cerdi.edu.au/cerdi/data/gwml2/borehole/101094",
 			"dctType": "gw:Borehole",
 			"format": [
 				"application/ld+json",
@@ -62,7 +62,7 @@
 			"provider": "https://www.cerdi.edu.au"
 		},
 		{
-				"url": "https://id.cerdi.edu.au/gsv/data/borehole/gsml.borehole.101094",
+				"url": "https://id.cerdi.edu.au/gsv/data/gsml2/borehole/gsml.borehole.101094",
 		"dctType": "gs:Borehole",
 			"format": [
 				"application/ld+json",
@@ -73,7 +73,7 @@
 		},
 		
 		{
-			"url": "http://services.cerdi.edu.au/anzsoilml/wfs?request=getFeature&typeName=om:OM_Observation&featureID=feduni.soil.observation.1,feduni.soil.observation.10,feduni.soil.observation.2",
+			"url": "https://id.cerdi.edu.au/cerdi/data/sosa/observationcollection/101094",
 			"dctType": "ssn-ext:ObservationCollection",
 			"format": [
 				"application/ld+json",
