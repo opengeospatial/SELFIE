@@ -1,0 +1,159 @@
+{
+	"@context": [
+		"https://opengeospatial.github.io/SELFIE/contexts/elf-index.jsonld",
+		"https://opengeospatial.github.io/SELFIE/contexts/elf-data.jsonld",
+		"https://opengeospatial.github.io/SELFIE/contexts/gw.jsonld",
+		"https://github.com/opengeospatial/SELFIE/blob/master/docs/contexts/gsmlb_classes_associations_context.json",
+		"https://opengeospatial.github.io/ELFIE/json-ld/sosa.jsonld",
+		"https://opengeospatial.github.io/ELFIE/json-ld/skos.jsonld"
+	],
+	"@id": "https://id.cerdi.edu.au/gwml2/feature/well/101094",
+	"@type": "xxx:Document",
+	"about": "https://geo.org.au/id/well/101094",
+	"dctType": "gw:GW_Well",
+	"format": [
+		"application/rdf+xml",
+		"text/turtle",
+		"application/ld+json"
+	],
+	"conformsTo": "https://www.opengis.net/def/gwml2",
+	"provider": "https://www.cerdi.edu.au",
+	"@graph": {
+		"@context": [
+			"https://opengeospatial.github.io/SELFIE/context/gw.jsonld"
+		],
+		"@id": "https://id.cerdi.edu.au/gwml2/feature/well/101094",
+		"@type": "gw:GW_Well",
+		"label": [
+			{
+				"@language": "en",
+				"@value": "CONEWARRE 2"
+			}
+		],
+		"name": [
+			"CONEWARRE 2",
+			101094,
+			8001
+		],
+		"spatialCoverage": {
+			"@type": "Place",
+			"geo": {
+				"@type": "GeoCoordinates",
+				"latitude": "-38.164626",
+				"longitude": "143.708966"
+			}
+		},
+		"hasGeometry": {
+			"@type": "gsp:Geometry",
+			"gsp:asWKT": "SRID=http://www.opengis.net/gml/srs/epsg.xml#4283;LINESTRING( )"
+		},
+		"gwWellConstructedDepth": {
+			"phenomenonTime": {
+				"timePosition": "1966-12-30Z"
+			},
+			"resultTime": {
+				"timePosition": "1966-12-30Z"
+			},
+			"usedProcedure": {
+				"@id": "http://www.opengis.net/def/nil/ogc/0/unknown"
+			},
+			"observedProperty": {
+				"@id": "http://www.opengis.net/gwml-well/2.2/gwWellConstructedDepth",
+				"name": "gwWellConstructedDepth"
+			},
+			"hasResult": {
+				"uom": {
+					"@id": "http://qudt.org/vocab/unit#Meter",
+					"name": "metre"
+				},
+				"value": "0.0"
+			}
+		},
+		"gwWellConstruction": {
+			"@id": "https://id.cerdi.edu.au/gwml2/feature/borehole/101094",
+			"@type": "Borehole",
+			"name": [
+				101094,
+				8001
+			],
+			"isSampleOf": {
+				"@id": "https://id.cerdi.edu.au/gwml2/feature/well/101094"
+			},
+			"hasGeometry": {
+				"@id": "http://www.opengis.net/def/nil/OGC/0/unknown",
+				"name": "unknown"
+			},
+			"bholeDateOfDrilling": "1966-12-30Z",
+			"bholeOperator": {
+				"@id": "null",
+				"name": "Private Landholders Bore"
+			},
+			"bholeHeadworks": {
+				"collarElevation": 118.0,
+				"collarLocation": {
+					"pos": "-38.132135 143.754248"
+				},
+				"bholeDetails": {
+					"@id": "https://id.cerdi.edu.au/gwml2/feature/well/101094"
+				}
+			}
+		},
+		"gwWellLocation": {
+			"pos": "-38.132135 143.754248"
+		},
+		"gwWellPurpose": [
+			{
+				"@id": "null",
+				"name": "Groundwater"
+			},
+			{
+				"@id": "null",
+				"name": "Not Known"
+			}
+		],
+		"gwWellReferenceElevation": {
+			"elevation": 118.0,
+			"elevationAccuracy": null,
+			"elevationType": {
+				"@id": "null",
+				"name": "Casing Standpipe"
+			}
+		},
+		"gwWellTotalLength": {
+			"uom": {
+				"@id": "http://qudt.org/vocab/unit#Meter",
+				"name": "metre"
+			},
+			"value": "0.0"
+		},
+		"gwWellWaterUse": null,
+		"gwWellYield": null,
+		"gwWellGeology": {
+			"usedProcedure": {
+				"@id": "http://www.opengis.net/def/gwml/2.0/observedProperty/earthMaterial",
+				"name": "drillers log"
+			},
+			"observedProperty": {
+				"@id": "http://www.opengis.net/def/gwml/2.0/observedProperty/earthMaterial",
+				"name": "lithology"
+			},
+			"hasFeatureOfInterest": {
+				"@id": "#feduni.well.101094"
+			},
+			"startDepth": {
+				"uom": {
+					"@id": "http://qudt.org/vocab/unit#Meter",
+					"name": "metre"
+				},
+				"value": "0.0"
+			},
+			"endDepth": {
+				"uom": {
+					"@id": "http://qudt.org/vocab/unit#Meter",
+					"name": "metre"
+				},
+				"value": "0.0"
+			}
+		}
+	}
+}
