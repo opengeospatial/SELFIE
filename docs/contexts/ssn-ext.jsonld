@@ -2,8 +2,8 @@
     "@context": {
         "ssn-ext": "http://www.w3.org/ns/ssn/ext/",
 				"hasUltimateFeatureOfInterest": "ssn-ext:hasUltimateFeatureOfInterest",
-				"ObservationCollection": "ssn-ext:ObservationCollection"
-				"hasMember": "ssn-ext:hasMember"
+				"ObservationCollection": "ssn-ext:ObservationCollection",
+				"hasMember": "ssn-ext:hasMember",
 				"isMemberOf": "ssn-ext:isMemberOf"
     }
 }
