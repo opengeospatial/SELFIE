@@ -3,10 +3,10 @@
 		"https://opengeospatial.github.io/SELFIE/contexts/elf-index.jsonld",
 		"https://opengeospatial.github.io/SELFIE/contexts/elf-data.jsonld",
 		"https://opengeospatial.github.io/SELFIE/contexts/gw.jsonld",
-		"https://github.com/opengeospatial/SELFIE/blob/master/docs/contexts/gsmlb_classes_associations_context.json",
+		"https://opengeospatial.github.io/SELFIE/contexts/gsmlb_classes_associations_context.json",
 		"https://opengeospatial.github.io/ELFIE/json-ld/sosa.jsonld",
 		"https://opengeospatial.github.io/ELFIE/json-ld/skos.jsonld",
-		"https://opengeospatial.github.io/SELFIE/contexts/ssn-ext.jsonld"
+      "http://schema.datacove.eu/ssn-ext.jsonld"
 	],
 	"@id": "https://id.cerdi.edu.au/gwml2/feature/observation/feduni.borehole.observation.101094.44457.12725",
 	"@type": "xxx:Document",
@@ -25,39 +25,46 @@
 			"@type": "GeoCoordinates",
 			"latitude": "-38.164626",
 			"longitude": "143.708966"
-		},
+		}
 	},
 	"@graph": {
 		"@context": [
-			"https://opengeospatial.github.io/SELFIE/context/ssn-ext.jsonld"
+			"http://schema.datacove.eu/ssn-ext.jsonld"
 		],
 		"@id": "https://id.cerdi.edu.au/gwml2/feature/observation/feduni.borehole.observation.101094.44457.12725",
-		"@type": "sosa:Observation"		
+		"@type": "sosa:Observation"
 	},
-"sosa:usedProcedure": {
+	"sosa:usedProcedure": {
 		"@id": "http://www.vvg.org.au/def/procedure/samplingMethod/Airlifted",
 		"@type": "sosa:Procedure"
 	},
-"sosa:hasFeatureOfInterest":{
+	"sosa:hasFeatureOfInterest": {
 		"@id": "https://id.cerdi.edu.au/gwml2/feature/well/101094",
 		"@type": "sosa:FeatureOfInterest"
 	},
-"sosa:observedProperty":{
-"@id": "http://environment.data.gov.au/def/property/calcium_concentration",
-"@type": "sosa:ObservableProperty"
-},
-"sosa:madeBySensor": "unknown",
- "sosa:hasResult" [
-    {@type: "qudt-1-1:QuantityValue",
-    qudt-1-1:numericValue "23.0"^^xsd:double,
-    qudt-1-1:unit qudt-unit-1-1:mg/l },
-    ],    
-  "sosa:resultTime" [
-    rdf:type time:Instant ;
-    time:inXSDDateTimeStamp "1966-09-01T00:00:00"^^xsd:dateTimeStamp ],
-"ssn-ext:hasUltimateFeatureOfInterest":{
+	"sosa:observedProperty": {
+		"@id": "http://environment.data.gov.au/def/property/calcium_concentration",
+		"@type": "sosa:ObservableProperty"
+	},
+	"sosa:madeBySensor": "unknown",
+	"sosa:hasResult": [{
+			"@type": "qudt-1-1:QuantityValue",
+			"Extraneous1": "qudt - 1 - 1",
+			"numericValue": 23.0,
+			"Extraneous2": "^ ^ xsd: double",
+			"Extraneous3": "qudt - unit - 1 - 1",
+			"unit": "mg / l"
+		}
+	],
+	"sosa:resultTime": {
+		"@type": "time",
+		"Extraneous1": "rdf: type time: Instant;",
+		"Extraneous2": "inXSDDateTimeStamp ^ ^ xsd: dateTimeStamp",
+		"time": "1966-09-01T00:00:00"
+	},
+	"ssn-ext:hasUltimateFeatureOfInterest": {
 		"@id": "https://id.cerdi.edu.au/gwml2/feature/fluidbody/feduni.borehole.fluidbody.101094.44457",
 		"@type": "gw:GW_FluidBody"
-	},	
-	
+	}
+
 }
