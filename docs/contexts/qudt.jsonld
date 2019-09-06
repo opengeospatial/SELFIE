@@ -1,0 +1,8 @@
+{
+    "@context": {
+        "qudt": "http://qudt.org/1.1/schema/qudt#",
+        "quantityValue": "http://qudt.org/schema/qudt#quantityValue",
+				"numericValue": "http://qudt.org/schema/qudt#numericValue",
+				"unit": "http://qudt.org/schema/qudt#unit"
+    }
+}
