@@ -6,12 +6,14 @@
 		"https://opengeospatial.github.io/SELFIE/contexts/gsmlb_classes_associations_context.json",
 		"https://opengeospatial.github.io/ELFIE/json-ld/sosa.jsonld",
 		"https://opengeospatial.github.io/ELFIE/json-ld/skos.jsonld",
-      "http://schema.datacove.eu/ssn-ext.jsonld"
+		"http://schema.datacove.eu/ssn-ext.jsonld",
+		"http://schema.datacove.eu/qudt.jsonld",
+		"http://schema.datacove.eu/spatial.jsonld"
 	],
 	"@id": "https://id.cerdi.edu.au/gwml2/feature/observation/feduni.borehole.observation.101094.44457.12725",
-	"@type": "xxx:Document",
+	"@type": "sosa:Observation",
+	"name": "Obs calcium_concentration on well/101094",
 	"about": "https://geo.org.au/id/well/101094",
-	"dctType": "sosa:Observation",
 	"format": [
 		"application/rdf+xml",
 		"text/turtle",
@@ -20,25 +22,18 @@
 	"conformsTo": "http://www.w3.org/ns/sosa/Observation",
 	"provider": "https://www.cerdi.edu.au",
 	"spatialCoverage": {
-		"@type": "Place",
+		"@type": "schema:Place",
 		"geo": {
 			"@type": "GeoCoordinates",
 			"latitude": "-38.164626",
 			"longitude": "143.708966"
 		}
 	},
-	"@graph": {
-		"@context": [
-			"http://schema.datacove.eu/ssn-ext.jsonld"
-		],
-		"@id": "https://id.cerdi.edu.au/gwml2/feature/observation/feduni.borehole.observation.101094.44457.12725",
-		"@type": "sosa:Observation"
-	},
-	"sosa:usedProcedure": {
+	"usedProcedure": {
 		"@id": "http://www.vvg.org.au/def/procedure/samplingMethod/Airlifted",
 		"@type": "sosa:Procedure"
 	},
-	"sosa:hasFeatureOfInterest": {
+	"hasFeatureOfInterest": {
 		"@id": "https://id.cerdi.edu.au/gwml2/feature/well/101094",
 		"@type": "sosa:FeatureOfInterest"
 	},
@@ -48,14 +43,10 @@
 	},
 	"sosa:madeBySensor": "unknown",
 	"sosa:hasResult": [{
-			"@type": "qudt-1-1:QuantityValue",
-			"Extraneous1": "qudt - 1 - 1",
-			"numericValue": 23.0,
-			"Extraneous2": "^ ^ xsd: double",
-			"Extraneous3": "qudt - unit - 1 - 1",
-			"unit": "mg / l"
-		}
-	],
+		"@type": "qudt:QuantityValue",
+		"numericValue": 23.0,
+		"unit": "mg / l"
+	}],
 	"sosa:resultTime": {
 		"@type": "time",
 		"Extraneous1": "rdf: type time: Instant;",
