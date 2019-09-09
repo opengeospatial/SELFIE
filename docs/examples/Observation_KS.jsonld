@@ -3,66 +3,59 @@
 		"https://opengeospatial.github.io/SELFIE/contexts/elf-index.jsonld",
 		"https://opengeospatial.github.io/SELFIE/contexts/elf-data.jsonld",
 		"https://opengeospatial.github.io/SELFIE/contexts/gw.jsonld",
-		"https://github.com/opengeospatial/SELFIE/blob/master/docs/contexts/gsmlb_classes_associations_context.json",
+		"https://opengeospatial.github.io/SELFIE/contexts/gsmlb_classes_associations_context.json",
 		"https://opengeospatial.github.io/ELFIE/json-ld/sosa.jsonld",
 		"https://opengeospatial.github.io/ELFIE/json-ld/skos.jsonld",
-		"https://opengeospatial.github.io/SELFIE/contexts/ssn-ext.jsonld"
+		"http://schema.datacove.eu/ssn-ext.jsonld",
+		"http://schema.datacove.eu/qudt.jsonld",
+		"http://schema.datacove.eu/spatial.jsonld"
 	],
 	"@id": "https://id.cerdi.edu.au/gwml2/feature/observation/feduni.borehole.observation.101094.44457.12725",
-	"@type": "xxx:Document",
+	"@type": "sosa:Observation",
+	"name": "Obs calcium_concentration on well/101094",
 	"about": "https://geo.org.au/id/well/101094",
-	"dctType": "sosa:Observation",
 	"format": [
 		"application/rdf+xml",
 		"text/turtle",
 		"application/ld+json"
 	],
-	 "unit" : "http://qudt.org/vocab/unit/",
-	"sosa" : "http://www.w3.org/ns/sosa/",
-    "ssn-ext" : "http://www.w3.org/ns/ssn/ext/",
-    "time" : "http://www.w3.org/2006/time#",
-  
 	"conformsTo": "http://www.w3.org/ns/sosa/Observation",
 	"provider": "https://www.cerdi.edu.au",
 	"spatialCoverage": {
-		"@type": "Place",
+		"@type": "schema:Place",
 		"geo": {
 			"@type": "GeoCoordinates",
 			"latitude": "-38.164626",
 			"longitude": "143.708966"
-		},
+		}
 	},
-	"@graph": {
-		"@context": [
-			"https://opengeospatial.github.io/SELFIE/context/ssn-ext.jsonld"
-		],
-		"@id": "https://id.cerdi.edu.au/gwml2/feature/observation/feduni.borehole.observation.101094.44457.12725",
-		"@type": "sosa:Observation"		
-	},
-"sosa:usedProcedure": {
+	"usedProcedure": {
 		"@id": "http://www.vvg.org.au/def/procedure/samplingMethod/Airlifted",
 		"@type": "sosa:Procedure"
 	},
-"sosa:hasFeatureOfInterest":{
+	"hasFeatureOfInterest": {
 		"@id": "https://id.cerdi.edu.au/gwml2/feature/well/101094",
 		"@type": "sosa:FeatureOfInterest"
 	},
-"sosa:observedProperty":{
-"@id": "http://environment.data.gov.au/def/property/calcium_concentration",
-"@type": "sosa:ObservableProperty"
-},
-
- "sosa:hasResult" [
-    {@type: "qudt-1-1:QuantityValue",
-    "numericValue": "23.0",
-    "unit:mg/l" },
-    ],     
-  "sosa:resultTime": {
-       "inXSDDate" : "1966-09-01"
-       },
-"ssn-ext:hasUltimateFeatureOfInterest":{
+	"sosa:observedProperty": {
+		"@id": "http://environment.data.gov.au/def/property/calcium_concentration",
+		"@type": "sosa:ObservableProperty"
+	},
+	"sosa:madeBySensor": "unknown",
+	"sosa:hasResult": [{
+		"@type": "qudt:QuantityValue",
+		"numericValue": 23.0,
+		"unit": "mg / l"
+	}],
+	"sosa:resultTime": {
+		"@type": "time",
+		"Extraneous1": "rdf: type time: Instant;",
+		"Extraneous2": "inXSDDateTimeStamp ^ ^ xsd: dateTimeStamp",
+		"time": "1966-09-01T00:00:00"
+	},
+	"ssn-ext:hasUltimateFeatureOfInterest": {
 		"@id": "https://id.cerdi.edu.au/gwml2/feature/fluidbody/feduni.borehole.fluidbody.101094.44457",
 		"@type": "gw:GW_FluidBody"
-	},	
-	
+	}
+
 }
