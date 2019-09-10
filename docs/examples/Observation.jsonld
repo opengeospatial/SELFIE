@@ -47,12 +47,10 @@
     "numericValue": "23.0",
     "unit:mg/l" },
     ],     
-  "sosa:resultTime": {
-		"@type": "time",
-		"Extraneous1": "rdf: type time: Instant;",
-		"Extraneous2": "inXSDDateTimeStamp ^ ^ xsd: dateTimeStamp",
-		"time": "1966-09-01T00:00:00"
-	},
+"sosa:resultTime": [
+	{"@type": "sosa:resultTime",
+    "time": "1966-09-01T00:00:00"},
+    ],
 "ssn-ext:hasUltimateFeatureOfInterest":{
 		"@id": "https://id.cerdi.edu.au/gwml2/feature/fluidbody/feduni.borehole.fluidbody.101094.44457",
 		"@type": "gw:GW_FluidBody"
