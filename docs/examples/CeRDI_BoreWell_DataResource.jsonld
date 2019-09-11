@@ -8,9 +8,9 @@
 		"https://opengeospatial.github.io/ELFIE/json-ld/skos.jsonld"
 	],
 	"@id": "https://id.cerdi.edu.au/gwml2/feature/well/101094",
-	"@type": "xxx:Document",
+	"@type": "foaf:Document",
 	"about": "https://geo.org.au/id/well/101094",
-	"dctType": "gw:GW_Well",
+	"foaf:primaryTopic": "gw:GW_Well",
 	"format": [
 		"application/rdf+xml",
 		"text/turtle",
