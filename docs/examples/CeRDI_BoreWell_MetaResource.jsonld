@@ -8,6 +8,7 @@
 	"@id": "https://geo.org.au/id/well/101094",
 	"@type": "foaf:Document",
 	"foaf:primaryTopic": "gw:GW_Well",
+	"url": "https://geo.org.au/id/well/101094",
 	"name": [
 		"CONEWARRE 2",
 		"WA2",
