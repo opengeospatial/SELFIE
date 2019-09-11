@@ -9,9 +9,8 @@
 		"http://schema.datacove.eu/ssn-ext.jsonld"
 	],
 	"@id": "https://id.cerdi.edu.au/gwml2/feature/observation-collection/101094",
-	"@type": "xxx:Document",
+	"@type": "ssn-ext:ObservationCollection",
 	"about": "https://geo.org.au/id/well/101094",
-	"dctType": "ssn-ext:ObservationCollection",
 	"format": [
 		"application/rdf+xml",
 		"text/turtle",
