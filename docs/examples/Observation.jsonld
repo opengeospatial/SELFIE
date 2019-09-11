@@ -10,8 +10,10 @@
 		"http://schema.datacove.eu/qudt.jsonld",
 		"http://schema.datacove.eu/spatial.jsonld"
 	],
-	"@id": "https://id.cerdi.edu.au/gwml2/feature/observation/feduni.borehole.observation.101094.44457.12725",
-	"@type": "sosa:Observation",
+	"@id": "https://id.cerdi.edu.au/gwml2/feature/observation/101094.44457.12725",
+	"@type": "foaf:Document",
+	"url": "https://id.cerdi.edu.au/gwml2/feature/observation/feduni.borehole.observation.101094.44457.12725",
+	"foaf:primaryTopic": "sosa:Observation",
 	"name": "calcium concentration",
 	"about": "https://geo.org.au/id/well/101094",
 	"format": [
