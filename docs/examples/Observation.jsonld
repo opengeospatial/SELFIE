@@ -29,7 +29,7 @@
 			"@type": "GeoCoordinates",
 			"latitude": "-38.164626",
 			"longitude": "143.708966"
-		},
+		}
 	},
 "sosa:usedProcedure": {
 		"url": "http://www.vvg.org.au/def/procedure/samplingMethod/Airlifted",
@@ -44,18 +44,18 @@
 		"foaf:primaryTopic": "sosa:ObservableProperty"
 },
 "sosa:madeBySensor": "unknown",
-"sosa:hasResult" [
+  "sosa:hasResult" : [
     {"foaf:primaryTopic": "qudt:QuantityValue",
     "numericValue": "23.0",
-    "unit:mg/l" },
+    "unit": "mg/l" }
     ],     
 "sosa:resultTime": [
 	{"foaf:primaryTopic": "sosa:resultTime",
-    "time": "1966-09-01T00:00:00Z"},
+    "time": "1966-09-01T00:00:00Z"}
     ],
 "ssn-ext:hasUltimateFeatureOfInterest":{
 		"url": "https://id.cerdi.edu.au/gwml2/feature/fluidbody/feduni.borehole.fluidbody.101094.44457",
 		"foaf:primaryTopic": "gw:GW_FluidBody"
-	},	
+	}
 	
 }  

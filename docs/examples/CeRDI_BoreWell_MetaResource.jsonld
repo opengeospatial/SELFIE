@@ -3,7 +3,7 @@
 		"https://opengeospatial.github.io/SELFIE/contexts/elf-index.jsonld",
 		"https://opengeospatial.github.io/SELFIE/contexts/elf-data.jsonld",
 		"https://opengeospatial.github.io/SELFIE/contexts/gw.jsonld",
-		"https://github.com/opengeospatial/SELFIE/blob/master/docs/contexts/gsmlb_classes_associations_context.json"
+	"https://github.com/opengeospatial/SELFIE/blob/master/docs/contexts/gsmlb_classes_associations_context.json"
 	],
 	"@id": "https://geo.org.au/id/well/101094",
 	"@type": "foaf:Document",
@@ -32,7 +32,7 @@
 		{
 			"@language": "en",
 			"@value": "CONEWARRE 2"
-		},
+		}
 	],
 	
 	"sameAs": [
@@ -40,7 +40,7 @@
 		{
 			"report": "http://data.water.vic.gov.au/static.htm?ppbm=101094&gw&0&gwlf_org",
 			"provider": "https://www2.delwp.vic.gov.au/"
-		},
+		}
 	],
 	"subjectOf": [
 		{
@@ -83,6 +83,6 @@
 			],
 			"conformsTo": "http://www.w3.org/ns/ssn/ext/",
 			"provider": "https://www.cerdi.edu.au"
-		},
+		}
 	]
 }

@@ -35,7 +35,8 @@
 		"url": "https://id.cerdi.edu.au/gwml2/feature/observation-collection/101094",
 		"foaf:primaryTopic": "ssn-ext:ObservationCollection"
 	},
-	"ssn-ext:hasMember": [{
+	"ssn-ext:hasMember": [
+		{
 			"url": "https://id.cerdi.edu.au/gwml2/feature/observation/feduni.borehole.observation.101094.44457.12725",
 			"foaf:primaryTopic": "sosa:Observation"
 		},

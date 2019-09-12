@@ -2,7 +2,7 @@
 	"@context": [
 		"https://opengeospatial.github.io/SELFIE/contexts/elf-index.jsonld",
 		"https://opengeospatial.github.io/SELFIE/contexts/elf-data.jsonld",
-		"https://opengeospatial.github.io/SELFIE/contexts/gw.jsonld",
+		"https://opengeospatial.github.io/SELFIE/contexts/gw.jsonld",					
 		"https://github.com/opengeospatial/SELFIE/blob/master/docs/contexts/gsmlb_classes_associations_context.json",
 		"https://opengeospatial.github.io/ELFIE/json-ld/sosa.jsonld",
 		"https://opengeospatial.github.io/ELFIE/json-ld/skos.jsonld"
@@ -49,11 +49,9 @@
 			"gsp:asWKT": "SRID=http://www.opengis.net/gml/srs/epsg.xml#4283;LINESTRING( )"
 		},
 		"gw:gwWellConstructedDepth": {
-			"sosa:phenomenonTime":  "1966-12-30T00:00:00Z"
-			},
-			"sosa:resultTime": "time": "1966-12-30T00:00:00Z"
-			},
-			"sosa:usedProcedure": "unknown"
+			"sosa:phenomenonTime":  "1966-12-30T00:00:00Z",
+			"sosa:resultTime": "1966-12-30T00:00:00Z",
+			"sosa:usedProcedure": "unknown",
 			"sosa:observedProperty": {
 				"url": "http://www.opengis.net/gwml-well/2.2/gwWellConstructedDepth",
 				"name": "gw:gwWellConstructedDepth"
@@ -97,7 +95,7 @@
 		"gw:gwWellPurpose": [
 			{
 				"name": "Groundwater"
-			},
+			}
 		],
 		"gw:gwWellReferenceElevation": {
 			"elevation": "118.0",
