@@ -33,20 +33,20 @@
 			"http://schema.datacove.eu/ssn-ext.jsonld"
 		],
 		"url": "https://id.cerdi.edu.au/gwml2/feature/observation-collection/101094",
-		"@type": "ssn-ext:ObservationCollection"
+		"foaf:primaryTopic": "ssn-ext:ObservationCollection"
 	},
 	"ssn-ext:hasMember": [{
 			"url": "https://id.cerdi.edu.au/gwml2/feature/observation/feduni.borehole.observation.101094.44457.12725",
-			"@type": "sosa:Observation"
+			"foaf:primaryTopic": "sosa:Observation"
 		},
 		{
 			"url": "https://id.cerdi.edu.au/gwml2/feature/observation/feduni.borehole.observation.101094.44457.15205",
-			"@type": "sosa:Observation"
+			"foaf:primaryTopic": "sosa:Observation"
 		}
 	],
 	"sosa:hasFeatureOfInterest": {
 		"url": "https://id.cerdi.edu.au/gwml2/feature/well/101094",
-		"@type": "gw:GW_Well"
+		"foaf:primaryTopic": "gw:GW_Well"
 	}
 
 }

@@ -33,29 +33,29 @@
 	},
 "sosa:usedProcedure": {
 		"url": "http://www.vvg.org.au/def/procedure/samplingMethod/Airlifted",
-		"@type": "sosa:Procedure"
+		"foaf:primaryTopic": "sosa:Procedure"
 	},
 "sosa:hasFeatureOfInterest":{
 		"url": "https://id.cerdi.edu.au/gwml2/feature/well/101094",
-		"@type": "sosa:FeatureOfInterest"
+		"foaf:primaryTopic": "sosa:FeatureOfInterest"
 	},
 "sosa:observedProperty":{
-		"urld": "http://environment.data.gov.au/def/property/calcium_concentration",
-		"@type": "sosa:ObservableProperty"
+		"url": "http://environment.data.gov.au/def/property/calcium_concentration",
+		"foaf:primaryTopic": "sosa:ObservableProperty"
 },
 "sosa:madeBySensor": "unknown",
 "sosa:hasResult" [
-    {@type: "qudt:QuantityValue",
+    {"foaf:primaryTopic": "qudt:QuantityValue",
     "numericValue": "23.0",
     "unit:mg/l" },
     ],     
 "sosa:resultTime": [
-	{"@type": "sosa:resultTime",
-    "time": "1966-09-01T00:00:00"},
+	{"foaf:primaryTopic": "sosa:resultTime",
+    "time": "1966-09-01T00:00:00Z"},
     ],
 "ssn-ext:hasUltimateFeatureOfInterest":{
 		"url": "https://id.cerdi.edu.au/gwml2/feature/fluidbody/feduni.borehole.fluidbody.101094.44457",
-		"@type": "gw:GW_FluidBody"
+		"foaf:primaryTopic": "gw:GW_FluidBody"
 	},	
 	
 }  

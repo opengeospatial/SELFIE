@@ -24,7 +24,7 @@
 			"https://opengeospatial.github.io/SELFIE/context/gw.jsonld"
 		],
 		"url": "https://id.cerdi.edu.au/gwml2/feature/well/101094",
-		"@type": "gw:GW_Well",
+		"foaf:primaryTopic": "gw:GW_Well",
 		"label": [
 			{
 				"@language": "en",
@@ -48,103 +48,93 @@
 			"@type": "gsp:Geometry",
 			"gsp:asWKT": "SRID=http://www.opengis.net/gml/srs/epsg.xml#4283;LINESTRING( )"
 		},
-		"gwWellConstructedDepth": {
-			"phenomenonTime": {
-				"timePosition": "1966-12-30Z"
+		"gw:gwWellConstructedDepth": {
+			"sosa:phenomenonTime":  "1966-12-30T00:00:00Z"
 			},
-			"resultTime": {
-				"timePosition": "1966-12-30Z"
+			"sosa:resultTime": "time": "1966-12-30T00:00:00Z"
 			},
-			"usedProcedure": {
-				"url": "http://www.opengis.net/def/nil/ogc/0/unknown"
-			},
-			"observedProperty": {
+			"sosa:usedProcedure": "unknown"
+			"sosa:observedProperty": {
 				"url": "http://www.opengis.net/gwml-well/2.2/gwWellConstructedDepth",
-				"name": "gwWellConstructedDepth"
+				"name": "gw:gwWellConstructedDepth"
 			},
-			"hasResult": {
+			"sosa:hasResult": {
 				"uom": {
-					"@id": "http://qudt.org/vocab/unit#Meter",
+					"url": "http://qudt.org/vocab/unit#Meter",
 					"name": "metre"
 				},
 				"value": "0.0"
 			}
 		},
-		"gwWellConstruction": {
+		"gw:gwWellConstruction": {
 			"url": "https://id.cerdi.edu.au/gwml2/feature/borehole/101094",
-			"@type": "Borehole",
+			"foaf:primaryTopic": "gw:Borehole",
 			"name": [
 				101094,
 				8001
 			],
-			"isSampleOf": {
+			"sosa:isSampleOf": {
 				"url": "https://id.cerdi.edu.au/gwml2/feature/well/101094"
 			},
-			"hasGeometry": {
-				"url": "http://www.opengis.net/def/nil/OGC/0/unknown",
-				"name": "unknown"
-			},
-			"bholeDateOfDrilling": "1966-12-30Z",
-			"bholeOperator": {
+			"geo:hasGeometry":  "unknown",
+			"gw:bholeDateOfDrilling": "1966-12-30T00:00:00Z",
+			"gw:bholeOperator": {
 				"name": "Private Landholders Bore"
 			},
-			"bholeHeadworks": {
-				"collarElevation": 118.0,
-				"collarLocation": {
+			"gw:bholeHeadworks": {
+				"gw:collarElevation": "118.0",
+				"gw:collarLocation": {
 					"pos": "-38.132135 143.754248"
 				},
-				"bholeDetails": {
+				"gw:bholeDetails": {
 					"url": "https://id.cerdi.edu.au/gwml2/feature/well/101094"
 				}
 			}
 		},
-		"gwWellLocation": {
+		"gw:gwWellLocation": {
 			"pos": "-38.132135 143.754248"
 		},
-		"gwWellPurpose": [
+		"gw:gwWellPurpose": [
 			{
 				"name": "Groundwater"
 			},
-			{
-				"name": "Not Known"
-			}
 		],
-		"gwWellReferenceElevation": {
-			"elevation": 118.0,
+		"gw:gwWellReferenceElevation": {
+			"elevation": "118.0",
 			"elevationAccuracy": "null",
 			"elevationType": {
 				"name": "Casing Standpipe"
 			}
 		},
-		"gwWellTotalLength": {
+		"gw:gwWellTotalLength": {
 			"uom": {
 				"url": "http://qudt.org/vocab/unit#Meter",
 				"name": "metre"
 			},
 			"value": "0.0"
 		},
-		"gwWellWaterUse": "null",
-		"gwWellYield": "null",
-		"gwWellGeology": {
-			"usedProcedure": {
+		"gw:gwWellWaterUse": "null",
+		"gw:gwWellYield": "null",
+		"gw:gwWellGeology": {
+			"sosa:usedProcedure": {
 				"url": "http://www.opengis.net/def/gwml/2.0/observedProperty/earthMaterial",
 				"name": "drillers log"
 			},
-			"observedProperty": {
+			"sosa:observedProperty": {
 				"url": "http://www.opengis.net/def/gwml/2.0/observedProperty/earthMaterial",
 				"name": "lithology"
 			},
-			"hasFeatureOfInterest": {
-				"url": "#feduni.well.101094"
+			"sosa:hasFeatureOfInterest": {
+				"url": "https://geo.org.au/id/well/101094"
 			},
-			"startDepth": {
+			"gw:startDepth": {
 				"uom": {
 					"url": "http://qudt.org/vocab/unit#Meter",
 					"name": "metre"
 				},
 				"value": "0.0"
 			},
-			"endDepth": {
+			"gw:endDepth": {
 				"uom": {
 					"url": "http://qudt.org/vocab/unit#Meter",
 					"name": "metre"
