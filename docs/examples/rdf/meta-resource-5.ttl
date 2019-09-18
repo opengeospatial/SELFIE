@@ -6,6 +6,7 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <http://schema.org/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
 
 <https://lab.scinfo.org.nz/selfie/id/hydrogeounit/richelieu-5>
   a gw:GW_HydrogeoUnit ;
@@ -13,30 +14,34 @@
   schema:image <https://www.nzc.nz/media/12834/bates_headshot_2018.jpg> ;
   schema:name "Hydrogeologic unit : Monteregian intrusions" ;
   schema:subjectOf [
+    rdf:type foaf:Document ;
     dct:conformsTo <https://www.opengis.net/def/gwml2> ;
     dct:format "application/ld+json", "text/ttl" ;
-    dct:type <gw:GW_HydrogeoUnit> ;
+    foaf:primaryTopic <gw:GW_HydrogeoUnit> ;
     schema:provider <https://opengeospatial.github.io/SELFIE/> ;
     schema:url <https://lab.scinfo.org.nz/selfie/data/hydrogeounit/richelieu-5>
   ],
   [
+    rdf:type foaf:Document ;
     dct:conformsTo <https://www.opengis.net/def/gwml2> ;
     dct:format "application/vnd.geo+json", "text/html" ;
-    dct:type <gw:GW_HydrogeoUnit> ;
+    foaf:primaryTopic <gw:GW_HydrogeoUnit> ;
     schema:provider <https://opengeospatial.github.io/SELFIE/> ;
     schema:url <https://lab.scinfo.org.nz/service/selfie/api/collections/data/items/hydrogeounit-richelieu-5>
   ],
   [
+    rdf:type foaf:Document ;
     dct:conformsTo <https://www.opengis.net/def/gwml2> ;
     dct:format "application/vnd.geo+json" ;
-    dct:type <gw:GW_HydrogeoUnit> ;
+    foaf:primaryTopic <gw:GW_HydrogeoUnit> ;
     schema:provider <https://opengeospatial.github.io/SELFIE/> ;
     schema:url <https://lab.scinfo.org.nz/selfie/representations/richelieu-5.geojson>
   ],
   [
+    rdf:type foaf:Document ;
     dct:conformsTo <https://www.opengis.net/def/gwml2> ;
     dct:format "text/html" ;
-    dct:type <gw:GW_HydrogeoUnit> ;
+    foaf:primaryTopic <gw:GW_HydrogeoUnit> ;
     schema:provider <https://opengeospatial.github.io/SELFIE/> ;
     schema:url <https://lab.scinfo.org.nz/selfie/representations/richelieu-5.html>
   ] ;

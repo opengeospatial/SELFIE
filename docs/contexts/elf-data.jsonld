@@ -6,7 +6,7 @@
         "provider": "schema:provider",
         "url": "schema:url",
         "conformsTo": "dct:conformsTo",
-        "dctType": "dct:type",
+        "dctType": "foaf:primaryTopic",
         "format": "dct:format"
     }
 }
