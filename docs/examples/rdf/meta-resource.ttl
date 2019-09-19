@@ -6,6 +6,7 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <http://schema.org/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
 
 <https://lab.scinfo.org.nz/selfie/id/aquifersystem/richelieu>
   a gw:GW_AquiferSystem ;
@@ -14,30 +15,34 @@
   schema:name "Aquifer system : Richelieu" ;
   schema:subjectOf <https://lab.scinfo.org.nz/selfie/data/aquifersystem/richelieu>,
     [
+      rdf:type foaf:Document ;
       dct:conformsTo <https://www.opengis.net/def/gwml2> ;
       dct:format "application/gml+xml", "application/ld+json", "text/ttl" ;
-      dct:type gw:GW_AquiferSystem ;
+      foaf:primaryTopic gw:GW_AquiferSystem ;
       schema:provider <https://opengeospatial.github.io/SELFIE/> ;
       schema:url <https://lab.scinfo.org.nz/selfie/data/aquifersystem/richelieu>
     ],
   [
+    rdf:type foaf:Document ;
     dct:conformsTo <https://www.opengis.net/def/gwml2> ;
     dct:format "application/vnd.geo+json", "text/html" ;
-    dct:type gw:GW_AquiferSystem ;
+    foaf:primaryTopic gw:GW_AquiferSystem ;
     schema:provider <https://opengeospatial.github.io/SELFIE/> ;
     schema:url <https://lab.scinfo.org.nz/service/selfie/api/collections/data/items/aquifersystem-richelieu>
   ],
   [
+    rdf:type foaf:Document ;
     dct:conformsTo <https://www.opengis.net/def/gwml2> ;
     dct:format "application/vnd.geo+json" ;
-    dct:type gw:GW_AquiferSystem ;
+    foaf:primaryTopic gw:GW_AquiferSystem ;
     schema:provider <https://opengeospatial.github.io/SELFIE/> ;
     schema:url <https://lab.scinfo.org.nz/selfie/representations/richelieu.geojson>
   ],
   [
+    rdf:type foaf:Document ;
     dct:conformsTo <https://www.opengis.net/def/gwml2> ;
     dct:format "text/html" ;
-    dct:type gw:GW_AquiferSystem ;
+    foaf:primaryTopic gw:GW_AquiferSystem ;
     schema:provider <https://opengeospatial.github.io/SELFIE/> ;
     schema:url <https://lab.scinfo.org.nz/selfie/representations/richelieu.html>
   ] ;
@@ -55,7 +60,7 @@
   a <xxx:Document> ;
   dct:conformsTo <https://www.opengis.net/def/gwml2> ;
   dct:format "application/ld+json", "application/rdf+xml", "text/turtle" ;
-  dct:type gw:GW_AquiferSystem ;
+  foaf:primaryTopic gw:GW_AquiferSystem ;
   schema:provider <https://opengeospatial.github.io/SELFIE/> .
 
 <https://lab.scinfo.org.nz/selfie/id/hydrogeounit/richelieu-1>
