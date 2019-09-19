@@ -3,15 +3,13 @@
 		"https://opengeospatial.github.io/SELFIE/contexts/elf-index.jsonld",
 		"https://opengeospatial.github.io/SELFIE/contexts/elf-data.jsonld",
 		"https://opengeospatial.github.io/SELFIE/contexts/gw.jsonld",
-		"https://github.com/opengeospatial/SELFIE/blob/master/docs/contexts/gsmlb_classes_associations_context.json",
+		"https://opengeospatial.github.io/SELFIE/contexts/gsmlb_classes_associations_context.json",
 		"https://opengeospatial.github.io/ELFIE/json-ld/sosa.jsonld",
-		"https://opengeospatial.github.io/ELFIE/json-ld/skos.jsonld"
+		"https://opengeospatial.github.io/ELFIE/json-ld/skos.jsonld",
+		"http://schema.datacove.eu/ssn-ext.jsonld"
 	],
-	"@id": "https://id.cerdi.edu.au/gwml2/feature/well/101094",
-	"@type": "foaf:Document",
-	"about": "https://geo.org.au/id/well/101094",
-	"url": "https://id.cerdi.edu.au/gwml2/feature/well/101094",
-	"foaf:primaryTopic": "GW_Well",
+	"@id": "https://geo.org.au/id/well/101094",
+	"@type": "gw:GW_Well",
 	"format": [
 		"application/rdf+xml",
 		"text/turtle",
@@ -41,96 +39,71 @@
 			"@type": "gsp:Geometry",
 			"gsp:asWKT": "SRID=http://www.opengis.net/gml/srs/epsg.xml#4283;LINESTRING( )"
 		},
-		"gwWellConstructedDepth": {
-			"phenomenonTime":  "1966-12-30T00:00:00Z",
-			"resultTime": "1966-12-30T00:00:00Z",
-			"usedProcedure": "unknown",
-			"observedProperty": {
-				"url": "http://www.opengis.net/gwml-well/2.2/gwWellConstructedDepth",
-				"name": "gwWellConstructedDepth"
+		"gw:gwWellConstructedDepth": {
+			"sosa:phenomenonTime":  "1966-12-30T00:00:00Z",
+			"sosa:resultTime": "1966-12-30T00:00:00Z",
+			"sosa:usedProcedure": "unknown",
+			"sosa:observedProperty": {
+				"@id": "http://www.opengis.net/gwml-well/2.2/gwWellConstructedDepth",
+				"@type": "gw:gwWellConstructedDepth"
 			},
-			"hasResult": {
+			"sosa:hasResult": {
 				"uom": {
-					"url": "http://qudt.org/vocab/unit#Meter",
+					"@id": "http://qudt.org/vocab/unit#Meter",
 					"name": "metre"
 				},
 				"value": "0.0"
 			}
 		},
-		"gwWellConstruction": {
-			"url": "https://id.cerdi.edu.au/gwml2/feature/borehole/101094",
-			"foaf:primaryTopic": "Borehole",
+		"gw:gwWellConstruction": {
+			"@id": "https://id.cerdi.edu.au/gwml2/feature/borehole/101094",
+			"@type": "gw:Borehole",
 			"name": [
 				101094,
 				8001
 			],
-			"isSampleOf": {
-				"url": "https://id.cerdi.edu.au/gwml2/feature/well/101094"
+			"sosa:isSampleOf": {
+			"@id": "https://geo.org.au/id/well/101094"
 			},
 			"geo:hasGeometry":  "unknown",
-			"bholeDateOfDrilling": "1966-12-30T00:00:00Z",
-			"bholeOperator": {
+			"gw:bholeDateOfDrilling": "1966-12-30T00:00:00Z",
+			"gw:bholeOperator": {
 				"name": "Private Landholders Bore"
 			},
-			"bholeHeadworks": {
+			"gw:bholeHeadworks": {
 				"collarElevation": "118.0",
 				"collarLocation": {
 					"pos": "-38.132135 143.754248"
 				},
-				"bholeDetails": {
-					"url": "https://id.cerdi.edu.au/gwml2/feature/well/101094"
+				"gw:bholeDetails": {
+					"@id": "https://id.cerdi.edu.au/gwml2/feature/well/101094"
 				}
 			}
 		},
-		"gwWellLocation": {
+		"gw:gwWellLocation": {
 			"pos": "-38.132135 143.754248"
 		},
-		"gwWellPurpose": [
+		"gw:gwWellPurpose": [
 			{
 				"name": "Groundwater"
 			}
 		],
-		"gwWellReferenceElevation": {
-			"elevation": "118.0",
-			"elevationAccuracy": "null",
-			"elevationType": {
+		"gw:gwWellReferenceElevation": {
+			"gw:elevation": "118.0",
+			"gw:elevationAccuracy": "null",
+			"gw:elevationType": {
 				"name": "Casing Standpipe"
 			}
 		},
-		"gwWellTotalLength": {
+		"gw:gwWellTotalLength": {
 			"uom": {
-				"url": "http://qudt.org/vocab/unit#Meter",
+				"@id": "http://qudt.org/vocab/unit#Meter",
 				"name": "metre"
 			},
 			"value": "0.0"
 		},
-		"gwWellWaterUse": "null",
-		"gwWellYield": "null",
-		"gwWellGeology": {
-			"usedProcedure": {
-				"url": "http://www.opengis.net/def/gwml/2.0/observedProperty/earthMaterial",
-				"name": "drillers log"
-			},
-			"observedProperty": {
-				"url": "http://www.opengis.net/def/gwml/2.0/observedProperty/earthMaterial",
-				"name": "lithology"
-			},
-			"hasFeatureOfInterest": {
-				"url": "https://geo.org.au/id/well/101094"
-			},
-			"startDepth": {
-				"uom": {
-					"url": "http://qudt.org/vocab/unit#Meter",
-					"name": "metre"
-				},
-				"value": "0.0"
-			},
-			"endDepth": {
-				"uom": {
-					"url": "http://qudt.org/vocab/unit#Meter",
-					"name": "metre"
-				},
-				"value": "0.0"
-			}
-		}
-	}
+		"gw:gwWellWaterUse": "null",
+		"gw:gwWellYield": "null",
+		"gw:gwWellGeology": "null"
+					
+}
