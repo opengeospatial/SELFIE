@@ -3,12 +3,13 @@
 		"https://opengeospatial.github.io/SELFIE/contexts/elf-index.jsonld",
 		"https://opengeospatial.github.io/SELFIE/contexts/elf-data.jsonld",
 		"https://opengeospatial.github.io/SELFIE/contexts/gw.jsonld",
-	"https://github.com/opengeospatial/SELFIE/blob/master/docs/contexts/gsmlb_classes_associations_context.json"
+	"https://opengeospatial.github.io/SELFIE/contexts/gsmlb_classes_associations_context.json",
+	"https://opengeospatial.github.io/ELFIE/json-ld/sosa.jsonld",
+"https://opengeospatial.github.io/ELFIE/json-ld/skos.jsonld",
+"http://schema.datacove.eu/ssn-ext.jsonld"
 	],
 	"@id": "https://geo.org.au/id/well/101094",
-	"@type": "foaf:Document",
-	"foaf:primaryTopic": "gw:GW_Well",
-	"url": "https://geo.org.au/id/well/101094",
+	"@type": "gw:GW_Well",
 	"name": [
 		"CONEWARRE 2",
 		"WA2",
@@ -44,44 +45,40 @@
 	],
 	"subjectOf": [
 		{
-			"url": "https://id.cerdi.edu.au/cerdi/data/gwml2/gw_well/101094",
-			"foaf:primaryTopic": "gw:GW_Well",
+			"@id": "https://id.cerdi.edu.au/cerdi/data/gwml2/gw_well/101094",
+			"@type": "gw:GW_Well",
 			"format": [
 				"application/ld+json",
 				"application/xml"
 			],
-			"conformsTo": "https://www.opengis.net/def/gwml2",
 			"provider": "https://www.cerdi.edu.au"
 		},
 		{
-			"url": "https://id.cerdi.edu.au/cerdi/data/gwml2/borehole/101094",
-			"foaf:primaryTopic": "gw:Borehole",
+			"@id": "https://id.cerdi.edu.au/cerdi/data/gwml2/borehole/101094",
+			"@type": "gw:Borehole",
 			"format": [
 				"application/ld+json",
 				"application/xml"
 			],
-			"conformsTo": "https://www.opengis.net/def/gwml2",
 			"provider": "https://www.cerdi.edu.au"
 		},
 		{
-				"url": "https://id.cerdi.edu.au/gsv/data/gsml2/borehole/101094",
-		"foaf:primaryTopic": "gs:Borehole",
+				"@id": "https://id.cerdi.edu.au/gsv/data/gsml2/borehole/101094",
+		"@type": "gs:Borehole",
 			"format": [
 				"application/ld+json",
 				"application/xml"
 			],
-			"conformsTo": "http://www.geosciml.org/geosciml/2.0/xsd/geosciml.xsd",
 			"provider": "https://earthresources.vic.gov.au/geology-exploration/geological-survey-victoria"
 		},
 		
 		{
-			"url": "https://id.cerdi.edu.au/cerdi/data/sosa/observationcollection/101094",
-			"foaf:primaryTopic": "ssn-ext:ObservationCollection",
+			"@id": "https://id.cerdi.edu.au/cerdi/data/sosa/observationcollection/101094",
+			"@type": "ssn-ext:ObservationCollection",
 			"format": [
 				"application/ld+json",
 				"application/xml"
 			],
-			"conformsTo": "http://www.w3.org/ns/ssn/ext/",
 			"provider": "https://www.cerdi.edu.au"
 		}
 	]
