@@ -45,7 +45,7 @@
 	],
 	"subjectOf": [
 		{
-			"@id": "https://id.cerdi.edu.au/cerdi/data/gwml2/gw_well/101094",
+			"url": "https://id.cerdi.edu.au/cerdi/data/gwml2/gw_well/101094",
 			"@type": "foaf:Document",
             "primaryTopic": "gw:GW_Well",
 			 "format": [
@@ -56,7 +56,7 @@
 			"provider": "https://www.cerdi.edu.au"
 		},
 		{
-			"@id": "https://id.cerdi.edu.au/cerdi/data/gwml2/borehole/101094",
+			"url": "https://id.cerdi.edu.au/cerdi/data/gwml2/borehole/101094",
 			"@type": "foaf:Document",
             "primaryTopic": "gw:Borehole",
 			"format": [
@@ -67,7 +67,7 @@
 			"provider": "https://www.cerdi.edu.au"
 		},
 		{
-			"@id": "https://id.cerdi.edu.au/gsv/data/gsml2/borehole/101094",
+			"url": "https://id.cerdi.edu.au/gsv/data/gsml2/borehole/101094",
 			"@type": "foaf:Document",
             "primaryTopic":"gs:Borehole",
 			"format": [
@@ -79,7 +79,7 @@
 		},
 		
 		{
-			"@id": "https://id.cerdi.edu.au/cerdi/data/sosa/observationcollection/101094",
+			"url": "https://id.cerdi.edu.au/cerdi/data/sosa/observationcollection/101094",
 			"@type": "foaf:Document",
             "primaryTopic":"ssn-ext:ObservationCollection",
 			"format": [
