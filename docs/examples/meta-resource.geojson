@@ -81,17 +81,6 @@
         },
         "subjectOf": [
           {
-            "@id": "https://lab.scinfo.org.nz/selfie/data/aquifersystem/richelieu",
-            "@type": "foaf:Document",
-            "primaryTopic": "gw:GW_AquiferSystem",
-            "format": [
-              "text/turtle",
-              "application/ld+json"
-            ],
-            "conformsTo": "https://www.opengis.net/def/gwml2",
-            "provider": "https://opengeospatial.github.io/SELFIE/"
-          },
-          {
             "url": "https://lab.scinfo.org.nz/selfie/data/aquifersystem/richelieu",
             "@type": "foaf:Document",
             "primaryTopic": "gw:GW_AquiferSystem",
