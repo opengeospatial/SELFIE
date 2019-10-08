@@ -52,7 +52,8 @@
     "subjectOf": [
         {
             "url": "https://lab.scinfo.org.nz/selfie/data/hydrogeounit/richelieu-5",
-            "dctType": "gw:GW_HydrogeoUnit",
+            "@type": "foaf:Document",
+            "primaryTopic": "gw:GW_HydrogeoUnit",
             "format": [
                 "text/ttl",
                 "application/ld+json"
@@ -62,7 +63,8 @@
         },
         {
             "url": "https://lab.scinfo.org.nz/service/selfie/api/collections/data/items/hydrogeounit-richelieu-5",
-            "dctType": "gw:GW_HydrogeoUnit",
+            "@type": "foaf:Document",
+            "primaryTopic": "gw:GW_HydrogeoUnit",
             "format": [
                 "application/vnd.geo+json",
                 "text/html"
@@ -72,7 +74,8 @@
         },
         {
             "url": "https://lab.scinfo.org.nz/selfie/representations/richelieu-5.geojson",
-            "dctType": "gw:GW_AquiferSystem",
+            "@type": "foaf:Document",
+            "primaryTopic": "gw:GW_AquiferSystem",
             "format": [
                 "application/vnd.geo+json"
             ],
@@ -81,7 +84,8 @@
         },
         {
             "url": "https://lab.scinfo.org.nz/selfie/representations/richelieu-5.html",
-            "dctType": "gw:GW_AquiferSystem",
+            "@type": "foaf:Document",
+            "primaryTopic": "gw:GW_AquiferSystem",
             "format": [
                 "text/html"
             ],

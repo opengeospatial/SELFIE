@@ -1,0 +1,93 @@
+{
+	"@context": [
+		"https://opengeospatial.github.io/SELFIE/contexts/elf-index.jsonld",
+		"https://opengeospatial.github.io/SELFIE/contexts/elf-data.jsonld",
+		"https://opengeospatial.github.io/SELFIE/contexts/gw.jsonld",
+	"https://opengeospatial.github.io/SELFIE/contexts/gsmlb_classes_associations_context.json",
+	"https://opengeospatial.github.io/ELFIE/json-ld/sosa.jsonld",
+"https://opengeospatial.github.io/ELFIE/json-ld/skos.jsonld",
+"http://schema.datacove.eu/ssn-ext.jsonld"
+	],
+	"@id": "https://geo.org.au/id/well/101094",
+	"@type": "gw:GW_Well",
+	"name": [
+		"CONEWARRE 2",
+		"WA2",
+		"101094",
+		"8001"
+	],
+	"image": [
+		"https://www.vvg.org.au/bores/bore_attachments/bore_917936_1339_kmckenna.JPG",
+		"https://www.vvg.org.au/bores/bore_attachments/bore_917936_1338_kmckenna.JPG" 
+	],
+	"report": "https://www.vvg.org.au/bores/admin/bore_attachment_details.php?bore_attachment_id=1345",
+		"spatialCoverage": {
+			"@type": "Place",
+		"geo": {
+			"@type": "GeoCoordinates",
+			"latitude": "-38.164626",
+			"longitude": "143.708966"
+		} 
+	},
+	"label": [
+		{
+			"@language": "en",
+			"@value": "CONEWARRE 2"
+		}
+	],
+	
+	"sameAs": [
+		
+		{
+			"report": "http://data.water.vic.gov.au/static.htm?ppbm=101094&gw&0&gwlf_org",
+			"provider": "https://www2.delwp.vic.gov.au/"
+		}
+	],
+	"subjectOf": [
+		{
+			"url": "https://id.cerdi.edu.au/cerdi/data/gwml2/gw_well/101094",
+			"@type": "foaf:Document",
+            "primaryTopic": "gw:GW_Well",
+			 "format": [
+				"application/ld+json",
+				"application/xml"
+			],
+			"conformsTo": "https://www.opengis.net/def/gwml2",
+			"provider": "https://www.cerdi.edu.au"
+		},
+		{
+			"url": "https://id.cerdi.edu.au/cerdi/data/gwml2/borehole/101094",
+			"@type": "foaf:Document",
+            "primaryTopic": "gw:Borehole",
+			"format": [
+				"application/ld+json",
+				"application/xml"
+			],
+			"conformsTo": "https://www.opengis.net/def/gwml2",
+			"provider": "https://www.cerdi.edu.au"
+		},
+		{
+			"url": "https://id.cerdi.edu.au/gsv/data/gsml2/borehole/101094",
+			"@type": "foaf:Document",
+            "primaryTopic":"gs:Borehole",
+			"format": [
+				"application/ld+json",
+				"application/xml"
+			],
+			"conformsTo": "https://www.opengis.net/def/gwml2",
+			"provider": "https://earthresources.vic.gov.au/geology-exploration/geological-survey-victoria"
+		},
+		
+		{
+			"url": "https://id.cerdi.edu.au/cerdi/data/sosa/observationcollection/101094",
+			"@type": "foaf:Document",
+            "primaryTopic":"ssn-ext:ObservationCollection",
+			"format": [
+				"application/ld+json",
+				"application/xml"
+			],
+			"conformsTo": "http://www.w3.org/ns/ssn/ext/",
+			"provider": "https://www.cerdi.edu.au"
+		}
+	]
+}

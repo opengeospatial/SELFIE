@@ -75,19 +75,9 @@
     },
     "subjectOf": [
         {
-            "@id": "https://lab.scinfo.org.nz/selfie/data/aquifersystem/richelieu",
-            "@type": "xxx:Document",
-            "dctType": "gw:GW_AquiferSystem",
-            "format": [
-                "text/turtle",
-                "application/ld+json"
-            ],
-            "conformsTo": "https://www.opengis.net/def/gwml2",
-            "provider": "https://opengeospatial.github.io/SELFIE/"
-        },
-        {
             "url": "https://lab.scinfo.org.nz/selfie/data/aquifersystem/richelieu",
-            "dctType": "gw:GW_AquiferSystem",
+            "@type": "foaf:Document",
+            "primaryTopic": "gw:GW_AquiferSystem",
             "format": [
                 "text/ttl",
                 "application/ld+json"
@@ -97,7 +87,8 @@
         },
         {
             "url": "https://lab.scinfo.org.nz/service/selfie/api/collections/data/items/aquifersystem-richelieu",
-            "dctType": "gw:GW_AquiferSystem",
+            "@type": "foaf:Document",
+            "primaryTopic": "gw:GW_AquiferSystem",
             "format": [
                 "application/vnd.geo+json",
                 "text/html"
@@ -107,7 +98,8 @@
         },
         {
             "url": "https://lab.scinfo.org.nz/selfie/representations/richelieu.geojson",
-            "dctType": "gw:GW_AquiferSystem",
+            "@type": "foaf:Document",
+            "primaryTopic": "gw:GW_AquiferSystem",
             "format": [
                 "application/vnd.geo+json"
             ],
@@ -116,7 +108,8 @@
         },
         {
             "url": "https://lab.scinfo.org.nz/selfie/representations/richelieu.html",
-            "dctType": "gw:GW_AquiferSystem",
+            "@type": "foaf:Document",
+            "primaryTopic": "gw:GW_AquiferSystem",
             "format": [
                 "text/html"
             ],
