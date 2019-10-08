@@ -1,0 +1,303 @@
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix ssd:   <http://www.w3.org/ns/sparql-service-description#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix qb:    <http://purl.org/linked-data/cube#> .
+@prefix dgu:   <http://reference.data.gov.uk/def/reference/> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix ui:    <http://purl.org/linked-data/registry-ui#> .
+@prefix reg:   <http://purl.org/linked-data/registry#> .
+@prefix api:   <http://purl.org/linked-data/api/vocab#> .
+@prefix vann:  <http://purl.org/vocab/vann/> .
+@prefix prov:  <http://www.w3.org/ns/prov#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix gwml2: <http://gwml2.org/def/gwml2#> .
+@prefix cc:    <http://creativecommons.org/ns#> .
+@prefix void:  <http://rdfs.org/ns/void#> .
+@prefix odrs:  <http://schema.theodi.org/odrs#> .
+@prefix org:   <http://www.w3.org/ns/org#> .
+@prefix env-ui: <http://environment.data.gov.uk/registry/structure/ui/> .
+@prefix version: <http://purl.org/linked-data/version#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ldp:   <http://www.w3.org/ns/ldp#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix vs:    <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://gwml2.org/def/gwml2>
+        a                owl:Ontology ;
+        owl:versionIRI   "http://gwml2.org/def/gwml2/2.2.0" ;
+        owl:versionInfo  "2.2.0" ;
+        skos:definition  "Logical Model for GroundWaterML version 2.0 containing the core elements required for groundwater data. Other GWML2 application schema import this schema."@en , "Describes the features and properties associated with water well. Imports WellConstruction."@en , "Describes the well drilling and construction details."@en .
+
+gwml2:GW_ManagementArea
+        a                owl:Class ;
+        skos:definition  "The GW_ManagementArea class defines properties associated with areas identified for management purposes. These can be delineated by human factors such as policy or regulation concerns, as well as domain (in this case hydrogeologic or hydrologic) concerns. The management area does not necessarily align exactly with the associated hydrogeologic feature boundaries.  \r\n  \r\nA placeholder (stub) to associated  legislative and reference documentation is provided, as a description of the properties of the associated classes is considered out of scope for GroundWaterML2. The INSPIRE Generic Conceptual Model 'Legislation References' and 'DocumentCitation' classes, created also to cover EU Directives reporting, provides possible candidates for these end association classes.   \r\n  \r\nThe GW_ManagementArea class identifies properties associated with managing a human defined area over real world features, in this case groundwater related features. As such, this class could provide a pattern for a more generic OGC 'trans-domain' feature management class.\"  \r\nThis class is equivalent to Inspire AM:ManagementRestrictionOrRegulationZone"@en .
+
+gwml2:Sealing
+        a                owl:Class ;
+        rdfs:subClassOf  gwml2:WellConstruction ;
+        skos:definition  "Collection of materials that prevent undesirable elements from entering the borehole."@en .
+
+gwml2:gwAreaBody  a      owl:ObjectProperty ;
+        skos:definition  "Relates a management area to the fluid bodies contained within the area. As with units, the spatial boundaries of management areas do not necessarily coincide with the spatial boundaries of fluid bodies."@en .
+
+gwml2:Casing
+        a                owl:Class ;
+        rdfs:subClassOf  gwml2:WellConstruction ;
+        skos:definition  "Collection of linings of the borehole."@en .
+
+gwml2:GW_FlowSystem  a   owl:Class ;
+        skos:definition  "Flow path from recharge to discharge location, through hydrogeologic units, and related to a groundwater body. It is a collection or aggregation of specific flows."@en .
+
+gwml2:GW_GeologyLog
+        a                owl:Class ;
+        skos:definition  "Specialization of the OM_Observation class to allow defining the log start end depth for coverages.\r\n\r\nFor Stratigraphic logs, the observedProperty will be a GeoSciML:GeologicUnit/name.\r\nFor Lithologic logs, the observedProperty will be a GeoSciML:GeologicUnit/composition/CompositionPart/material."@en .
+
+gwml2:sealingElement
+        a                owl:ObjectProperty ;
+        skos:definition  "Relation between a seal and its parts."@en .
+
+gwml2:GW_AquiferUnit  a  owl:Class ;
+        rdfs:subClassOf  gwml2:GW_HydrogeoUnit ;
+        <http://def.isotc211.org/iso19150-2/2012/base#isAbstract>
+                true ;
+        skos:definition  "Denotes aquifer-related hydrogeologic units: aquifer systems, aquifers, or confining beds."@en .
+
+gwml2:gwVoidPartOf  a    owl:ObjectProperty ;
+        skos:definition  "Relates which voids are parts of a whole void"@en .
+
+gwml2:collarSeal
+        a                owl:ObjectProperty ;
+        skos:definition  "Relation between a bore collar and its sealing parts."@en .
+
+gwml2:gwVoidUnit  a      owl:ObjectProperty ;
+        skos:definition  "Relates to the hydrogeologic unit hosting the void"@en .
+
+gwml2:GW_GeologyLogCoverage
+        a                owl:Class ;
+        skos:definition  "Overrides discreteCoverage to allow LogValues as elements"@en .
+
+gwml2:gwPartOfBody  a    owl:ObjectProperty ;
+        skos:definition  "Relates a body part to a whole body"@en .
+
+gwml2:gwBodySurface  a   owl:ObjectProperty ;
+        skos:definition  "Relates a fluid body to a surface hosted by the body"@en .
+
+gwml2:gwFlowSystemPart
+        a                owl:ObjectProperty ;
+        skos:definition  "Relates the parts of a flow system to the whole flow system"@en .
+
+gwml2:Borehole
+        a                owl:Class ;
+        rdfs:subClassOf  <http://def.seegrid.csiro.au/isotc211/iso19156/2011/samplingSF_SamplingCurve> ;
+        skos:definition  "General term for a hole drilled in the ground for various purposes such extraction of a core, release of fluid, etc."@en .
+
+gwml2:gwDivideSurface
+        a                owl:ObjectProperty ;
+        skos:definition  "Relates to a surface linked to a groundwater divide"@en .
+
+gwml2:ConstructionComponent
+        a                owl:Class ;
+        skos:definition  "Elements used in borehole construction."@en .
+
+gwml2:gwUnitVoid  a      owl:ObjectProperty ;
+        skos:definition  "Relates hydrogeologic units with a void hosted by the units"@en .
+
+gwml2:gwSurfaceDivide
+        a                owl:ObjectProperty ;
+        skos:definition  "Relates to a groundwater divide linked to the fluid body surface"@en .
+
+gwml2:gwFluidBodyUnit
+        a                owl:ObjectProperty ;
+        skos:definition  "Relates to the hydrogeologic unit containing the fluid body"@en .
+
+gwml2:Screen
+        a                owl:Class ;
+        rdfs:subClassOf  gwml2:WellConstruction ;
+        skos:definition  "Collection of components of the water pump screen."@en .
+
+gwml2:FiltrationComponent
+        a                owl:Class ;
+        rdfs:subClassOf  gwml2:ConstructionComponent ;
+        skos:definition  "Material used to filter the fluid in a borehole or well."@en .
+
+gwml2:gwAquiferSystem
+        a                owl:ObjectProperty ;
+        skos:definition  "Relates an aquifer system to an aquifer unit"@en .
+
+gwml2:GW_FluidBody  a    owl:Class ;
+        skos:definition  "A distinct body of some fluid (liquid, gas) that fills the voids of a container such as an aquifer, system of aquifers, water well, etc; in hydrogeology this body is usually constituted from groundwater, but the model allows for other types of fillers e.g. petroleum."@en .
+
+gwml2:GW_BodySurface  a  owl:Class ;
+        skos:definition  "A surface on a body of groundwater, for a local or regional area, e.g. piezometric, potentiometric, water table, salt wedge, etc."@en .
+
+gwml2:BoreCollar
+        a                owl:Class ;
+        skos:definition  "Topmost component of a borehole construction."@en .
+
+gwml2:gwSurfaceBody  a   owl:ObjectProperty ;
+        skos:definition  "Relates to the fluid body bounded by the surface"@en .
+
+gwml2:CasingComponent
+        a                owl:Class ;
+        rdfs:subClassOf  gwml2:ConstructionComponent ;
+        skos:definition  "A single part of a well casing"@en .
+
+gwml2:GW_HydrogeoVoid
+        a                owl:Class ;
+        skos:definition  "Voids represent the spaces inside (hosted by) a unit or its material. E.g. the pores in an aquifer, or in the sandstone of an aquifer. Voids can contain fluid bodies. Voids are differentiated from 'porosity' in that porosity is the proportion of void volume to total volume, while voids are the spaces themselves. Voids are required in GWML2, for example, to capture the volume of fractures in an aquifer."@en .
+
+gwml2:bholeConstruction
+        a                owl:ObjectProperty ;
+        skos:definition  "Relation between a borehole and its construction components."@en .
+
+gwml2:GW_Divide  a       owl:Class ;
+        skos:definition  "Line on a water table or piezometric surface on either side of which the groundwater flow diverges. IGH0556"@en .
+
+gwml2:gwUnitFluidBody
+        a                owl:ObjectProperty ;
+        skos:definition  "Relates to the fluid body contained by the hydrogeologic unit"@en .
+
+gwml2:GW_AquiferSystem
+        a                owl:Class ;
+        rdfs:subClassOf  gwml2:GW_AquiferUnit ;
+        skos:definition  "Aquifer system - A body of permeable and poorly permeable material that functions regionally as a water-yielding unit; it comprises two or more permeable beds separated at least locally by confining beds that impede groundwater movement but do not greatly affect the regional hydraulic continuity of the system; includes both saturated and unsaturated parts of permeable material (after ASCE, 1985)."@en .
+
+gwml2:bholeHeadworks
+        a                owl:ObjectProperty ;
+        skos:definition  "Relation between a borehole and its collar, which represents the top construction component of the borehole."@en .
+
+gwml2:gwConfiningBed  a  owl:ObjectProperty ;
+        rdfs:label  "Relates confining bed to an aquifer"@en .
+
+gwml2:bholeDetails
+        a                owl:ObjectProperty ;
+        skos:definition  "Characteristics of the borehole associated to a specific collar"@en .
+
+gwml2:GW_MonitoringSite
+        a                owl:Class ;
+        skos:definition  "Observation site (e.g. well) used to watch for the advent of an anticipated condition, generally undesirable, such as the advance of the salt-water front in a coastal area where salt-water encroachment is occurring, or the movement of a pollutant injected into a disposal well. IGH0806"@en .
+
+gwml2:casingSlit
+        a                owl:ObjectProperty ;
+        skos:definition  "Casing slit opposing water bearing zones before plugging.\r\ncasing slit opposing water bearing zones before plugging"@en .
+
+gwml2:WellConstruction
+        a                owl:Class ;
+        <http://def.isotc211.org/iso19150-2/2012/base#isAbstract>
+                true ;
+        skos:definition  "Construction components of the well. These are particularly important when assessing results of pump tests."@en .
+
+gwml2:gwPartOfVoid  a    owl:ObjectProperty ;
+        skos:definition  "Relates a void part to a void whole"@en .
+
+gwml2:SealingComponent
+        a                owl:Class ;
+        rdfs:subClassOf  gwml2:ConstructionComponent ;
+        skos:definition  "A material used for sealing the construction of a borehole or well."@en .
+
+gwml2:GW_Well
+        a                owl:Class ;
+        rdfs:subClassOf  <http://def.seegrid.csiro.au/isotc211/iso19156/2011/samplingSF_SamplingCurve> ;
+        skos:definition  "A shaft or hole sunk, dug or drilled into the Earth to observe, extract or inject water (after IGH1397)."@en .
+
+gwml2:gwAquiferSystemPart
+        a                owl:ObjectProperty ;
+        skos:definition  "Relates to the parts of an aquifer system"@en .
+
+gwml2:ScreenComponent
+        a                owl:Class ;
+        rdfs:subClassOf  gwml2:ConstructionComponent ;
+        skos:definition  "Component of the well lining where water enters the well."@en .
+
+gwml2:Filtration
+        a                owl:Class ;
+        rdfs:subClassOf  gwml2:WellConstruction ;
+        skos:definition  "<font color=\"#0f0f0f\">Collection of filtration components used to filter a fluid body in a well.</font>"@en .
+
+gwml2:result
+        a                owl:ObjectProperty ;
+        skos:definition  "Relates a geology log with a particular collection of values (the result) that represent the group of measurements taken in intervals along the length of the log."@en .
+
+gwml2:gwDivide  a        owl:ObjectProperty ;
+        skos:definition  "Line on a water table or piezometric surface on either side of which the groundwater flow diverges. IGH0556."@en .
+
+gwml2:casingLeft
+        a                owl:ObjectProperty ;
+        skos:definition  "Casing left after plugging"@en .
+
+gwml2:gwManagedUnit  a   owl:ObjectProperty ;
+        skos:definition  "Relates a hydrogeologic unit to a groundwater management area"@en .
+
+gwml2:GW_Aquifer  a      owl:Class ;
+        rdfs:subClassOf  gwml2:GW_AquiferUnit ;
+        skos:definition  "A body of ground that contains, potentially contains or potentially contained sufficient saturated permeable material to yield significant quantities of water to wells and springs (after Lohman and others, 1972)."@en .
+
+gwml2:casingElement
+        a                owl:ObjectProperty ;
+        skos:definition  "Relation between a casing and its parts."@en .
+
+gwml2:gwBasinUnit  a     owl:ObjectProperty ;
+        skos:definition  "Relates hydrogeologic units and the basins that contain them, in full or part."@en .
+
+gwml2:GW_Spring
+        a                owl:Class ;
+        skos:definition  "Any natural situation where groundwater flows to the surface of the earth."@en .
+
+gwml2:gwPartOfSystemFlow
+        a                owl:ObjectProperty ;
+        skos:definition  "Relates a flow system part to a flow system whole."@en .
+
+gwml2:GW_HydrogeoUnit
+        a                owl:Class ;
+        <http://def.isotc211.org/iso19150-2/2012/base#isAbstract>
+                true ;
+        skos:definition  "Any soil or rock unit or zone which by virtue of its hydraulic properties has a distinct influence on the storage or movement of groundwater (after ANS, 1980)."@en .
+
+gwml2:filterElement
+        a                owl:ObjectProperty ;
+        skos:definition  "Relation between a filtration device and its parts."@en .
+
+gwml2:gwDivideFlow  a  owl:ObjectProperty .
+
+gwml2:gwBodyPartOf  a    owl:ObjectProperty ;
+        skos:definition  "Relates which body are parts of a whole body"@en .
+
+gwml2:gwConfinedAquifer
+        a           owl:ObjectProperty ;
+        rdfs:label  "Relates aquifers to a confining bed"@en .
+
+gwml2:gwManagementArea
+        a                owl:ObjectProperty ;
+        skos:definition  "Relates to the management area(s) linked to a hydrogeologic unit"@en .
+
+gwml2:GW_ConfiningBed
+        a                owl:Class ;
+        rdfs:subClassOf  gwml2:GW_AquiferUnit ;
+        skos:definition  "A layer of rock having very low porosity and in consequence hydraulic conductivity that hampers the movement of water into and out of an aquifer (Heath 1983)"@en .
+
+gwml2:GW_Basin  a        owl:Class ;
+        rdfs:subClassOf  gwml2:GW_HydrogeoUnit ;
+        skos:definition  "A large hydrogeologically defined body of ground typically consisting of hydraulically connected hydrogeologic units, whose waters are flowing to a common or multiple outlets, and which is delimited by a groundwater divide."@en .
+
+gwml2:gwWellGeology
+        a                owl:ObjectProperty ;
+        skos:definition  "Relates a GeologyLog with a well."@en .
+
+gwml2:relatedManagementArea
+        a                owl:ObjectProperty ;
+        skos:definition  "Relates a management area part to a management area whole."@en .
+
+gwml2:gwFluidBodyVoid
+        a                owl:ObjectProperty ;
+        skos:definition  "Relates a fluid body to a void"@en .
+
+gwml2:screenElement
+        a                owl:ObjectProperty ;
+        skos:definition  "Relation between a screen and its parts."@en .
+
+gwml2:gwVoidFluidBody
+        a                owl:ObjectProperty ;
+        skos:definition  "Relates to a fluid body found in a hydrogeologic void"@en .
