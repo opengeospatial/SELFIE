@@ -26,7 +26,7 @@
 			"@type": "Place",
 			"geo": {
 			  "@type": "GeoShape",
-			  "polygon": "0.833517945572101,48.580916853590388 0.833428349345565,48.580910722713149 0.832886826383118,48.58088736224127 .....",//geometry reduced for practicality
+			  "polygon": "48.68623176,0.46661591 48.37581861,1.25009474 48.36827953,1.27602052 48.31218719,1.55420236 .....",//convex hull of the geometry reduced for practicality
 			}
 		  },
 		  "label": [
@@ -50,7 +50,7 @@
 		  "subjectOf": [
 			{
 				"@id": "https://data.geoscience.fr/id/hydrogeounit/121AS01",
-				"@type": "foaf:Document", //?I don't recall the discussion around this but why foaf:Document was not used?
+				"@type": "foaf:Document", // ? Abdel: I don't recall the discussion around this but why foaf:Document was not used?
 				"dctType": "gw:GW_Aquifer", 
 				"format": [
 				  "application/gml+xml"
@@ -60,7 +60,7 @@
 			  },
 			  {
 				"@id": "https://data.geoscience.fr/id/hydrogeounit/121AS01",
-				"@type": "foaf:Document", //?
+				"@type": "foaf:Document", 
 				"dctType": "gw:GW_Aquifer",
 				"format": [
 					"application/ld+json"
@@ -70,7 +70,7 @@
 			  },
 			  {
 				"@id": "https://data.geoscience.fr/id/hydrogeounit/121AS01",            
-				"@type": "foaf:Document", //?
+				"@type": "foaf:Document", 
 				"dctType": "sa_saq:EntiteHydroGeol",
 				"format": [
 					"application/pdf"
@@ -80,7 +80,7 @@
 			  },
 			  {
 				"@id": "https://data.geoscience.fr/id/hydrogeounit/121AS01", 
-				"@type": "foaf:Document", //?
+				"@type": "foaf:Document", 
 				"dctType": "sa_saq:EntiteHydroGeol",
 				"format": [
 					"text/html"
@@ -90,7 +90,7 @@
 			  },
 			  {
 				"@id": "http://www.sandre.eaufrance.fr/urn.php?urn=urn:sandre:donnees:EntiteHydroGeol:FRA:code:121AS01:::::xml", 
-				"@type": "foaf:Document", //?
+				"@type": "foaf:Document", 
 				"dctType": "sa_saq:EntiteHydroGeol", 
 				"format": [
 					"application/gml+xml"
@@ -100,7 +100,7 @@
 			  },
 			  {
 				"@id": "http://www.sandre.eaufrance.fr/geo/EntiteHydroGeol/121AS01", 
-				"@type": "foaf:Document", //?
+				"@type": "foaf:Document", 
 				"dctType": "sa_saq:EntiteHydroGeol",
 				"format": [
 					"text/html"
