@@ -1,7 +1,7 @@
 {
     "@context": {		
 	
-		"hyf" :"http://gwml2.org/ont/hyf",	
+		"hyf" :"https://www.opengis.net/def/appschema/hy_features/hyf/",	
 	
 		"conjointCatchment" :"hyf:conjointCatchment",
 		"HY_Catchment" :"hyf:HY_Catchment",
