@@ -1,12 +1,14 @@
 	// 20191004114923
 	// hand crafted by Abdel & Sylvain based https://lab.scinfo.org.nz/service/selfie/api/collections/meta/items/aquifersystem-richelieu?f=json
+	// edits by taking into consideration more recent decisions as in https://raw.githubusercontent.com/opengeospatial/SELFIE/master/docs/examples/meta-resource-1.geojson
 
 	{
-		//--> context should be declared here
+		//--> why all the contexts are not declared here?
 		"@context": [ 
 			"https://opengeospatial.github.io/SELFIE/contexts/elf-index.jsonld",
+			"https://opengeospatial.github.io/SELFIE/contexts/elf-data.jsonld",
 			"https://opengeospatial.github.io/SELFIE/contexts/gw.jsonld",
-			"https://geojson.org/geojson-ld/geojson-context.jsonld",//should be declared so the file can be a valid GeoJSON-LD file (under jsonld 1.1, or even the current parser of 1.0)
+			"https://geojson.org/geojson-ld/geojson-context.jsonld"
 			{
 			"sa_saq":"http://xml.sandre.eaufrance.fr/saq/2.1"
 			}
@@ -51,7 +53,7 @@
 			{
 				"@id": "https://data.geoscience.fr/id/hydrogeounit/121AS01",
 				"@type": "foaf:Document", // ? Abdel: I don't recall the discussion around this but why foaf:Document was not used?
-				"dctType": "gw:GW_Aquifer", 
+				"primaryTopic": "gw:GW_Aquifer", 
 				"format": [
 				  "application/gml+xml"
 				],
@@ -61,7 +63,7 @@
 			  {
 				"@id": "https://data.geoscience.fr/id/hydrogeounit/121AS01",
 				"@type": "foaf:Document", 
-				"dctType": "gw:GW_Aquifer",
+				"primaryTopic": "gw:GW_Aquifer",
 				"format": [
 					"application/ld+json"
 				],
@@ -71,7 +73,7 @@
 			  {
 				"@id": "https://data.geoscience.fr/id/hydrogeounit/121AS01",            
 				"@type": "foaf:Document", 
-				"dctType": "sa_saq:EntiteHydroGeol",
+				"primaryTopic": "sa_saq:EntiteHydroGeol",
 				"format": [
 					"application/pdf"
 				],
@@ -81,7 +83,7 @@
 			  {
 				"@id": "https://data.geoscience.fr/id/hydrogeounit/121AS01", 
 				"@type": "foaf:Document", 
-				"dctType": "sa_saq:EntiteHydroGeol",
+				"primaryTopic": "sa_saq:EntiteHydroGeol",
 				"format": [
 					"text/html"
 				],
@@ -91,7 +93,7 @@
 			  {
 				"@id": "http://www.sandre.eaufrance.fr/urn.php?urn=urn:sandre:donnees:EntiteHydroGeol:FRA:code:121AS01:::::xml", 
 				"@type": "foaf:Document", 
-				"dctType": "sa_saq:EntiteHydroGeol", 
+				"primaryTopic": "sa_saq:EntiteHydroGeol", 
 				"format": [
 					"application/gml+xml"
 				],
@@ -101,7 +103,7 @@
 			  {
 				"@id": "http://www.sandre.eaufrance.fr/geo/EntiteHydroGeol/121AS01", 
 				"@type": "foaf:Document", 
-				"dctType": "sa_saq:EntiteHydroGeol",
+				"primaryTopic": "sa_saq:EntiteHydroGeol",
 				"format": [
 					"text/html"
 				],
