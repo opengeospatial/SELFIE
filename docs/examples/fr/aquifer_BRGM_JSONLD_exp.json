@@ -1,5 +1,6 @@
 // 201910082007
 // hand crafted by Abdel & Sylvain based https://lab.scinfo.org.nz/service/selfie/api/collections/meta/items/aquifersystem-richelieu?f=json
+// edits by taking into consideration more recent decisions as in https://raw.githubusercontent.com/opengeospatial/SELFIE/master/docs/examples/meta-resource-1.geojson
 
 {
     "@context": [
@@ -55,7 +56,7 @@
 		{
 			"@id": "https://data.geoscience.fr/id/hydrogeounit/121AS01",
 			"@type": "foaf:Document", // ? Abdel: I don't recall the discussion around this but why foaf:Document was not used?
-			"dctType": "gw:GW_Aquifer", 
+			"primaryTopic": "gw:GW_Aquifer", 
 			"format": [
 			  "application/gml+xml"
 			],
@@ -65,7 +66,7 @@
 		  {
 			"@id": "https://data.geoscience.fr/id/hydrogeounit/121AS01",
 			"@type": "foaf:Document", 
-			"dctType": "gw:GW_Aquifer",
+			"primaryTopic": "gw:GW_Aquifer",
 			"format": [
 				"application/ld+json"
 			],
@@ -75,7 +76,7 @@
 		  {
 			"@id": "https://data.geoscience.fr/id/hydrogeounit/121AS01",            
 			"@type": "foaf:Document", 
-			"dctType": "sa_saq:EntiteHydroGeol",
+			"primaryTopic": "sa_saq:EntiteHydroGeol",
 			"format": [
 				"application/pdf"
 			],
@@ -85,7 +86,7 @@
 		  {
 			"@id": "https://data.geoscience.fr/id/hydrogeounit/121AS01", 
 			"@type": "foaf:Document", 
-			"dctType": "sa_saq:EntiteHydroGeol",
+			"primaryTopic": "sa_saq:EntiteHydroGeol",
 			"format": [
 				"text/html"
 			],
@@ -95,7 +96,7 @@
 		  {
 			"@id": "http://www.sandre.eaufrance.fr/urn.php?urn=urn:sandre:donnees:EntiteHydroGeol:FRA:code:121AS01:::::xml", 
 			"@type": "foaf:Document", 
-			"dctType": "sa_saq:EntiteHydroGeol", 
+			"primaryTopic": "sa_saq:EntiteHydroGeol", 
 			"format": [
 				"application/gml+xml"
 			],
@@ -105,7 +106,7 @@
 		  {
 			"@id": "http://www.sandre.eaufrance.fr/geo/EntiteHydroGeol/121AS01", 
 			"@type": "foaf:Document", 
-			"dctType": "sa_saq:EntiteHydroGeol",
+			"primaryTopic": "sa_saq:EntiteHydroGeol",
 			"format": [
 				"text/html"
 			],
