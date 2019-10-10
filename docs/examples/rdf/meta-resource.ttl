@@ -11,7 +11,7 @@
 <https://lab.scinfo.org.nz/selfie/id/aquifersystem/richelieu>
   a gw:GW_AquiferSystem ;
   schema:description "Aquifer system comprising the Appalachian Internal and External Zones, Northern and Southern St Lawrence Platforms and the Monteregian intrusions" ;
-  schema:image <http://external.opengis.org/twiki_public/pub/HydrologyDWG/05-08May2014--GW2IEMeeting18/GW2IE_Vienna2014_Photo2.JPG> ;
+  schema:image "http://external.opengis.org/twiki_public/pub/HydrologyDWG/05-08May2014--GW2IEMeeting18/GW2IE_Vienna2014_Photo2.JPG" ;
   schema:name "Aquifer system : Richelieu" ;
   schema:subjectOf <https://lab.scinfo.org.nz/selfie/data/aquifersystem/richelieu>,
     [
@@ -20,7 +20,7 @@
       dct:format "application/gml+xml", "application/ld+json", "text/ttl" ;
       foaf:primaryTopic gw:GW_AquiferSystem ;
       schema:provider <https://opengeospatial.github.io/SELFIE/> ;
-      schema:url <https://lab.scinfo.org.nz/selfie/data/aquifersystem/richelieu>
+      schema:url "https://lab.scinfo.org.nz/selfie/data/aquifersystem/richelieu"
     ],
   [
     rdf:type foaf:Document ;
@@ -28,7 +28,7 @@
     dct:format "application/vnd.geo+json", "text/html" ;
     foaf:primaryTopic gw:GW_AquiferSystem ;
     schema:provider <https://opengeospatial.github.io/SELFIE/> ;
-    schema:url <https://lab.scinfo.org.nz/service/selfie/api/collections/data/items/aquifersystem-richelieu>
+    schema:url "https://lab.scinfo.org.nz/service/selfie/api/collections/data/items/aquifersystem-richelieu"
   ],
   [
     rdf:type foaf:Document ;
@@ -36,7 +36,7 @@
     dct:format "application/vnd.geo+json" ;
     foaf:primaryTopic gw:GW_AquiferSystem ;
     schema:provider <https://opengeospatial.github.io/SELFIE/> ;
-    schema:url <https://lab.scinfo.org.nz/selfie/representations/richelieu.geojson>
+    schema:url "https://lab.scinfo.org.nz/selfie/representations/richelieu.geojson"
   ],
   [
     rdf:type foaf:Document ;
@@ -44,7 +44,7 @@
     dct:format "text/html" ;
     foaf:primaryTopic gw:GW_AquiferSystem ;
     schema:provider <https://opengeospatial.github.io/SELFIE/> ;
-    schema:url <https://lab.scinfo.org.nz/selfie/representations/richelieu.html>
+    schema:url "https://lab.scinfo.org.nz/selfie/representations/richelieu.html"
   ] ;
   rdfs:label "Aquifer system : Richelieu"@en, "Systeme aquifere : Richelieu"@fr ;
   owl:sameAs <https://geoconnex.ca/gsip/id/aquiferSystems/Richelieu> ;
