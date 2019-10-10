@@ -11,7 +11,7 @@
 <https://lab.scinfo.org.nz/selfie/id/hydrogeounit/richelieu-2>
   a gw:GW_HydrogeoUnit ;
   schema:description "The Northern St Lawrence Platform is a Hydrogeologic Unit within the Richelieu Aquifer System." ;
-  schema:image <https://www.nzc.nz/media/15493/trent-boult.jpg> ;
+  schema:image "https://www.nzc.nz/media/15493/trent-boult.jpg" ;
   schema:name "Hydrogeologic unit : Northern St Lawrence Platform" ;
   schema:subjectOf [
     rdf:type foaf:Document ;
@@ -19,7 +19,7 @@
     dct:format "application/ld+json", "text/ttl" ;
     foaf:primaryTopic gw:GW_HydrogeoUnit ;
     schema:provider <https://opengeospatial.github.io/SELFIE/> ;
-    schema:url <https://lab.scinfo.org.nz/selfie/data/hydrogeounit/richelieu-2>
+    schema:url "https://lab.scinfo.org.nz/selfie/data/hydrogeounit/richelieu-2"
   ],
   [
     rdf:type foaf:Document ;
@@ -27,7 +27,7 @@
     dct:format "application/vnd.geo+json", "text/html" ;
     foaf:primaryTopic gw:GW_HydrogeoUnit ;
     schema:provider <https://opengeospatial.github.io/SELFIE/> ;
-    schema:url <https://lab.scinfo.org.nz/service/selfie/api/collections/data/items/hydrogeounit-richelieu-2>
+    schema:url "https://lab.scinfo.org.nz/service/selfie/api/collections/data/items/hydrogeounit-richelieu-2"
   ],
   [
     rdf:type foaf:Document ;
@@ -35,7 +35,7 @@
     dct:format "application/vnd.geo+json" ;
     foaf:primaryTopic gw:GW_HydrogeoUnit ;
     schema:provider <https://opengeospatial.github.io/SELFIE/> ;
-    schema:url <https://lab.scinfo.org.nz/selfie/representations/richelieu-2.geojson>
+    schema:url "https://lab.scinfo.org.nz/selfie/representations/richelieu-2.geojson"
   ],
   [
     rdf:type foaf:Document ;
@@ -43,7 +43,7 @@
     dct:format "text/html" ;
     foaf:primaryTopic gw:GW_HydrogeoUnit ;
     schema:provider <https://opengeospatial.github.io/SELFIE/> ;
-    schema:url <https://lab.scinfo.org.nz/selfie/representations/richelieu-2.html>
+    schema:url "https://lab.scinfo.org.nz/selfie/representations/richelieu-2.html"
   ] ;
   rdfs:label "Hydrogeologic unit : Northern St Lawrence Platform"@en, "Unite hydrogeologique : Plate-forme du St-Laurent nord"@fr ;
   owl:sameAs <https://geoconnex.ca/id/hydrogeounits/Richelieu2> .
