@@ -15,34 +15,26 @@
   schema:name "Aquifer system : Richelieu" ;
   schema:subjectOf <https://lab.scinfo.org.nz/selfie/data/aquifersystem/richelieu>,
     [
-      rdf:type foaf:Document ;
       dct:conformsTo <https://www.opengis.net/def/gwml2> ;
       dct:format "application/gml+xml", "application/ld+json", "text/ttl" ;
-      foaf:primaryTopic gw:GW_AquiferSystem ;
       schema:provider <https://opengeospatial.github.io/SELFIE/> ;
       schema:url "https://lab.scinfo.org.nz/selfie/data/aquifersystem/richelieu"
     ],
   [
-    rdf:type foaf:Document ;
     dct:conformsTo <https://www.opengis.net/def/gwml2> ;
     dct:format "application/vnd.geo+json", "text/html" ;
-    foaf:primaryTopic gw:GW_AquiferSystem ;
     schema:provider <https://opengeospatial.github.io/SELFIE/> ;
     schema:url "https://lab.scinfo.org.nz/service/selfie/api/collections/data/items/aquifersystem-richelieu"
   ],
   [
-    rdf:type foaf:Document ;
     dct:conformsTo <https://www.opengis.net/def/gwml2> ;
     dct:format "application/vnd.geo+json" ;
-    foaf:primaryTopic gw:GW_AquiferSystem ;
     schema:provider <https://opengeospatial.github.io/SELFIE/> ;
     schema:url "https://lab.scinfo.org.nz/selfie/representations/richelieu.geojson"
   ],
   [
-    rdf:type foaf:Document ;
     dct:conformsTo <https://www.opengis.net/def/gwml2> ;
     dct:format "text/html" ;
-    foaf:primaryTopic gw:GW_AquiferSystem ;
     schema:provider <https://opengeospatial.github.io/SELFIE/> ;
     schema:url "https://lab.scinfo.org.nz/selfie/representations/richelieu.html"
   ] ;
@@ -57,10 +49,8 @@
   schema:name "Aquifer system : Richelieu"@en, "Systeme aquifere : Richelieu"@fr .
 
 <https://lab.scinfo.org.nz/selfie/data/aquifersystem/richelieu>
-  a <xxx:Document> ;
   dct:conformsTo <https://www.opengis.net/def/gwml2> ;
   dct:format "application/ld+json", "application/rdf+xml", "text/turtle" ;
-  foaf:primaryTopic gw:GW_AquiferSystem ;
   schema:provider <https://opengeospatial.github.io/SELFIE/> .
 
 <https://lab.scinfo.org.nz/selfie/id/hydrogeounit/richelieu-1>
