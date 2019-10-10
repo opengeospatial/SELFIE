@@ -17,7 +17,7 @@
     rdf:type foaf:Document ;
     dct:conformsTo <https://www.opengis.net/def/gwml2> ;
     dct:format "application/ld+json", "text/ttl" ;
-    foaf:primaryTopic <gw:GW_HydrogeoUnit> ;
+    foaf:primaryTopic gw:GW_HydrogeoUnit ;
     schema:provider <https://opengeospatial.github.io/SELFIE/> ;
     schema:url <https://lab.scinfo.org.nz/selfie/data/hydrogeounit/richelieu-4>
   ],
@@ -25,7 +25,7 @@
     rdf:type foaf:Document ;
     dct:conformsTo <https://www.opengis.net/def/gwml2> ;
     dct:format "application/vnd.geo+json", "text/html" ;
-    foaf:primaryTopic <gw:GW_HydrogeoUnit> ;
+    foaf:primaryTopic gw:GW_HydrogeoUnit ;
     schema:provider <https://opengeospatial.github.io/SELFIE/> ;
     schema:url <https://lab.scinfo.org.nz/service/selfie/api/collections/data/items/hydrogeounit-richelieu-4>
   ],
@@ -33,7 +33,7 @@
     rdf:type foaf:Document ;
     dct:conformsTo <https://www.opengis.net/def/gwml2> ;
     dct:format "application/vnd.geo+json" ;
-    foaf:primaryTopic <gw:GW_HydrogeoUnit> ;
+    foaf:primaryTopic gw:GW_HydrogeoUnit ;
     schema:provider <https://opengeospatial.github.io/SELFIE/> ;
     schema:url <https://lab.scinfo.org.nz/selfie/representations/richelieu-4.geojson>
   ],
@@ -41,7 +41,7 @@
     rdf:type foaf:Document ;
     dct:conformsTo <https://www.opengis.net/def/gwml2> ;
     dct:format "text/html" ;
-    foaf:primaryTopic <gw:GW_HydrogeoUnit> ;
+    foaf:primaryTopic gw:GW_HydrogeoUnit ;
     schema:provider <https://opengeospatial.github.io/SELFIE/> ;
     schema:url <https://lab.scinfo.org.nz/selfie/representations/richelieu-4.html>
   ] ;
