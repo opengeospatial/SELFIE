@@ -8,6 +8,6 @@
 @prefix schema: <http://schema.org/> .
 
 <https://lab.scinfo.org.nz/selfie/id/hydrogeounit/richelieu-1>
-  a GW_HydrogeoUnit ;
+  a gw:GW_HydrogeoUnit ;
   rdfs:label "Hydrogeologic unit : Southern St Lawrence Platform"@en, "Unite hydrogeologique : Plate-forme du St-Laurent sud"@fr ;
   gw:gwAquiferSystem <https://lab.scinfo.org.nz/selfie/id/aquifersystem/richelieu> .
