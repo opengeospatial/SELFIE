@@ -1,0 +1,45 @@
+@prefix schema: <http://schema.org/> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://localhost:8080/gsip/id/waterwells/qc.1986_157_300>
+        rdfs:label  "Water well 1986_157_300"@en , "Puits 1986_157_300"@fr .
+
+<http://localhost:8080/gsip/id/up_watershed/-73.11249,46.027843>
+        rdfs:label  "En amont de 1978_49588_300"@fr , "upstream of 1978_49588_300"@en .
+
+<http://localhost:8080/gsip/id/waterwells/qc.1978_49588_300>
+        a                 <http://www.w3.org/2002/07/owl#Thing> , <http://geosciences.ca/def/groundwater#GW_Well> , rdfs:Resource ;
+        rdfs:label        "Water well 1978_49588_300"@en , "Puits 1978_49588_300"@fr ;
+        <http://geosciences.ca/def/groundwater#inside>
+                <http://localhost:8080/gsip/id/hydrogeounits/Richelieu2> ;
+        <http://geosciences.ca/def/hydraulic#close-to>
+                <http://localhost:8080/gsip/id/waterwells/qc.1986_157_300> , <http://localhost:8080/gsip/id/waterwells/qc.1978_49589_300> ;
+        <http://geosciences.ca/def/hydraulic#downstreamOf>
+                <http://localhost:8080/gsip/id/up_watershed/-73.11249,46.027843> ;
+        schema:image      <http://ngwd-bdnes.cits.nrcan.gc.ca/Reference/uri-cgi/feature/gsc/waterwell/ca.qc.gov.wells.1978_49588_300?format=png> ;
+        schema:name       "qc.1978_49588_300" ;
+        schema:subjectOf  <http://localhost:8080/gsip/data/gwml/gwml1/gsip/gin/qc.1978_49588_300> ;
+        schema:subjectOf  [ rdfs:label       "Information depuis la Cache RIES"@fr , "Information from GIN Cache"@en ;
+                            dct:conformsTo   <https://www.opengis.net/def/gwml2> ;
+                            dct:format       "text/xml" , "text/html" , "application/vnd.geo+json" ;
+                            schema:provider  <http://gin.gw-info.net> ;
+                            schema:url       "https://gin.geosciences.ca/GinService/rs/FeatureTypes/query?uri=id/waterwells/qc.1978_49588_300"
+                          ] ;
+        <http://www.w3.org/2002/07/owl#sameAs>
+                <http://localhost:8080/gsip/id/waterwells/qc.1978_49588_300> .
+
+<http://localhost:8080/gsip/data/gwml/gwml1/gsip/gin/qc.1978_49588_300>
+        rdfs:label       "Information depuis RIES"@fr , "Information from GIN"@en ;
+        dct:conformsTo   <https://www.opengis.net/def/gwml1> ;
+        dct:format       "text/xml" , "text/html" , "application/vnd.geo+json" ;
+        schema:provider  <http://gin.gw-info.net> .
+
+<http://geosciences.ca/def/groundwater#GW_Well>
+        rdfs:label  "Water Well"@en , "Puits d'eau"@fr .
+
+<http://localhost:8080/gsip/id/hydrogeounits/Richelieu2>
+        rdfs:label  "Hydrogeologic unit : Northern St Lawrence Platform"@en , "Unite hydrogeologique : Plate-forme du St-Laurent nord"@fr .
+
+<http://localhost:8080/gsip/id/waterwells/qc.1978_49589_300>
+        rdfs:label  "Puits 1978_49589_300"@fr , "Water well 1978_49589_300"@en .
