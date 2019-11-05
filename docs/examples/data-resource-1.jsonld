@@ -1,0 +1,31 @@
+{
+    "@context": [
+        "https://opengeospatial.github.io/SELFIE/contexts/elf-index.jsonld",
+        "https://opengeospatial.github.io/SELFIE/contexts/elf-data.jsonld",
+        "https://opengeospatial.github.io/SELFIE/contexts/gw.jsonld"
+    ],
+    "@id": "https://lab.scinfo.org.nz/selfie/id/hydrogeounit/richelieu-1",
+    "@type": "gw:GW_HydrogeoUnit",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "polygon": "45.00422793,-73.61090590 45.60649224,-73.61090590 45.60649224,-72.88245067 45.00422793,-72.88245067 45.00422793,-73.61090590"
+        }
+    },
+    "label": [
+        {
+            "@language": "en",
+            "@value": "Hydrogeologic unit : Southern St Lawrence Platform"
+        },
+        {
+            "@language": "fr",
+            "@value": "Unite hydrogeologique : Plate-forme du St-Laurent sud"
+        }
+    ],
+    "gwAquiferSystem": {
+        "@id": "https://lab.scinfo.org.nz/selfie/id/aquifersystem/richelieu",
+        "@type": "gw:GW_AquiferSystem",
+        "name": "Aquifer system : Richelieu"
+    }
+}

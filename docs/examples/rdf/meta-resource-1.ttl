@@ -1,0 +1,45 @@
+# Generated from SELFIE JSON-LD using http://www.easyrdf.org/converter.
+# schema:spatialCoverage values were not converted - nested array issue?
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix gw: <https://www.opengis.net/def/gwml2#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<https://lab.scinfo.org.nz/selfie/id/hydrogeounit/richelieu-1>
+  a gw:GW_HydrogeoUnit ;
+  schema:description "The Southern St Lawrence Platform is a Hydrogeologic Unit within the Richelieu Aquifer System." ;
+  schema:image "https://www.nzc.nz/media/15483/kane-williamson_01.jpg" ;
+  schema:name "Hydrogeologic unit : Southern St Lawrence Platform" ;
+  schema:subjectOf [
+    dct:conformsTo <https://www.opengis.net/def/gwml2> ;
+    dct:format "application/ld+json", "text/ttl" ;
+    schema:provider <https://opengeospatial.github.io/SELFIE/> ;
+    schema:url "https://lab.scinfo.org.nz/selfie/data/hydrogeounit/richelieu-1"
+  ],
+  [
+    dct:conformsTo <https://www.opengis.net/def/gwml2> ;
+    dct:format "application/vnd.geo+json", "text/html" ;
+    schema:provider <https://opengeospatial.github.io/SELFIE/> ;
+    schema:url "https://lab.scinfo.org.nz/service/selfie/api/collections/data/items/hydrogeounit-richelieu-1"
+  ],
+  [
+    dct:conformsTo <https://www.opengis.net/def/gwml2> ;
+    dct:format "application/vnd.geo+json" ;
+    schema:provider <https://opengeospatial.github.io/SELFIE/> ;
+    schema:url "https://lab.scinfo.org.nz/selfie/representations/richelieu-1.geojson"
+  ],
+  [
+    dct:conformsTo <https://www.opengis.net/def/gwml2> ;
+    dct:format "text/html" ;
+    schema:provider <https://opengeospatial.github.io/SELFIE/> ;
+    schema:url "https://lab.scinfo.org.nz/selfie/representations/richelieu-1.html"
+  ] ;
+  rdfs:label "Hydrogeologic unit : Southern St Lawrence Platform"@en, "Unite hydrogeologique : Plate-forme du St-Laurent sud"@fr ;
+  owl:sameAs <https://geoconnex.ca/id/hydrogeounits/Richelieu1> .
+
+<https://geoconnex.ca/id/hydrogeounits/Richelieu1>
+  a rdfs:Resource, owl:Thing, gw:GW_HydrogeoUnit ;
+  schema:name "Hydrogeologic unit : Southern St Lawrence Platform"@en, "Unite hydrogeologique : Plate-forme du St-Laurent sud"@fr .

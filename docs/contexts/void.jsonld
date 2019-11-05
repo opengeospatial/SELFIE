@@ -1,0 +1,98 @@
+{
+    "@context": {
+        "void": "http://rdfs.org/ns/void#",
+        "Dataset": {
+            "@id": "void:Dataset"
+        },
+        "DatasetDescription": {
+            "@id": "void:DatasetDescription"
+        },
+        "Linkset": {
+            "@id": "void:Linkset"
+        },
+        "TechnicalFeature": {
+            "@id": "void:TechnicalFeature"
+        },
+        "class": {
+            "@id": "void:class"
+        },
+        "classPartition": {
+            "@id": "void:classPartition"
+        },
+        "classes": {
+            "@id": "void:classes"
+        },
+        "dataDump": {
+            "@id": "void:dataDump"
+        },
+        "distinctObjects": {
+            "@id": "void:distinctObjects"
+        },
+        "distinctSubjects": {
+            "@id": "void:distinctSubjects"
+        },
+        "documents": {
+            "@id": "void:documents"
+        },
+        "entities": {
+            "@id": "void:entities"
+        },
+        "exampleResource": {
+            "@id": "void:exampleResource"
+        },
+        "feature": {
+            "@id": "void:feature"
+        },
+        "inDataset": {
+            "@id": "void:inDataset"
+        },
+        "linkPredicate": {
+            "@id": "void:ilinkPredicate"
+        },
+        "objectsTarget": {
+            "@id": "void:objectsTarget"
+        },
+        "openSearchDescription": {
+            "@id": "void:openSearchDescription"
+        },
+        "properties": {
+            "@id": "void:properties"
+        },
+        "property": {
+            "@id": "void:property"
+        },
+        "propertyPartition": {
+            "@id": "void:propertyPartition"
+        },
+        "rootResource": {
+            "@id": "void:rootResource"
+        },
+        "sparqlEndpoint": {
+            "@id": "void:sparqlEndpoint"
+        },
+        "subjectsTarget": {
+            "@id": "void:subjectsTarget"
+        },
+        "subset": {
+            "@id": "void:subset"
+        },
+        "target": {
+            "@id": "void:target"
+        },
+        "triples": {
+            "@id": "void:triples"
+        },
+        "uriLookupEndpoint": {
+            "@id": "void:uriLookupEndpoint"
+        },
+        "uriRegexPattern": {
+            "@id": "void:uriRegexPattern"
+        },
+        "uriSpace": {
+            "@id": "void:uriSpace"
+        },     
+        "vocabulary": {
+            "@id": "void:vocabulary"
+        }
+    }
+}

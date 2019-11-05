@@ -1,0 +1,351 @@
+@prefix iso19150-2: <http://def.isotc211.org/iso19150-2/2012/base#> .
+@prefix gsp:   <http://www.opengis.net/ont/geosparql#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix gsmlb: <http://geosciml.org/ont/gsmlb#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+gsmlb:Contact  a         owl:Class ;
+        rdfs:subClassOf  gsmlb:GeologicStructure ;
+        skos:definition  "Very general concept representing any kind of surface separating two geologic units including primary boundaries such as depositional contacts, all kinds of unconformities, intrusive contacts, and gradational contacts, as well as faults that separate geologic units.\r\n\r\nBedding measured as discrete surfaces in the case that those are the feature of interest (e.g. individual cross set surfaces for paleocurrent analysis) should be represented here."@en .
+
+gsmlb:trend  a           owl:ObjectProperty ;
+        skos:definition  "The azimuth (compass bearing) value of the linear orientation."@en .
+
+gsmlb:specification  a   owl:ObjectProperty ;
+        skos:definition  "The feature being mapped.  In a geological map, MappedFeature are used to represent GeologicFeature, but other features from other domains could be represented"@en .
+
+gsmlb:material  a        owl:ObjectProperty ;
+        skos:definition  "EarthMaterial composing the part."@en .
+
+gsmlb:foliationType  a   owl:ObjectProperty ;
+        skos:definition  "Specifies the type of foliation.  Examples include crenulation cleavage, slaty cleavage, schistosity"@en .
+
+gsmlb:gaEventDescription
+        a                owl:ObjectProperty ;
+        skos:definition  "Detailed event description.  This is a stub property in GeoSciML Basic"@en .
+
+gsmlb:plunge  a          owl:ObjectProperty ;
+        skos:definition  "Magnitude of the plunge."@en .
+
+gsmlb:NaturalGeomorphologicFeature
+        a                owl:Class ;
+        rdfs:subClassOf  gsmlb:GeomorphologicFeature ;
+        skos:definition  "A geomorphologic feature (ie, landform) that has been created by natural Earth processes. For example, river channel, beach ridge, caldera, canyon, moraine, mud flat."@en .
+
+gsmlb:ShearDisplacementStructureAbstractDescription
+        a                      owl:Class ;
+        iso19150-2:isAbstract  true ;
+        skos:definition        "An abstract class providing a link between classes in GeoSciMLBasic and GeoSciMLExtended application schemas."@en .
+
+gsmlb:eventEnvironment
+        a                owl:ObjectProperty ;
+        skos:definition  "The physical setting within which a GeologicEvent takes place. GeologicEnvironment is construed broadly to include physical settings on the Earth surface specified by climate, tectonics, physiography or geography, and settings in the Earth’s interior specified by pressure, temperature, chemical environment, or tectonics."@en .
+
+gsmlb:MappedFeature.observationMethod
+        a                owl:ObjectProperty ;
+        rdfs:domain      gsmlb:MappedFeature ;
+        skos:definition  "MappedFeature ObservationMethod is a metadata snippet indicating how the spatial extent of the mapped feature was determined, and the basis for association of the geometry with some GeologicFeature specification to define a MappedFeature. For a borehole, the MappedInterval observation method indicates how the boundaries of the interval were defined (eg, linear measurement from borehole collar). ObservationMethod is a convenience property that provides a quick and dirty approach to observation metadata when data are reported using a feature view (as opposed to observation view). This property corresponds (loosely) to ISO19115 Lineage.  (eg: digitised, Global Positioning System, published map, fieldObservation, downhole survey, aerial photography, field survey)"@en .
+
+gsmlb:GeologicUnitAbstractDescription
+        a                      owl:Class ;
+        iso19150-2:isAbstract  true ;
+        skos:definition        "Abstract description class for geologic units.  This class is a placeholder for further extension in Extension package"@en .
+
+gsmlb:occurrence  a      owl:ObjectProperty ;
+        skos:definition  "A description association that links a notional geologic feature with any number of mapped features.  A geologic feature, such as a geologic unit may be linked to mapped features from a number of different maps."@en .
+
+gsmlb:targetUnit  a      owl:ObjectProperty ;
+        skos:definition  "Indicates the parent unit that contains the GeologicUnitPart."@en .
+
+gsmlb:GeologicUnit  a    owl:Class ;
+        rdfs:subClassOf  gsmlb:GeologicFeature ;
+        skos:definition  "Operationally, the GeologicUnit element is a container used to associate geologic properties with some mapped occurrence (through GeologicFeature.occurrence -> MappedFeature link), or with a geologic unit ControlledConcept in a vocabulary (through the GeologicUnit.classifier ->ControlledConcept link).\r\n\r\nConceptually, may represent a body of material in the Earth whose complete and precise extent is inferred to exist (NADM GeologicUnit, Stratigraphic unit in sense of NACSN or International Stratigraphic Code), or a classifier used to characterize parts of the Earth (e.g. lithologic map unit like 'granitic rock' or 'alluvial deposit', surficial units like 'till' or 'old alluvium').\r\n\r\nSpatial properties are only available through association with a MappedFeature. Includes both formal units (i.e. formally adopted and named in the official lexicon) and informal units (i.e. named but not promoted to the lexicon) and unnamed units (i.e. recognisable and described and delineable in the field but not otherwise formalised)."@en .
+
+gsmlb:stStructureDescription
+        a                owl:ObjectProperty ;
+        skos:definition  "Detailed shear displacement description.  This is a stub property in GeoSciML Basic"@en .
+
+gsmlb:polarity  a        owl:ObjectProperty ;
+        skos:definition  "Indicates whether the planar orientation is associated with a directed feature that is overturned, upright, vertical etc."@en .
+
+gsmlb:azimuth  a         owl:ObjectProperty ;
+        skos:definition  "The azimuth (compass point, bearing etc) value of the orientation. Convention reports how azimuth is interpreted; if is quadrant. Allowance of different convention makes querying more difficult."@en .
+
+gsmlb:exposure  a        owl:ObjectProperty ;
+        skos:definition  "Description of the nature of the expression of the mapped feature at the earth's surface (eg, exposed, concealed)"@en .
+
+gsmlb:gmFeatureDescription
+        a                owl:ObjectProperty ;
+        skos:definition  "Detailed geomorphologic description.  This is a stub property in GeoSciML Basic"@en .
+
+gsmlb:stContactDescription
+        a                owl:ObjectProperty ;
+        skos:definition  "Detailed contact description.  This is a stub property in GeoSciML Basic"@en .
+
+gsmlb:directed  a        owl:ObjectProperty ;
+        skos:definition  "To indicate if orientation represents linear feature that is directed, e.g. clast imbrication, mylonitic lineation with sense of shear, slickenlines with displacement direction, rather than undirected.  A code list to indicate which is the directed end of the linear orientation"@en .
+
+gsmlb:GeologicFeature.observationMethod
+        a                owl:ObjectProperty ;
+        rdfs:domain      gsmlb:GeologicFeature ;
+        skos:definition  "Feature ObservationMethod specifies the approach to acquiring the collection of attribute values that constitute an individual feature instance (e.g. point count, brunton compass on site, air photo interpretation,  field observation, hand specimen, laboratory, aerial photography, creative imagination). ObservationMethod is a convenience property that provides a quick and dirty approach to observation metadata when data are reported using a feature view (as opposed to observation view). For a borehole, the GeologicFeature observation method specifies how the geologic properties were determined (eg, visual observation, or standard AzGS logging procedure (described in detail somewhere else)).  This property corresponds (loosely) to ISO19115 Lineage."@en .
+
+gsmlb:GeologicFeature
+        a                      owl:Class ;
+        iso19150-2:isAbstract  true ;
+        skos:definition        "The abstract GeologicFeature class represents a conceptual feature that is hypothesized to exist coherently in the world.\r\n   * this corresponds with a \"legend item\" from a traditional geologic map\r\n   * while the bounding coordinates of a Geologic Feature may be described, its shape is not.\r\n\r\nThe implemented Geologic Feature instance acts as the \"description package\"\r\n\r\n    * the description package is classified according to its purpose as an Instance, TypicalNorm, or DefiningNorm."@en .
+
+gsmlb:GeologicUnitHierarchy.proportion
+        a                owl:ObjectProperty ;
+        rdfs:domain      gsmlb:GeologicUnitHierarchy ;
+        skos:definition  "Quantity that specifies the fraction of the geologic unit formed by the part."@en .
+
+gsmlb:ShearDisplacementStructure
+        a                owl:Class ;
+        rdfs:subClassOf  gsmlb:GeologicStructure ;
+        skos:definition  "A shear displacement structure includes all brittle to ductile style structures along which displacement has occurred, from a simple, single 'planar' brittle or ductile surface to a fault system comprised of 10's of strands of both brittle and ductile nature. This structure may have some significant thickness (a deformation zone) and have an associated body of deformed rock that may be considered a DeformationUnit"@en .
+
+gsmlb:FoldAbstractDescription
+        a                      owl:Class ;
+        iso19150-2:isAbstract  true ;
+        skos:definition        "An abstract class providing a link between classes in GeoSciMLBasic and GeoSciMLExtended application schemas."@en .
+
+gsmlb:olderBoundDate  a  owl:ObjectProperty ;
+        skos:definition  "The older bounding time coordinate in an age range"@en .
+
+gsmlb:GeologicUnitHierarchy.role
+        a                owl:ObjectProperty ;
+        rdfs:domain      gsmlb:GeologicUnitHierarchy ;
+        skos:definition  "Nature of the parts, e.g. facies, stratigraphic, interbeds, geographic, eastern facies,"@en .
+
+gsmlb:profileType  a     owl:ObjectProperty ;
+        skos:definition  "Terminology specifying concave/convex geometry of fold relative to earth surface, and relationship to younging direction in folded strata if known. (eg; antiform, synform, neutral, anticline, syncline, monocline, ptygmatic)"@en .
+
+gsmlb:EarthMaterialAbstractDescription
+        a                      owl:Class ;
+        iso19150-2:isAbstract  true ;
+        skos:definition        "Abstract description class for earth material.  This class is a placeholder for further extension in Extension package"@en .
+
+gsmlb:geologicUnitType
+        a                owl:ObjectProperty ;
+        skos:definition  "A term from a controlled vocabulary defining the type of geologic unit. Logical constraints of definition of unit and valid property cardinalities should be contained in the definition. Use of the CGI Geologic Unit Type vocabulary (eg: something like http://geosciml.org/classifierScheme/CGI/GeologicUnitType/200811) is preferred."@en .
+
+gsmlb:FoliationAbstractDescription
+        a                      owl:Class ;
+        iso19150-2:isAbstract  true ;
+        skos:definition        "An abstract class providing a link between classes in GeoSciMLBasic and GeoSciMLExtended application schemas."@en .
+
+<http://geosciml.org/ont/gsmlb>
+        a                owl:Ontology ;
+        owl:versionIRI   "http://geosciml.org/ont/gsmlb/4.0.0" ;
+        owl:versionInfo  "4.0.0" ;
+        skos:definition  "A package of classes representing fundamental geological features (units, structures, and events), earth materials, and the relations between them."@en .
+
+gsmlb:resolutionRepresentativeFraction
+        a                owl:DatatypeProperty ;
+        skos:definition  "An integer representing the denominator of the representative scale of the spatial feature.  (ie, 10,000 = the spatial feature is represented at 1:10,000 scale)"@en .
+
+gsmlb:convention  a      owl:ObjectProperty ;
+        skos:definition  "The convention used for the measurement"@en .
+
+gsmlb:positionalAccuracy
+        a                owl:ObjectProperty ;
+        skos:definition  "Quantitative values define the radius of an uncertainty buffer around a mappedFeature (eg: a positionAccuracy of 100 m for a line feature defines a buffer polygon of total width 200 m centred on the line). Corresponds to ISO19115 DQ_PositionalAccuracy."@en .
+
+gsmlb:relatedFeature  a  owl:ObjectProperty ;
+        skos:definition  "General structure used to define relationships between any feature or object within GeoSciML. Relationships are always binary and directional.  There is always a single source and a single target.  The relationship is always defined from the perspective of the Source and is generally an active verb"@en .
+
+gsmlb:collectionType  a  owl:ObjectProperty ;
+        skos:definition  "Types of collections of geological and geophysical objects. (From INSPIRE)"@en .
+
+gsmlb:anthropogenicGeomorphologicFeatureType
+        a                owl:ObjectProperty ;
+        skos:definition  "A byReference link to a dictionary of terms describing the type of geomorphologic feature"@en .
+
+gsmlb:gbUnitDescription
+        a                owl:ObjectProperty ;
+        skos:definition  "Detailed unit description.  This is a stub property in GeoSciML Basic"@en .
+
+gsmlb:NumericAgeRange
+        a                owl:Class ;
+        skos:definition  "Class to represent general age assignment using numeric measurement results. All attributes have cardinality 1; report with nilReason=\"missing\" if a value is absent."@en .
+
+gsmlb:CompositionPart
+        a                owl:Class ;
+        skos:definition  "Element to represent composition of a geologic unit in terms of earth material constituents."@en .
+
+gsmlb:classifier  a      owl:ObjectProperty ;
+        skos:definition  "A standard description or definition of the feature type (eg; the definition of a particular Geologic Unit in a stratigraphic lexicon)"@en .
+
+gsmlb:reportingDate  a   owl:ObjectProperty ;
+        skos:definition  "Single time coordinate value to report as representative for this NumericAge assignment"@en .
+
+gsmlb:GeologicStructure
+        a                      owl:Class ;
+        rdfs:subClassOf        gsmlb:GeologicFeature ;
+        iso19150-2:isAbstract  true ;
+        skos:definition        "A configuration of matter in the Earth based on describable inhomogeneity, pattern, or fracture in an EarthMaterial. \r\nThe identity of a GeologicStructure is independent of the material that is the substrate for the structure. \r\nProperties like \"clast-supported\",  \"matrix-supported\", and \"graded bed\" that do not involve orientation are considered kinds of GeologicStructure \r\nbecause they depend on the configuration of parts of a rock body. Includes sedimentary structures.\r\nThe general GeologicRelation is used to associate penetrative GeologicStructures with GeologicUnits."@en .
+
+gsmlb:CompositionPart.role
+        a                owl:ObjectProperty ;
+        rdfs:domain      gsmlb:CompositionPart ;
+        skos:definition  "Defines the relationship of the earth material constituent in the geologic unit, e.g. vein, interbedded constituent, layers, dominant constituent. Scoped name because role is asserted by the geologist building the description."@en .
+
+gsmlb:youngerBoundDate
+        a                owl:ObjectProperty ;
+        skos:definition  "The younger bounding time coordinate in an age range"@en .
+
+gsmlb:activity  a        owl:ObjectProperty ;
+        skos:definition  "Describes the current activity status of the geomorphologic feature (eg, currently active, dormant, inactive, reactivated, etc)"@en .
+
+gsmlb:GeologicEvent  a   owl:Class ;
+        rdfs:subClassOf  gsmlb:GeologicFeature ;
+        skos:definition  "An identifiable event during which one or more geological processes act to modify geological entities. A GeologicEvent may have a specified geologic age (numeric age or GeochologicEraTerm) and may have specified environments and processes. An example might be a cratonic uplift event during which erosion, sedimentation, and volcanism all take place."@en .
+
+gsmlb:GeomorphologicFeature
+        a                      owl:Class ;
+        rdfs:subClassOf        gsmlb:GeologicFeature ;
+        iso19150-2:isAbstract  true ;
+        skos:definition        "A feature describing the shape and nature of the Earth's land surface (ie, a landform).  These landforms may be created by natural Earth processes (eg, river channel, beach, moraine, mountain) or through human (anthropogenic) activity (eg, dredged channel, reclaimed land, mine waste dumps)."@en .
+
+gsmlb:stFoliationDescription
+        a                owl:ObjectProperty ;
+        skos:definition  "Detailed foliation description.  This is a stub property in GeoSciML Basic"@en .
+
+gsmlb:composition  a     owl:ObjectProperty ;
+        skos:definition  "Describes the composition (detailed, instance specific, lithologic description) of the GeologicUnit"@en .
+
+gsmlb:AnthropogenicGeomorphologicFeature
+        a                owl:Class ;
+        rdfs:subClassOf  gsmlb:GeomorphologicFeature ;
+        skos:definition  "A geomorphologic feature (ie, landform) which has been created by human activity. For example, dredged channel, midden, open pit, reclaimed land."@en .
+
+gsmlb:contactType  a     owl:ObjectProperty ;
+        skos:definition  "Classifies the contact (eg intrusive, unconformity, bedding surface, lithologic boundary, phase boundary)"@en .
+
+gsmlb:numericAge  a      owl:ObjectProperty ;
+        skos:definition  "use of GSML_QuantityRange is recommended to have explicit upper and lower values"@en .
+
+gsmlb:GeologicUnitHierarchy
+        a                owl:Class ;
+        skos:definition  "GeologicUnitHierarchy associates a GeologicUnit with another GeologicUnit that is a proper part of that unit. Parts may be formal or notional. Formal parts refer to a specific body of rock, as in formal stratigraphic members. Notional parts refer to assemblages of particular EarthMaterials with particular internal structure, which may be repeated in various places within a unit (e.g. 'turbidite sequence', 'point bar assemblage', 'leucosome veins')"@en .
+
+gsmlb:member  a          owl:ObjectProperty ;
+        skos:definition  "Points to a member of a GSML collection, which can be any of the GeoSciML classes that are listed in the GSMLitem union class."@en .
+
+gsmlb:hierarchyLink  a   owl:ObjectProperty ;
+        skos:definition  "indicates a subsiduary unit with its role and proportion with respect to the container unit"@en .
+
+gsmlb:GSML_PlanarOrientation
+        a                owl:Class ;
+        rdfs:subClassOf  gsmlb:GSML_GeometricDescriptionValue ;
+        skos:definition  "Description of the geometry of a plane."@en .
+
+gsmlb:GeomorphologicUnitAbstractDescription
+        a                      owl:Class ;
+        iso19150-2:isAbstract  true ;
+        skos:definition        "Detailed geomorphologic unit description placeholder (stub class) for GeomorphologicUnit"@en .
+
+gsmlb:dip  a             owl:ObjectProperty ;
+        skos:definition  "Dip is the angle that the structural surface (eg bedding, fault plane) makes with the horizontal measured perpindicular to the strike of the structure and in the vertical plane as a numeric or term"@en .
+
+gsmlb:GeologicFeature.purpose
+        a                owl:ObjectProperty ;
+        rdfs:domain      gsmlb:GeologicFeature ;
+        skos:definition  "Specification of the intended purpose/level of abstraction for a given feature or object instance. Scoped name because intention is asserted by author of the data instance. Values are: instance, typicalNorm, definingNorm."@en .
+
+gsmlb:olderNamedAge  a   owl:ObjectProperty ;
+        skos:definition  "Older boundary of age of event expressed using a geochronologic era defined according to a geologic time scale per GeologicTime schema"@en .
+
+gsmlb:GeologicEventAbstractDescription
+        a                      owl:Class ;
+        iso19150-2:isAbstract  true ;
+        skos:definition        "Stub property class to allow extended event related properties."@en .
+
+gsmlb:determinationMethod
+        a                owl:ObjectProperty ;
+        skos:definition  "Describes the way the orientation value was determined (eg measured, inferred from dip slope, etc)"@en .
+
+gsmlb:Foliation  a       owl:Class ;
+        rdfs:subClassOf  gsmlb:GeologicStructure ;
+        skos:definition  "A planar arrangement of textural or structural features in any type of rock.  Includes any of a wide variety of penetrative planar geological structures that may be present in a rock.  Examples include schistosity, mylonitic foliation, penetrative bedding structure (lamination), and cleavage.  Following the proposed definition of gneiss by the NADM Science Language Technical Team, penetrative planar foliation defined by layers > 5 mm thick is considered Layering. \r\nBedding as a fabric representing the average orientation of paleodepositional surface should be encoded through the foliationType; might apply to bedding that is layering or a foliation without layering (e.g. clast alignment in amalgamated beds)."@en .
+
+gsmlb:CompositionPart.proportion
+        a                owl:ObjectProperty ;
+        rdfs:domain      gsmlb:CompositionPart ;
+        skos:definition  "Quantity that specifies the fraction of the geologic unit composed of the compound material."@en .
+
+gsmlb:GSML_LinearOrientation
+        a                owl:Class ;
+        rdfs:subClassOf  gsmlb:GSML_GeometricDescriptionValue ;
+        skos:definition  "Description of the measured orientation of a line.  At least one of plunge or trend should not be nil."@en .
+
+gsmlb:youngerNamedAge
+        a                owl:ObjectProperty ;
+        skos:definition  "Younger boundary of age of event expressed using a geochronologic era defined according to a geologic time scale per GeologicTime schema"@en .
+
+gsmlb:geologicHistory
+        a                owl:ObjectProperty ;
+        skos:definition  "Relates one or more GeologicEvents to a GeologicFeature to describe their age or geologic history"@en .
+
+gsmlb:faultType  a       owl:ObjectProperty ;
+        skos:definition  "Refers to a vocabulary of terms describing the type of shear displacement structure (eg; thrust fault, normal fault, wrench fault)."@en .
+
+gsmlb:naturalGeomorphologicFeatureType
+        a                owl:ObjectProperty ;
+        skos:definition  "A byReference link to a dictionary of terms describing the type of geomorphologic feature"@en .
+
+gsmlb:Fold  a            owl:Class ;
+        rdfs:subClassOf  gsmlb:GeologicStructure ;
+        skos:definition  "One or more systematically curved layers, surfaces, or lines in a rock body. Fold denotes a structure formed by the deformation of a GeologicStructure to form a structure that may be described by the translation of an abstract line (the fold axis) parallel to itself along some curvilinear path (the fold profile). Folds have a hinge zone (zone of maximum curvature along the surface) and limbs (parts of the deformed surface not in the hinge zone).  Folds are described by an axial surface, hinge line , profile geometry, the solid angle between the limbs, and the relationships between adjacent folded surfaces if the folded structure is a Layering fabric (similar, parallel)."@en .
+
+gsmlb:rank  a            owl:ObjectProperty ;
+        skos:definition  "Term that classifies the geologic unit in a generalization hierarchy from most local/smallest volume to most regional. Scoped name because classification is asserted, not based on observational data.\r\nExamples: group, subgroup, formation, member, bed, intrusion, complex, batholith"@en .
+
+gsmlb:magnitude  a       owl:ObjectProperty ;
+        skos:definition  "The numerical length of a linear vector"@en .
+
+gsmlb:MappedFeature  a   owl:Class ;
+        skos:definition  "A MappedFeature is part of a geological interpretation. \r\nIt provides a link between a notional feature (description package) and one spatial representation of it, or part of it. (Exposures, Surface Traces and Intercepts, etc)\r\n    * the specific bounded occurrence, such as an outcrop or map polygon\r\n    * the Mapped Feature carries a geometry or shape\r\n          - the association with a Geologic Feature (legend item) provides specification of all the other descriptors\r\n          - the association with a Sampling Feature provides the context and dimensionality \r\n\r\nA Mapped Feature is always associated with some sampling feature - e.g. a mapping surface, a section, a Borehole (see BoreHolesAndObservation) etc. As noted on the diagram, if the associated sampling feature is a Borehole, then the shape associated with the MappedFeature will usually be either a point or an interval. This reconciles the 2-D (\"map\", section) and 1-D (borehole, traverse) viewpoints in a common abstraction."@en .
+
+gsmlb:GSML_GeometricDescriptionValue
+        a                      owl:Class ;
+        iso19150-2:isAbstract  true ;
+        skos:definition        "Description of the planar or linear orientation of a geologic feature.   \r\nAllows specifying direction by DirectionVector (eg Dip/Dip Direction), compass point (NE),  description (\"toward fold hinge\", \"below')"@en .
+
+gsmlb:ContactAbstractDescription
+        a                      owl:Class ;
+        iso19150-2:isAbstract  true ;
+        skos:definition        "An abstract class providing a link between classes in GeoSciMLBasic and GeoSciMLExtended application schemas."@en .
+
+gsmlb:gbMaterialDescription
+        a                owl:ObjectProperty ;
+        skos:definition  "Detailed material description.  This is a stub property in GeoSciML Basic"@en .
+
+gsmlb:GSML_Vector  a     owl:Class ;
+        rdfs:subClassOf  gsmlb:GSML_LinearOrientation ;
+        skos:definition  "data type for linear orientation with magnitude. Cardinality on magnitude is 1, if magnitude is unknown use GSML_LinearOrientation"@en .
+
+gsmlb:eventProcess  a    owl:ObjectProperty ;
+        skos:definition  "The eventProcess specifies the process or processes that occurred during the event. Examples include deposition, extrusion, intrusion, cooling."@en .
+
+gsmlb:stFoldDescription
+        a                owl:ObjectProperty ;
+        skos:definition  "Detailed fold description.  This is a stub property in GeoSciML Basic"@en .
+
+gsmlb:GSML  a            owl:Class ;
+        skos:definition  "A collection container for items to be bundled in WFS response documents and other applications. FeatureType stereotype allows this to be a FeatureMember in a WFS_FeatureCollection."@en .
+
+gsmlb:mappingFrame  a    owl:ObjectProperty ;
+        skos:definition  "Terms indicating the surface on which the MappedFeature is projected. (from INSPIRE)"@en .
+
+gsmlb:unitDescription
+        a                owl:ObjectProperty ;
+        skos:definition  "For geological description of a geomorphological feature (eg, related stratigraphic units and earth materials)"@en .
+
+gsmlb:descriptiveOrientation
+        a                owl:DatatypeProperty ;
+        skos:definition  "Textual specification of orientation, possibly referencing some local geography"@en .
