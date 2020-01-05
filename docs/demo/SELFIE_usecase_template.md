@@ -21,9 +21,10 @@ A one sentence story.
 ### Datasets and Sources
 
 <!---
-Use this list to document your data and the distributed network of data providers.
-Data in this context should alude to the "NIR"/"MR"/"DR" but still focvus on the 
-data its self.
+Use this section to document your data and the distributed network of data providers.
+Alude to the non information resource and information content that satisfies the use
+case. Discussion of how the unique use case uses the SELFIE "core" concepts should be
+included here.
 --->
 
 - A bulleted
@@ -53,4 +54,7 @@ application.
 ## Demo findings and potential next steps
 
 Discuss issues that this demo works around or would otherwise need to be solved to take
-it from demonstration/experiment to production.
+it from demonstration/experiment to production. Talk about how the SELFIE core of 303
+redirection and use of JSON-LD in HTML landing pages works in the context of the complete
+technical setting of your use case. Discussion of what future experimentation is needed
+should go here.
