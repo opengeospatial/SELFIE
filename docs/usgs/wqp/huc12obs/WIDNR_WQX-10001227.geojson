@@ -1,0 +1,6 @@
+{
+"type": "FeatureCollection",
+"features": [
+{ "type": "Feature", "properties": { "source": "WQP", "sourceName": "Water Quality Portal", "identifier": "WIDNR_WQX-10001227", "name": "LOUIS BUECHNER POND - LOUIS BUECHNER POND", "uri": "https:\/\/www.waterqualitydata.us\/provider\/STORET\/WIDNR_WQX\/WIDNR_WQX-10001227\/", "comid": "13293490", "navigation": "https:\/\/cida.usgs.gov\/nldi\/wqp\/WIDNR_WQX-10001227\/navigate" }, "geometry": { "type": "Point", "coordinates": [ -89.56, 43.18 ] } }
+]
+}

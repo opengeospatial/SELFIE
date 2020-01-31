@@ -1,0 +1,6 @@
+{
+"type": "FeatureCollection",
+"features": [
+{ "type": "Feature", "properties": { "source": "WQP", "sourceName": "Water Quality Portal", "identifier": "WIDNR_WQX-10001222", "name": "BRANDENBURG LAKE - BRANDENBURG LAKE", "uri": "https:\/\/www.waterqualitydata.us\/provider\/STORET\/WIDNR_WQX\/WIDNR_WQX-10001222\/", "comid": "13293490", "navigation": "https:\/\/cida.usgs.gov\/nldi\/wqp\/WIDNR_WQX-10001222\/navigate" }, "geometry": { "type": "Point", "coordinates": [ -89.59, 43.19 ] } }
+]
+}

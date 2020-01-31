@@ -1,0 +1,6 @@
+{
+"type": "FeatureCollection",
+"features": [
+{ "type": "Feature", "properties": { "source": "WQP", "sourceName": "Water Quality Portal", "identifier": "USGS-431212089314801", "name": "DANE CO MRBI WATERWAY 2 NR SPRINGFIELD CORNERS, WI", "uri": "https:\/\/www.waterqualitydata.us\/provider\/NWIS\/USGS-WI\/USGS-431212089314801\/", "comid": "13293462", "navigation": "https:\/\/cida.usgs.gov\/nldi\/wqp\/USGS-431212089314801\/navigate" }, "geometry": { "type": "Point", "coordinates": [ -89.5299444, 43.2033889 ] } }
+]
+}

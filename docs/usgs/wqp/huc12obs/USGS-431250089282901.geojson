@@ -1,0 +1,6 @@
+{
+"type": "FeatureCollection",
+"features": [
+{ "type": "Feature", "properties": { "source": "WQP", "sourceName": "Water Quality Portal", "identifier": "USGS-431250089282901", "name": "DANE COUNTY MRBI WATERWAY NUMBER 1 NR WAUNAKEE, WI", "uri": "https:\/\/www.waterqualitydata.us\/provider\/NWIS\/USGS-WI\/USGS-431250089282901\/", "comid": "13293442", "navigation": "https:\/\/cida.usgs.gov\/nldi\/wqp\/USGS-431250089282901\/navigate" }, "geometry": { "type": "Point", "coordinates": [ -89.4746667, 43.2139167 ] } }
+]
+}

@@ -1,0 +1,6 @@
+{
+"type": "FeatureCollection",
+"features": [
+{ "type": "Feature", "properties": { "source": "WQP", "sourceName": "Water Quality Portal", "identifier": "WIDNR_WQX-10001221", "name": "BARBIAN POND - BARBIAN POND", "uri": "https:\/\/www.waterqualitydata.us\/provider\/STORET\/WIDNR_WQX\/WIDNR_WQX-10001221\/", "comid": "13294132", "navigation": "https:\/\/cida.usgs.gov\/nldi\/wqp\/WIDNR_WQX-10001221\/navigate" }, "geometry": { "type": "Point", "coordinates": [ -89.51, 43.2 ] } }
+]
+}

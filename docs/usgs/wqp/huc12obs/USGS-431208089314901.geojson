@@ -1,0 +1,6 @@
+{
+"type": "FeatureCollection",
+"features": [
+{ "type": "Feature", "properties": { "source": "WQP", "sourceName": "Water Quality Portal", "identifier": "USGS-431208089314901", "name": "DANE CO. MRBI TILE NO. 1 NR SPRINGFIELD CORNERS,WI", "uri": "https:\/\/www.waterqualitydata.us\/provider\/NWIS\/USGS-WI\/USGS-431208089314901\/", "comid": "13293462", "navigation": "https:\/\/cida.usgs.gov\/nldi\/wqp\/USGS-431208089314901\/navigate" }, "geometry": { "type": "Point", "coordinates": [ -89.5302222, 43.20225 ] } }
+]
+}

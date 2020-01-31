@@ -1,0 +1,6 @@
+{
+"type": "FeatureCollection",
+"features": [
+{ "type": "Feature", "properties": { "source": "WQP", "sourceName": "Water Quality Portal", "identifier": "WIDNR_WQX-10001223", "name": "DIEDRICH POND - DIEDRICH POND", "uri": "https:\/\/www.waterqualitydata.us\/provider\/STORET\/WIDNR_WQX\/WIDNR_WQX-10001223\/", "comid": "13293464", "navigation": "https:\/\/cida.usgs.gov\/nldi\/wqp\/WIDNR_WQX-10001223\/navigate" }, "geometry": { "type": "Point", "coordinates": [ -89.55, 43.2 ] } }
+]
+}

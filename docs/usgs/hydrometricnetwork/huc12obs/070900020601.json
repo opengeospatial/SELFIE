@@ -1,0 +1,9 @@
+{
+  "@context": ["https://opengeospatial.github.io/ELFIE/contexts/elfie-2/elf-index.jsonld", "https://opengeospatial.github.io/ELFIE/contexts/elfie-2/hyf_minimal_context.jsonld"],
+  "@id": "http://geoconnex.us/SELFIE/usgs/hydrometricnetwork/huc12obs/070900020601",
+  "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrometricNetwork",
+  "name": "Waunakee Marsh-Sixmile Creek Monitoring Network",
+  "description": "Monitoring locations in the Waunakee Marsh-Sixmile Creek watershed.",
+  "realizedCatchment": "https://opengeospatial.github.io/ELFIE/usgs/huc/huc12obs/070900020601",
+  "networkStation": ["https://opengeospatial.github.io/ELFIE/usgs/nwissite/huc12obs/USGS-05427880", "https://opengeospatial.github.io/ELFIE/usgs/wqp/huc12obs/WIDNR_WQX-10001227", "https://opengeospatial.github.io/ELFIE/usgs/wqp/huc12obs/WIDNR_WQX-10001222", "https://opengeospatial.github.io/ELFIE/usgs/wqp/huc12obs/WIDNR_WQX-134002", "https://opengeospatial.github.io/ELFIE/usgs/wqp/huc12obs/USGS-431208089314901", "https://opengeospatial.github.io/ELFIE/usgs/wqp/huc12obs/USGS-431212089314801", "https://opengeospatial.github.io/ELFIE/usgs/wqp/huc12obs/USGS-431212089314802", "https://opengeospatial.github.io/ELFIE/usgs/wqp/huc12obs/USGS-431250089282902", "https://opengeospatial.github.io/ELFIE/usgs/wqp/huc12obs/USGS-431250089282901", "https://opengeospatial.github.io/ELFIE/usgs/wqp/huc12obs/USGS-05427880", "https://opengeospatial.github.io/ELFIE/usgs/wqp/huc12obs/WIDNR_WQX-10017024", "https://opengeospatial.github.io/ELFIE/usgs/wqp/huc12obs/WIDNR_WQX-10001221", "https://opengeospatial.github.io/ELFIE/usgs/wqp/huc12obs/WIDNR_WQX-10016974", "https://opengeospatial.github.io/ELFIE/usgs/wqp/huc12obs/WIDNR_WQX-10043697", "https://opengeospatial.github.io/ELFIE/usgs/wqp/huc12obs/WIDNR_WQX-10001223"]
+}
