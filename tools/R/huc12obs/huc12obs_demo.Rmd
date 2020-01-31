@@ -1,0 +1,77 @@
+---
+title: "huc12obs ELFIE Demo"
+output: html_document
+---
+Click on water quality and stream flow sites for more information.
+```{r, eval = T, echo = F}
+source("../../R/json_ld_functions.R")
+
+catchment_id <- "https://opengeospatial.github.io/ELFIE/usgs/huc/huc12obs/070900020601"
+
+catchment_data <- parse_elfie_json(paste0(catchment_id, ".json"))
+
+realizations <- catchment_data$catchmentRealization
+
+get_elfie_docs <- function(x) list(x = parse_elfie_json(paste0(x$`@id`)))
+
+for(realization in realizations) {
+  if(realization$`@type` == "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrometricNetwork") {
+    
+    rzn <- parse_elfie_json(paste0(realization$`@id`))
+    
+    station_list <- sapply(rzn$networkStation, get_elfie_docs)
+    
+    station_geo <- sf::st_sf("geometry" = sf::st_sfc(lapply(station_list, function(x) x$geo)),
+                             "name" = sapply(station_list, function(x) x$name),
+                             "link" = sapply(station_list, function(x) x$sameAs),
+                             "graph" = sapply(station_list, function(x) ifelse(is.null(x$image), "", x$image)),
+                             "elfie" = sapply(station_list, function(x) x$`@id`), stringsAsFactors = F)
+    
+    gs <- !station_geo$graph==""
+    graph_stations <- station_geo[which(gs),]
+    station_geo <- station_geo[which(!gs),]
+    
+  } else if(realization$`@type` == "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_CatchmentDivide") {
+    
+    rzn <- parse_elfie_json(paste0(realization$`@id`))
+    
+    divide_geo <- sf::st_sf(name = rzn$name, geometry = sf::st_sfc(rzn$geometry), stringsAsFactors = F)
+    
+  } else if(realization$`@type` == "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrographicNetwork") {
+    
+    rzn <- parse_elfie_json(paste0(realization$`@id`))
+    
+    network_geo <- sf::st_sf(name = rzn$name, geometry = sf::st_sfc(rzn$geometr), stringsAsFactors = F)
+    
+  } else {
+    stop("got a type that was unexpected. This won't work")
+  }
+}
+
+station_geo["popup"] <- paste0("<b><a href='", station_geo$link, "' target='_blank'>", station_geo$name, "</a></b><br/>",
+                              "<a href='", station_geo$elfie, "' target='_blank'>Source JSON-LD</a>")
+                 
+graph_stations["popup"] <- paste0("<b><a href='", graph_stations$link, "' target='_blank'>", graph_stations$name, "</a></b><br/>",
+                              "<img src='", graph_stations$graph, "alt='hydrograph'><br/>",
+                              "<a href='", graph_stations$elfie, "' target='_blank'>Source JSON-LD</a>")
+
+
+library(magrittr)
+m <- leaflet::leaflet(width = 1000, height = 800) %>%
+  leaflet::addTiles() %>%  
+  leaflet::addPolygons(data = divide_geo, color = "black", fill = F, opacity = 100, group = "Catchment Boundary") %>%
+  leaflet::addPolylines(data = network_geo, opacity = 100, group = "Hydrographic Network") %>%
+  leaflet::addMarkers(data = station_geo, popup = station_geo$popup, group = "Water Quality Sites") %>%
+  leaflet::addCircleMarkers(data = graph_stations, popup = graph_stations$popup, 
+                            color = "red", opacity = 75, 
+                            popupOptions = leaflet::popupOptions(minWidth = 600), group = "Streamflow Sites") %>%
+  leaflet::addLayersControl(options = leaflet::layersControlOptions(collapsed = FALSE), 
+                            overlayGroups = c("Catchment Boundary", "Hydrographic Network", 
+                                              "Water Quality Sites", "Streamflow Sites"))
+m
+```
+See the source that created this html [here.](https://github.com/opengeospatial/ELFIE/blob/master/data/huc12obs/build_viz.Rmd)
+
+Code starts with this JSON-LD file: [`https://opengeospatial.github.io/ELFIE/usgs/huc/huc12obs/070900020601`](https://opengeospatial.github.io/ELFIE/usgs/huc/huc12obs/070900020601) all content is derived from linked JSON-LD files.
+
+For more information go [here.](https://opengeospatial.github.io/ELFIE/demo/huc12obs)

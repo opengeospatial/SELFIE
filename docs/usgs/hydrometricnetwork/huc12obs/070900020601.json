@@ -1,78 +1,9 @@
 {
-  "@context": [
-    "https://opengeospatial.github.io/ELFIE/contexts/elfie-2/elf-index.jsonld",
-    "https://opengeospatial.github.io/ELFIE/contexts/elfie-2/hyf_minimal_context.jsonld"
-  ],
+  "@context": ["https://opengeospatial.github.io/ELFIE/contexts/elfie-2/elf-index.jsonld", "https://opengeospatial.github.io/ELFIE/contexts/elfie-2/hyf_minimal_context.jsonld"],
   "@id": "http://geoconnex.us/SELFIE/usgs/hydrometricnetwork/huc12obs/070900020601",
   "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrometricNetwork",
   "name": "Waunakee Marsh-Sixmile Creek Monitoring Network",
   "description": "Monitoring locations in the Waunakee Marsh-Sixmile Creek watershed.",
-  "realizedCatchment": [
-    {
-      "@id": "http://geoconnex.us/SELFIE/usgs/huc/huc12obs/070900020601",
-      "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_Catchment"
-    }
-  ],
-  "networkStation": [
-    {
-      "@id": "http://geoconnex.us/SELFIE/usgs/nwissite/huc12obs/USGS-05427880",
-      "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrometricFeature"
-    },
-    {
-      "@id": "http://geoconnex.us/SELFIE/usgs/wqp/huc12obs/WIDNR_WQX-10001227",
-      "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrometricFeature"
-    },
-    {
-      "@id": "http://geoconnex.us/SELFIE/usgs/wqp/huc12obs/WIDNR_WQX-10001222",
-      "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrometricFeature"
-    },
-    {
-      "@id": "http://geoconnex.us/SELFIE/usgs/wqp/huc12obs/WIDNR_WQX-134002",
-      "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrometricFeature"
-    },
-    {
-      "@id": "http://geoconnex.us/SELFIE/usgs/wqp/huc12obs/USGS-431208089314901",
-      "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrometricFeature"
-    },
-    {
-      "@id": "http://geoconnex.us/SELFIE/usgs/wqp/huc12obs/USGS-431212089314801",
-      "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrometricFeature"
-    },
-    {
-      "@id": "http://geoconnex.us/SELFIE/usgs/wqp/huc12obs/USGS-431212089314802",
-      "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrometricFeature"
-    },
-    {
-      "@id": "http://geoconnex.us/SELFIE/usgs/wqp/huc12obs/USGS-431250089282902",
-      "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrometricFeature"
-    },
-    {
-      "@id": "http://geoconnex.us/SELFIE/usgs/wqp/huc12obs/USGS-431250089282901",
-      "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrometricFeature"
-    },
-    {
-      "@id": "http://geoconnex.us/SELFIE/usgs/wqp/huc12obs/USGS-05427880",
-      "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrometricFeature"
-    },
-    {
-      "@id": "http://geoconnex.us/SELFIE/usgs/wqp/huc12obs/WIDNR_WQX-10017024",
-      "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrometricFeature"
-    },
-    {
-      "@id": "http://geoconnex.us/SELFIE/usgs/wqp/huc12obs/WIDNR_WQX-10001221",
-      "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrometricFeature"
-    },
-    {
-      "@id": "http://geoconnex.us/SELFIE/usgs/wqp/huc12obs/WIDNR_WQX-10016974",
-      "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrometricFeature"
-    },
-    {
-      "@id": "http://geoconnex.us/SELFIE/usgs/wqp/huc12obs/WIDNR_WQX-10043697",
-      "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrometricFeature"
-    },
-    {
-      "@id": "http://geoconnex.us/SELFIE/usgs/wqp/huc12obs/WIDNR_WQX-10001223",
-      "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrometricFeature"
-    }
-  ]
+  "realizedCatchment": "http://geoconnex.us/SELFIE/usgs/huc/huc12obs/070900020601",
+  "networkStation": ["http://geoconnex.us/SELFIE/usgs/nwissite/huc12obs/USGS-05427880", "http://geoconnex.us/SELFIE/usgs/wqp/huc12obs/WIDNR_WQX-10001227", "http://geoconnex.us/SELFIE/usgs/wqp/huc12obs/WIDNR_WQX-10001222", "http://geoconnex.us/SELFIE/usgs/wqp/huc12obs/WIDNR_WQX-134002", "http://geoconnex.us/SELFIE/usgs/wqp/huc12obs/USGS-431208089314901", "http://geoconnex.us/SELFIE/usgs/wqp/huc12obs/USGS-431212089314801", "http://geoconnex.us/SELFIE/usgs/wqp/huc12obs/USGS-431212089314802", "http://geoconnex.us/SELFIE/usgs/wqp/huc12obs/USGS-431250089282902", "http://geoconnex.us/SELFIE/usgs/wqp/huc12obs/USGS-431250089282901", "http://geoconnex.us/SELFIE/usgs/wqp/huc12obs/USGS-05427880", "http://geoconnex.us/SELFIE/usgs/wqp/huc12obs/WIDNR_WQX-10017024", "http://geoconnex.us/SELFIE/usgs/wqp/huc12obs/WIDNR_WQX-10001221", "http://geoconnex.us/SELFIE/usgs/wqp/huc12obs/WIDNR_WQX-10016974", "http://geoconnex.us/SELFIE/usgs/wqp/huc12obs/WIDNR_WQX-10043697", "http://geoconnex.us/SELFIE/usgs/wqp/huc12obs/WIDNR_WQX-10001223"]
 }
