@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<!--Adapted/Stolen from: https://github.com/scienceai/jsonld-markup Thanks!!!-->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="https://opengeospatial.github.io/ELFIE/css/jsonld-markup.css">
+    <style>
+    body { padding: 1em; }
+    .logo { margin-bottom: 3px; }
+    .code.column { background-color: rgb(51,51,51); color: white }
+    </style>
+    <title>/usgs/wqp/huc12obs/USGS-431208089314901.json</title>
+    <script language="" type="application/ld+json">
+      {
+  "@context": [
+    "https://opengeospatial.github.io/ELFIE/contexts/elfie-2/elf-index.jsonld",
+    "https://opengeospatial.github.io/ELFIE/contexts/elfie-2/hyf_minimal_context.jsonld",
+    "https://opengeospatial.github.io/ELFIE/contexts/elfie-2/spatial.jsonld",
+    {
+      "gsp": "http://www.opengeospatial.org/standards/geosparql/"
+    }
+  ],
+  "@id": "http://geoconnex.us/SELFIE/usgs/wqp/huc12obs/USGS-431208089314901",
+  "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrometricFeature",
+  "name": "DANE CO. MRBI TILE NO. 1 NR SPRINGFIELD CORNERS,WI",
+  "subjectOf": "https://www.waterqualitydata.us/provider/STORET/USGS-WI/USGS-431208089314901",
+  "hydrometricNetwork": "https://opengeospatial.github.io/ELFIE/usgs/hydrometricnetwork/huc12obs/070900020601",
+  "geo": {
+    "@type": "schema:GeoCoordinates",
+    "schema:latitude": 43.2022,
+    "schema:longitude": -89.5302
+  },
+  "gsp:hasGeometry": {
+    "@type": "gsp:Geometry",
+    "gsp:asWKT": "POINT (-89.53022 43.20225)"
+  }
+}
+    </script>
+  </head>
+  <body>
+    <div class="ui middle aligned two column grid">
+      <div class="column">
+        <h4 class="ui header">
+          Environmental Linked Features Interoperability Experiment Demonstration
+        </h4>
+      </div>
+      <div class="right aligned column">
+        A demonstration of the
+        <a href="https://opengeospatial.github.io/ELFIE/" target="_blank">
+        <img class="ui tiny inline image logo" src="https://opengeospatial.github.io/ELFIE/images/ELFIE_logo.png" alt="ELFIE logo">
+        </a>
+      </div>
+    </div>
+    <div class="ui two column doubling stackable grid">
+      <div class="five wide code column">
+    <h3 class="ui inverted header">Expanded Context</h3>
+    <pre><code id="context">
+{
+  "@context": {
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "dct": "http://purl.org/dc/terms/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "http://schema.org/",
+    "name": "schema:name",
+    "description": "schema:description",
+    "spatialCoverage": "schema:spatialCoverage",
+    "geo": "schema:geo",
+    "polygon": "schema:polygon",
+    "image": {
+      "@id": "schema:image",
+      "@type": "@id"
+    },
+    "report": "schema:report",
+    "subjectOf": "schema:subjectOf",
+    "sameAs": "owl:sameAs",
+    "label": "rdfs:label",
+    "note": "http://www.w3.org/2004/02/skos/core#note",
+    "hyf": "https://www.opengis.net/def/appschema/hy_features/hyf/",
+    "conjointCatchment": "hyf:conjointCatchment",
+    "HY_Catchment": "hyf:HY_Catchment",
+    "contributingCatchment": "hyf:contributingCatchment",
+    "code": "hyf:code",
+    "containingCatchment": "hyf:containingCatchment",
+    "referencedPosition": "hyf:referencedPosition",
+    "HY_IndirectPosition": "hyf:HY_IndirectPosition",
+    "catchmentRealization": "hyf:catchmentRealization",
+    "HY_CatchmentRealization": "hyf:HY_CatchmentRealization",
+    "HY_CatchmentAggregate": "hyf:HY_CatchmentAggregate",
+    "endorheicDrainage": "hyf:endorheicDrainage",
+    "HY_InteriorCatchment": "hyf:HY_InteriorCatchment",
+    "HY_FlowPath": "hyf:HY_FlowPath",
+    "HY_HydroFeatureName": "hyf:HY_HydroFeatureName",
+    "realizedNexus": "hyf:realizedNexus",
+    "HY_HydroNexus": "hyf:HY_HydroNexus",
+    "namesPart": "hyf:namesPart",
+    "referenceLocation": "hyf:referenceLocation",
+    "HY_HydroLocation": "hyf:HY_HydroLocation",
+    "upperCatchment": "hyf:upperCatchment",
+    "lowerCatchment": "hyf:lowerCatchment",
+    "catchmentArea": "hyf:catchmentArea",
+    "HY_CatchmentArea": "hyf:HY_CatchmentArea",
+    "nexusRealization": "hyf:nexusRealization",
+    "receivingCatchment": "hyf:receivingCatchment",
+    "outflow": "hyf:outflow",
+    "flowpath": "hyf:flowpath",
+    "HY_HydroNetwork": "hyf:HY_HydroNetwork",
+    "containedCatchment": "hyf:containedCatchment",
+    "HY_HydroFeatureName.name": "hyf:HY_HydroFeatureName.name",
+    "linearElement": "hyf:linearElement",
+    "HY_HydroFeature": "hyf:HY_HydroFeature",
+    "exorheicDrainage": "hyf:exorheicDrainage",
+    "HY_DendriticCatchment": "hyf:HY_DendriticCatchment",
+    "HY_CatchmentDivide": "hyf:HY_CatchmentDivide",
+    "locatedReferent": "hyf:locatedReferent",
+    "HY_CartographicRealization": "hyf:HY_CartographicRealization",
+    "catchmentDivide": "hyf:catchmentDivide",
+    "variantSpelling": "hyf:variantSpelling",
+    "inflow": "hyf:inflow",
+    "HY_HydroFeature.name": "hyf:HY_HydroFeature.name",
+    "realizedCatchment": "hyf:realizedCatchment",
+    "preferredBy": "hyf:preferredBy",
+    "positionOnRiver": "hyf:positionOnRiver",
+    "HY_HydrometricNetwork": "hyf:HY_HydrometricNetwork",
+    "networkStation": "hyf:networkStation",
+    "HY_HydrometricFeature": "hyf:HY_HydrometricFeature",
+    "crossSectionPoint": "hyf:crossSectionPoint",
+    "HY_Lake": "hyf:HY_Lake",
+    "HY_WaterBody": "hyf:HY_WaterBody",
+    "downstreamWaterBody": "hyf:downstreamWaterBody",
+    "waterpool": "hyf:waterpool",
+    "HY_Depression": "hyf:HY_Depression",
+    "reservoirZone": "hyf:reservoirZone",
+    "HY_WaterBodyStratum": "hyf:HY_WaterBodyStratum",
+    "bedProfileTransversal": "hyf:bedProfileTransversal",
+    "HY_CrossSection": "hyf:HY_CrossSection",
+    "HY_Lagoon": "hyf:HY_Lagoon",
+    "watercourse": "hyf:watercourse",
+    "HY_Channel": "hyf:HY_Channel",
+    "surfaceDepression": "hyf:surfaceDepression",
+    "HY_Water_SolidPhase": "hyf:HY_Water_SolidPhase",
+    "fixedLandmark": "hyf:fixedLandmark",
+    "HY_ChannelNetwork": "hyf:HY_ChannelNetwork",
+    "longitudinalSectionPoint": "hyf:longitudinalSectionPoint",
+    "HY_Impoundment": "hyf:HY_Impoundment",
+    "HY_Reservoir": "hyf:HY_Reservoir",
+    "HY_LongitudinalSection": "hyf:HY_LongitudinalSection",
+    "stream": "hyf:stream",
+    "drainagePattern": "hyf:drainagePattern",
+    "HY_River": "hyf:HY_River",
+    "coveredWaterBody": "hyf:coveredWaterBody",
+    "upstreamWaterBody": "hyf:upstreamWaterBody",
+    "HY_Canal": "hyf:HY_Canal",
+    "storedWaterBody": "hyf:storedWaterBody",
+    "HY_Estuary": "hyf:HY_Estuary",
+    "bedProfileLongitudinal": "hyf:bedProfileLongitudinal",
+    "surfaceChannel": "hyf:surfaceChannel",
+    "streamCrossSection": "hyf:streamCrossSection",
+    "HY_HydrographicNetwork": "hyf:HY_HydrographicNetwork",
+    "standingWater": "hyf:standingWater",
+    "snowmelt": "hyf:snowmelt",
+    "HY_Water_LiquidPhase": "hyf:HY_Water_LiquidPhase",
+    "storage": "hyf:storage",
+    "confinedWaterBody": "hyf:confinedWaterBody",
+    "networkWaterBody": "hyf:networkWaterBody",
+    "accumulatingWaterBody": "hyf:accumulatingWaterBody",
+    "streamLongitudinalSection": "hyf:streamLongitudinalSection",
+    "stratumType": "hyf:stratumType",
+    "benchmark": "hyf:benchmark",
+    "stratum": "hyf:stratum",
+    "Place": "schema:Place",
+    "GeoCoordinates": "schema:GeoCoordinates",
+    "latitude": "schema:latitude",
+    "longitude": "schema:longitude",
+    "gsp": "http://www.opengeospatial.org/standards/geosparql/"
+  }
+}
+    </code></pre>
+      </div>
+      <div class="eleven wide code column">
+    <h3 class="ui inverted header">JSON-LD Document</h3>
+    <pre><code id="code">
+{
+  "@context": [
+    "https://opengeospatial.github.io/ELFIE/contexts/elfie-2/elf-index.jsonld",
+    "https://opengeospatial.github.io/ELFIE/contexts/elfie-2/hyf_minimal_context.jsonld",
+    "https://opengeospatial.github.io/ELFIE/contexts/elfie-2/spatial.jsonld",
+    {
+      "gsp": "http://www.opengeospatial.org/standards/geosparql/"
+    }
+  ],
+  "@id": "http://geoconnex.us/SELFIE/usgs/wqp/huc12obs/USGS-431208089314901",
+  "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrometricFeature",
+  "name": "DANE CO. MRBI TILE NO. 1 NR SPRINGFIELD CORNERS,WI",
+  "subjectOf": "https://www.waterqualitydata.us/provider/STORET/USGS-WI/USGS-431208089314901",
+  "hydrometricNetwork": "https://opengeospatial.github.io/ELFIE/usgs/hydrometricnetwork/huc12obs/070900020601",
+  "geo": {
+    "@type": "schema:GeoCoordinates",
+    "schema:latitude": 43.2022,
+    "schema:longitude": -89.5302
+  },
+  "gsp:hasGeometry": {
+    "@type": "gsp:Geometry",
+    "gsp:asWKT": "POINT (-89.53022 43.20225)"
+  }
+}
+    </code></pre>
+      </div>
+    </div>
+    <div class="ui middle aligned two column grid">
+      <div class="column">
+        <h4 class="ui header">
+          Code for this pretty JSON-LD view derived from 
+          <a href="https://github.com/scienceai/jsonld-markup" target="_blank">
+            https://github.com/scienceai/jsonld-markup
+          </a>. 
+          Thanks <a href="https://science.ai/">science.ai</a>!
+        </h4>
+      </div>
+      <div class="right aligned column">
+        A demonstration of the
+        <a href="https://opengeospatial.github.io/ELFIE/" target="_blank">
+        <img class="ui tiny inline image logo" src="https://opengeospatial.github.io/ELFIE/images/ELFIE_logo.png" alt="ELFIE logo">
+        </a>
+      </div>
+    </div>
+    <script type="text/javascript" src="https://opengeospatial.github.io/ELFIE/js/pretty_jsonld.js"></script>
+    <script type="text/javascript">
+     var $context = document.getElementById('context');
+     var $code = document.getElementById('code');
+     var ctx = JSON.parse($context.textContent.trim());
+     var data = JSON.parse($code.textContent.trim());
+     $context.innerHTML = jsonldMarkup(ctx);
+     $code.innerHTML = jsonldMarkup(data, ctx['@context']);
+    </script>
+  </body>
+</html>
