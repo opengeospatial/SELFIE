@@ -12,7 +12,12 @@
   "name": "SIXMILE CREEK AT STATE HIGHWAY 19 NEAR WAUNAKEE,WI",
   "subjectOf": "https://waterdata.usgs.gov/nwis/inventory?site_no=05427880",
   "image": "https://waterdata.usgs.gov/nwisweb/graph?agency_cd=USGS&site_no=05427880&parm_cd=00060&period=7",
-  "hydrometricNetwork": "https://opengeospatial.github.io/ELFIE/usgs/hydrometricnetwork/huc12obs/070900020601",
+  "hydrometricNetwork": [
+    {
+      "@id": "http://geoconnex.us/SELFIE/usgs/hydrometricnetwork/huc12obs/070900020601",
+      "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrometricNetwork"
+    }
+  ],
   "geo": {
     "@type": "schema:GeoCoordinates",
     "schema:latitude": 43.1922,

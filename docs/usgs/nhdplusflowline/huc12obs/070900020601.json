@@ -11,7 +11,12 @@
   "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrographicNetwork",
   "name": "NHDPlus V2.0 Network for Waunakee Marsh-Sixmile Creek",
   "description": "Collection of Flowlines for HUC12 watershed.",
-  "realizedCatchment": "https://opengeospatial.github.io/ELFIE/usgs/huc/huc12obs/070900020601",
+  "realizedCatchment": [
+    {
+      "@id": "http://geoconnex.us/SELFIE/usgs/huc/huc12obs/070900020601",
+      "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_Catchment"
+    }
+  ],
   "geo": [
     {
       "@type": "schema:GeoCoordinates",
