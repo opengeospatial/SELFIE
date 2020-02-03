@@ -15,7 +15,7 @@ realizations <- catchment_data$catchmentRealization
 get_elfie_docs <- function(x) list(x = parse_elfie_json(paste0(x$`@id`)))
 
 for(realization in realizations) {
-  if(realization$`@type` == "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrometricNetwork") {
+  if(realization$`@type` == "https://www.opengis.net/def/appschema/hy_features/hyf/HY_HydrometricNetwork") {
     
     rzn <- parse_elfie_json(paste0(realization$`@id`))
     
@@ -31,13 +31,13 @@ for(realization in realizations) {
     graph_stations <- station_geo[which(gs),]
     station_geo <- station_geo[which(!gs),]
     
-  } else if(realization$`@type` == "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_CatchmentDivide") {
+  } else if(realization$`@type` == "https://www.opengis.net/def/appschema/hy_features/hyf/HY_CatchmentDivide") {
     
     rzn <- parse_elfie_json(paste0(realization$`@id`))
     
     divide_geo <- sf::st_sf(name = rzn$name, geometry = sf::st_sfc(rzn$geometry), stringsAsFactors = F)
     
-  } else if(realization$`@type` == "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrographicNetwork") {
+  } else if(realization$`@type` == "https://www.opengis.net/def/appschema/hy_features/hyf/HY_HydrographicNetwork") {
     
     rzn <- parse_elfie_json(paste0(realization$`@id`))
     

@@ -8,10 +8,15 @@
     }
   ],
   "@id": "http://geoconnex.us/SELFIE/usgs/wqp/huc12obs/WIDNR_WQX-10043697",
-  "@type": "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrometricFeature",
+  "@type": "https://www.opengis.net/def/appschema/hy_features/hyf/HY_HydrometricFeature",
   "name": "Sixmile Creek at STH 19 (WEST) crossing",
   "subjectOf": "https://www.waterqualitydata.us/provider/STORET/WIDNR_WQX/WIDNR_WQX-10043697",
-  "hydrometricNetwork": "http://geoconnex.us/SELFIE/usgs/hydrometricnetwork/huc12obs/070900020601",
+  "hydrometricNetwork": [
+    {
+      "@id": "http://geoconnex.us/SELFIE/usgs/hydrometricnetwork/huc12obs/070900020601",
+      "@type": "https://www.opengis.net/def/appschema/hy_features/hyf/HY_HydrometricNetwork"
+    }
+  ],
   "geo": {
     "@type": "schema:GeoCoordinates",
     "schema:latitude": 43.1919,

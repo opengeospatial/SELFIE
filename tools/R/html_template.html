@@ -10,6 +10,8 @@
     body { padding: 1em; }
     .logo { margin-bottom: 3px; }
     .code.column { background-color: rgb(51,51,51); color: white }
+    .column_left { float: left; width: 80%; }
+    .column_right { float: right; width: 20%; }
     </style>
     <title>{{{page_title}}}</title>
     <script language="" type="application/ld+json">
@@ -18,15 +20,32 @@
   </head>
   <body>
     <div class="ui middle aligned two column grid">
-      <div class="column">
+      <div class="column_left">
         <h4 class="ui header">
-          Environmental Linked Features Interoperability Experiment Demonstration
+          Second Environmental Linked Features Interoperability Experiment Demonstration
         </h4>
+        <br>
+        This page is a demonstration of landing page content for a feature in the 
+        <a href="https://opengeospatial.github.io/ELFIE/" target="_blank">Second Environmental Linked Features Interoperability Experiment.</a> 
+        <br><br>
+        This page is about: <a href="{{{feature_id}}}" target="_blank">{{{feature_id}}}</a>
+        {{{#feature_name}}}
+          <br>
+          Named: {{{feature_name}}}
+        {{{/feature_name}}}
+        {{{#feature_desc}}}
+        <br>
+          Description: {{{feature_desc}}}
+        {{{/feature_desc}}}
+        {{{#feature_type}}}
+        <br>
+          It is a: <a href="{{{feature_type}}}" target="_blank">{{{feature_type}}}</a>
+        {{{/feature_type}}}
       </div>
-      <div class="right aligned column">
+      <div class="column_right">
         A demonstration of the
         <a href="https://opengeospatial.github.io/ELFIE/" target="_blank">
-        <img class="ui tiny inline image logo" src="https://opengeospatial.github.io/ELFIE/images/ELFIE_logo.png" alt="ELFIE logo">
+        <img class="ui inline image logo" src="https://opengeospatial.github.io/ELFIE/images/ELFIE_logo.png" alt="ELFIE logo">
         </a>
       </div>
     </div>

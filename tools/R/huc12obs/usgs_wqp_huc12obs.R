@@ -23,7 +23,7 @@ rownames(wqp_site_info) <- names(sites)
 
 for(site in names(sites)) {
   wqp_site_info[site,"jsonkey_identifier"] <- sites[site][[1]]$MonitoringLocationIdentifier
-  wqp_site_info[site, "rdfs:type"] <- "http://www.opengeospatial.org/standards/waterml2/hy_features/HY_HydrometricFeature"
+  wqp_site_info[site, "rdfs:type"] <- "https://www.opengis.net/def/appschema/hy_features/hyf/HY_HydrometricFeature"
   wqp_site_info[site, "schema:name"] <- sites[site][[1]]$MonitoringLocationName
   wqp_site_info[site, "schema:subjectOf"] <- paste0("https://www.waterqualitydata.us/provider/STORET/", 
                                               sites[site][[1]]$OrganizationIdentifier, "/",

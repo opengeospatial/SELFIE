@@ -150,7 +150,9 @@ doc <- as_xml_document(out)
 xml2::write_xml(doc, "test.xml")
 
 for(id in created_ids) {
-  json_out <- jsonlite::toJSON(prefetch_ids(id), 
+  js <- prefetch_ids(id)
+  
+  json_out <- jsonlite::toJSON(js, 
                                pretty = T, 
                                auto_unbox = T)
   
@@ -162,7 +164,11 @@ for(id in created_ids) {
   
   whisker_list <- list(context = list(context_out), 
                        `json-ld` = json_out, 
-                       page_title = gsub("../../docs", "", elfie_url_local(id)))
+                       page_title = gsub("../../docs", "", elfie_url_local(id)),
+                       feature_name = js$name,
+                       feature_desc = js$description,
+                       feature_type = js$`@type`,
+                       feature_id = js$`@id`)
   
   writeLines(whisker::whisker.render(readLines("html_template.html"), 
                                      whisker_list),
