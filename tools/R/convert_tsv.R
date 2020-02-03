@@ -168,7 +168,8 @@ for(id in created_ids) {
                        feature_name = js$name,
                        feature_desc = js$description,
                        feature_type = js$`@type`,
-                       feature_id = js$`@id`)
+                       feature_id = js$`@id`,
+                       feature_image = js$image)
   
   writeLines(whisker::whisker.render(readLines("html_template.html"), 
                                      whisker_list),
