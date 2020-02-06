@@ -3,75 +3,75 @@
     "https://opengeospatial.github.io/ELFIE/contexts/elfie-2/elf-index.jsonld",
     "https://opengeospatial.github.io/ELFIE/contexts/elfie-2/hyf_minimal_context.jsonld"
   ],
-  "@id": "http://geoconnex.us/SELFIE/usgs/hydrometricnetwork/huc12obs/070900020601",
+  "@id": "https://geoconnex.us/SELFIE/usgs/hydrometricnetwork/huc12obs/070900020601",
   "@type": "https://www.opengis.net/def/appschema/hy_features/hyf/HY_HydrometricNetwork",
   "name": "Waunakee Marsh-Sixmile Creek Monitoring Network",
   "description": "Monitoring locations in the Waunakee Marsh-Sixmile Creek watershed.",
   "realizedCatchment": [
     {
-      "@id": "http://geoconnex.us/SELFIE/usgs/huc/huc12obs/070900020601",
+      "@id": "https://geoconnex.us/SELFIE/usgs/huc/huc12obs/070900020601",
       "@type": "https://www.opengis.net/def/appschema/hy_features/hyf/HY_Catchment"
     }
   ],
   "networkStation": [
     {
-      "@id": "http://geoconnex.us/SELFIE/usgs/nwissite/huc12obs/USGS-05427880",
+      "@id": "https://geoconnex.us/SELFIE/usgs/nwissite/huc12obs/USGS-05427880",
       "@type": "https://www.opengis.net/def/appschema/hy_features/hyf/HY_HydrometricFeature"
     },
     {
-      "@id": "http://geoconnex.us/SELFIE/usgs/wqp/huc12obs/WIDNR_WQX-10001227",
+      "@id": "https://geoconnex.us/SELFIE/usgs/wqp/huc12obs/WIDNR_WQX-10001227",
       "@type": "https://www.opengis.net/def/appschema/hy_features/hyf/HY_HydrometricFeature"
     },
     {
-      "@id": "http://geoconnex.us/SELFIE/usgs/wqp/huc12obs/WIDNR_WQX-10001222",
+      "@id": "https://geoconnex.us/SELFIE/usgs/wqp/huc12obs/WIDNR_WQX-10001222",
       "@type": "https://www.opengis.net/def/appschema/hy_features/hyf/HY_HydrometricFeature"
     },
     {
-      "@id": "http://geoconnex.us/SELFIE/usgs/wqp/huc12obs/WIDNR_WQX-134002",
+      "@id": "https://geoconnex.us/SELFIE/usgs/wqp/huc12obs/WIDNR_WQX-134002",
       "@type": "https://www.opengis.net/def/appschema/hy_features/hyf/HY_HydrometricFeature"
     },
     {
-      "@id": "http://geoconnex.us/SELFIE/usgs/wqp/huc12obs/USGS-431208089314901",
+      "@id": "https://geoconnex.us/SELFIE/usgs/wqp/huc12obs/USGS-431208089314901",
       "@type": "https://www.opengis.net/def/appschema/hy_features/hyf/HY_HydrometricFeature"
     },
     {
-      "@id": "http://geoconnex.us/SELFIE/usgs/wqp/huc12obs/USGS-431212089314801",
+      "@id": "https://geoconnex.us/SELFIE/usgs/wqp/huc12obs/USGS-431212089314801",
       "@type": "https://www.opengis.net/def/appschema/hy_features/hyf/HY_HydrometricFeature"
     },
     {
-      "@id": "http://geoconnex.us/SELFIE/usgs/wqp/huc12obs/USGS-431212089314802",
+      "@id": "https://geoconnex.us/SELFIE/usgs/wqp/huc12obs/USGS-431212089314802",
       "@type": "https://www.opengis.net/def/appschema/hy_features/hyf/HY_HydrometricFeature"
     },
     {
-      "@id": "http://geoconnex.us/SELFIE/usgs/wqp/huc12obs/USGS-431250089282902",
+      "@id": "https://geoconnex.us/SELFIE/usgs/wqp/huc12obs/USGS-431250089282902",
       "@type": "https://www.opengis.net/def/appschema/hy_features/hyf/HY_HydrometricFeature"
     },
     {
-      "@id": "http://geoconnex.us/SELFIE/usgs/wqp/huc12obs/USGS-431250089282901",
+      "@id": "https://geoconnex.us/SELFIE/usgs/wqp/huc12obs/USGS-431250089282901",
       "@type": "https://www.opengis.net/def/appschema/hy_features/hyf/HY_HydrometricFeature"
     },
     {
-      "@id": "http://geoconnex.us/SELFIE/usgs/wqp/huc12obs/USGS-05427880",
+      "@id": "https://geoconnex.us/SELFIE/usgs/wqp/huc12obs/USGS-05427880",
       "@type": "https://www.opengis.net/def/appschema/hy_features/hyf/HY_HydrometricFeature"
     },
     {
-      "@id": "http://geoconnex.us/SELFIE/usgs/wqp/huc12obs/WIDNR_WQX-10017024",
+      "@id": "https://geoconnex.us/SELFIE/usgs/wqp/huc12obs/WIDNR_WQX-10017024",
       "@type": "https://www.opengis.net/def/appschema/hy_features/hyf/HY_HydrometricFeature"
     },
     {
-      "@id": "http://geoconnex.us/SELFIE/usgs/wqp/huc12obs/WIDNR_WQX-10001221",
+      "@id": "https://geoconnex.us/SELFIE/usgs/wqp/huc12obs/WIDNR_WQX-10001221",
       "@type": "https://www.opengis.net/def/appschema/hy_features/hyf/HY_HydrometricFeature"
     },
     {
-      "@id": "http://geoconnex.us/SELFIE/usgs/wqp/huc12obs/WIDNR_WQX-10016974",
+      "@id": "https://geoconnex.us/SELFIE/usgs/wqp/huc12obs/WIDNR_WQX-10016974",
       "@type": "https://www.opengis.net/def/appschema/hy_features/hyf/HY_HydrometricFeature"
     },
     {
-      "@id": "http://geoconnex.us/SELFIE/usgs/wqp/huc12obs/WIDNR_WQX-10043697",
+      "@id": "https://geoconnex.us/SELFIE/usgs/wqp/huc12obs/WIDNR_WQX-10043697",
       "@type": "https://www.opengis.net/def/appschema/hy_features/hyf/HY_HydrometricFeature"
     },
     {
-      "@id": "http://geoconnex.us/SELFIE/usgs/wqp/huc12obs/WIDNR_WQX-10001223",
+      "@id": "https://geoconnex.us/SELFIE/usgs/wqp/huc12obs/WIDNR_WQX-10001223",
       "@type": "https://www.opengis.net/def/appschema/hy_features/hyf/HY_HydrometricFeature"
     }
   ]

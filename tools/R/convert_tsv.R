@@ -136,8 +136,8 @@ make_mapping <- function(path, target, creator, type = "1:1",
 }
 
 mappings <- lapply(created_ids, function(id) {
-  make_mapping(gsub("http://geoconnex.us", "", id),
-               gsub("http://geoconnex.us", "https://opengeospatial.github.io", id), 
+  make_mapping(gsub("https://geoconnex.us", "", id),
+               gsub("https://geoconnex.us", "https://opengeospatial.github.io", id), 
                creator = "dblodgett@usgs.gov", 
                description = "made SELFIE testing")
 })

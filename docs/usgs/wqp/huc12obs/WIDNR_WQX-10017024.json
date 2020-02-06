@@ -7,13 +7,13 @@
       "gsp": "http://www.opengeospatial.org/standards/geosparql/"
     }
   ],
-  "@id": "http://geoconnex.us/SELFIE/usgs/wqp/huc12obs/WIDNR_WQX-10017024",
+  "@id": "https://geoconnex.us/SELFIE/usgs/wqp/huc12obs/WIDNR_WQX-10017024",
   "@type": "https://www.opengis.net/def/appschema/hy_features/hyf/HY_HydrometricFeature",
   "name": "Sixmile Creek - Woodland Rd Station #2",
   "subjectOf": "https://www.waterqualitydata.us/provider/STORET/WIDNR_WQX/WIDNR_WQX-10017024",
   "hydrometricNetwork": [
     {
-      "@id": "http://geoconnex.us/SELFIE/usgs/hydrometricnetwork/huc12obs/070900020601",
+      "@id": "https://geoconnex.us/SELFIE/usgs/hydrometricnetwork/huc12obs/070900020601",
       "@type": "https://www.opengis.net/def/appschema/hy_features/hyf/HY_HydrometricNetwork"
     }
   ],

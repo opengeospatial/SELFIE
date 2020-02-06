@@ -3,21 +3,21 @@
     "https://opengeospatial.github.io/ELFIE/contexts/elfie-2/elf-index.jsonld",
     "https://opengeospatial.github.io/ELFIE/contexts/elfie-2/hyf_minimal_context.jsonld"
   ],
-  "@id": "http://geoconnex.us/SELFIE/usgs/huc/huc12obs/070900020601",
+  "@id": "https://geoconnex.us/SELFIE/usgs/huc/huc12obs/070900020601",
   "@type": "https://www.opengis.net/def/appschema/hy_features/hyf/HY_Catchment",
   "name": "Waunakee Marsh-Sixmile Creek",
   "description": "USGS Watershed Boundary Dataset Twelve Digit Hydrologic Unit Code Watershed",
   "catchmentRealization": [
     {
-      "@id": "http://geoconnex.us/SELFIE/usgs/nhdplusflowline/huc12obs/070900020601",
+      "@id": "https://geoconnex.us/SELFIE/usgs/nhdplusflowline/huc12obs/070900020601",
       "@type": "https://www.opengis.net/def/appschema/hy_features/hyf/HY_HydrographicNetwork"
     },
     {
-      "@id": "http://geoconnex.us/SELFIE/usgs/hucboundary/huc12obs/070900020601",
+      "@id": "https://geoconnex.us/SELFIE/usgs/hucboundary/huc12obs/070900020601",
       "@type": "https://www.opengis.net/def/appschema/hy_features/hyf/HY_CatchmentDivide"
     },
     {
-      "@id": "http://geoconnex.us/SELFIE/usgs/hydrometricnetwork/huc12obs/070900020601",
+      "@id": "https://geoconnex.us/SELFIE/usgs/hydrometricnetwork/huc12obs/070900020601",
       "@type": "https://www.opengis.net/def/appschema/hy_features/hyf/HY_HydrometricNetwork"
     }
   ]

@@ -1,7 +1,7 @@
 ## Constants
 out_path_base <- "../../docs/"
 
-elf_url_base <- "http://geoconnex.us/SELFIE"
+elf_url_base <- "https://geoconnex.us/SELFIE"
 
 #' @title build elfie index
 #' @param tsv_data one row data.frame with predicates to be added to an R list
@@ -427,12 +427,12 @@ remove_missing <- function(x) {
 }
 
 elfie_sub <- function(x) {
-  gsub("elfie/", "http://geoconnex.us/SELFIE/", x)
+  gsub("elfie/", "https://geoconnex.us/SELFIE/", x)
 }
 
 elfie_url_local <- function(x) {
   if(!grepl(".json", x)) x <- paste0(x, ".json")
-  gsub("http://geoconnex.us/SELFIE/", out_path_base, x)
+  gsub("https://geoconnex.us/SELFIE/", out_path_base, x)
 }
 
 check_outlist <- function(outlist) {
