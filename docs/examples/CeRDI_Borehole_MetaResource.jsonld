@@ -1,0 +1,102 @@
+{
+	"@context": [
+		"https://opengeospatial.github.io/SELFIE/contexts/elf-index.jsonld",
+		"https://opengeospatial.github.io/SELFIE/contexts/elf-data.jsonld",
+		"https://raw.githubusercontent.com/opengeospatial/SELFIE/master/docs/contexts/gwml2_minimal_context.jsonld",
+		"https://raw.githubusercontent.com/opengeospatial/SELFIE/master/docs/contexts/gsmlb_minimal_context.jsonld",
+		"http://schema.datacove.eu/ssn-ext.jsonld"
+	],
+	"@id": "https://geo.org.au/id/well/46217",
+	"@type": "gw:GW_Well",
+	"name": [
+		"46217",
+		"ARDNO 2"
+	],
+	"image": [
+		"https://www.vvg.org.au/bores/bore_attachments/bore_917937_1365_amacleod.JPG",
+		"https://www.vvg.org.au/bores/bore_attachments/bore_917937_1351_kmckenna.JPG",
+		"https://www.vvg.org.au/bores/bore_attachments/bore_917937_1350_kmckenna.JPG",
+		"https://www.vvg.org.au/bores/bore_attachments/bore_917937_1349_kmckenna.JPG",
+		"https://www.vvg.org.au/bores/bore_attachments/bore_917937_1348_kmckenna.JPG"
+	],
+	"report": [
+		"https://www.vvg.org.au/bores/bore_attachments/bore_917937_1346_kmckenna.pdf"
+	],
+	"spatialCoverage": {
+		"@type": "Place",
+		"geo": {
+			"@type": "GeoCoordinates",
+			"latitude": "-37.784881",
+			"longitude": "140.971284"
+		}
+	},
+	"label": [
+		{
+			"@language": "en",
+			"@value": "46217,ARDNO 2"
+		}
+	],
+	"sameAs": [
+		{
+			"@id": "https://id.cerdi.edu.au/wmis/data/gwml2/well/46217",
+			"@type": "gw:GW_Well",
+			"format": [
+				"application/ld+json",
+				"application/gml+xml",
+				"text/html"
+			],
+			"provider": "http://www.water.vic.gov.au"
+		},
+	],
+	"subjectOf": [
+		{
+			"@id": "https://id.cerdi.edu.au/wmis/data/gwml2/borehole/46217",
+			"@type": "gw:Borehole",
+			"format": [
+				"application/ld+json",
+				"application/gml+xml",
+				"text/html"
+			],
+			"provider": "http://www.water.vic.gov.au"
+		},
+		{
+			"@id": "https://id.cerdi.edu.au/gsv/data/gsml2/borehole/46217?f=json",
+			"@type": "gs:Borehole",
+			"format": [
+				"application/ld+json",
+				"application/gml+xml"
+			],
+			"provider": "https://earthresources.vic.gov.au/geology-exploration/geological-survey-victoria"
+		},
+		{
+			"@id": "https://id.cerdi.edu.au/wmis/data/sosa/observationcollection/46217",
+			"@type": "ssn-ext:ObservationCollection",
+			"format": [
+				"application/ld+json",
+				"application/gml+xml"
+			],
+			"provider": "http://www.water.vic.gov.au"
+		}
+		{
+			"url": "http://data.water.vic.gov.au/static.htm?ppbm=46217&gw&0&gwlf_org",
+			"format": [
+				"text/html"
+			],
+			"provider": "http://www.water.vic.gov.au"
+		},
+		{
+			"url": "http://gsv.vic.gov.au/birt/frameset?__report=report/boreholes/borehole_details_pdf.rptdesign&showAllFlag=true&site_id=46217",
+			"format": [
+				"application/pdf"
+			],
+			"provider": "https://earthresources.vic.gov.au/geology-exploration/geological-survey-victoria"
+		},
+		{
+			"url": "https://gsv.vic.gov.au/getBoreDataV2/rest/v1/user/46217?sdcApplicationId=microservice",
+			"format": [
+				"application/json"
+			],
+			"provider": "https://earthresources.vic.gov.au/geology-exploration/geological-survey-victoria"
+		}
+	]
+}
