@@ -1,6 +1,6 @@
 # SELFIE Demonstration Write Up Template
 
-## Use Case Descrition
+## Use Case Description
 
 <!--
 this is talking about a “domain” use case (SELFIE is the technical use-case — 🤪)
