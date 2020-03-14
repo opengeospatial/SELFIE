@@ -1,7 +1,7 @@
 # JSON-LD Example Files
 
 ## Summary
-Example instance documents for [SELFIE JSON-LD Contexts](https://opengeospatial.github.io/SELFIE/contexts).
+Example instance documents for [SELFIE JSON-LD Contexts](https://opengeospatial.github.io/ELFIE/contexts/elfie-2/).
 
 ## GeoJSON-LD Notes
 These example documents include GeoJSON docs testing the legality of GeoJSON-LD in the context of JSON-LD 1.1 - the
