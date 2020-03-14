@@ -18,8 +18,8 @@
       {
   "@context": [
     "https://opengeospatial.github.io/ELFIE/contexts/elfie-2/elf-index.jsonld",
-    "https://opengeospatial.github.io/ELFIE/contexts/elfie-2/hyf_minimal_context.jsonld",
-    "https://opengeospatial.github.io/ELFIE/contexts/elfie-2/spatial.jsonld",
+    "https://opengeospatial.github.io/ELFIE/contexts/elfie-2/hy_features.jsonld",
+    "https://opengeospatial.github.io/ELFIE/contexts/elfie-2/elf-spatial.jsonld",
     {
       "gsp": "http://www.opengeospatial.org/standards/geosparql/"
     }
@@ -80,24 +80,20 @@
     <pre><code id="context">
 {
   "@context": {
-    "owl": "http://www.w3.org/2002/07/owl#",
-    "dct": "http://purl.org/dc/terms/",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "schema": "http://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
     "name": "schema:name",
     "description": "schema:description",
     "spatialCoverage": "schema:spatialCoverage",
     "geo": "schema:geo",
     "polygon": "schema:polygon",
-    "image": {
-      "@id": "schema:image",
-      "@type": "@id"
-    },
+    "image": "schema:image",
     "report": "schema:report",
     "subjectOf": "schema:subjectOf",
-    "sameAs": "owl:sameAs",
+    "sameAs": "schema:sameAs",
     "label": "rdfs:label",
-    "note": "http://www.w3.org/2004/02/skos/core#note",
+    "note": "skos:note",
     "hyf": "https://www.opengis.net/def/appschema/hy_features/hyf/",
     "conjointCatchment": "hyf:conjointCatchment",
     "HY_Catchment": "hyf:HY_Catchment",
@@ -205,8 +201,8 @@
 {
   "@context": [
     "https://opengeospatial.github.io/ELFIE/contexts/elfie-2/elf-index.jsonld",
-    "https://opengeospatial.github.io/ELFIE/contexts/elfie-2/hyf_minimal_context.jsonld",
-    "https://opengeospatial.github.io/ELFIE/contexts/elfie-2/spatial.jsonld",
+    "https://opengeospatial.github.io/ELFIE/contexts/elfie-2/hy_features.jsonld",
+    "https://opengeospatial.github.io/ELFIE/contexts/elfie-2/elf-spatial.jsonld",
     {
       "gsp": "http://www.opengeospatial.org/standards/geosparql/"
     }
