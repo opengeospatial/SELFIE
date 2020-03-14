@@ -1,8 +1,8 @@
 {
   "@context": [
     "https://opengeospatial.github.io/ELFIE/contexts/elfie-2/elf-index.jsonld",
-    "https://opengeospatial.github.io/ELFIE/contexts/elfie-2/hyf_minimal_context.jsonld",
-    "https://opengeospatial.github.io/ELFIE/contexts/elfie-2/spatial.jsonld",
+    "https://opengeospatial.github.io/ELFIE/contexts/elfie-2/hy_features.jsonld",
+    "https://opengeospatial.github.io/ELFIE/contexts/elfie-2/elf-spatial.jsonld",
     {
       "gsp": "http://www.opengeospatial.org/standards/geosparql/"
     }

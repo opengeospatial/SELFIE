@@ -98,7 +98,7 @@ build_schema_geo <- function(geojson_geometry, add_context, schema_lat = NULL, s
                          "gsp:asWKT" = sf::st_as_text(sf_geom))
   }
   
-  out <- list("@context" = "https://opengeospatial.github.io/ELFIE/contexts/elfie-2/spatial.jsonld",
+  out <- list("@context" = "https://opengeospatial.github.io/ELFIE/contexts/elfie-2/elf-spatial.jsonld",
               "geo" = list("@type" = "schema:GeoCoordinates",
                                 "schema:latitude" = schema_lat,
                                 "schema:longitude" = schema_lon))
@@ -132,7 +132,7 @@ build_schema_geo <- function(geojson_geometry, add_context, schema_lat = NULL, s
 build_hyf_net <- function(tsv_data, id, include_missing = F) {
   tsv_data <- lapply(tsv_data, elfie_sub)
   
-  outlist <- list("@context" = "https://opengeospatial.github.io/ELFIE/contexts/elfie-2/hyf_minimal_context.jsonld",
+  outlist <- list("@context" = "https://opengeospatial.github.io/ELFIE/contexts/elfie-2/hy_features.jsonld",
                   "@id" = id,
                   "@type" = tsv_data$`rdfs:type`)
   

@@ -142,6 +142,27 @@ mappings <- lapply(created_ids, function(id) {
                description = "made SELFIE testing")
 })
 
+registered_ids <- lapply(created_ids, function(id) {
+  list(id = id, target = gsub("https://geoconnex.us", "https://opengeospatial.github.io", id), 
+       creator = "dblodgett@usgs.gov", description = "made SELFIE testing")
+})
+
+registered_ids <- do.call(dplyr::bind_rows, registered_ids)
+
+registered_ids$c1_type <- "Extension"
+registered_ids$c1_match <- "^.html$"
+registered_ids$c1_value <- paste0(registered_ids$target, ".html")
+
+registered_ids$c2_type <- "Extension"
+registered_ids$c2_match <- "^.json$"
+registered_ids$c2_value <- paste0(registered_ids$target, ".json")
+
+registered_ids$c3_type <- "Extension"
+registered_ids$c3_match <- "^.geojson$"
+registered_ids$c3_value <- paste0(registered_ids$target, ".geojson")
+
+readr::write_csv(registered_ids, "SELFIE_ids.csv")
+
 attr(mappings, "xmlns") <- "urn:csiro:xmlns:pidsvc:backup:1.0"
 
 out <- list(backup = mappings)
