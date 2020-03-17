@@ -5,9 +5,9 @@
 	{
 		//--> why all the contexts are not declared here?
 		"@context": [ 
-			"https://opengeospatial.github.io/SELFIE/contexts/elf-index.jsonld",
-			"https://opengeospatial.github.io/SELFIE/contexts/elf-data.jsonld",
-			"https://opengeospatial.github.io/SELFIE/contexts/gw.jsonld",
+			"https://opengeospatial.github.io/ELFIE/contexts/elfie-2/elf-index.jsonld",
+			"https://opengeospatial.github.io/ELFIE/contexts/elfie-2/elf-data.jsonld",
+			"https://opengeospatial.github.io/ELFIE/contexts/elfie-2/gwml2.jsonld",
 			"https://geojson.org/geojson-ld/geojson-context.jsonld"
 			{
 			"sa_saq":"http://xml.sandre.eaufrance.fr/saq/2.1"

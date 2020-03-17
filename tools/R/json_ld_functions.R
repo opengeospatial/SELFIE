@@ -229,7 +229,7 @@ build_elf_net <- function(tsv_data, id, include_missing = F) {
 build_sosa <- function(tsv_data, id, include_missing = F) {
   tsv_data <- lapply(tsv_data, elfie_sub)
   
-  outlist <- list("@context" = "https://opengeospatial.github.io/ELFIE/json-ld/sosa.jsonld",
+  outlist <- list("@context" = "https://opengeospatial.github.io/ELFIE/contexts/elfie-2/sosa.jsonld",
                   "@id" = id,
                   "@type" = tsv_data$`rdfs:type`)
   

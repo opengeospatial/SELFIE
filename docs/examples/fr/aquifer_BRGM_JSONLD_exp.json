@@ -4,8 +4,8 @@
 
 {
     "@context": [
-        "https://opengeospatial.github.io/SELFIE/contexts/elf-index.jsonld",
-        "https://opengeospatial.github.io/SELFIE/contexts/gw.jsonld",
+        "https://opengeospatial.github.io/ELFIE/contexts/elfie-2/elf-index.jsonld",
+        "https://opengeospatial.github.io/ELFIE/contexts/elfie-2/gwml2.jsonld",
 		{
 		"gsp": "http://www.opengis.net/ont/geosparql#",
 		"sf": "http://www.opengis.net/ont/sf#",

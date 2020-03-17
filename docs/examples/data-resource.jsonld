@@ -1,7 +1,7 @@
 {
     "@context": [
-        "https://opengeospatial.github.io/SELFIE/contexts/elf-index.jsonld",
-        "https://opengeospatial.github.io/SELFIE/contexts/gw.jsonld"
+        "https://opengeospatial.github.io/ELFIE/contexts/elfie-2/elf-index.jsonld",
+        "https://opengeospatial.github.io/ELFIE/contexts/elfie-2/gwml2.jsonld"
     ],
     "@id": "https://lab.scinfo.org.nz/selfie/id/aquifersystem/richelieu",
     "@type": "gw:GW_AquiferSystem",
