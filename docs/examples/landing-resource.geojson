@@ -42,21 +42,6 @@
             "@id": "https://lab.scinfo.org.nz/selfie/id/hydrogeounit/richelieu-2",
             "@type": "gw:GW_HydrogeoUnit",
             "name": "Northern St Lawrence Platform"
-          },
-          {
-            "@id": "https://lab.scinfo.org.nz/selfie/id/hydrogeounit/richelieu-3",
-            "@type": "gw:GW_HydrogeoUnit",
-            "name": "Appalachian External zone"
-          },
-          {
-            "@id": "https://lab.scinfo.org.nz/selfie/id/hydrogeounit/richelieu-4",
-            "@type": "gw:GW_HydrogeoUnit",
-            "name": "Appalachian Internal zone"
-          },
-          {
-            "@id": "https://lab.scinfo.org.nz/selfie/id/hydrogeounit/richelieu-5",
-            "@type": "gw:GW_HydrogeoUnit",
-            "name": "Monteregian intrusions"
           }
         ],
         "sameAs": {
@@ -123,7 +108,7 @@
             "provider": "https://opengeospatial.github.io/SELFIE/"
           },
           {
-            "url": "https://opengeospatial.github.io/SELFIE/examples/meta-resource.jsonld",
+            "url": "https://opengeospatial.github.io/SELFIE/examples/landing-resource.jsonld",
             "format": [
               "application/ld+json"
             ],

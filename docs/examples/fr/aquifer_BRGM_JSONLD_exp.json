@@ -1,6 +1,6 @@
 // 201910082007
 // hand crafted by Abdel & Sylvain based https://lab.scinfo.org.nz/service/selfie/api/collections/meta/items/aquifersystem-richelieu?f=json
-// edits by taking into consideration more recent decisions as in https://raw.githubusercontent.com/opengeospatial/SELFIE/master/docs/examples/meta-resource-1.geojson
+// edits by taking into consideration more recent decisions as in https://raw.githubusercontent.com/opengeospatial/SELFIE/master/docs/examples/landing-resource-1.geojson
 
 {
     "@context": [
