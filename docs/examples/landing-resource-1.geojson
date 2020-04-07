@@ -6,31 +6,31 @@
             "type": "Feature",
             "properties": {
                 "@context": [
-                    "https://opengeospatial.github.io/SELFIE/contexts/elf-index.jsonld",
-                    "https://opengeospatial.github.io/SELFIE/contexts/elf-data.jsonld",
-                    "https://opengeospatial.github.io/SELFIE/contexts/gw.jsonld"
+                    "https://opengeospatial.github.io/ELFIE/contexts/elfie-2/elf-index.jsonld",
+                    "https://opengeospatial.github.io/ELFIE/contexts/elfie-2/elf-data.jsonld",
+                    "https://opengeospatial.github.io/ELFIE/contexts/elfie-2/gwml2.jsonld"
                 ],
-                "fid": "hydrogeounit-richelieu-4",
-                "id": "https://lab.scinfo.org.nz/selfie/id/hydrogeounit/richelieu-4",
+                "fid": "hydrogeounit/richelieu-1",
+                "id": "https://lab.scinfo.org.nz/selfie/id/hydrogeounit/richelieu-1",
                 "type": "gw:GW_HydrogeoUnit",
-                "name": "Hydrogeologic unit : Appalachian Internal zone",
-                "description": "The Appalachian Internal zone is a Hydrogeologic Unit within the Richelieu Aquifer System.",
-                "image": "https://www.nzc.nz/media/15494/ross-taylor_01.jpg",
+                "name": "Hydrogeologic unit : Southern St Lawrence Platform",
+                "description": "The Southern St Lawrence Platform is a Hydrogeologic Unit within the Richelieu Aquifer System.",
+                "image": "https://www.nzc.nz/media/15483/kane-williamson_01.jpg",
                 "spatialCoverage": {
                     "@type": "Place",
                     "geo": {
                         "@type": "GeoShape",
-                        "polygon": "45.00552010,-72.91742177 45.00552010,-72.20200299 45.60961569,-72.20200299 45.60961569,-72.91742177 45.00552010,-72.91742177"
+                        "polygon": "45.00422793,-73.61090590 45.60649224,-73.61090590 45.60649224,-72.88245067 45.00422793,-72.88245067 45.00422793,-73.61090590"
                     }
                 },
                 "label": [
                     {
                         "@language": "en",
-                        "@value": "Hydrogeologic unit : Appalachian Internal zone"
+                        "@value": "Hydrogeologic unit : Southern St Lawrence Platform"
                     },
                     {
                         "@language": "fr",
-                        "@value": "Unite hydrogeologique : Zone interne des Appalaches"
+                        "@value": "Unite hydrogeologique : Plate-forme du St-Laurent sud"
                     }
                 ],
                 "gwAquiferSystem": {
@@ -39,7 +39,7 @@
                     "name": "Aquifer system : Richelieu"
                 },
                 "sameAs": {
-                    "@id": "https://geoconnex.ca/id/hydrogeounits/Richelieu4",
+                    "@id": "https://geoconnex.ca/id/hydrogeounits/Richelieu1",
                     "@type": [
                         "gw:GW_HydrogeoUnit",
                         "owl:Thing",
@@ -48,17 +48,17 @@
                     "name": [
                         {
                             "@language": "en",
-                            "@value": "Hydrogeologic unit : Appalachian Internal zone"
+                            "@value": "Hydrogeologic unit : Southern St Lawrence Platform"
                         },
                         {
                             "@language": "fr",
-                            "@value": "Unite hydrogeologique : Zone interne des Appalaches"
+                            "@value": "Unite hydrogeologique : Plate-forme du St-Laurent sud"
                         }
                     ]
                 },
                 "subjectOf": [
                     {
-                        "url": "https://lab.scinfo.org.nz/selfie/data/hydrogeounit/richelieu-4",
+                        "url": "https://lab.scinfo.org.nz/selfie/data/hydrogeounit/richelieu-1",
                         "@type": "foaf:Document",
                         "primaryTopic": "gw:GW_HydrogeoUnit",
                         "format": [
@@ -69,7 +69,7 @@
                         "provider": "https://opengeospatial.github.io/SELFIE/"
                     },
                     {
-                        "url": "https://lab.scinfo.org.nz/service/selfie/api/collections/data/items/hydrogeounit-richelieu-4",
+                        "url": "https://lab.scinfo.org.nz/service/selfie/api/collections/data/items/hydrogeounit-richelieu-1",
                         "@type": "foaf:Document",
                         "primaryTopic": "gw:GW_HydrogeoUnit",
                         "format": [
@@ -80,7 +80,7 @@
                         "provider": "https://opengeospatial.github.io/SELFIE/"
                     },
                     {
-                        "url": "https://lab.scinfo.org.nz/selfie/representations/richelieu-4.geojson",
+                        "url": "https://lab.scinfo.org.nz/selfie/representations/richelieu-1.geojson",
                         "@type": "foaf:Document",
                         "primaryTopic": "gw:GW_AquiferSystem",
                         "format": [
@@ -90,7 +90,7 @@
                         "provider": "https://opengeospatial.github.io/SELFIE/"
                     },
                     {
-                        "url": "https://lab.scinfo.org.nz/selfie/representations/richelieu-4.html",
+                        "url": "https://lab.scinfo.org.nz/selfie/representations/richelieu-1.html",
                         "@type": "foaf:Document",
                         "primaryTopic": "gw:GW_AquiferSystem",
                         "format": [
@@ -106,24 +106,24 @@
                 "coordinates": [
                     [
                         [
-                            -72.91742177,
-                            45.00552010
+                            -73.6109059,
+                            45.00422793
                         ],
                         [
-                            -72.20200299,
-                            45.00552010
+                            -72.88245067,
+                            45.00422793
                         ],
                         [
-                            -72.20200299,
-                            45.60961569
+                            -72.88245067,
+                            45.60649224
                         ],
                         [
-                            -72.91742177,
-                            45.60961569
+                            -73.6109059,
+                            45.60649224
                         ],
                         [
-                            -72.91742177,
-                            45.00552010
+                            -73.6109059,
+                            45.00422793
                         ]
                     ]
                 ]

@@ -1,12 +1,11 @@
 {
 	"@context": [
-		"https://opengeospatial.github.io/SELFIE/contexts/elf-index.jsonld",
-		"https://opengeospatial.github.io/SELFIE/contexts/elf-data.jsonld",
-		"https://opengeospatial.github.io/SELFIE/contexts/gw.jsonld",
-		"https://opengeospatial.github.io/SELFIE/contexts/gsmlb_classes_associations_context.json",
-		"https://opengeospatial.github.io/ELFIE/json-ld/sosa.jsonld",
-		"https://opengeospatial.github.io/ELFIE/json-ld/skos.jsonld",
-		"http://schema.datacove.eu/ssn-ext.jsonld"
+		"https://opengeospatial.github.io/ELFIE/contexts/elfie-2/elf-index.jsonld",
+		"https://opengeospatial.github.io/ELFIE/contexts/elfie-2/elf-data.jsonld",
+		"https://opengeospatial.github.io/ELFIE/contexts/elfie-2/gwml2.jsonld",
+		"https://opengeospatial.github.io/ELFIE/contexts/elfie-2/gsmlb.jsonld",
+		"https://opengeospatial.github.io/ELFIE/contexts/elfie-2/sosa.jsonld",
+		"https://opengeospatial.github.io/ELFIE/contexts/elfie-2/skos.jsonld"
 	],
 	"@id": "https://geo.org.au/id/well/101094",
 	"@type": "gw:GW_Well",

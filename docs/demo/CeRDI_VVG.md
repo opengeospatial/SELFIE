@@ -86,7 +86,7 @@ WMIS Service
 GSV service
 [**https://id.cerdi.edu.au/gsv/data/gsml2/borehole/46217?f=json**](https://id.cerdi.edu.au/gsv/data/gsml2/borehole/46217?f=json)
 
-We have attempted to generate an ssn-ext:ObservationCollection to provide access to lab data (water quality) via bore ID
+We have attempted to generate an sosa:ObservationCollection to provide access to lab data (water quality) via bore ID
 [**https://id.cerdi.edu.au/wmis/data/sosa/observationcollection/46217?f=json**](https://id.cerdi.edu.au/wmis/data/sosa/observationcollection/46217?f=json)
 
 

@@ -6,30 +6,31 @@
             "type": "Feature",
             "properties": {
                 "@context": [
-                    "https://opengeospatial.github.io/SELFIE/contexts/elf-index.jsonld",
-                    "https://opengeospatial.github.io/SELFIE/contexts/elf-data.jsonld",
-                    "https://opengeospatial.github.io/SELFIE/contexts/gw.jsonld"
+                    "https://opengeospatial.github.io/ELFIE/contexts/elfie-2/elf-index.jsonld",
+                    "https://opengeospatial.github.io/ELFIE/contexts/elfie-2/elf-data.jsonld",
+                    "https://opengeospatial.github.io/ELFIE/contexts/elfie-2/gwml2.jsonld"
                 ],
-                "fid": "hydrogeounit-richelieu-5",
-                "id": "https://lab.scinfo.org.nz/selfie/id/hydrogeounit/richelieu-5",
-                "name": "Hydrogeologic unit : Monteregian intrusions",
-                "description": "The Monteregian intrusions is a Hydrogeologic Unit within the Richelieu Aquifer System.",
-                "image": "https://www.nzc.nz/media/12834/bates_headshot_2018.jpg",
+                "fid": "hydrogeounit-richelieu-2",
+                "id": "https://lab.scinfo.org.nz/selfie/id/hydrogeounit/richelieu-2",
+                "type": "gw:GW_HydrogeoUnit",
+                "name": "Hydrogeologic unit : Northern St Lawrence Platform",
+                "description": "The Northern St Lawrence Platform is a Hydrogeologic Unit within the Richelieu Aquifer System.",
+                "image": "https://www.nzc.nz/media/15493/trent-boult.jpg",
                 "spatialCoverage": {
                     "@type": "Place",
                     "geo": {
                         "@type": "GeoShape",
-                        "polygon": "45.22021138,-73.34940756 45.22021138,-72.56606466 45.66686637,-72.56606466 45.66686637,-73.34940756 45.22021138,-73.34940756"
+                        "polygon": "45.37086669,-73.48659260 45.37086669,-72.62163847 46.11346501,-72.62163847 46.11346501,-73.48659260 45.37086669,-73.48659260"
                     }
                 },
                 "label": [
                     {
                         "@language": "en",
-                        "@value": "Hydrogeologic unit : Monteregian intrusions"
+                        "@value": "Hydrogeologic unit : Northern St Lawrence Platform"
                     },
                     {
                         "@language": "fr",
-                        "@value": "Unite hydrogeologique : Intrusions Monteregiennes"
+                        "@value": "Unite hydrogeologique : Plate-forme du St-Laurent nord"
                     }
                 ],
                 "gwAquiferSystem": {
@@ -38,7 +39,7 @@
                     "name": "Aquifer system : Richelieu"
                 },
                 "sameAs": {
-                    "@id": "https://geoconnex.ca/id/hydrogeounits/Richelieu5",
+                    "@id": "https://geoconnex.ca/id/hydrogeounits/Richelieu2",
                     "@type": [
                         "gw:GW_HydrogeoUnit",
                         "owl:Thing",
@@ -47,17 +48,17 @@
                     "name": [
                         {
                             "@language": "en",
-                            "@value": "Hydrogeologic unit : Monteregian intrusions"
+                            "@value": "Hydrogeologic unit : Northern St Lawrence Platform"
                         },
                         {
                             "@language": "fr",
-                            "@value": "Unite hydrogeologique : Intrusions Monteregiennes"
+                            "@value": "Unite hydrogeologique : Plate-forme du St-Laurent nord"
                         }
                     ]
                 },
                 "subjectOf": [
                     {
-                        "url": "https://lab.scinfo.org.nz/selfie/data/hydrogeounit/richelieu-5",
+                        "url": "https://lab.scinfo.org.nz/selfie/data/hydrogeounit/richelieu-2",
                         "@type": "foaf:Document",
                         "primaryTopic": "gw:GW_HydrogeoUnit",
                         "format": [
@@ -68,7 +69,7 @@
                         "provider": "https://opengeospatial.github.io/SELFIE/"
                     },
                     {
-                        "url": "https://lab.scinfo.org.nz/service/selfie/api/collections/data/items/hydrogeounit-richelieu-5",
+                        "url": "https://lab.scinfo.org.nz/service/selfie/api/collections/data/items/hydrogeounit-richelieu-2",
                         "@type": "foaf:Document",
                         "primaryTopic": "gw:GW_HydrogeoUnit",
                         "format": [
@@ -79,7 +80,7 @@
                         "provider": "https://opengeospatial.github.io/SELFIE/"
                     },
                     {
-                        "url": "https://lab.scinfo.org.nz/selfie/representations/richelieu-5.geojson",
+                        "url": "https://lab.scinfo.org.nz/selfie/representations/richelieu-2.geojson",
                         "@type": "foaf:Document",
                         "primaryTopic": "gw:GW_AquiferSystem",
                         "format": [
@@ -89,7 +90,7 @@
                         "provider": "https://opengeospatial.github.io/SELFIE/"
                     },
                     {
-                        "url": "https://lab.scinfo.org.nz/selfie/representations/richelieu-5.html",
+                        "url": "https://lab.scinfo.org.nz/selfie/representations/richelieu-2.html",
                         "@type": "foaf:Document",
                         "primaryTopic": "gw:GW_AquiferSystem",
                         "format": [
@@ -105,24 +106,24 @@
                 "coordinates": [
                     [
                         [
-                            -73.34940756,
-                            45.22021138
+                            -73.4865926,
+                            45.37086669
                         ],
                         [
-                            -72.56606466,
-                            45.22021138
+                            -72.62163847,
+                            45.37086669
                         ],
                         [
-                            -72.56606466,
-                            45.66686637
+                            -72.62163847,
+                            46.11346501
                         ],
                         [
-                            -73.34940756,
-                            45.66686637
+                            -73.4865926,
+                            46.11346501
                         ],
                         [
-                            -73.34940756,
-                            45.22021138
+                            -73.4865926,
+                            45.37086669
                         ]
                     ]
                 ]
