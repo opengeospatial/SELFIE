@@ -1,0 +1,94 @@
+
+{
+	"@context": [
+		"https://opengeospatial.github.io/SELFIE/contexts/elf-index.jsonld",
+		"https://opengeospatial.github.io/SELFIE/contexts/elf-data.jsonld",
+		"https://raw.githubusercontent.com/opengeospatial/SELFIE/master/docs/contexts/gwml2_minimal_context.jsonld",
+		"https://raw.githubusercontent.com/opengeospatial/SELFIE/master/docs/contexts/gsmlb_minimal_context.jsonld",
+		"http://schema.datacove.eu/ssn-ext.jsonld"
+	],
+	"@id": "https://geo.org.au/id/well/107972",
+	"@type": "gw:GW_Well",
+	"name": ["107972","YARRAGON 12"],
+
+	"spatialCoverage": {
+		"@type": "Place",
+		"geo": {
+			"@type": "GeoCoordinates",
+			"latitude": "-38.171636",
+			"longitude": "146.255074"
+		}
+	},
+	"label": [
+		{
+			"@language": "en",
+			"@value": "107972,YARRAGON 12"
+		}
+	],
+
+	"sameAs": [
+		{
+			"@id": "https://id.cerdi.edu.au/wmis/data/gwml2/well/107972",
+			"@type": "gw:GW_Well",
+			"format": [
+				"application/ld+json",
+				"application/gml+xml",
+				"text/html"
+			],
+			"provider": "http://www.water.vic.gov.au"
+		},
+		{
+			"@id": "https://id.cerdi.edu.au/wmis/data/gwml2/borehole/107972",
+			"@type": "gw:Borehole",
+			"format": [
+				"application/ld+json",
+				"application/gml+xml",
+				"text/html"
+			],
+			"provider": "http://www.water.vic.gov.au"
+		}
+		,		{
+			"@id": "https://id.cerdi.edu.au/gsv/data/gsml2/borehole/107972?f=json",
+			"@type": "gs:Borehole",
+			"format": [
+				"application/ld+json",
+				"application/gml+xml"
+			],
+			"provider": "https://earthresources.vic.gov.au/geology-exploration/geological-survey-victoria"
+		}
+		,
+		{
+			"@id": "https://id.cerdi.edu.au/wmis/data/sosa/observationcollection/107972",
+			"@type": "ssn-ext:ObservationCollection",
+			"format": [
+				"application/ld+json",
+				"application/gml+xml"
+			],
+			"provider": "http://www.water.vic.gov.au"
+		}
+],
+"subjectOf": [
+		{
+			"url": "http://data.water.vic.gov.au/static.htm?ppbm=107972&gw&0&gwlf_org",
+			"format": [
+				"text/html"
+			],
+			"provider": "http://www.water.vic.gov.au"
+		}
+	,	{
+		"url": "http://gsv.vic.gov.au/birt/frameset?__report=report/boreholes/borehole_details_pdf.rptdesign&showAllFlag=true&site_id=107972",
+		"format": [
+			"application/pdf"
+		],
+		"provider": "https://earthresources.vic.gov.au/geology-exploration/geological-survey-victoria"
+	},
+	{
+		"url": "https://gsv.vic.gov.au/getBoreDataV2/rest/v1/user/107972?sdcApplicationId=microservice",
+		"format": [
+			"application/json"
+		],
+		"provider": "https://earthresources.vic.gov.au/geology-exploration/geological-survey-victoria"
+	}
+	]
+}
+

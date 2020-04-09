@@ -1,0 +1,158 @@
+{
+	"@context": [
+		"https://raw.githubusercontent.com/opengeospatial/SELFIE/master/docs/contexts/elf-data.jsonld",
+		"https://opengeospatial.github.io/ELFIE/json-ld/sosa.jsonld",
+		"https://raw.githubusercontent.com/opengeospatial/SELFIE/master/docs/contexts/gwml2_minimal_context.jsonld",
+		"https://raw.githubusercontent.com/opengeospatial/SELFIE/master/docs/contexts/gsmlb_minimal_context.jsonld",
+		"https://opengeospatial.github.io/ELFIE/json-ld/skos.jsonld"
+	],
+	"@id": "https://id.cerdi.edu.au/wmis/data/gwml2/well/wmis.well.107972",
+	"@type": "GW_Well",
+	"name": [
+		107972,
+		12
+	],
+	"hasGeometry": {
+		"@type": "gsp:Geometry",
+		"gsp:asWKT": "<http://www.opengis.net/def/crs/EPSG/0/4283> LINESTRING(-38.171636 146.255074, -38.171636 146.255074)"
+	},
+	"gwWellConstructedDepth": {
+		"phenomenonTime": {
+			"timePosition": "1973-03-21Z"
+		},
+		"resultTime": {
+			"timePosition": "1973-03-21Z"
+		},
+		"usedProcedure": {
+			"@id": "http://www.opengis.net/def/nil/ogc/0/unknown"
+		},
+		"observedProperty": {
+			"@id": "http://www.opengis.net/gwml-well/2.2/gwWellConstructedDepth",
+			"name": "gwWellConstructedDepth"
+		},
+		"hasResult": {
+			"@value": 256.64,
+			"uom": "metre"
+		}
+	},
+	"gwWellConstruction": {
+		"@id": "https://id.cerdi.edu.au/wmis/data/gwml2/borehole/107972",
+		"@type": "Borehole",
+		"name": [
+			107972,
+			12
+		],
+		"isSampleOf": {
+			"@id": "https://id.cerdi.edu.au/wmis/data/gwml2/well/4176314"
+		},
+		"hasGeometry": {
+			"@id": "http://www.opengis.net/def/nil/OGC/0/unknown",
+			"name": "unknown"
+		},
+		"bholeDateOfDrilling": "1973-03-21Z",
+		"bholeDriller": "KINNON K",
+		"bholeOperator": null,
+		"bholeConstruction": [
+			{
+				"screenElement": {
+					"from": {
+						"@value": 225.55,
+						"uom": "metre"
+					},
+					"to": {
+						"@value": 231.65,
+						"uom": "metre"
+					},
+					"screenInternalDiameter": {
+						"@id": "http://www.opengis.net/def/nil/OGC/0/unknown"
+					}
+				}
+			},
+			{
+				"casingElement": {
+					"from": {
+						"@value": 0.0,
+						"uom": "metre"
+					},
+					"to": {
+						"@value": 225.55,
+						"uom": "metre"
+					},
+					"casingInternalDiameter": {
+						"@id": "http://www.opengis.net/def/nil/OGC/0/unknown"
+					},
+					"casingExternalDiameter": {
+						"@id": "http://www.opengis.net/def/nil/OGC/0/unknown",
+						"name": "unknown"
+					},
+					"casingWallThickness": {
+						"@id": "http://www.opengis.net/def/nil/OGC/0/unknown",
+						"name": "unknown"
+					}
+				}
+			}
+		],
+		"bholeHeadworks": {
+			"collarElevation": 62.44,
+			"collarLocation": {
+				"pos": "-38.171636 146.255074"
+			},
+			"bholeDetails": {
+				"@id": "https://id.cerdi.edu.au/wmis/data/gwml2/well/4176314"
+			}
+		}
+	},
+	"gwWellLocation": {
+		"pos": "-38.171636 146.255074"
+	},
+	"gwWellPurpose": [
+		{
+			"@id": "null",
+			"name": "Groundwater"
+		},
+		null,
+		{
+			"@id": "null",
+			"name": "Observation"
+		},
+		{
+			"@id": "null",
+			"name": "State Observation Network"
+		}
+	],
+	"gwWellReferenceElevation": {
+		"elevation": 62.44,
+		"elevationAccuracy": null,
+		"elevationType": {
+			"@id": "null",
+			"name": "Casing Standpipe"
+		}
+	},
+	"gwWellTotalLength": {
+		"@value": 256.64,
+		"uom": "metre"
+	},
+	"gwWellWaterUse": null,
+	"gwWellYield": null,
+	"gwWellGeology": {
+		"usedProcedure": {
+			"@id": "http://www.opengis.net/def/gwml/2.0/observedProperty/earthMaterial",
+			"name": "drillers log"
+		},
+		"observedProperty": {
+			"@id": "http://www.opengis.net/def/gwml/2.0/observedProperty/earthMaterial",
+			"name": "lithology"
+		},
+		"hasFeatureOfInterest": {
+			"@id": "#wmis.well.107972"
+		},
+		"startDepth": {
+			"@value": 0.0,
+			"uom": "metre"
+		},
+		"endDepth": {
+			"@value": 256.64,
+			"uom": "metre"
+		}
+	}
+}
