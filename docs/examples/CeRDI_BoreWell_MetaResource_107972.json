@@ -5,7 +5,8 @@
 		"https://opengeospatial.github.io/ELFIE/contexts/elfie-2/elf-data.jsonld",
 		"https://opengeospatial.github.io/ELFIE/contexts/elfie-2/gwml2.jsonld",
 		"https://opengeospatial.github.io/ELFIE/contexts/elfie-2/gsmlb.jsonld",
-		"https://opengeospatial.github.io/ELFIE/contexts/elfie-2/sosa.jsonld"
+		"https://opengeospatial.github.io/ELFIE/contexts/elfie-2/sosa.jsonld",
+		"https://opengeospatial.github.io/ELFIE/json-ld/skos.jsonld"
 	],
 	"@id": "https://geo.org.au/id/well/107972",
 	"@type": "gw:GW_Well",

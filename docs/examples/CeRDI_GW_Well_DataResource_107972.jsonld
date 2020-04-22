@@ -1,12 +1,13 @@
 {
 	"@context": [
-		"https://raw.githubusercontent.com/opengeospatial/SELFIE/master/docs/contexts/elf-data.jsonld",
-		"https://opengeospatial.github.io/ELFIE/json-ld/sosa.jsonld",
-		"https://raw.githubusercontent.com/opengeospatial/SELFIE/master/docs/contexts/gwml2_minimal_context.jsonld",
-		"https://raw.githubusercontent.com/opengeospatial/SELFIE/master/docs/contexts/gsmlb_minimal_context.jsonld",
+		"https://opengeospatial.github.io/ELFIE/contexts/elfie-2/elf-index.jsonld",
+		"https://opengeospatial.github.io/ELFIE/contexts/elfie-2/elf-data.jsonld",
+		"https://opengeospatial.github.io/ELFIE/contexts/elfie-2/gwml2.jsonld",
+		"https://opengeospatial.github.io/ELFIE/contexts/elfie-2/gsmlb.jsonld",
+		"https://opengeospatial.github.io/ELFIE/contexts/elfie-2/sosa.jsonld",
 		"https://opengeospatial.github.io/ELFIE/json-ld/skos.jsonld"
 	],
-	"@id": "https://id.cerdi.edu.au/wmis/data/gwml2/well/wmis.well.107972",
+	"@id": "https://geo.org.au/id/well/107972",
 	"@type": "GW_Well",
 	"name": [
 		107972,
