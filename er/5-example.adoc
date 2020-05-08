@@ -1,0 +1,177 @@
+[[ExampleClause]]
+== Example Clause
+
+[NOTE]
+.Instructions
+===============================================
+This section explains some concepts frequently required by Asciidoc novices. Please use this file as a template for your own clauses.
+===============================================
+
+=== Headlines
+All headlines are marked by "=" signs. The top level in each each file starts with level 2 ("=="). Important: For whatever strange reason, headings in annexes are marked differently.
+
+=== Figures
+If you want to reference a figure by using a figure number, it is important to use the following syntax. The figure identifier for <<img_mindMap>> is the first statement of the header. Please adapt the width as appropriate, but generally a width of 800 is good for landscape-shaped figures and 400 is good for portrait-shaped ones.
+
+[#img_mindMap,reftext='{figure-caption} {counter:figure-num}']
+.This is an example figure
+image::images/placeholder.png[width=600,align="center"]
+
+It is important that you use the same syntax for all images, otherwise the automatic numbering is corrupted!
+
+=== Tables
+Tables are easy to deal with as long as you keep them simple! To add a table, please use the following syntax.
+
+[#table_countries,reftext='{table-caption} {counter:table-num}']
+.Countries in Europe
+[cols="50e,^25m,>25s",width="75%",options="header",align="center"]
+|===
+|Country | Population | Size
+
+| Monaco
+| 36371
+| 1.98
+
+| Gibraltar
+| 29431
+| 6.8
+|===
+
+The first line is used for referencing. You can reference <<table_countries>> in your text. The only thing you should change in that line is the table id, which is "table_countries" in this case. Please do not remove the "#", please do not change anything else in that line.
+
+You can define the style and width of each column. In our example, the first column takes 50% of the entire width, the second and third column take 25% each. The total width of the table is 75% of the text width.
+
+The letters after the width percentage indicate if the column is e=emphasis, m=monospaced, a=asciidoc, s=strong. The d=default does not need to be set.
+
+Cell alignment: If you need to align a column, you may indicate this by setting ^,<, or >. Examples:
+
+* ^25m = centered, 25% width, monospaced.
+* >25e = aligned right, 25% width, emphasised
+* <25 = aligned left, 25% width, asciidoc
+
+In any case, please make sure that your table fit on a piece of A4 or letter-size paper!!
+
+[[RecommendedAsciidocEnvironment]]
+=== Recommended Asciidoc Environment
+
+We recommend to use http://asciidoctor.org[asciidoctor] and http://asciidoctor.org/docs/convert-asciidoc-to-pdf/[asciidoctor-pdf] in combination with the https://atom.io[Atom] editor.
+
+==== Installation on MacOS and Linux
+. Please follow the steps on https://asciidoctor.org/#installation.
+. Install the bibtex extension: _gem install asciidoctor-bibtex_
+
+
+==== Installation on Windows
+We have made best experiences with the following steps:
+
+. Install ruby for windows: https://rubyinstaller.org/downloads/. If you experience any issues, the following link may help: https://stackoverflow.com/questions/18908708/installing-ruby-gem-in-windows[stackoverflow]
+
+. Open command prompt and install two gems:
+.. Execute: "gem install asciidoctor"
+.. Execute: "gem install asciidoctor-bibtex"
+
+. Text your installation
+.. Open a folder that contains your Engineering Report asciidoc source files, including the _er.adoc_ file.
+.. Execute the following command: _asciidoctor -r asciidoctor-bibtex er.adoc_
+
+==== Using Asciidoctor with Atom
+In Atom, you should install the following packages:
+
+* asciidoc-preview
+* autocomplete-asciidoc
+* language-asciidoc
+* markdown-writer: requires changing of key-map to allow for keyboard shortcuts such as e.g. *bold*
+* platformio-IDE-terminal
+
+This environment allows you to use keyboard shortcuts, autocomplete, syntax highlighting and a rendered preview for asciidoc; and provides you an terminal window within the editor to convert your asciidoc to html and pdf.
+
+=== Asciidoc Conversion
+In order to achieve a uniform look-and-feel of all ERs in both HTML and PDF, we have provided a css and theme file. The following commands can be used to convert the ER:
+
+*Command for PDF output:*
+ asciidoctor-pdf -r asciidoctor-bibtex -a pdf-stylesdir=resources -a pdf-style=ogc -a pdf-fontsdir=resources/fonts er.adoc
+
+*Command for HTML output:*
+asciidoctor -r asciidoctor-bibtex -a linkcss -a stylesheet=rocket-panda.css -a stylesdir=./stylesheets er.adoc
+
+=== Source Code
+
+You can add code snippets using the following syntax:
+
+.Code Example XML
+[source,xml]
+----
+<section>
+  <title>Section Title</title> <!--1-->
+</section>
+----
+<1> This notation allows to reference particular sections within the code.
+
+You can alternatively use line numbers to reference a specific section in your code.
+
+
+.Code Example JSON
+[source,json,linenumbers]
+----
+{"menu": {
+  "id": "file",
+  "value": "File",
+  "popup": {
+    "menuitem": [
+      {"value": "New", "onclick": "CreateNewDoc()"},
+      {"value": "Open", "onclick": "OpenDoc()"},
+      {"value": "Close", "onclick": "CloseDoc()"}
+    ]
+  }
+}}
+----
+
+As shown in line 2, the value of "id" is "File".
+
+=== Asciidoc(tor) Syntax Help
+Is available e.g. here: http://asciidoctor.org/docs/
+
+=== Citations
+Please use the following syntax to insert citations anywhere in the text:
+
+----
+cite:[VanZyl2009]
+----
+
+or, if it is more than one citation that should be added at the same location, use
+
+----
+cite:[Pross2018,OGCTechTrends2018]
+----
+
+which will create links in the compiled HTML/PDF that look as follows: cite:[VanZyl2009], of for the second example given above, it results in cite:[Pross2018,OGCTechTrends2018]
+
+
+Then you need to provide all citation information in the file resources/bibtex-file.bib. This file uses the bibtex file format, which is defined in full detail http://www.bibtex.org/Format/[here]. The bibtex-style file shall remain untouched.
+
+The conversion of _cite:[]_ takes place at the time of asciidoc-to-pdf/html conversion and requires two things:
+
+. The definition of the _bibtex-file_ and the _bibtex-style_ attributes. This is done in this template in file <<bibtexAttributes,er.adoc>>. Please make sure that both files are available at their defined locations.
+
+----
+Examples of bibtex attributes as set in file er.adoc
+
+:bibtex-file: resources/bibtex-file.bib
+:bibtex-style: resources/lncs.csl
+----
+
+[arabic, start=2]
+. Adding a flag to the asciidoctor conversion command
+
+----
+asciidoctor -r asciidoctor-bibtex er.adoc
+----
+
+A full conversion command could look as in the following example:
+
+====
+asciidoctor -r asciidoctor-bibtex -a linkcss -a s
+tylesheet=rocket-panda.css -a stylesdir=./resources/stylesheets er.adoc
+====
+
+For further information, please consult https://github.com/asciidoctor/asciidoctor-bibtex.

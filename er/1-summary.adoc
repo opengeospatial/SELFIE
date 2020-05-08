@@ -1,0 +1,42 @@
+== Subject
+(( The following is, as all texts in double parentheses, a helper text. Please remove this and all other helper texts once done. ))
+
+(( The Subject clause shall define without ambiguity the topic of this document and the aspect(s) covered. It shall be succinct so that it can be used as a text for bibliographic purposes. ))
+
+(( This section shall be between 2-3 sentences and not longer than 140 words total.))
+
+== Executive Summary
+
+(( The following is, as all texts in double square brackets, a helper text. Please remove this and all other helper texts once done. ))
+
+(( The Executive Summary clause shall contain the key findings and results in a concise form. A more detailed description of the findings should be in the body of the report. ))
+
+(( The Executive Summary shall contain a business value statement that should describe the value of this Engineering Report to improve interoperability, advance location-based technologies or realize innovations. ))
+
+(( This section shall include precise descriptions of the requirements that have been addressed by the work documented in this Engineering Report; together with the research motivation that answers the fundamental question: What motivated us to address this topic in this report? ))
+
+(( This section provides an overview of recommendations on how to further proceed with the achievements documented in this ER. ))
+
+(( This section shall be between 1-3 pages.))
+
+===	Document contributor contact points
+
+All questions regarding this document should be directed to the editor or the contributors:
+
+*Contacts*
+[width="80%",options="header",caption=""]
+|====================
+|Name |Organization | Role
+|((Full Name)) | (( from org )) | ((Editor/Contributor))
+|((Full Name)) | ((from org)) |((Editor/Contributor))
+|====================
+
+
+// *****************************************************************************
+// Editors please do not change the Foreword.
+// *****************************************************************************
+=== Foreword
+
+Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. The Open Geospatial Consortium shall not be held responsible for identifying any or all such patent rights.
+
+Recipients of this document are requested to submit, with their comments, notification of any relevant patent claims or other intellectual property rights of which they may be aware that might be infringed by any implementation of the standard set forth in this document, and to provide supporting documentation.

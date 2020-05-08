@@ -1,0 +1,70 @@
+[appendix]
+[[AbstractTestSuite]]
+= Abstract Test Suite
+
+(( An Abstract Test Suite may be relevant to an Engineering Report. ))
+
+((An Abstract Test Suite is specified in Clause 9 and Annex A of ISO 19105. That Clause and Annex specify the ISO/TC 211 requirements for Abstract Test Suites.
+Examples of Abstract Test Suites are available in an annex of most ISO 191XX documents, one of the more useful is in ISO 19136. Note that this guidance may be more abstract than needed in an OGC® Implementation Standard. ))
+
+NOTE: We skip level 2 headers so that asciidoc correctly numbers the subsections in the appendix.
+
+=== Test module for conformance level 1
+
+==== 	Conformance level 1
+[cols=">20h,<80d",width="100%"]
+|====================
+|Test identifier | /test/case/id
+|Test purpose: | Confirm that the IUT satisfies all applicable requirements for conformance level 1.
+|Test method: a| Functional testing performed in an automated and/or manual manner. Verify the behaviour of the IUT for the following operations:
+
+*	GetCapabilities (mandatory)
+*	DescribeRecord (mandatory)
+*	GetRecords (mandatory)
+*	GetRecordById (mandatory)
+*	GetRepositoryItem (mandatory)
+*	GetDomain (optional)
+
+|Requirement: |OGC 07-110: cl. 2.2
+|Test type: |Capability
+|====================
+
+==== 	Test case for validity of XML response entity
+[cols=">20h,<80d",width="100%"]
+|====================
+|Test identifier | http://www.opengis.net/spec/xxx/conf/WRS.General-ValidResponse
+|Test purpose: |The XML response entity is valid.
+|Test method: |Validate content of response entity against corresponding element declaration.
+|Requirement: |OGC 07-006r1: cl. 10.2.5.1, p. 118
+|Test type: |Capability
+|====================
+
+=== Test module for conformance level 2
+
+==== Conformance level 2
+[cols=">20h,<80d",width="100%"]
+|====================
+|Test identifier | /test/case/id
+|Test purpose: | Confirm that the IUT satisfies all applicable requirements for conformance level 1.
+|Test method: a| Functional testing performed in an automated and/or manual manner. Verify the behaviour of the IUT for the following operations:
+
+*	GetCapabilities (mandatory)
+*	DescribeRecord (mandatory)
+*	GetRecords (mandatory)
+*	GetRecordById (mandatory)
+*	GetRepositoryItem (mandatory)
+*	GetDomain (optional)
+
+|Requirement: |OGC 07-110: cl. 2.2
+|Test type: |Capability
+|====================
+
+==== Test case for validity of XML response entity
+[cols=">20h,<80d",width="100%"]
+|====================
+|Test identifier | http://www.opengis.net/spec/xxx/conf/WRS.General-ValidResponse
+|Test purpose: |The XML response entity is valid.
+|Test method: |Validate content of response entity against corresponding element declaration.
+|Requirement: |OGC 07-006r1: cl. 10.2.5.1, p. 118
+|Test type: |Capability
+|====================

@@ -1,0 +1,8 @@
+[[references]]
+== References
+
+The following normative documents are referenced in this document.
+
+.NOTE: 	Only normative standards are referenced here, e.g. OGC, ISO or other SDO standards. All other references are listed in the bibliography. Example:
+
+* https://portal.opengeospatial.org/files/?artifact_id=38867&version=2[OGC 06-121r9, OGC® Web Services Common Standard]
