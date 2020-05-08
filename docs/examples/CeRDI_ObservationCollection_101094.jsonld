@@ -8,16 +8,14 @@
 		"https://opengeospatial.github.io/ELFIE/contexts/elfie-2/skos.jsonld"
 	],
 	"@id": "https://id.cerdi.edu.au/gwml2/feature/observation-collection/101094",
-	"@type": "foaf:Document",
+	"@type": "sosa:ObservationCollection",
 	"about": "https://geo.org.au/id/well/101094",
-	"url": "https://id.cerdi.edu.au/gwml2/feature/observation-collection/101094",
-	"foaf:primaryTopic": "sosa:ObservationCollection",
 	"format": [
 		"application/rdf+xml",
 		"text/turtle",
 		"application/ld+json"
 	],
-	"conformsTo": "http://www.w3.org/ns/ssn/ext/ObservationCollection",
+	"conformsTo": "https://github.com/w3c/sdw/blob/gh-pages/ssn-extensions/rdf/ssn-ext.ttl#L40",
 	"provider": "https://www.cerdi.edu.au",
 	"spatialCoverage": {
 		"@type": "Place",
@@ -42,7 +40,7 @@
 		}
 	],
 	"sosa:hasFeatureOfInterest": {
-		"url": "https://id.cerdi.edu.au/gwml2/feature/well/101094",
+		"url": "https://geo.org.au/id/well/101094",
 		"foaf:primaryTopic": "gw:GW_Well"
 	}
 

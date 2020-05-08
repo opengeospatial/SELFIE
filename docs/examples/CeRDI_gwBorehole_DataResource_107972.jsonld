@@ -1,0 +1,74 @@
+{
+	"@context": [
+		"https://opengeospatial.github.io/ELFIE/contexts/elfie-2/elf-index.jsonld",
+		"https://opengeospatial.github.io/ELFIE/contexts/elfie-2/elf-data.jsonld",
+		"https://opengeospatial.github.io/ELFIE/contexts/elfie-2/gwml2.jsonld",
+		"https://opengeospatial.github.io/ELFIE/contexts/elfie-2/gsmlb.jsonld",
+		"https://opengeospatial.github.io/ELFIE/contexts/elfie-2/sosa.jsonld",
+		"https://opengeospatial.github.io/ELFIE/json-ld/skos.jsonld"
+	],
+	"@id": "https://geo.org.au/id/well/107972",
+	"@type": "gw:Borehole",
+	"name": [
+		107972,
+		12
+	],	
+	"isSampleOf": {
+			"url": "https://id.cerdi.edu.au/wmis/data/gwml2/well/107972"
+		},
+	"hasGeometry": {
+		"@type": "gsp:Geometry",
+		"gsp:asWKT": "<http://www.opengis.net/def/crs/EPSG/0/4283> LINESTRING(-38.171636 146.255074, -38.171636 146.255074)"
+	},		"bholeDateOfDrilling": "1973-03-21Z",
+	"bholeDriller": "KINNON K",
+	"bholeOperator": null,
+	"bholeConstruction": [
+		{
+			"screenElement": {
+				"from": {
+					"@value": 225.55,
+					"uom": "metre"
+				},
+					"to": {
+						"@value": 231.65,
+						"uom": "metre"
+					},
+					"screenInternalDiameter": {
+						"@id": "http://www.opengis.net/def/nil/OGC/0/unknown"
+					}
+				}
+			},
+		{
+			"casingElement": {
+				"from": {
+					"@value": 0.0,
+					"uom": "metre"
+				},
+				"to": {
+					"@value": 225.55,
+					"uom": "metre"
+				},
+				"casingInternalDiameter": {
+					"@id": "http://www.opengis.net/def/nil/OGC/0/unknown"
+				},
+				"casingExternalDiameter": {
+					"@id": "http://www.opengis.net/def/nil/OGC/0/unknown",
+					"name": "unknown"
+				},
+				"casingWallThickness": {
+					"@id": "http://www.opengis.net/def/nil/OGC/0/unknown",
+					"name": "unknown"
+				}
+			}
+		}
+	],
+	"bholeHeadworks": {
+		"collarElevation": 62.44,
+		"collarLocation": {
+			"pos": "-38.171636 146.255074"
+		},
+		"bholeDetails": {
+			"@id": "https://id.cerdi.edu.au/wmis/data/gwml2/well/4176314"
+		}
+	}
+}

@@ -1,0 +1,68 @@
+{
+"@context": [
+		"https://opengeospatial.github.io/ELFIE/contexts/elfie-2/elf-index.jsonld",
+		"https://opengeospatial.github.io/ELFIE/contexts/elfie-2/elf-data.jsonld",
+		"https://opengeospatial.github.io/ELFIE/contexts/elfie-2/gwml2.jsonld",
+		"https://opengeospatial.github.io/ELFIE/contexts/elfie-2/gsmlb.jsonld",
+		"https://opengeospatial.github.io/ELFIE/contexts/elfie-2/sosa.jsonld",
+		"https://opengeospatial.github.io/ELFIE/json-ld/skos.jsonld"
+	],
+	"@id": "https://geo.org.au/id/well/107972",
+	"@type": "gs:Borehole",
+"name": [
+"urn:cgi:feature:GSV:Borehole:107972",
+"107972 [Rural Water Comm Borehole Name]",
+"MOE REC RESERVE [Location of bore]",
+"YARRAGON 12 [Parish Hole Number]",
+"01/73/003 [Drilling Rig Borehole Name]"
+],
+"sampledFeature": {
+"@id": "http://www.opengis.net/def/nil/OGC/0/unknown",
+"@type": "http://www.opengis.net/def/nil/OGC/0/unknown",
+"name": "unknown"
+},
+"hasGeometry": {
+"@type": "gsp:Geometry",
+"gsp:asWKT": "<http://www.opengis.net/def/crs/EPSG/0/4283> LINESTRING(146.25505 -38.17177, 0 146.25505, -38.17177 249.936)"
+},
+"length": {
+"@value": 249.936,
+"uom": "http://www.opengis.net/def/uom/OGC/1.0/metre"
+},
+"collarLocation": {
+"location": {
+"@type": "gsp:Geometry",
+"gsp:asWKT": "<http://www.opengis.net/def/crs/EPSG/0/4283> POINT(146.25505 -38.17177)"
+},
+"elevation": 61.93,
+"borehole": {
+"@id": "#gsml.borehole.107972",
+"@type": "http://www.geosciml.org/geosciml/2.0/doc/GeoSciML/Borehole/Borehole.html"
+}
+},
+"indexData": {
+"operator": {
+"@id": "http://www.opengis.net/def/nil/OGC/0/unknown",
+"@type": "http://www.geosciml.org/geosciml/2.0/doc/GeoSciML/Borehole/BoreholeDetails.html#operator"
+},
+"driller": {
+"@id": "http://www.opengis.net/def/nil/OGC/0/unknown",
+"@type": "http://www.geosciml.org/geosciml/2.0/doc/GeoSciML/Borehole/BoreholeDetails.html#driller"
+},
+"dateOfDrilling": "1973-03-22",
+"drillingMethod": "hydraulic rotary",
+"startPoint": "natural ground surface",
+"inclinationType": "vertical",
+"coredInterval": {
+"pos": [
+0,
+249.936
+]
+},
+"coreCustodian": {
+"@id": "http://www.dpi.vic.gov.au/earth-resources",
+"@type": "http://www.geosciml.org/geosciml/2.0/doc/GeoSciML/Borehole/BoreholeDetails.html#coreCustodian"
+}
+}
+}
+}

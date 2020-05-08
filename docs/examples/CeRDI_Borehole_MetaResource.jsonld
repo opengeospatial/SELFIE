@@ -2,11 +2,12 @@
 	"@context": [
 		"https://opengeospatial.github.io/ELFIE/contexts/elfie-2/elf-index.jsonld",
 		"https://opengeospatial.github.io/ELFIE/contexts/elfie-2/elf-data.jsonld",
-		"https://raw.githubusercontent.com/opengeospatial/SELFIE/master/docs/contexts/gwml2_minimal_context.jsonld",
-		"https://raw.githubusercontent.com/opengeospatial/SELFIE/master/docs/contexts/gsmlb_minimal_context.jsonld"
+		"https://opengeospatial.github.io/ELFIE/contexts/elfie-2/gwml2.jsonld",
+		"https://opengeospatial.github.io/ELFIE/contexts/elfie-2/gsmlb.jsonld",
+		"https://opengeospatial.github.io/ELFIE/contexts/elfie-2/sosa.jsonld"
 	],
 	"@id": "https://geo.org.au/id/well/46217",
-	"@type": "gw:GW_Well",
+	"@type": "gw:GW_Well, gw:Borehole, gs:Borehole, sosa:Sample",
 	"name": [
 		"46217",
 		"ARDNO 2"
@@ -35,9 +36,9 @@
 			"@value": "46217,ARDNO 2"
 		}
 	],
-	"sameAs": [
+	"subjectOf":  [
 		{
-			"@id": "https://id.cerdi.edu.au/wmis/data/gwml2/well/46217",
+			"url": "https://id.cerdi.edu.au/wmis/data/gwml2/well/46217",
 			"@type": "gw:GW_Well",
 			"format": [
 				"application/ld+json",
@@ -45,11 +46,9 @@
 				"text/html"
 			],
 			"provider": "http://www.water.vic.gov.au"
-		},
-	],
-	"subjectOf": [
+		},	
 		{
-			"@id": "https://id.cerdi.edu.au/wmis/data/gwml2/borehole/46217",
+			"url": "https://id.cerdi.edu.au/wmis/data/gwml2/borehole/46217",
 			"@type": "gw:Borehole",
 			"format": [
 				"application/ld+json",
@@ -59,7 +58,7 @@
 			"provider": "http://www.water.vic.gov.au"
 		},
 		{
-			"@id": "https://id.cerdi.edu.au/gsv/data/gsml2/borehole/46217?f=json",
+			"url": "https://id.cerdi.edu.au/gsv/data/gsml2/borehole/46217?f=json",
 			"@type": "gs:Borehole",
 			"format": [
 				"application/ld+json",
@@ -67,15 +66,6 @@
 			],
 			"provider": "https://earthresources.vic.gov.au/geology-exploration/geological-survey-victoria"
 		},
-		{
-			"@id": "https://id.cerdi.edu.au/wmis/data/sosa/observationcollection/46217",
-			"@type": "sosa:ObservationCollection",
-			"format": [
-				"application/ld+json",
-				"application/gml+xml"
-			],
-			"provider": "http://www.water.vic.gov.au"
-		}
 		{
 			"url": "http://data.water.vic.gov.au/static.htm?ppbm=46217&gw&0&gwlf_org",
 			"format": [
@@ -97,5 +87,15 @@
 			],
 			"provider": "https://earthresources.vic.gov.au/geology-exploration/geological-survey-victoria"
 		}
-	]
+	],
+	"sosa:isFeatureOfInterestOf": {
+			"@id": "https://id.cerdi.edu.au/wmis/data/sosa/observationcollection/46217",
+			"@type": "sosa:ObservationCollection",
+			"format": [
+				"application/ld+json",
+				"application/gml+xml"
+			],
+			"provider": "http://www.water.vic.gov.au"
+	}
+	
 }
