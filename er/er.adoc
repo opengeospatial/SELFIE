@@ -142,21 +142,18 @@ include::4-overview.adoc[]
 // Editors organize included-file inputs as appropriate starting here.
 // *****************************************************************************
 
-include::5-example.adoc[]
-
-include::6-math_example.adoc[]
-
-// you may add any number of chapters as required here
-
-// *****************************************************************************
-// Editors add or remove annexes as necessary.
-// *****************************************************************************
+include::5-objectives.adoc[]
+include::6-use_cases.adoc[]
+include::7-resource_model.adoc[]
+include::8-contexts.adoc[]
+include::9-nir.adoc[]
+include::10-landing_content.adoc[]
+include::11-ogc_api.adoc[]
+include::12-properties.adoc[]
+include::13-domain_use_cases.adoc[]
+include::14-summary_recommendations.adoc[]
 
 include::annex-a.adoc[]
-
-include::annex-b.adoc[]
-
-include::annex-c.adoc[]
 
 // *****************************************************************************
 // Revision History should be the last annex before the Bibliography.
@@ -166,8 +163,3 @@ include::annex-c.adoc[]
 include::annex-history.adoc[]
 
 include::annex-bibliography.adoc[]
-
-// *****************************************************************************
-// Editors please proceed to edit the content of 2-references.adoc[],
-// 3-terms.adoc[], etc. for each of the included files.
-// *****************************************************************************
