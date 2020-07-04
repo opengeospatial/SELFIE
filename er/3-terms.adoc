@@ -1,6 +1,35 @@
 == Terms and definitions
 
+_Resource:_ an item of interest in the distributed network of environmental data. +
+_Non-Information Resource:_ A real-world or conceptual object of interest that is identified by a Uniform Resource Identifier bound to the HTTP protocol (HTTP URI). +
+_Information Resource:_ A digital resource that can be sent as a message over the internet using a protocol such as HTTP. Located using a Uniform Resource Locator (URL). +
+_Information Index Resource_: An information resource that provides an index of annotated (metadata) links to information and non-information resources that describe or are related to the non-information resource of interest. +
+_Indirect Identifier: _As defined in the https://www.w3.org/TR/2004/REC-webarch-20041215/#indirect-identification[W3C Architecture of the World Wide Web, Volume 1 Section 2.2.3]. In the context of SELFIE, a URI that would usually be used to identify a digital resource is sometimes used as an indirect identifier of a real world feature.  +
+_In-band resource: _An in band resource is one that can provide information according to a given technical architecture. In the context of linked data, an in-band resource can provide html and json-ld/rdf representations. Other representations may also be considered in-band if the specified architecture expects them (GeoJSON for example). In-band resources can extend the linked-data graph. +
+_Out-of-band resource:_ An out-of-band resource is one that does not adhere to the technical architecture from which it is found. A resource that can provide observation result graphs, XML, CSV, and JSON representations but no linked-data representation would be considered out-of-band if linked from a linked-data document. Out-of-band resources can not extend the linked data graph. +
+_HyperText Transfer Protocol Uniform Resource Identifier (HTTP URI)_: An identifier with the potential to be used with the HTTP protocol to dereference (look up) the identified resource. +
+_HyperText Transfer Protocol Uniform Resource Locator (HTTP URL)_: A type of URI that can be used to locate an information resource. +
+_Data Resource_: An information resource providing a representation of a non-information resource. +
+_Registry_: Per https://www.fgdc.gov/standards/organization/FGDC-SWG/meetings/2005/2005-12-20/ISO%2019135.ppt[ISO 19135, Geographic information, Procedures for item registration]: An information system that manages a set of files containing identifiers assigned to items with descriptions of the associated items. +
+_Resource Model_: A taxonomy and functional description of the system of non-information, index and data resources. +
+__N___ode: _A source of information about real world features. May be specific to a geospatial or scientific application domain. Acts as a node in a system of linked data providers. +
+_Hub: _An aggregator or indexer of information about real world features. Provides integrated information as landing content derived from a community of nodes. +
+_Provider:  _An originating source of data. +
+_Resolver: _A registry system that provides 303 redirection from URI-14s to URL-14. +
+__L___anding resource:_ The ‘default’ information resource provided, through a range-14 303 redirect, when a non-information resource’s URI is dereferenced. An abstract thing, the actual information resource returned is based on content negotiation. HTML -> landing page; JSON-LD -> landing data. Assumes constant content in the concrete landing page and data.
 
+_Landing page:_ Presentation-oriented HTML representation of the landing resource. Resource description data are included as values of HTML tags and as structured data: JSON-LD in an HTML script tag.
+
+_Landing data: _Machine-oriented representation of the landing resource. Is the structured data object in the HTML page presented on its own. +
+SELFIE expects the landing data media type to be JSON-LD but others are allowed, encouraged even, (RDF/XML; TTL; GML; GeoJSON etc).
+
+_Structured data:_ As per Google: https://developers.google.com/search/docs/guides/intro-structured-data
+
+_URI-14:_ The HTTP URI identifying a non-information resource. When dereferenced the host will respond with 303 redirect to a URL for an information resource. Content can be negotiated. 
+
+_URL-14:_ A URL, provided by the 303 redirect from a non-information resource’s HTTP URI, that locates an information resource. Ideally these are kept hidden (not provided as values for in data) as they shouldn’t be confused with the non-information resources HTTP URI.
+
+_URL-200:_ A common or garden URL. So called because the most likely HTTP response code is a ‘200 OK’ with content. It could be the URL for a service request or a file on a file server. Content can be negotiated.
 
 For the purposes of this report, the definitions specified in Clause 4 of the OWS Common Implementation Standard https://portal.opengeospatial.org/files/?artifact_id=38867&version=2[OGC 06-121r9] shall apply. In addition, the following terms and definitions apply.
 

@@ -5,6 +5,8 @@
 
 (( This section shall be between 2-3 sentences and not longer than 140 words total.))
 
+Focus on building blocks SELFIE provides: URI-14, URL-14, Landing-content basics. Relationship to OGC API-features. Note scope limit related to links between landing-content and data (multiple representation relations, related observations, describing variation in resource content). Need for more domain data models and examples of practice remains.
+
 == Executive Summary
 
 (( The following is, as all texts in double square brackets, a helper text. Please remove this and all other helper texts once done. ))

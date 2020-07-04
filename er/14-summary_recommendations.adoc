@@ -1,0 +1,10 @@
+=== Summary and outcomes
+
+* URI-14 / URL-14
+* Core/default ELFIE/SELFIE information resource content.
+
+=== Issues and recommendations.
+
+** https://github.com/opengeospatial/SELFIE/issues/43[#43] subjectOf / primaryTopicOf options and plan to test further.
+* https://github.com/opengeospatial/SELFIE/issues/77[#77] issues related to "in band" and "out of band" data.
+* Issues related to content negotiation by profile and variation of information resource content. https://github.com/opengeospatial/SELFIE/issues/97[#97]

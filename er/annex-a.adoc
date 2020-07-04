@@ -2,69 +2,86 @@
 [[AbstractTestSuite]]
 = Abstract Test Suite
 
-(( An Abstract Test Suite may be relevant to an Engineering Report. ))
+== Appendix A: Domain Use Cases
 
-((An Abstract Test Suite is specified in Clause 9 and Annex A of ISO 19105. That Clause and Annex specify the ISO/TC 211 requirements for Abstract Test Suites.
-Examples of Abstract Test Suites are available in an annex of most ISO 191XX documents, one of the more useful is in ISO 19136. Note that this guidance may be more abstract than needed in an OGC® Implementation Standard. ))
+At the time of publication, these use cases were also available as web resources associated with the SELFIE project here: https://opengeospatial.github.io/ELFIE/[https://opengeospatial.github.io/ELFIE/]
 
-NOTE: We skip level 2 headers so that asciidoc correctly numbers the subsections in the appendix.
+=== U.S. Internet of Water
 
-=== Test module for conformance level 1
+https://github.com/opengeospatial/SELFIE/blob/master/docs/demo/internet_of_water.md[https://github.com/opengeospatial/SELFIE/blob/master/docs/demo/internet_of_water.md]
 
-==== 	Conformance level 1
-[cols=">20h,<80d",width="100%"]
-|====================
-|Test identifier | /test/case/id
-|Test purpose: | Confirm that the IUT satisfies all applicable requirements for conformance level 1.
-|Test method: a| Functional testing performed in an automated and/or manual manner. Verify the behaviour of the IUT for the following operations:
+=== NZ Soils Data
 
-*	GetCapabilities (mandatory)
-*	DescribeRecord (mandatory)
-*	GetRecords (mandatory)
-*	GetRecordById (mandatory)
-*	GetRepositoryItem (mandatory)
-*	GetDomain (optional)
+??
 
-|Requirement: |OGC 07-110: cl. 2.2
-|Test type: |Capability
-|====================
+=== US/Canada Groundwater Surface Water Interoperability Pilot
 
-==== 	Test case for validity of XML response entity
-[cols=">20h,<80d",width="100%"]
-|====================
-|Test identifier | http://www.opengis.net/spec/xxx/conf/WRS.General-ValidResponse
-|Test purpose: |The XML response entity is valid.
-|Test method: |Validate content of response entity against corresponding element declaration.
-|Requirement: |OGC 07-006r1: cl. 10.2.5.1, p. 118
-|Test type: |Capability
-|====================
+https://github.com/opengeospatial/SELFIE/blob/master/docs/demo/gsip.md[https://github.com/opengeospatial/SELFIE/blob/master/docs/demo/gsip.md]
 
-=== Test module for conformance level 2
+=== EU Surface Water Groundwater Linked Data
 
-==== Conformance level 2
-[cols=">20h,<80d",width="100%"]
-|====================
-|Test identifier | /test/case/id
-|Test purpose: | Confirm that the IUT satisfies all applicable requirements for conformance level 1.
-|Test method: a| Functional testing performed in an automated and/or manual manner. Verify the behaviour of the IUT for the following operations:
+=== Distributed Borehole Data (Australia)
 
-*	GetCapabilities (mandatory)
-*	DescribeRecord (mandatory)
-*	GetRecords (mandatory)
-*	GetRecordById (mandatory)
-*	GetRepositoryItem (mandatory)
-*	GetDomain (optional)
+https://github.com/opengeospatial/SELFIE/blob/master/docs/demo/CeRDI_VVG.md[https://github.com/opengeospatial/SELFIE/blob/master/docs/demo/CeRDI_VVG.md]
 
-|Requirement: |OGC 07-110: cl. 2.2
-|Test type: |Capability
-|====================
+==== Use Case Description
 
-==== Test case for validity of XML response entity
-[cols=">20h,<80d",width="100%"]
-|====================
-|Test identifier | http://www.opengis.net/spec/xxx/conf/WRS.General-ValidResponse
-|Test purpose: |The XML response entity is valid.
-|Test method: |Validate content of response entity against corresponding element declaration.
-|Requirement: |OGC 07-006r1: cl. 10.2.5.1, p. 118
-|Test type: |Capability
-|====================
+To provide a means whereby all the relevant information (resources) about a real world feature (in this case a borehole or well) can be brought together in a machine readable and indexable 'page'. +
+This Use Case is designed and tested by the Centre for eResearch and Digital Innovation (CeRDI) at Federation University Australia.
+
+==== User Story
+
+Groundwater bore data management in the State of Victoria, Australia is carried out by a number of Government departments, research agencies and community groups. Information about the same real-world borehole may therefore exist in multiple databases. The Visualising Victoria’s Groundwater (VVG) web portal (https://www.vvg.org.au/[https://www.vvg.org.au/]) partly addressed this problem by federating the disparate data services into a spatial web portal that allows the user to access all the information regardless of its source or duplication (seehttps://www.vvg.org.au/cb_pages/history_of_bore_data.php[https://www.vvg.org.au/cb_pages/history_of_bore_data.php[ ]]https://www.vvg.org.au/cb_pages/history_of_bore_data.php[History of Bore data in Victoria]). +
+Information about a borehole exists at one or more of:
+
+* Geological Survey of Victoria (GSV);
+* Department of Environment, Land, Water and Planning (DELWP);
+* State Library of Victoria (SLV);
+* Centre for eResearch and Digital Innovation at Federation University Australia (FedUni).
+These organisations provide services, either directly or through proxy, that deliver data about the borehole. This data may include information relating to:
+
+* Borehole location and construction details;
+* Reports (drilling, maintenance) and images;
+* Geology and aquifers intersected in the borehole;
+* Groundwater (water quality, levels);
+* Observations relating to features intersected in the bore;
+* Borehole monitoring.
+Depending on the service capacity and available data formats, these may be represented in:
+
+* HTML
+* GML/XML
+* JSON
+* Documents / multimedia (e.g. .pdf, .jpg)
+Currently the user must individually discover and access these different data services and compile the relevant information about a borehole manually. Where the same borehole exists across multiple data sources it is not readily apparent that they are the same real world feature as there is no common identifier across the various services. Additionally there is no mechanism to identify the different information available. +
+Through this demonstration a user should be able to use a standard search engine to discover the availability of these various sources, formats and contents (via a MetaResource ‘page’). The user (including machines) can navigate via the links in this resource to request data from the various providers in one of the available representation formats (e.g. html, xml, json-ld).
+
+==== Datasets
+
+The datasets accessed for this demonstration are:
+
+* Geological Survey of Victoria (GSV) -https://www.vvg.org.au/cb_pages/gedis.php[https://www.vvg.org.au/cb_pages/gedis.php[ ]]https://www.vvg.org.au/cb_pages/gedis.php[Geological Exploration and Development Information System (GEDIS)]
+* Department of Environment, Land, Water and Planning (DELWP) -https://www.vvg.org.au/cb_pages/wmis.php[https://www.vvg.org.au/cb_pages/wmis.php[ ]]https://www.vvg.org.au/cb_pages/wmis.php[Water Measurement Information System (WMIS)]
+* CeRDI Federation University Australia (FedUni) -https://www.vvg.org.au/cb_pages/ub_spatial_bore_database.php[https://www.vvg.org.au/cb_pages/ub_spatial_bore_database.php[ ]]https://www.vvg.org.au/cb_pages/ub_spatial_bore_database.php[Groundwater research bores]
+* State Library of Victoria (SLV) -https://www.vvg.org.au/cb_pages/digitisation_of_historical_records.php[https://www.vvg.org.au/cb_pages/digitisation_of_historical_records.php[ ]]https://www.vvg.org.au/cb_pages/digitisation_of_historical_records.php[Boring Records]
+==== Demonstration Description and Links
+
+https://geo.org.au/info/well/46217[CeRDI SELFIE testbed] example. The CeRDI demonstration is designed to expose a single borehole via its real-world non-information resource identifier (NIR; e.g. https://geo.org.au/id/well/46217[https://geo.org.au/id/well/46217]).
+
+. The application resolves a URI pattern for the real-world-feature of the form *https://geo.org.au/id/well/[borehole id]*https://geo.org.au/id/well/46217[ (e.g. ]https://geo.org.au/id/well/46217[https://geo.org.au/id/well/46217]) which performs a 303 redirect to a SELFIE Meta-information Resource ‘page’ (MR) of the form *https://geo.org.au/info/well/[borehole id]*https://geo.org.au/info/46217[ (e.g. ]https://geo.org.au/info/46217[https://geo.org.au/info/46217]).
+. The application then uses a lookup tool (rosetta stone) to determine which of the various data providers have information on that borehole and the source-specific identifier needed to access that data resource.
+. Basic Content Negotiation via accepts header caters for both HTML (with embedded JSON-LD) and straight JSON-LD. The format can be overridden with either a .json or ?f=json in either the Non-Information Resource (NIR; i.e. using the “/id” pattern) or the Meta-Information Resource (MR; i.e. using the “/info” pattern) URI.
+. For the JSON-LD representations (‘in-band’ formats) the MR encodes the various representations (Data Resources; DR) into the “SubjectOf” block (JSON LD Example https://geo.org.au/info/well/46217?f=json[https://geo.org.au/info/well/46217?f=json]).
+. Where data custodians have made them available *Images* in the “image” block, and *Reports* in the “report” block are included. A borehole from Federation University with both image and report examples ishttps://geo.org.au/info/well/WA1[https://geo.org.au/info/well/WA1[ ]]https://geo.org.au/id/well/WA1[https://geo.org.au/id/well/WA1]. One with drilling reports from the Victorian State Library Archives ishttps://geo.org.au/id/well/326217[ https://geo.org.au/id/well/326217].
+. Existing WFS services delivering complex features as domain specific GML were used for the data resources (DRs). The WFS mediator developed by Manaaki Whenua – Landcare Research, NZ allowed on-the-fly conversion of the GML into JSON-LD and HTML (as implemented in ELFIE-1). The results have not been validated apart from checking that the results look right and a structured like JSON-LD. These DRs follow a URI pattern */sourceprovider/data/datatype/featuretype/id*. Examples from two data provider services with three different domain models for the same NIR are:
+* WMIS GroundWaterML:Borehole servicehttps://id.cerdi.edu.au/wmis/data/gwml2/well/46217?f=json[https://id.cerdi.edu.au/wmis/data/gwml2/well/46217?f=json[ ]]https://id.cerdi.edu.au/wmis/data/gwml2/borehole/46217?f=json[https://id.cerdi.edu.au/wmis/data/gwml2/borehole/46217?f=json]
+* WMIS GroundWaterML:GW_Well servicehttps://id.cerdi.edu.au/wmis/data/gwml2/well/46217?f=json[https://id.cerdi.edu.au/wmis/data/gwml2/well/46217?f=json[ ]]https://id.cerdi.edu.au/wmis/data/gwml2/well/46217?f=json[https://id.cerdi.edu.au/wmis/data/gwml2/well/46217?f=json]
+* GSV GeoSciML:Borehole servicehttps://id.cerdi.edu.au/gsv/data/gsml2/borehole/46217?f=json[https://id.cerdi.edu.au/gsv/data/gsml2/borehole/46217?f=json[ ]]https://id.cerdi.edu.au/gsv/data/gsml2/borehole/46217?f=json[https://id.cerdi.edu.au/gsv/data/gsml2/borehole/46217?f=json]
+. Observations made on features within the borehole (mostly laboratory data on water quality) have been collated via the borehole ID into an observation collection using an ssn-ext:ObservationCollection. For example, borehole https://geo.org.au/id/well/46217[https://geo.org.au/id/well/46217] contains the collection of observations https://id.cerdi.edu.au/wmis/data/sosa/observationcollection/46217?f=json[https://id.cerdi.edu.au/wmis/data/sosa/observationcollection/46217?f=json]. In the collection each individual observation is linked in the ‘hasMember’ block.
+####What we have not done (Yet): There are some fairly major parts of the SELFIE puzzle missing at the moment.
+
+* At the moment we have not exposed the catalogue of bores (or a way for a search engine to index all bores)
+* We are only in the preliminary stages of generating RDF or TTL formats. Or determining if we need to provide these formats.
+
+=== AU LOCi 
+
+https://github.com/opengeospatial/SELFIE/blob/master/docs/demo/loci.md[https://github.com/opengeospatial/SELFIE/blob/master/docs/demo/loci.md]

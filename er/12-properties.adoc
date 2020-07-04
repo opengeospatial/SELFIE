@@ -1,0 +1,50 @@
+=== Properties / Relations
+
+The logic for selection of relations in SELFIE followed from the more content-focused ELFIE. That logic is described in detail in the https://docs.opengeospatial.org/per/18-097.html[ELFIE engineering report] and on thehttps://opengeospatial.github.io/ELFIE/json-ld/[ ELFIE contexts web page.] To summarize, broad adoption and commonality on the web was the primary driver of selection of relations. Spatial topology, temporal, and monitoring concepts were taken from established OGC and W3C ontologies, and domain concepts were sought from OGC domain feature models. The following lists relations by source with comments for selected relations as necessary.
+
+==== Schema.org:
+
+https://opengeospatial.github.io/ELFIE/contexts/elfie-2/elf-index.jsonld[https://opengeospatial.github.io/ELFIE/contexts/elfie-2/elf-index.jsonld]
+
+* https://schema.org/name[https://schema.org/name]
+* https://schema.org/description[https://schema.org/description]
+* https://schema.org/geo[https://schema.org/geo]
+* https://schema.org/image[https://schema.org/image]
+* https://schema.org/subjectOf[https://schema.org/subjectOf]
+** Used as a generic association between URI-14s and URL-200s, i.e. between a real world feature identifier and a URL that will provide data about the feature.
+* https://schema.org/sameAs[https://schema.org/sameAs]
+** Used very infrequently to establish that two resources are the same but available via two URIs. A domain-specific association should almost always be used.
+* https://schema.org/provider[https://schema.org/provider]
+* https://schema.org/url[https://schema.org/url]
+==== Dublin Core:
+
+https://opengeospatial.github.io/ELFIE/contexts/elfie-2/elf-data.jsonld[https://opengeospatial.github.io/ELFIE/contexts/elfie-2/elf-index.jsonld]
+
+* http://purl.org/dc/terms/conformsTo[http://purl.org/dc/terms/conformsTo]
+* http://purl.org/dc/terms/format[http://purl.org/dc/terms/format]
+==== SKOS: 
+
+https://opengeospatial.github.io/ELFIE/contexts/elfie-2/elf-index.jsonld[https://opengeospatial.github.io/ELFIE/contexts/elfie-2/elf-index.jsonld]
+
+* https://www.w3.org/2009/08/skos-reference/skos.html#note[https://www.w3.org/2009/08/skos-reference/skos.html#note]
+==== RDFS:
+
+https://opengeospatial.github.io/ELFIE/contexts/elfie-2/elf-index.jsonld[https://opengeospatial.github.io/ELFIE/contexts/elfie-2/elf-index.jsonld]
+
+* https://www.w3.org/2000/01/rdf-schema#label[https://www.w3.org/2000/01/rdf-schema#label]
+==== Geosparql:
+
+https://opengeospatial.github.io/ELFIE/contexts/elfie-2/elf-network.jsonld[https://opengeospatial.github.io/ELFIE/contexts/elfie-2/elf-network.jsonld]
+
+* http://www.opengis.net/ont/geosparql#sfIntersects[http://www.opengis.net/ont/geosparql#sfIntersects]
+* http://www.opengis.net/ont/geosparql#sfTouches[http://www.opengis.net/ont/geosparql#sfTouches]
+* http://www.opengis.net/ont/geosparql#sfWithin[http://www.opengis.net/ont/geosparql#sfWithin]
+==== OWL-time:
+
+https://opengeospatial.github.io/ELFIE/contexts/elfie-2/elf-network.jsonld[https://opengeospatial.github.io/ELFIE/contexts/elfie-2/elf-network.jsonld]
+
+* https://www.w3.org/TR/owl-time/#time:after[https://www.w3.org/TR/owl-time/#time:after]
+* https://www.w3.org/TR/owl-time/#time:before[https://www.w3.org/TR/owl-time/#time:before]
+* https://www.w3.org/TR/owl-time/#time:intervalAfter[https://www.w3.org/TR/owl-time/#time:intervalAfter]
+* https://www.w3.org/TR/owl-time/#time:intervalBefore[https://www.w3.org/TR/owl-time/#time:intervalBefore]
+* https://www.w3.org/TR/owl-time/#time:intervalDuring[https://www.w3.org/TR/owl-time/#time:intervalDuring]

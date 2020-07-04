@@ -38,9 +38,9 @@
 // The title here should match the title on the first page.
 // *****************************************************************************
 
-:title: <initiative_title>:
+:title: Second Environmental Linked Features Experiment:
 
-:initiative_short_name: <initiative_short_name>
+:initiative_short_name: SELFIE
 
 
 // *****************************************************************************
@@ -61,13 +61,13 @@
 // Names of all editors, comma-separated (e.g., John Doe, Sue Smith)
 // *****************************************************************************
 
-:editor: Name(s)
+:editor: David Blodgett, Alistair Ritchie
 
 // *****************************************************************************
 // Proposed working group for review (e.g. Architecture DWG, WCS SWG)
 // *****************************************************************************
 
-:workingGroup: SWG/DWG for Review: Name(s)
+:workingGroup: SWG/DWG for Review: Geosemantics
 
 // *****************************************************************************
 // End of Editor's front-matter elements.
