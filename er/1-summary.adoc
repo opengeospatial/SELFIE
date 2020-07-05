@@ -29,8 +29,10 @@ All questions regarding this document should be directed to the editor or the co
 [width="80%",options="header",caption=""]
 |====================
 |Name |Organization | Role
-|((Full Name)) | (( from org )) | ((Editor/Contributor))
-|((Full Name)) | ((from org)) |((Editor/Contributor))
+|David Blodgett | U.S. Geological Survey | Editor
+|Alistair Ritchie | Manaaki Whenua | Contributor
+|Bruce Simons | Federation University Australia | Contributor
+|Eric Boisvert | Natural Resources Canada | Contributor
 |====================
 
 
