@@ -123,8 +123,15 @@ Note that we have avoided discussion `@type` and `conformsTo`. Use of these prop
 
 The range 14 decision, to identify real world features with URIs that HTTP-303 redirect to resources providing information about the real world feature, was accepted by SELFIE. Box x illustrates the complete solution.
 
+image::images/SELFIE_fig3.svg[figure3,600,200]
+
+Figure 3. Complete range-14 resolution behavior.
 
 However, to simplify implementation, some landing resource providers skip the 303 redirect entirely, using a URL for a landing resource as an indirect identifier of a real world feature. Box x. Illustrates this less complicated, but limited approach.
+
+image::images/SELFIE_fig4.svg[figure4,400,200]
+
+Figure 4. Indirect identification of a feature where a URL is used as an indirect identifier for a real world feature.
 
 There are two related problems with the indirect identification approach: one technical and one social. Both issues stem from the need to maintain stable identifiers for real world features and very real needs to change URLs to retrieve digital resources. 
 
@@ -134,4 +141,9 @@ Socially, real-world feature identification is a process undertaken by a group o
 
 Adding content negotiation to the discussion of resource resolution, a 303 redirect works fine as long as the client passes the same accept header to the redirect target URL. However, there is a common content negotiation override practice involving URL parameters such as _f=mime-type_ or __format=mime-type _that may be desirable to have passed along as part  of a 303 redirect. Some SELFIE participants support such mime-type overrides, but additional experimentation will be required to determine if there is a solution that should be recommended for this in general. Note that this says nothing about content-negotiation "by profile" (https://www.w3.org/TR/dx-prof-conneg/[https://www.w3.org/TR/dx-prof-conneg/]), an emerging technique that was decided to be beyond the scope SELFIE would be able to address.
 
-Extending the resource resolution use case to include retrieving representations of a feature introduces additional functions that were the subject of some SELFIE experiments. Two such resolution schemes were tested. One required a client to inspect information index hypermedia and make an additional request for an available representation. The other used media-type content negotiation to return a representation available via that media-type directly from a URL-14 indirect identifier without the client needing to review information index hypermedia. These two schemes are illustrated in Box x. These alternatives are equally valid and further work is needed to determine if one is preferable to the other.
+Extending the resource resolution use case to include retrieving representations of a feature introduces additional functions that were the subject of some SELFIE experiments. Two such resolution schemes were tested. One required a client to inspect information index hypermedia and make an additional request for an available representation. The other used media-type content negotiation to return a representation available via that media-type directly from a URL-14 indirect identifier without the client needing to review information index hypermedia. These two schemes are illustrated in figure 5. These alternatives are equally valid and further work is needed to determine if one is preferable to the other.
+
+image::images/SELFIE_fig5.svg[figure5,600,500]
+
+Figure 5. Hypermedia-driven resource resolution (above) versus content negotiation-driven resource resolution (left). While less complex, the content negotiation-driven approach is limited to implementation on a single domain and requires a significantly more complex resolver implementation.
+
