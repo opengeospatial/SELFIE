@@ -16,22 +16,26 @@ https://opengeospatial.github.io/ELFIE/contexts/elfie-2/elf-index.jsonld[https:/
 ** Used very infrequently to establish that two resources are the same but available via two URIs. A domain-specific association should almost always be used.
 * https://schema.org/provider[https://schema.org/provider]
 * https://schema.org/url[https://schema.org/url]
+
 ==== Dublin Core:
 
 https://opengeospatial.github.io/ELFIE/contexts/elfie-2/elf-data.jsonld[https://opengeospatial.github.io/ELFIE/contexts/elfie-2/elf-index.jsonld]
 
 * http://purl.org/dc/terms/conformsTo[http://purl.org/dc/terms/conformsTo]
 * http://purl.org/dc/terms/format[http://purl.org/dc/terms/format]
+
 ==== SKOS: 
 
 https://opengeospatial.github.io/ELFIE/contexts/elfie-2/elf-index.jsonld[https://opengeospatial.github.io/ELFIE/contexts/elfie-2/elf-index.jsonld]
 
 * https://www.w3.org/2009/08/skos-reference/skos.html#note[https://www.w3.org/2009/08/skos-reference/skos.html#note]
+
 ==== RDFS:
 
 https://opengeospatial.github.io/ELFIE/contexts/elfie-2/elf-index.jsonld[https://opengeospatial.github.io/ELFIE/contexts/elfie-2/elf-index.jsonld]
 
 * https://www.w3.org/2000/01/rdf-schema#label[https://www.w3.org/2000/01/rdf-schema#label]
+
 ==== Geosparql:
 
 https://opengeospatial.github.io/ELFIE/contexts/elfie-2/elf-network.jsonld[https://opengeospatial.github.io/ELFIE/contexts/elfie-2/elf-network.jsonld]
@@ -39,6 +43,7 @@ https://opengeospatial.github.io/ELFIE/contexts/elfie-2/elf-network.jsonld[https
 * http://www.opengis.net/ont/geosparql#sfIntersects[http://www.opengis.net/ont/geosparql#sfIntersects]
 * http://www.opengis.net/ont/geosparql#sfTouches[http://www.opengis.net/ont/geosparql#sfTouches]
 * http://www.opengis.net/ont/geosparql#sfWithin[http://www.opengis.net/ont/geosparql#sfWithin]
+
 ==== OWL-time:
 
 https://opengeospatial.github.io/ELFIE/contexts/elfie-2/elf-network.jsonld[https://opengeospatial.github.io/ELFIE/contexts/elfie-2/elf-network.jsonld]

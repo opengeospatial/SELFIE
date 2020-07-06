@@ -1,3 +1,4 @@
+
 === Domain Use Case Experiment Summaries
 
 These brief summaries of domain-use case are described in greater detail in Appendix A: Domain Use Cases and on the SELFIE Web resources: https://opengeospatial.github.io/ELFIE/[https://opengeospatial.github.io/ELFIE/]. +
@@ -6,6 +7,7 @@ These summaries contain the following information:
 . Summary of non-information URIs and data included in landing-content.
 . Summary of organizational setting: non-information URI curator, data providers, landing-content providers.
 . Outcome summary and findings.
+
 ==== Internet of Water
 
 https://opengeospatial.github.io/SELFIE/demo/internet_of_water[https://opengeospatial.github.io/SELFIE/demo/internet_of_water] +
