@@ -143,14 +143,23 @@ include::4-overview.adoc[]
 // *****************************************************************************
 
 include::5-objectives.adoc[]
+
 include::6-use_cases.adoc[]
+
 include::7-resource_model.adoc[]
+
 include::8-contexts.adoc[]
+
 include::9-nir.adoc[]
+
 include::10-landing_content.adoc[]
+
 include::11-ogc_api.adoc[]
+
 include::12-properties.adoc[]
+
 include::13-domain_use_cases.adoc[]
+
 include::14-summary_recommendations.adoc[]
 
 include::annex-a.adoc[]

@@ -2,12 +2,10 @@
 [[RevisionHistory]]
 = Revision History
 
-[NOTE]
-.Example History
-
 .Revision History
 [width="90%",options="header"]
 |====================
 |Date |Editor |Release | Primary clauses modified |Descriptions
 |July 4, 2020 |D. Blodgett | .1 |all |transfer from google doc
+|July 6, 2020 | D. Blodgett | .2 |all |fix formatting and add images
 |====================

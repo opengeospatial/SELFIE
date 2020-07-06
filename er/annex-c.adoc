@@ -1,7 +1,0 @@
-[appendix]
-[[UMLModel]]
-= UML model
-
-(( A UML model may be relevant to an Engineering Report. This template thus includes this annex as the place for recording this UML model. ))
-
-Instructions and guidelines on the usage of UML models are provided in OGC document https://portal.opengeospatial.org/files/?artifact_id=38867[ OGC-121r9].

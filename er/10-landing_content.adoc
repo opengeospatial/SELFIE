@@ -2,8 +2,11 @@
 === Landing content
 
 The following sections describe the purpose and some logic for SELFIE landing content.  +
-As an overview, table 1 contains the most precise use-case descriptions the SELFIE team was able to craft that pertain to URL-14 landing-content "groups". These groups can be seen as building blocks that are used to construct landing-content structured data.
+As an overview, <<table_content_groups>> contains the most precise use-case descriptions the SELFIE team was able to craft that pertain to URL-14 landing-content "groups". These groups can be seen as building blocks that are used to construct landing-content structured data.
 
+[#table_content_groups,reftext='{table-caption} {counter:table-num}']
+.SELFIE landing-content groups, their purpose, and descriptive text.
+[cols="20e,20e,70",width="90%",options="header",align="center"]
 |===
 |*Content Group*|*Purpose*|*Description*
 
@@ -13,9 +16,8 @@ As an overview, table 1 contains the most precise use-case descriptions the SELF
 |descriptive links |non-information resource description |Links to related non-information resources according to the thing’s place in the world. For example a link could describe a spatial or temporal topological relationship, a sample’s feature of interest, or a river’s reach’s upstream reach. As such these links use properties defined in our domain ontologies. As with representation links, these links will be objects/blank nodes rather than simple URI/Ls.
 |descriptive properties |non-information resource description |Statements about the nature of the non-information resource using domain ontology properties. These have literal values (string, number etc) or structured values (collections of sub-properties that would appear as JSON object or an RDF blank node).
 |===
-Table 1. SELFIE landing-content groups, their purpose, and descriptive text.
 
-The content groups described in Table 1 have been encoded in JSON-LD contexts that can be used as a guide for implementers and by-reference in structured data. These contexts are grouped functionally around indexing, documenting data-resources, describing topological feature associations, and providing simple spatial representations of features.
+The content groups described in <<table_content_groups>> have been encoded in JSON-LD contexts that can be used as a guide for implementers and by-reference in structured data. These contexts are grouped functionally around indexing, documenting data-resources, describing topological feature associations, and providing simple spatial representations of features.
 
 ==== Properties for documenting data resources
 
@@ -98,7 +100,7 @@ An out-of-band resource might be documented similarly but using a blank node as 
 
 ==== Properties for relating non-information resources
 
-In addition to the `elf-index.jsonld` context, SELFIE participants created a https://opengeospatial.github.io/ELFIE/contexts/elfie-2/sosa.jsonld[`sosa.jsonld`] context which includes a isFeatureOfInterestOf association which can be used to associate observational data with a feature of interest. The following is an extremely minimal example that demonstrates this.
+In addition to the https://opengeospatial.github.io/ELFIE/contexts/elfie-2/elf-index.jsonld[`elf-index.jsonld`] context, SELFIE participants created a https://opengeospatial.github.io/ELFIE/contexts/elfie-2/sosa.jsonld[`sosa.jsonld`] context which includes a isFeatureOfInterestOf association which can be used to associate observational data with a feature of interest. The following is an extremely minimal example that demonstrates this.
 
 ----
 {

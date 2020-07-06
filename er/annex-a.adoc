@@ -1,18 +1,12 @@
 [appendix]
-[[AbstractTestSuite]]
-= Abstract Test Suite
-
-== Appendix A: Domain Use Cases
+[[DomainUseCases]]
+= Domain Use Cases
 
 At the time of publication, these use cases were also available as web resources associated with the SELFIE project here: https://opengeospatial.github.io/ELFIE/[https://opengeospatial.github.io/ELFIE/]
 
 === U.S. Internet of Water
 
 https://github.com/opengeospatial/SELFIE/blob/master/docs/demo/internet_of_water.md[https://github.com/opengeospatial/SELFIE/blob/master/docs/demo/internet_of_water.md]
-
-=== NZ Soils Data
-
-??
 
 === US/Canada Groundwater Surface Water Interoperability Pilot
 
@@ -63,6 +57,7 @@ The datasets accessed for this demonstration are:
 * Department of Environment, Land, Water and Planning (DELWP) -https://www.vvg.org.au/cb_pages/wmis.php[https://www.vvg.org.au/cb_pages/wmis.php[ ]]https://www.vvg.org.au/cb_pages/wmis.php[Water Measurement Information System (WMIS)]
 * CeRDI Federation University Australia (FedUni) -https://www.vvg.org.au/cb_pages/ub_spatial_bore_database.php[https://www.vvg.org.au/cb_pages/ub_spatial_bore_database.php[ ]]https://www.vvg.org.au/cb_pages/ub_spatial_bore_database.php[Groundwater research bores]
 * State Library of Victoria (SLV) -https://www.vvg.org.au/cb_pages/digitisation_of_historical_records.php[https://www.vvg.org.au/cb_pages/digitisation_of_historical_records.php[ ]]https://www.vvg.org.au/cb_pages/digitisation_of_historical_records.php[Boring Records]
+
 ==== Demonstration Description and Links
 
 https://geo.org.au/info/well/46217[CeRDI SELFIE testbed] example. The CeRDI demonstration is designed to expose a single borehole via its real-world non-information resource identifier (NIR; e.g. https://geo.org.au/id/well/46217[https://geo.org.au/id/well/46217]).
@@ -77,6 +72,7 @@ https://geo.org.au/info/well/46217[CeRDI SELFIE testbed] example. The CeRDI demo
 * WMIS GroundWaterML:GW_Well servicehttps://id.cerdi.edu.au/wmis/data/gwml2/well/46217?f=json[https://id.cerdi.edu.au/wmis/data/gwml2/well/46217?f=json[ ]]https://id.cerdi.edu.au/wmis/data/gwml2/well/46217?f=json[https://id.cerdi.edu.au/wmis/data/gwml2/well/46217?f=json]
 * GSV GeoSciML:Borehole servicehttps://id.cerdi.edu.au/gsv/data/gsml2/borehole/46217?f=json[https://id.cerdi.edu.au/gsv/data/gsml2/borehole/46217?f=json[ ]]https://id.cerdi.edu.au/gsv/data/gsml2/borehole/46217?f=json[https://id.cerdi.edu.au/gsv/data/gsml2/borehole/46217?f=json]
 . Observations made on features within the borehole (mostly laboratory data on water quality) have been collated via the borehole ID into an observation collection using an ssn-ext:ObservationCollection. For example, borehole https://geo.org.au/id/well/46217[https://geo.org.au/id/well/46217] contains the collection of observations https://id.cerdi.edu.au/wmis/data/sosa/observationcollection/46217?f=json[https://id.cerdi.edu.au/wmis/data/sosa/observationcollection/46217?f=json]. In the collection each individual observation is linked in the ‘hasMember’ block.
+
 ####What we have not done (Yet): There are some fairly major parts of the SELFIE puzzle missing at the moment.
 
 * At the moment we have not exposed the catalogue of bores (or a way for a search engine to index all bores)

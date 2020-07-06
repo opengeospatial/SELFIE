@@ -1,8 +1,9 @@
-=== Resource/Content Model
+[[ResourceContentModel]]
+== Resource / Content Model
 
+TODO: fill in an intro here.
 
-
-==== W3C Resources Summary
+=== W3C Resources Summary
 
 The SELFIE model for web resources is based on the notion of _information resources_ and _non-information resources_ as defined by the W3C document ‘Dereferencing HTTP URIs’. This summarises the so-called ‘Range-14’ decision that, while unofficial, is useful especially when read in conjunction with ‘Cool URIs for the Semantic Web’.
 
@@ -25,7 +26,7 @@ Each of these groups occupy different meta-levels but can be interlinked. For ex
 
 For SELFIE, nodes in a knowledge graph are non-information resources, and the nodes of most interest are those that identify domain features. Sampling and semantic resources provide metadata that describe those features and organise available knowledge about them. Therefore, the SELFIE knowledge graph describes relationships between non-information resources in the ‘real world’. The links between information resources that describe them +++<u>+++*is an important but separate concern*+++</u>+++. In SELFIE, how to transition from non-information resources in the knowledge graph to those in the web of information resources was an important consideration where further work is needed.
 
-==== ELFIE Resources
+=== ELFIE Resources
 
 At the outset of SELFIE, the team was thinking in terms of a "three-tiered resource model" where "resource" was a thing identified by a URI. The resource model involved "non-information resources", "meta-information resources", and "data-information resources". Conceptually, the "non-information" "meta" and "data" scheme is useful, but the word "resource" is wrong when applied to the terminology of particular technologies (such as HTTP Resources). As such, the team found a need to change its language to more accurately reflect what was found to be useful ways to describe what is actually a set of use-cases that can be described in terms of non-information, metadata, and data.
 
@@ -47,13 +48,15 @@ ____
 *_As a Web user, I want to find all the information available for an environmental feature, so I can find what I'm looking for and retrieve it._* +
 ____
 
-As the project dissected this use case the HTTP-Range 14 (303 redirects), OGC-API Features (html landing pages for features), and schema.org JSON-LD in a +<script>+ tag of a landing page were all embraced as useful technical solutions that serve it. None of the above requires alternative resource representations (media types). With an HTML landing page, a human user or crawler designed around natural language and schema.org are satisfied. +
+As the project dissected this use case the HTTP-Range 14 (303 redirects), OGC-API Features (html landing pages for features), and schema.org JSON-LD in a `<script>` tag of a landing page were all embraced as useful technical solutions that serve it. None of the above requires alternative resource representations (media types). With an HTML landing page, a human user or crawler designed around natural language and schema.org are satisfied. +
+
 However, the IE recognized the potential to bring structure to data (including semantically enabled data) underlying the landing page content. Going further, the SELFIE was premised on the idea that html landing pages are layered on top of a potentially wide range of data systems that need such a discovery layer. Given this, while not addressed specifically in SELFIE,  alternative media types and content negotiation are expected in a system that the SELFIE model is applied to. However, the complexity and lack of broad implementation made making progress on this front difficult. +
-Participants in the IE agreed that they would avoid specifying how to use content negotiation between the "meta" and "data" tiers. Standards for content negotiation by profile are emerging but we have not been able to evaluate them rigorously. Instead, SELFIE was limited to describing how to advertise that multiple content-types are available for a given URL in structured JSON-LD data.
 
-image::images/SELFIE_Architecture.svg[]
+Participants in the IE agreed that they would avoid specifying how to use content negotiation between the "meta" and "data" tiers. Standards for content negotiation by profile are emerging but we have not been able to evaluate them rigorously. Instead, SELFIE was limited to describing how to advertise that multiple content-types are available for a given URL in structured JSON-LD data. The scope and summary architecture are described in <<img_architecture>>.
 
-Figure 2. Summary of the SELFIE resource / content model showing that there are Non-information resources which 303 redirect to a resource intended to provide "landing content". The distinction between landing-content and data-content is use-case specific and methods for negotiating between the two is left for future work.
+[#img_architecture,reftext='{figure-caption} {counter:figure-num}']
+.Summary of the SELFIE resource / content model showing that there are Non-information resources which 303 redirect to a resource intended to provide "landing content". The distinction between landing-content and data-content is use-case specific and methods for negotiating between the two is left for future work.
+image::images/SELFIE_Architecture.svg[width=800,align="center"]
 
 === "In band" and "out of band" resources.
 
@@ -121,17 +124,17 @@ Note that we have avoided discussion `@type` and `conformsTo`. Use of these prop
 
 === Resource Resolution Alternatives
 
-The range 14 decision, to identify real world features with URIs that HTTP-303 redirect to resources providing information about the real world feature, was accepted by SELFIE. Box x illustrates the complete solution.
+The range 14 decision, to identify real world features with URIs that HTTP-303 redirect to resources providing information about the real world feature, was accepted by SELFIE. <<img_range14>> illustrates the complete solution.
 
-image::images/SELFIE_fig3.svg[figure3,600,200]
+[#img_range14,reftext='{figure-caption} {counter:figure-num}']
+.Complete range-14 resolution behavior.
+image::images/SELFIE_fig3.svg[width=500,align="left"]
 
-Figure 3. Complete range-14 resolution behavior.
+However, to simplify implementation, some landing resource providers skip the 303 redirect entirely, using a URL for a landing resource as an indirect identifier of a real world feature. <<img_indirect_id>> Illustrates this less complicated, but limited approach.
 
-However, to simplify implementation, some landing resource providers skip the 303 redirect entirely, using a URL for a landing resource as an indirect identifier of a real world feature. Box x. Illustrates this less complicated, but limited approach.
-
-image::images/SELFIE_fig4.svg[figure4,400,200]
-
-Figure 4. Indirect identification of a feature where a URL is used as an indirect identifier for a real world feature.
+[#img_indirect_id,reftext='{figure-caption} {counter:figure-num}']
+.Indirect identification of a feature where a URL is used as an indirect identifier for a real world feature.
+image::images/SELFIE_fig4.svg[width=350,align="left"]
 
 There are two related problems with the indirect identification approach: one technical and one social. Both issues stem from the need to maintain stable identifiers for real world features and very real needs to change URLs to retrieve digital resources. 
 
@@ -141,9 +144,9 @@ Socially, real-world feature identification is a process undertaken by a group o
 
 Adding content negotiation to the discussion of resource resolution, a 303 redirect works fine as long as the client passes the same accept header to the redirect target URL. However, there is a common content negotiation override practice involving URL parameters such as _f=mime-type_ or __format=mime-type _that may be desirable to have passed along as part  of a 303 redirect. Some SELFIE participants support such mime-type overrides, but additional experimentation will be required to determine if there is a solution that should be recommended for this in general. Note that this says nothing about content-negotiation "by profile" (https://www.w3.org/TR/dx-prof-conneg/[https://www.w3.org/TR/dx-prof-conneg/]), an emerging technique that was decided to be beyond the scope SELFIE would be able to address.
 
-Extending the resource resolution use case to include retrieving representations of a feature introduces additional functions that were the subject of some SELFIE experiments. Two such resolution schemes were tested. One required a client to inspect information index hypermedia and make an additional request for an available representation. The other used media-type content negotiation to return a representation available via that media-type directly from a URL-14 indirect identifier without the client needing to review information index hypermedia. These two schemes are illustrated in figure 5. These alternatives are equally valid and further work is needed to determine if one is preferable to the other.
+Extending the resource resolution use case to include retrieving representations of a feature introduces additional functions that were the subject of some SELFIE experiments. Two such resolution schemes were tested. One required a client to inspect information index hypermedia and make an additional request for an available representation. The other used media-type content negotiation to return a representation available via that media-type directly from a URL-14 indirect identifier without the client needing to review information index hypermedia. These two schemes are illustrated in <<img_conneg>>. These alternatives are equally valid and further work is needed to determine if one is preferable to the other.
 
-image::images/SELFIE_fig5.svg[figure5,600,500]
-
-Figure 5. Hypermedia-driven resource resolution (above) versus content negotiation-driven resource resolution (left). While less complex, the content negotiation-driven approach is limited to implementation on a single domain and requires a significantly more complex resolver implementation.
+[#img_conneg,reftext='{figure-caption} {counter:figure-num}']
+.Hypermedia-driven resource resolution (above) versus content negotiation-driven resource resolution (left). While less complex, the content negotiation-driven approach is limited to implementation on a single domain and requires a significantly more complex resolver implementation.
+image::images/SELFIE_fig5.svg[width=600,align="left"]
 

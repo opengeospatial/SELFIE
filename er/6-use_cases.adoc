@@ -1,4 +1,3 @@
-
 === Domain Use Cases
 
 The SELFIE relied on participant's domain-specific use cases to provide context and drive decision making in the context of the IE. The use cases included hydrogeology, soils, hydrology, and land-survey information. Common to these use cases was the need to work with identifiers for environmental features for which multiple representations are available. Each of the use cases was implemented to one extent or another. Full details of the use cases are included in appendix A, domain use cases. Taken together and harmonized, these domain-specific use cases provided sufficient scope to determine a useful set of general use cases are summarized in the following sections.
@@ -51,13 +50,8 @@ The *landing content and network of linked features* use case focuses on the def
 
 *Data* that represent or are otherwise related to features are what we refer to here as out-of-band. Such data are not part of the system of linked data and related content. These might be a complex GML representation of a feature, an image or map, a report, or a JSON representation of a timeseries. The distinction is that a given representation of a resource is either compatible with a technical architecture (i.e. can be parsed and handled by software that works with it) or is not (i.e. is opaque to software that works with the architecture). In-band content can directly extend the linked-data graph and out-of-band cannot. 
 
-image::images/SELFIE_fig1.svg[figure1,800,900]
+<<img_useCases>> provides a summary of the SELFIE functionalities in the context of the range of potential implementation sophistication.
 
-Figure 1. The four functions of the SELFIE general use cases. The most simple implementations, while limited, may use a single resource and content negotiation for all four functions. A complete SELFIE implementation would use seperate resources for each function with linked-data hypermedia to facilitate discovery and access.
-
-[1] - need to describe limitations of using a landing-page url for feature identification. +
-[2] - need a section on schema.org and other ubiquitous ontologies / contexts. +
-[3] - need a section on html content for landing content pages. +
-[4] - need a section on variable resource content and how to access. +
-[5] - need a section on URLs that can provide either in-band or out-of-band content. +
-[6] - need to cover legacy (GML) formats how to describe them as in or out of band.
+[#img_useCases,reftext='{figure-caption} {counter:figure-num}']
+.The four functions of the SELFIE general use cases. The most simple implementations, while limited, may use a single resource and content negotiation for all four functions. A complete SELFIE implementation would use separate resources for each function with linked-data hypermedia to facilitate discovery and access.
+image::images/SELFIE_fig1.svg[width=600,align="center"]
