@@ -58,6 +58,7 @@ Participants in the IE agreed that they would avoid specifying how to use conten
 .Summary of the SELFIE resource / content model showing that there are Non-information resources which 303 redirect to a resource intended to provide "landing content". The distinction between landing-content and data-content is use-case specific and methods for negotiating between the two is left for future work.
 image::images/SELFIE_Architecture.svg[width=800,align="center"]
 
+[[inBandoutofBand]]
 === "In band" and "out of band" resources.
 
 The idea of "in-band" and "out-of-band" has been brought up as a useful distinction between resource representations that can provide information that is useful to a given application (in-band) and resource representations that are opaque to an application (out-of-band). In reality, there are many bands that correspond to various applications. Here, we define the SELFIE-band which is intended to foster interoperability toward the goals of the IE.

@@ -1,11 +1,52 @@
-
 === Summary and outcomes
 
-* URI-14 / URL-14
-* Core/default ELFIE/SELFIE information resource content.
+SELFIE participants experienced difficulty communicating about the nature of the issues at hand. Examples included, but were not limited to:
+. complexity introduced by the relationships between domain feature models
+. the nuances of observational feature relations (e.g. monitoring vs feature of interest) 
+. the particulars introduced by the RDF data model (e.g. semantic vs non-semantic resources) 
+. URIs as identifiers and/or locators 
+. json-ld reserved keys and "context" encoding of RDF
+
+As a result, the IE's primary outcomes are a deeper understanding of the problem at hand rather than fully-fledged and tested solutions.
+
+First and foremost, the IE demonstrated that use of the HTTP-Range14 303 redirection between so-called URI-14 URIs and URL-14 resources that provide "landing content" has great utility and is not incompatible with modern web infrastructure. There is a strong logical and technical case for using URI-14 -> URL-14 redirection. A critical additional consideration here is that **URL-14 HTTP URIs should almost never be used as identifiers* in and of themselves. That is, landing content should only ever be retrieved by first dereferencing the URI-14 identifier.  
+
+The SELFIE refined the linked data predicates defined for use in landing content by the first ELFIE especially as it relates to links between and among URI-14 identifiers and URL-200 data resources. While more work is needed here, the core-relation to link between identification and representation is `https://schema.org/subjectOf`. Other aspects of the ELFIE content model (such as domain-feature model associations between URI-14 identifiers) were vetted, and proved to work in the context of URI-14 -> URL-14 redirection. Further work is needed to enrich the semantics between identification and representation -- especially in the context of multiple representations of the same feature where each representation is of a different type.
+
+While the SELFIE set out to test content negotiation by profile and potentially other ways to negotiate between various representations of a resource, the complexities and communication difficulties regarding the core-problem proved enough for one IE.
 
 === Issues and recommendations.
 
-** https://github.com/opengeospatial/SELFIE/issues/43[#43] subjectOf / primaryTopicOf options and plan to test further.
-* https://github.com/opengeospatial/SELFIE/issues/77[#77] issues related to "in band" and "out of band" data.
-* Issues related to content negotiation by profile and variation of information resource content. https://github.com/opengeospatial/SELFIE/issues/97[#97]
+==== Landing content type and the URL-14 resource
+
+A major issue the IE could not resolve arises from the URI-14 -> URL-14 distinction. The content returned by a URL-14 is ostensibly an information resource about a URI-14 non-information resource. While SELFIE moved forward by agreeing that the URL-14's information content would document the URI-14 resource directly, there may be an argument to treat the URL-14's information content as an identifiable linked-data resource in its own right. An example that could drive further work investigation is the need to type the URL-14 resource its self. 
+
+To illustrate this, the outcomes of SELFIE dictate that a URL-14 resource is, at its core, an identified feature with a type as in:
+----
+{
+"@id": "https://id",
+"@type": "https://type_of_feature"
+}
+----
+
+However, this content would have been retrieved from a url such as: `https://info/id` and might just as well have content like:
+
+----
+{
+"@id": "https://info/id",
+"@type": "https://feaature_info",
+"http://xmlns.com/foaf/0.1/primaryTopic": "https://id"
+}
+----
+
+Whether the resource providing information about a non-information resource is itself a resource with a type, was deferred in SELFIE. The decision was made to move forward pragmatically -- treating the URL-14 resource as a convenience resource who's only job is to provide information about a URI-14 and, therefore, not a resource that would ever be the subject of linked data. The details surrounding this point will undoubtedly need to be explored in more detail.
+
+==== In band and out of band resources
+
+As discussed in <<inBandoutofBand>>, the nature of a resource that is the object of a linked-data triple is important. What qualifies as an "in band" resource or a "semantic" resource is entirely in the eyes of the beholder. In the context of SELFIE, it was decided that a URL-14 resource that could provide an HTML representation with JSON-LD linked data in a `<script>` tag is considered "in band". Format and/or profile content negotiation, while of great interest, was deemed beyond the scope of what SELFIE could make firm recommendations about. 
+
+Extension of what is "in band" for environmental linked features should be the subject of future work. How content negotiation, either on format or profile, layers on top of 303 redirection is an open question. How links to resources that have both "in band" and "out of band" representations should be handled is another. The key here is that future work will need to have implementation of the outcomes of SELFIE as hindsight to treat as evidence for future experiments.
+
+==== Domain Ontologies and JSON-LD Contexts
+
+A major outcome of the first ELFIE was noting the lack of domain ontologies upon which to build links between environmental features. Work to further this in SELFIE was largely unsuccessful. While additional "minimal ontologies" were generated, the procedures for publishing them as resolvable URIs proved too cumbersome. Additionally, foundational details of adapting these UML-based class models to use in linked data remain unsolved and untested. While progress was made durring the IE, the process is ongoing at the time of writing.
