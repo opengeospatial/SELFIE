@@ -91,6 +91,8 @@ A common or garden URL. So called because the most likely HTTP response code is 
 
 ===	Abbreviated terms
 
+TODO
+
 .NOTE: The abbreviated terms clause gives a list of the abbreviated terms and the symbols necessary for understanding this document. All symbols should be listed in alphabetical order. Some more frequently used abbreviated terms are provided below as examples.
 
 * COM	Component Object Model
