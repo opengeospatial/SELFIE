@@ -158,9 +158,7 @@ include::11-ogc_api.adoc[]
 
 include::12-properties.adoc[]
 
-include::13-domain_use_cases.adoc[]
-
-include::14-summary_recommendations.adoc[]
+include::13-summary_recommendations.adoc[]
 
 include::annex-a.adoc[]
 
