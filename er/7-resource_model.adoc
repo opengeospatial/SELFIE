@@ -3,6 +3,7 @@
 
 Resources are the stuff of the internet. Is _a resource_ 1) its identifier, 2) content retrieved by dereferencing its identifier, or 3) some abstract notion identified by a URI and described by dereferenced content? The problems pursued by SELFIE made the importance of these distinctions clear and, to some extent, found some answers. More often than finding answers, the SELFIE found that the technical baseline pertaining to the problem is rich and relatively un-explored for environmental data use cases. That is to say that given the technical baseline available to the community, implementation and building an understanding of modern technologies should proceed in order to better understand pain points and find where additional complexity really is required vs. where existing technologies can satisfy the real need.
 
+[[w3cResources]]
 === W3C Resources Summary
 
 The SELFIE model for web resources is based on the notion of _information resources_ and _non-information resources_ as defined by the W3C document https://www.w3.org/2001/tag/doc/httpRange-14/2007-08-31/HttpRange-14.html[‘Dereferencing HTTP URIs’]. This summarises the so-called ‘Range-14’ decision that, while unofficial, is useful especially when read in conjunction with https://www.w3.org/TR/cooluris/[‘Cool URIs for the Semantic Web’].
@@ -60,7 +61,7 @@ Participants in the IE agreed that they would avoid specifying how to use conten
 image::images/SELFIE_Architecture.svg[width=800,align="center"]
 
 [[inBandoutofBand]]
-=== "In band" and "out of band" resources.
+=== "In band" and "out of band" resources
 
 The idea of "in-band" and "out-of-band" has been brought up as a useful distinction between resource representations that can provide information that is useful to a given application (in-band) and resource representations that are opaque to an application (out-of-band). In reality, there are many bands that correspond to various applications. Here, we define the SELFIE-band which is intended to foster interoperability toward the goals of the IE.
 
@@ -124,6 +125,7 @@ Which would mean we would need to resolve and interrogate +`https://someresource
 
 Note that we have avoided discussion `@type` and `conformsTo`. Use of these properties, while valuable, introduces complexities that were determined to go beyond the scope SELFIE was able to accomplish.
 
+[[resourceResolutionAlternatives]]
 === Resource Resolution Alternatives
 
 The Range-14 decision, to identify real world features with URIs that HTTP-303 redirect to resources providing information about the real world feature, was accepted by SELFIE. <<img_range14>> illustrates the complete solution.

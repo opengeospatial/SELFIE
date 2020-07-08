@@ -1,22 +1,26 @@
 [[Overview]]
 == Overview
 
-[NOTE]
-.Instructions
-====
-This 4-overview.adoc file helps the reader to better understand the various sections of the ER. It should be written like an extended table of contents.
-====
+<<objectives>> provides a high-level overview of how the first ELFIE's outcomes provide context for the objectives of the SELFIE.
 
-TODO
+<<usecases>> describes how domain use cases and more general technical use cases were used in SELFIE.
 
-(( Example: ))
+<<ResourceContentModel>> is the core discussion of the SELFIE experiment. It includes four subsections:  
 
-(( Section 5 introduces the problem of vector tiling. It describes the situation prior to the testbed and discusses the requirements set by the sponsors. ))
+. <<w3cResources>>  
+. <<ELFIEResources>>  
+. <<inBandoutofBand>>  
+. <<resourceResolutionAlternatives>>  
 
-(( Section 6 discusses the mathematical model behind the various tiling strategies. It provides recommendations on preferred strategies. ))
+Detailed descriptions of the technical outcomes of the experiment are provided in:
 
-(( Section 7 presents the solution developed in this testbed. A clear mapping of requirements to solutions is provided. The section shows additional work is required to implement 3D tiles, which could not be addressed in this activity. ))
+* <<contexts>>  
+* <<nir>>  
+* <<landingContent>>  
+* <<dataContent>>  
+* <<ogcApi>>  
+* <<propertiresRelations>> 
 
-(( Section 8 provides a summary of the main findings and discusses links to other tasks such as WFS 3.0 and WMTS 2.3. ))
+The report wraps up with <<summary>> and <<issues>> that wrap up and illustrate issues for future work respectively.
 
-(( Annex A provides code snippets that illustrate the functionality of the Vector Tiling Engine and shall help to implement similar technology. It briefly discusses the key issues we experienced during implementation.))
+Finally, <<DomainUseCases>> provides summaries of selected domain use cases contributed by SELFIE participants.

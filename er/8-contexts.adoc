@@ -1,3 +1,4 @@
+[[contexts]]
 === Contexts
 
 The SELFIE evolved several JSON-LD contexts that were initially created for the first ELFIE. IE participants also worked to establish a number of contexts containing UML classes and associations (used as feature types and property associations in RDF/JSON-LD) from domain feature models such as GWML2 and HY_Features. The content of the SELFIE-contexts is described in the meta-content section below. The purpose of the domain-specific contexts is to provide semantics that describe the basic associations between non-information resources (e.g. upstream/downstream associations) and domain-specific type (e.g. a feature is a water well). In order to ensure the contexts are usable by a broad audience and to foster adoption, the contexts and ontologies that they reference were kept purposefully focused and minimal; including feature types and associations from the normative UML models only.

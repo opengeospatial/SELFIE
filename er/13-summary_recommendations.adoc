@@ -1,3 +1,4 @@
+[[summary]]
 === Summary and outcomes
 
 SELFIE participants experienced difficulty communicating about the nature of the issues at hand. Examples included, but were not limited to:
@@ -15,6 +16,7 @@ The SELFIE refined the linked data predicates defined for use in landing content
 
 While the SELFIE set out to test content negotiation by profile and potentially other ways to negotiate between various representations of a resource, the complexities and communication difficulties regarding the core-problem proved enough for one IE.
 
+[[issues]]
 === Issues and recommendations.
 
 ==== Landing content type and the URL-14 resource

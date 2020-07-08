@@ -1,3 +1,4 @@
+[[objectives]]
 === Objectives
 
 The first Environmental Linked Features Interoperability Experiment (ELFIE) sought to answer the question, _"what linked data content should be included in a landing page describing an environmental feature and its relationship to other features and data?"._ Limiting scope in this way allowed the team to avoid the complex issues related to network behavior and the semantics of requesting default or alternate representations of a feature, representations of it, or other features and data in some way related to it. These issues were discussed in the first ELFIE -- but often only briefly or in the context of defining what was expressly out of scope for the project. The Second Environmental Linked Features Interoperability Experiment (SELFIE) took these issues on in earnest.

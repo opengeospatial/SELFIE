@@ -1,3 +1,4 @@
+[[usecases]]
 === Domain Use Cases
 
 The SELFIE relied on participant's domain-specific use cases to provide context and drive decision making in the context of the IE. The use cases included hydrogeology, soils, hydrology, and land-survey information. Common to these use cases was the need to work with identifiers for environmental features for which multiple representations are available. Each of the use cases was implemented to one extent or another. Full details of the use cases are included in <<DomainUseCases>>, domain use cases. Taken together and harmonized, these domain-specific use cases provided sufficient scope to determine a useful set of general use cases are summarized in the following sections.

@@ -1,4 +1,4 @@
-
+[[nir]]
 === Non-information resources
 
 The SELFIE content model, with its loosely-defined non-information, meta, and data tiers, is focused on the nature of a resource and not the structure of the identifier used to dereference the resource. However, there is a need to establish expected behavior when dereferencing URIs for information at each of these three tiers. As discussed in <<ELFIEResources>>, the SELFIE project found that the distinction between meta and data tiers is loose and should be the subject of future work. The IE considered two behaviors between non-information and information resources that provide landing content: 1) A 303 redirect from a URI-14 to a URL-14, and 2) Indirect identification of the non-information resource where the URI-14 and URL-14 are identical. +

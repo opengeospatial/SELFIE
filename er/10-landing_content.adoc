@@ -1,4 +1,4 @@
-
+[[landingContent]]
 === Landing content
 
 The following sections describe the purpose and some logic for SELFIE landing content.  +
@@ -139,6 +139,7 @@ https://opengeospatial.github.io/ELFIE/contexts/elfie-2/elf-network.jsonld[`elf-
 
 Many other contexts based on domain data models were created as part of the SELFIE. These can be seen at the https://opengeospatial.github.io/ELFIE/contexts/elfie-2/[SELFIE contexts web page.]
 
+[[dataContent]]
 === Data content
 
 Resources containing data content are extremely diverse. Examples include but are by no means limited to geospatial feature data whether a feature of interest or a reference feature, monitoring result data, monitoring location data, and related remote sensing data. As described above, such data can be said to be "in-band" or "out-of-band". The former would be a data resource that generally conforms to the system of linked data, GeoJSON, and HTML prescribed by the W3C Spatial Data on the Web best practices and emerging practices such as is described here. The latter is any other data resource that, while of interest and associated with a non-information resource, does not conform to linked data / semantic web practices. +
