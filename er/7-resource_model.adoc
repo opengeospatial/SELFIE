@@ -5,7 +5,7 @@ TODO: fill in an intro here.
 
 === W3C Resources Summary
 
-The SELFIE model for web resources is based on the notion of _information resources_ and _non-information resources_ as defined by the W3C document ‘Dereferencing HTTP URIs’. This summarises the so-called ‘Range-14’ decision that, while unofficial, is useful especially when read in conjunction with ‘Cool URIs for the Semantic Web’.
+The SELFIE model for web resources is based on the notion of _information resources_ and _non-information resources_ as defined by the W3C document https://www.w3.org/2001/tag/doc/httpRange-14/2007-08-31/HttpRange-14.html[‘Dereferencing HTTP URIs’]. This summarises the so-called ‘Range-14’ decision that, while unofficial, is useful especially when read in conjunction with https://www.w3.org/TR/cooluris/[‘Cool URIs for the Semantic Web’].
 
 Information resources are the currency of the web - the pages and data served in a digital form to be consumed by web browsers and applications. Non-information resources are the things these information resources may describe (for example people, mountains, or Aristotelian philosophical constructs). For SELFIE, the critical distinction between them is that an information resource has a location (expressed as a URL) while a non-information resource has identity, expressed as an HTTP URI.
 
@@ -22,10 +22,11 @@ The Environmental Linked Features in S+++<u>+++*ELF*+++</u>+++IE are non-informa
 . Sampling features - human-created representative samples of domain features. These features exist to provide metadata about how the feature was described and how robust/representative that description is. An information resource describing a domain feature would logically use, link to, or summarize data related to sampling features.
 . Semantic resources: the ontologies and vocabularies used to structure and populate the descriptions of domain and sampling features. These are formalized using OWL and RDF.
 
-Each of these groups occupy different meta-levels but can be interlinked. For example, allowing an agent traversing a knowledge graph to move from the description of a domain feature to how that description was obtained (sampling features). The links between the domain and sampling features are described with ontologies such as SOSA. Given that SELFIE has adopted JSON-LD as its RDF encoding syntax, links to semantic resources are provided via JSON-LD contexts that map JSON keys and types to RDF ontology property and class HTTP URIs.
+Each of these groups occupy different meta-levels but can be interlinked. For example, allowing an agent traversing a knowledge graph to move from the description of a domain feature to how that description was obtained (sampling features). The links between the domain and sampling features are described with https://www.w3.org/TR/vocab-ssn/[ontologies such as SOSA]. Given that SELFIE has adopted JSON-LD as its RDF encoding syntax, links to semantic resources are provided via JSON-LD contexts that map JSON keys and types to RDF ontology property and class HTTP URIs.
 
 For SELFIE, nodes in a knowledge graph are non-information resources, and the nodes of most interest are those that identify domain features. Sampling and semantic resources provide metadata that describe those features and organise available knowledge about them. Therefore, the SELFIE knowledge graph describes relationships between non-information resources in the ‘real world’. The links between information resources that describe them +++<u>+++*is an important but separate concern*+++</u>+++. In SELFIE, how to transition from non-information resources in the knowledge graph to those in the web of information resources was an important consideration where further work is needed.
 
+[[ELFIEResources]]
 === ELFIE Resources
 
 At the outset of SELFIE, the team was thinking in terms of a "three-tiered resource model" where "resource" was a thing identified by a URI. The resource model involved "non-information resources", "meta-information resources", and "data-information resources". Conceptually, the "non-information" "meta" and "data" scheme is useful, but the word "resource" is wrong when applied to the terminology of particular technologies (such as HTTP Resources). As such, the team found a need to change its language to more accurately reflect what was found to be useful ways to describe what is actually a set of use-cases that can be described in terms of non-information, metadata, and data.
@@ -95,7 +96,7 @@ To illustrate the distinction, consider the following JSON-LD example which has 
 }
 ----
 
-Alternatively, when we resolve +"+https://feature.id[+https://feature.id]"+ we might get a more limited document that does not include pre-fetched content about `https://someresource`:
+Alternatively, when we resolve +`https://feature.id`+ we might get a more limited document that does not include pre-fetched content about +`https://someresource`+:
 ----
 {
   "@id": "https://feature.id",
@@ -110,7 +111,7 @@ Alternatively, when we resolve +"+https://feature.id[+https://feature.id]"+ we m
   }
 }
 ----
-Which would mean we would need to resolve and interrogate +"https://someresource[+https://someresource]"+ to retrieve information needed to decide whether it is of interest, which is possible with the "in-band" +"+https://someresource[+https://someresource]++"+, and might give us the json-ld below, but impossible with the "out-of-band" +"https://blobby[https://blobby]"+ which might only return xml.
+Which would mean we would need to resolve and interrogate +`https://someresource`+ to retrieve information needed to decide whether it is of interest, which is possible with the "in-band" +`https://someresource`+, and might give us the JSON-LD below, but impossible with the "out-of-band" +`https://blobby`+ which might only return xml.
 
 ----
 {
@@ -125,7 +126,7 @@ Note that we have avoided discussion `@type` and `conformsTo`. Use of these prop
 
 === Resource Resolution Alternatives
 
-The range 14 decision, to identify real world features with URIs that HTTP-303 redirect to resources providing information about the real world feature, was accepted by SELFIE. <<img_range14>> illustrates the complete solution.
+The Range-14 decision, to identify real world features with URIs that HTTP-303 redirect to resources providing information about the real world feature, was accepted by SELFIE. <<img_range14>> illustrates the complete solution.
 
 [#img_range14,reftext='{figure-caption} {counter:figure-num}']
 .Complete range-14 resolution behavior.
@@ -143,7 +144,7 @@ The technical issue is related to how URLs are used to drive server behavior. Ch
 
 Socially, real-world feature identification is a process undertaken by a group of people that is likely not the same as those who implement the server software used to retrieve information about those features. Identification of features may work best with a different URI structure than retrieval of digital information about those features; forcing the two groups of people to reconcile these patterns is an unneeded, complicated, and likely fraught interaction that can be eliminated by separating real world feature identification from information index resource identification.
 
-Adding content negotiation to the discussion of resource resolution, a 303 redirect works fine as long as the client passes the same accept header to the redirect target URL. However, there is a common content negotiation override practice involving URL parameters such as _f=mime-type_ or __format=mime-type _that may be desirable to have passed along as part  of a 303 redirect. Some SELFIE participants support such mime-type overrides, but additional experimentation will be required to determine if there is a solution that should be recommended for this in general. Note that this says nothing about content-negotiation "by profile" (https://www.w3.org/TR/dx-prof-conneg/[https://www.w3.org/TR/dx-prof-conneg/]), an emerging technique that was decided to be beyond the scope SELFIE would be able to address.
+Adding content negotiation to the discussion of resource resolution, a 303 redirect works fine as long as the client passes the same accept header to the redirect target URL. However, there is a common content negotiation override practice involving URL parameters such as `?f=mime-type` or `?format=mime-type` that may be desirable to have passed along as part  of a 303 redirect. Some SELFIE participants support such mime-type overrides, but additional experimentation will be required to determine if there is a solution that should be recommended for this in general. Note that this says nothing about https://www.w3.org/TR/dx-prof-conneg/[content-negotiation "by profile"], an emerging technique that was decided to be beyond the scope SELFIE would be able to address.
 
 Extending the resource resolution use case to include retrieving representations of a feature introduces additional functions that were the subject of some SELFIE experiments. Two such resolution schemes were tested. One required a client to inspect information index hypermedia and make an additional request for an available representation. The other used media-type content negotiation to return a representation available via that media-type directly from a URL-14 indirect identifier without the client needing to review information index hypermedia. These two schemes are illustrated in <<img_conneg>>. These alternatives are equally valid and further work is needed to determine if one is preferable to the other.
 

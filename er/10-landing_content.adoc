@@ -59,7 +59,7 @@ These properties are useful for documenting any information resource in structur
 } 
 ----
 
-As is shown in examples in the "in-band" and "out-of-band" section, these properties can be used in two ways.  +
+As is shown in examples in the <<inBandoutofBand>>, these properties can be used in two ways.  +
 An in-band resource might be documented as follows: +
 
 ----
