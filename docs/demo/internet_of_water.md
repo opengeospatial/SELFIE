@@ -100,10 +100,4 @@ flowlines and boundary are intended to provide a visual representation and could
 
 ## Demo findings and potential next steps
 
-### TODO
-
-Discuss issues that this demo works around or would otherwise need to be solved to take
-it from demonstration/experiment to production. Talk about how the SELFIE core of 303
-redirection and use of JSON-LD in HTML landing pages works in the context of the complete
-technical setting of your use case. Discussion of what future experimentation is needed
-should go here.
+This demo demonstrates that the core SELFIE technical solution rooted in URI-14 -> URL-14 redirection works well. Links to representations and associated features are operable but additional implementations will be needed to gain needed experience before any strong conclusions can be made. Availability of domain feature models (classes and associations) continues to be an issue the community needs to address before full-fledged implementation of domain-data-model linked data will be possible.
