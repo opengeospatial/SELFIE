@@ -1,7 +1,7 @@
 [[ResourceContentModel]]
 == Resource / Content Model
 
-TODO: fill in an intro here.
+Resources are the stuff of the internet. Is _a resource_ 1) its identifier, 2) content retrieved by dereferencing its identifier, or 3) some abstract notion identified by a URI and described by dereferenced content? The problems pursued by SELFIE made the importance of these distinctions clear and, to some extent, found some answers. More often than finding answers, the SELFIE found that the technical baseline pertaining to the problem is rich and relatively un-explored for environmental data use cases. That is to say that given the technical baseline available to the community, implementation and building an understanding of modern technologies should proceed in order to better understand pain points and find where additional complexity really is required vs. where existing technologies can satisfy the real need.
 
 === W3C Resources Summary
 
