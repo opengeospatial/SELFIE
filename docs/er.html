@@ -540,7 +540,7 @@ To obtain additional rights of use, visit <a href="http://www.opengeospatial.org
 <li><a href="#ResourceContentModel">6. Resource / Content Model</a>
 <ul class="sectlevel2">
 <li><a href="#_w3c_resources_summary">6.1. W3C Resources Summary</a></li>
-<li><a href="#_elfie_resources">6.2. ELFIE Resources</a></li>
+<li><a href="#ELFIEResources">6.2. ELFIE Resources</a></li>
 <li><a href="#inBandoutofBand">6.3. "In band" and "out of band" resources.</a></li>
 <li><a href="#_resource_resolution_alternatives">6.4. Resource Resolution Alternatives</a></li>
 <li><a href="#_contexts">6.5. Contexts</a></li>
@@ -619,6 +619,9 @@ To obtain additional rights of use, visit <a href="http://www.opengeospatial.org
 <h2 id="_subject"><a class="anchor" href="#_subject"></a>1. Subject</h2>
 <div class="sectionbody">
 <div class="paragraph">
+<p>TODO</p>
+</div>
+<div class="paragraph">
 <p>The following is, as all texts in double parentheses, a helper text. Please remove this and all other helper texts once done.</p>
 </div>
 <div class="paragraph">
@@ -635,6 +638,9 @@ To obtain additional rights of use, visit <a href="http://www.opengeospatial.org
 <div class="sect1">
 <h2 id="_executive_summary"><a class="anchor" href="#_executive_summary"></a>2. Executive Summary</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>TODO</p>
+</div>
 <div class="paragraph">
 <p>The following is, as all texts in double square brackets, a helper text. Please remove this and all other helper texts once done.</p>
 </div>
@@ -829,25 +835,66 @@ To obtain additional rights of use, visit <a href="http://www.opengeospatial.org
 <div class="sect2">
 <h3 id="_abbreviated_terms"><a class="anchor" href="#_abbreviated_terms"></a>4.1. Abbreviated terms</h3>
 <div class="ulist">
-<div class="title">NOTE: The abbreviated terms clause gives a list of the abbreviated terms and the symbols necessary for understanding this document. All symbols should be listed in alphabetical order. Some more frequently used abbreviated terms are provided below as examples.</div>
 <ul>
 <li>
-<p>COM	Component Object Model</p>
+<p>API - Application Programming Interface</p>
 </li>
 <li>
-<p>CORBA	Common Object Request Broker Architecture</p>
+<p>CURI - Compact Uniform Resource Identifier</p>
 </li>
 <li>
-<p>COTS	Commercial Off The Shelf</p>
+<p>ELFIE - Environmental Linked Features Interoperability Experiment</p>
 </li>
 <li>
-<p>DCE	Distributed Computing Environment</p>
+<p>HTML - HyperText Markup Language</p>
 </li>
 <li>
-<p>DCOM	Distributed Component Object Model</p>
+<p>HTTP URI - HyperText Transfer Protocol</p>
 </li>
 <li>
-<p>IDL	Interface Definition Language</p>
+<p>IE - Interoperability Experiment</p>
+</li>
+<li>
+<p>GML - Geography Markup Language</p>
+</li>
+<li>
+<p>GWML2 - Groundwater Markup Language 2</p>
+</li>
+<li>
+<p>HY_Features - Surface Hydrologic Features Conceptual Model</p>
+</li>
+<li>
+<p>OWL - Web Ontology Language</p>
+</li>
+<li>
+<p>RDF - Resource Description Format</p>
+</li>
+<li>
+<p>URI - Uniform Resource Identifier</p>
+</li>
+<li>
+<p>URL - Uniform Resource Locator</p>
+</li>
+<li>
+<p>SELFIE - Second Environmental Linked Features Interoperability Experiment</p>
+</li>
+<li>
+<p>XML - eXtensible Markup Language</p>
+</li>
+<li>
+<p>CSV - Comma Separated Values</p>
+</li>
+<li>
+<p>JSON - Javascript Object Notation</p>
+</li>
+<li>
+<p>JSON-LD - Javascript Object Notation for Linked Data</p>
+</li>
+<li>
+<p>TTL - Terse RDF Triple Language</p>
+</li>
+<li>
+<p>GeoJSON - Geographic Javascript Object Notation</p>
 </li>
 </ul>
 </div>
@@ -871,6 +918,9 @@ To obtain additional rights of use, visit <a href="http://www.opengeospatial.org
 </td>
 </tr>
 </table>
+</div>
+<div class="paragraph">
+<p>TODO</p>
 </div>
 <div class="paragraph">
 <p>Example:</p>
@@ -935,7 +985,7 @@ These can be summarized with the question, <em>"what is the expected network beh
 <div class="sect2">
 <h3 id="_domain_use_cases"><a class="anchor" href="#_domain_use_cases"></a>5.2. Domain Use Cases</h3>
 <div class="paragraph">
-<p>The SELFIE relied on participant&#8217;s domain-specific use cases to provide context and drive decision making in the context of the IE. The use cases included hydrogeology, soils, hydrology, and land-survey information. Common to these use cases was the need to work with identifiers for environmental features for which multiple representations are available. Each of the use cases was implemented to one extent or another. Full details of the use cases are included in appendix A, domain use cases. Taken together and harmonized, these domain-specific use cases provided sufficient scope to determine a useful set of general use cases are summarized in the following sections.</p>
+<p>The SELFIE relied on participant&#8217;s domain-specific use cases to provide context and drive decision making in the context of the IE. The use cases included hydrogeology, soils, hydrology, and land-survey information. Common to these use cases was the need to work with identifiers for environmental features for which multiple representations are available. Each of the use cases was implemented to one extent or another. Full details of the use cases are included in <a href="#DomainUseCases">Domain Use Cases</a>, domain use cases. Taken together and harmonized, these domain-specific use cases provided sufficient scope to determine a useful set of general use cases are summarized in the following sections.</p>
 </div>
 </div>
 <div class="sect2">
@@ -994,7 +1044,7 @@ This diversity required some careful consideration and handling and the solution
 <p><strong>Structured-data to support search indexing</strong> is the representation of landing content that is presented to a web-crawler. The lexicon of this most-default representation must be common to the Web (e.g. schema.org) and the breadth of content focused such that only specific pertinent details for general search, discovery, and general preview (such as a knowledge panel) are included.</p>
 </div>
 <div class="paragraph">
-<p>Providing links to *representations and related data *is the ultimate purpose of the system of linked data explored in SELFIE. Such resources are generally not natively defined in linked-data formats and can&#8217;t be incorporated into the linked data graph directly. As described in detail later, such out-of-band resources must be referred to with associations like <a href="https://schema.org/url">schema.org/url</a> rather than as in-band linked data resources.</p>
+<p>Providing links to <strong>representations and related data</strong> is the ultimate purpose of the system of linked data explored in SELFIE. Such resources are generally not natively defined in linked-data formats and can&#8217;t be incorporated into the linked data graph directly. As described in detail later, such out-of-band resources must be referred to with associations like <a href="https://schema.org/url">schema.org/url</a> rather than as in-band linked data resources.</p>
 </div>
 </div>
 <div class="sect3">
@@ -1019,13 +1069,13 @@ This diversity required some careful consideration and handling and the solution
 </ol>
 </div>
 <div class="paragraph">
-<p>The <strong>feature identification</strong> use case involves association of an HTTP URI with a recognized real world feature. In the most sophisticated implementations, this would be a "URI-14" URI which only ever returns a HTTP-303 see-other directing a client to a "URL-14" which would return landing content. However, a less sophisticated implementation may conflate the URI-14 and URL-14 resources such that the feature identification use case is satisfied with a URL that returns landing content. This was found to be valid and a practical approach with some notable limitations[1].</p>
+<p>The <strong>feature identification</strong> use case involves association of an HTTP URI with a recognized real world feature. In the most sophisticated implementations, this would be a "URI-14" URI which only ever returns a HTTP-303 see-other directing a client to a "URL-14" which would return landing content. However, a less sophisticated implementation may conflate the URI-14 and URL-14 resources such that the feature identification use case is satisfied with a URL that returns landing content. This was found to be valid and a practical approach.</p>
 </div>
 <div class="paragraph">
-<p>The <strong>landing content and network of linked features</strong> use case focuses on the default content and encoding that a search-engine crawler expects. It involves the HTML media-type content returned by default when resolving a feature identification resource whether via 303-redirect or not. Structured data in landing content must be designed in the lexicon of the web, focused on schema.org and other common ontologies[2] and encoded in JSON-LD. HTML content provides useful natural language descriptors and uses appropriate link relations wherever possible[3]. The URL that is used to retrieve landing content may have a number of sophisticated alternative behaviors accessed via HTTP content negotiation and/or appended API patterns, but the default response when the accept header indicates HTML, should satisfy the needs of the landing content use case.</p>
+<p>The <strong>landing content and network of linked features</strong> use case focuses on the default content and encoding that a search-engine crawler expects. It involves the HTML media-type content returned by default when resolving a feature identification resource whether via 303-redirect or not. Structured data in landing content must be designed in the lexicon of the web, focused on schema.org and other common ontologies and encoded in JSON-LD. HTML content provides useful natural language descriptors and uses appropriate link relations wherever possible. The URL that is used to retrieve landing content may have a number of sophisticated alternative behaviors accessed via HTTP content negotiation and/or appended API patterns, but the default response when the accept header indicates HTML, should satisfy the needs of the landing content use case.</p>
 </div>
 <div class="paragraph">
-<p><strong>Structured-data</strong> for search indexing, what we might call in-band resources, could involve various lexicons and graph-views of linked data that adheres to the RDF data model and are part of a consistent structured data web architecture. Logically, such content should be returned from the URL used to retrieve landing content if the HTTP-accept header indicates a linked data type such as JSON-LD, html, and other media types included in a defined architecture. With regard to linked data types, use of API patterns such as those introduced in the Linked Data API or HTTP content negotiation by profile may be relevant here[4], a system may return all known associations to the identified feature, or a custom view of an extended linked data graph that meets the needs of an implementation. Given that multiple profiles of linked data may be available, the linked data rendered in the <code>&lt;script&gt;</code> header of the HTML representation of a landing resource may provide different content than other linked-data representations. This follows from the fact that many linked data use cases don&#8217;t necessarily focus on search-engine indexing.</p>
+<p><strong>Structured-data</strong> for search indexing, what we might call in-band resources, could involve various lexicons and graph-views of linked data that adheres to the RDF data model and are part of a consistent structured data web architecture. Logically, such content should be returned from the URL used to retrieve landing content if the HTTP-accept header indicates a linked data type such as JSON-LD, html, and other media types included in a defined architecture. With regard to linked data types, use of API patterns such as those introduced in the Linked Data API or HTTP content negotiation by profile may be relevant here, a system may return all known associations to the identified feature, or a custom view of an extended linked data graph that meets the needs of an implementation. Given that multiple profiles of linked data may be available, the linked data rendered in the <code>&lt;script&gt;</code> header of the HTML representation of a landing resource may provide different content than other linked-data representations. This follows from the fact that many linked data use cases don&#8217;t necessarily focus on search-engine indexing.</p>
 </div>
 <div class="paragraph">
 <p><strong>Data</strong> that represent or are otherwise related to features are what we refer to here as out-of-band. Such data are not part of the system of linked data and related content. These might be a complex GML representation of a feature, an image or map, a report, or a JSON representation of a timeseries. The distinction is that a given representation of a resource is either compatible with a technical architecture (i.e. can be parsed and handled by software that works with it) or is not (i.e. is opaque to software that works with the architecture). In-band content can directly extend the linked-data graph and out-of-band cannot.</p>
@@ -1047,12 +1097,12 @@ This diversity required some careful consideration and handling and the solution
 <h2 id="ResourceContentModel"><a class="anchor" href="#ResourceContentModel"></a>6. Resource / Content Model</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>TODO: fill in an intro here.</p>
+<p>Resources are the stuff of the internet. Is <em>a resource</em> 1) its identifier, 2) content retrieved by dereferencing its identifier, or 3) some abstract notion identified by a URI and described by dereferenced content? The problems pursued by SELFIE made the importance of these distinctions clear and, to some extent, found some answers. More often than finding answers, the SELFIE found that the technical baseline pertaining to the problem is rich and relatively un-explored for environmental data use cases. That is to say that given the technical baseline available to the community, implementation and building an understanding of modern technologies should proceed in order to better understand pain points and find where additional complexity really is required vs. where existing technologies can satisfy the real need.</p>
 </div>
 <div class="sect2">
 <h3 id="_w3c_resources_summary"><a class="anchor" href="#_w3c_resources_summary"></a>6.1. W3C Resources Summary</h3>
 <div class="paragraph">
-<p>The SELFIE model for web resources is based on the notion of <em>information resources</em> and <em>non-information resources</em> as defined by the W3C document ‘Dereferencing HTTP URIs’. This summarises the so-called ‘Range-14’ decision that, while unofficial, is useful especially when read in conjunction with ‘Cool URIs for the Semantic Web’.</p>
+<p>The SELFIE model for web resources is based on the notion of <em>information resources</em> and <em>non-information resources</em> as defined by the W3C document <a href="https://www.w3.org/2001/tag/doc/httpRange-14/2007-08-31/HttpRange-14.html">‘Dereferencing HTTP URIs’</a>. This summarises the so-called ‘Range-14’ decision that, while unofficial, is useful especially when read in conjunction with <a href="https://www.w3.org/TR/cooluris/">‘Cool URIs for the Semantic Web’</a>.</p>
 </div>
 <div class="paragraph">
 <p>Information resources are the currency of the web - the pages and data served in a digital form to be consumed by web browsers and applications. Non-information resources are the things these information resources may describe (for example people, mountains, or Aristotelian philosophical constructs). For SELFIE, the critical distinction between them is that an information resource has a location (expressed as a URL) while a non-information resource has identity, expressed as an HTTP URI.</p>
@@ -1090,14 +1140,14 @@ This diversity required some careful consideration and handling and the solution
 </ol>
 </div>
 <div class="paragraph">
-<p>Each of these groups occupy different meta-levels but can be interlinked. For example, allowing an agent traversing a knowledge graph to move from the description of a domain feature to how that description was obtained (sampling features). The links between the domain and sampling features are described with ontologies such as SOSA. Given that SELFIE has adopted JSON-LD as its RDF encoding syntax, links to semantic resources are provided via JSON-LD contexts that map JSON keys and types to RDF ontology property and class HTTP URIs.</p>
+<p>Each of these groups occupy different meta-levels but can be interlinked. For example, allowing an agent traversing a knowledge graph to move from the description of a domain feature to how that description was obtained (sampling features). The links between the domain and sampling features are described with <a href="https://www.w3.org/TR/vocab-ssn/">ontologies such as SOSA</a>. Given that SELFIE has adopted JSON-LD as its RDF encoding syntax, links to semantic resources are provided via JSON-LD contexts that map JSON keys and types to RDF ontology property and class HTTP URIs.</p>
 </div>
 <div class="paragraph">
 <p>For SELFIE, nodes in a knowledge graph are non-information resources, and the nodes of most interest are those that identify domain features. Sampling and semantic resources provide metadata that describe those features and organise available knowledge about them. Therefore, the SELFIE knowledge graph describes relationships between non-information resources in the ‘real world’. The links between information resources that describe them <u><strong>is an important but separate concern</strong></u>. In SELFIE, how to transition from non-information resources in the knowledge graph to those in the web of information resources was an important consideration where further work is needed.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_elfie_resources"><a class="anchor" href="#_elfie_resources"></a>6.2. ELFIE Resources</h3>
+<h3 id="ELFIEResources"><a class="anchor" href="#ELFIEResources"></a>6.2. ELFIE Resources</h3>
 <div class="paragraph">
 <p>At the outset of SELFIE, the team was thinking in terms of a "three-tiered resource model" where "resource" was a thing identified by a URI. The resource model involved "non-information resources", "meta-information resources", and "data-information resources". Conceptually, the "non-information" "meta" and "data" scheme is useful, but the word "resource" is wrong when applied to the terminology of particular technologies (such as HTTP Resources). As such, the team found a need to change its language to more accurately reflect what was found to be useful ways to describe what is actually a set of use-cases that can be described in terms of non-information, metadata, and data.</p>
 </div>
@@ -1210,7 +1260,7 @@ This limited set of criteria covers the important architectural concerns. It imp
 </div>
 </div>
 <div class="paragraph">
-<p>Alternatively, when we resolve "+https://feature.id[+https://feature.id]" we might get a more limited document that does not include pre-fetched content about <code><a href="https://someresource" class="bare">https://someresource</a></code>:</p>
+<p>Alternatively, when we resolve `https://feature.id` we might get a more limited document that does not include pre-fetched content about `https://someresource`:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1229,7 +1279,7 @@ This limited set of criteria covers the important architectural concerns. It imp
 </div>
 </div>
 <div class="paragraph">
-<p>Which would mean we would need to resolve and interrogate "https://someresource[+https://someresource]" to retrieve information needed to decide whether it is of interest, which is possible with the "in-band" "+https://someresource[+https://someresource]+", and might give us the json-ld below, but impossible with the "out-of-band" +"https://blobby[https://blobby]" which might only return xml.</p>
+<p>Which would mean we would need to resolve and interrogate `https://someresource` to retrieve information needed to decide whether it is of interest, which is possible with the "in-band" `https://someresource`, and might give us the JSON-LD below, but impossible with the "out-of-band" `https://blobby` which might only return xml.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1248,7 +1298,7 @@ This limited set of criteria covers the important architectural concerns. It imp
 <div class="sect2">
 <h3 id="_resource_resolution_alternatives"><a class="anchor" href="#_resource_resolution_alternatives"></a>6.4. Resource Resolution Alternatives</h3>
 <div class="paragraph">
-<p>The range 14 decision, to identify real world features with URIs that HTTP-303 redirect to resources providing information about the real world feature, was accepted by SELFIE. <a href="#img_range14">Figure 3</a> illustrates the complete solution.</p>
+<p>The Range-14 decision, to identify real world features with URIs that HTTP-303 redirect to resources providing information about the real world feature, was accepted by SELFIE. <a href="#img_range14">Figure 3</a> illustrates the complete solution.</p>
 </div>
 <div id="img_range14" class="imageblock text-left">
 <div class="content">
@@ -1275,7 +1325,7 @@ This limited set of criteria covers the important architectural concerns. It imp
 <p>Socially, real-world feature identification is a process undertaken by a group of people that is likely not the same as those who implement the server software used to retrieve information about those features. Identification of features may work best with a different URI structure than retrieval of digital information about those features; forcing the two groups of people to reconcile these patterns is an unneeded, complicated, and likely fraught interaction that can be eliminated by separating real world feature identification from information index resource identification.</p>
 </div>
 <div class="paragraph">
-<p>Adding content negotiation to the discussion of resource resolution, a 303 redirect works fine as long as the client passes the same accept header to the redirect target URL. However, there is a common content negotiation override practice involving URL parameters such as <em>f=mime-type</em> or __format=mime-type _that may be desirable to have passed along as part  of a 303 redirect. Some SELFIE participants support such mime-type overrides, but additional experimentation will be required to determine if there is a solution that should be recommended for this in general. Note that this says nothing about content-negotiation "by profile" (<a href="https://www.w3.org/TR/dx-prof-conneg/">https://www.w3.org/TR/dx-prof-conneg/</a>), an emerging technique that was decided to be beyond the scope SELFIE would be able to address.</p>
+<p>Adding content negotiation to the discussion of resource resolution, a 303 redirect works fine as long as the client passes the same accept header to the redirect target URL. However, there is a common content negotiation override practice involving URL parameters such as <code>?f=mime-type</code> or <code>?format=mime-type</code> that may be desirable to have passed along as part  of a 303 redirect. Some SELFIE participants support such mime-type overrides, but additional experimentation will be required to determine if there is a solution that should be recommended for this in general. Note that this says nothing about <a href="https://www.w3.org/TR/dx-prof-conneg/">content-negotiation "by profile"</a>, an emerging technique that was decided to be beyond the scope SELFIE would be able to address.</p>
 </div>
 <div class="paragraph">
 <p>Extending the resource resolution use case to include retrieving representations of a feature introduces additional functions that were the subject of some SELFIE experiments. Two such resolution schemes were tested. One required a client to inspect information index hypermedia and make an additional request for an available representation. The other used media-type content negotiation to return a representation available via that media-type directly from a URL-14 indirect identifier without the client needing to review information index hypermedia. These two schemes are illustrated in <a href="#img_conneg">Figure 5</a>. These alternatives are equally valid and further work is needed to determine if one is preferable to the other.</p>
@@ -1296,7 +1346,7 @@ This limited set of criteria covers the important architectural concerns. It imp
 <p>With regard to style of contexts themselves, IE participants agreed that we should alias only properties and not classes/feature types. Only namespace URI prefixs (e.g. <code>"schema": "http://schema.org/"</code>) and property keys (e.g. <code>"sameAs": "schema:sameAs"</code>) are aliased. Classes are not, instead they are returned as compact URIs (CURIs) in the JSON documents: <code>"@type": "gw:GW_HydrogeoUnit"</code>.</p>
 </div>
 <div class="paragraph">
-<p>The argument for namespace is very common practice. They simplify documents, making URIs shorter and clearer in documents. For example, <code>gw:GW_Well</code> is easier to work with than <code><a href="https://www.opengis.net/def/gwml2#GW_Well" class="bare">https://www.opengis.net/def/gwml2#GW_Well</a></code>.</p>
+<p>The argument for namespace is very common practice. They simplify documents, making URIs shorter and clearer in documents. For example, <code>gw:GW_Well</code> is easier to work with than `https://www.opengis.net/def/gwml2#GW_Well`.</p>
 </div>
 <div class="paragraph">
 <p>The first ELFIE made the decision not to use CURIs for property key names as a simplification to make JSON-LD documents more approachable and limit colons in JSON keywords. <a href="https://opengeospatial.github.io/ELFIE/json-ld/">See this description of ELFIE context design for more… context.</a> The downside of this decision is we lose the ability to distinguish between the use of the same label in different JSON-LD contexts. CURIs disambiguate identical property keys (<code>schema:comment</code>; <code>rdfs:comment</code>) but this can also be accomplished with longer key aliases (<code>"schemaComment": "schema:comment"</code>; <code>"rdfsComment": "rdfs:comment"</code>). This workaround will be required very rarely and isn&#8217;t necessary for classes (<code>@type</code> values) as they are property values and not used as JSON keys so problematic characters (like colons) are not a problem.</p>
@@ -1305,7 +1355,7 @@ This limited set of criteria covers the important architectural concerns. It imp
 <div class="sect2">
 <h3 id="_non_information_resources"><a class="anchor" href="#_non_information_resources"></a>6.6. Non-information resources</h3>
 <div class="paragraph">
-<p>The SELFIE content model, with its loosely-defined non-information, meta, and data tiers, is focused on the nature of a resource and not the structure of the identifier used to dereference the resource. However, there is a need to establish expected behavior when dereferencing URIs for information at each of these three tiers. As discussed in section X, the SELFIE project found that the distinction between meta and data tiers is loose and should be the subject of future work. The IE considered two behaviors between non-information and information resources that provide landing content: 1) A 303 redirect from a URI-14 to a URL-14, and 2) Indirect identification of the non-information resource where the URI-14 and URL-14 are identical.<br>
+<p>The SELFIE content model, with its loosely-defined non-information, meta, and data tiers, is focused on the nature of a resource and not the structure of the identifier used to dereference the resource. However, there is a need to establish expected behavior when dereferencing URIs for information at each of these three tiers. As discussed in <a href="#ELFIEResources">ELFIE Resources</a>, the SELFIE project found that the distinction between meta and data tiers is loose and should be the subject of future work. The IE considered two behaviors between non-information and information resources that provide landing content: 1) A 303 redirect from a URI-14 to a URL-14, and 2) Indirect identification of the non-information resource where the URI-14 and URL-14 are identical.<br>
 The distinction between non-information resources and resources that provide landing-content located with different URIs introduces the potential for confusion. This confusion was anticipated to produce two issues:</p>
 </div>
 <div class="olist arabic">
@@ -1423,7 +1473,7 @@ These properties are useful for documenting any information resource in structur
 </div>
 </div>
 <div class="paragraph">
-<p>As is shown in examples in the "in-band" and "out-of-band" section, these properties can be used in two ways. <br>
+<p>As is shown in examples in the <a href="#inBandoutofBand">"In band" and "out of band" resources.</a>, these properties can be used in two ways. <br>
 An in-band resource might be documented as follows:<br></p>
 </div>
 <div class="listingblock">
@@ -1686,7 +1736,7 @@ An in-band resource might be documented as follows:<br></p>
 <p>As a result, the IE&#8217;s primary outcomes are a deeper understanding of the problem at hand rather than fully-fledged and tested solutions.</p>
 </div>
 <div class="paragraph">
-<p>First and foremost, the IE demonstrated that use of the HTTP-Range14 303 redirection between so-called URI-14 URIs and URL-14 resources that provide "landing content" has great utility and is not incompatible with modern web infrastructure. There is a strong logical and technical case for using URI-14 &#8594; URL-14 redirection. A critical additional consideration here is that <strong>*URL-14 HTTP URIs should almost never be used as identifiers</strong> in and of themselves. That is, landing content should only ever be retrieved by first dereferencing the URI-14 identifier.</p>
+<p>First and foremost, the IE demonstrated that use of the HTTP-Range14 303 redirection between so-called URI-14 URIs and URL-14 resources that provide "landing content" has great utility and is not incompatible with modern web infrastructure. There is a strong logical and technical case for using URI-14 &#8594; URL-14 redirection. A critical additional consideration here is that <strong>URL-14 HTTP URIs should almost never be used as identifiers</strong> in and of themselves. That is, landing content should only ever be retrieved by first dereferencing the URI-14 identifier.</p>
 </div>
 <div class="paragraph">
 <p>The SELFIE refined the linked data predicates defined for use in landing content by the first ELFIE especially as it relates to links between and among URI-14 identifiers and URL-200 data resources. While more work is needed here, the core-relation to link between identification and representation is <code><a href="https://schema.org/subjectOf" class="bare">https://schema.org/subjectOf</a></code>. Other aspects of the ELFIE content model (such as domain-feature model associations between URI-14 identifiers) were vetted, and proved to work in the context of URI-14 &#8594; URL-14 redirection. Further work is needed to enrich the semantics between identification and representation&#8201;&#8212;&#8201;especially in the context of multiple representations of the same feature where each representation is of a different type.</p>
