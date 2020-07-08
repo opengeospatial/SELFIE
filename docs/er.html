@@ -526,8 +526,8 @@ To obtain additional rights of use, visit <a href="http://www.opengeospatial.org
 </li>
 <li><a href="#Overview">5. Overview</a>
 <ul class="sectlevel2">
-<li><a href="#_objectives">5.1. Objectives</a></li>
-<li><a href="#_domain_use_cases">5.2. Domain Use Cases</a></li>
+<li><a href="#objectives">5.1. Objectives</a></li>
+<li><a href="#usecases">5.2. Domain Use Cases</a></li>
 <li><a href="#_general_selfie_use_cases">5.3. General SELFIE Use Cases</a>
 <ul class="sectlevel3">
 <li><a href="#_organizational_architectures">5.3.1. Organizational architectures</a></li>
@@ -539,22 +539,22 @@ To obtain additional rights of use, visit <a href="http://www.opengeospatial.org
 </li>
 <li><a href="#ResourceContentModel">6. Resource / Content Model</a>
 <ul class="sectlevel2">
-<li><a href="#_w3c_resources_summary">6.1. W3C Resources Summary</a></li>
+<li><a href="#w3cResources">6.1. W3C Resources Summary</a></li>
 <li><a href="#ELFIEResources">6.2. ELFIE Resources</a></li>
-<li><a href="#inBandoutofBand">6.3. "In band" and "out of band" resources.</a></li>
-<li><a href="#_resource_resolution_alternatives">6.4. Resource Resolution Alternatives</a></li>
-<li><a href="#_contexts">6.5. Contexts</a></li>
-<li><a href="#_non_information_resources">6.6. Non-information resources</a></li>
-<li><a href="#_landing_content">6.7. Landing content</a>
+<li><a href="#inBandoutofBand">6.3. "In band" and "out of band" resources</a></li>
+<li><a href="#resourceResolutionAlternatives">6.4. Resource Resolution Alternatives</a></li>
+<li><a href="#contexts">6.5. Contexts</a></li>
+<li><a href="#nir">6.6. Non-information resources</a></li>
+<li><a href="#landingContent">6.7. Landing content</a>
 <ul class="sectlevel3">
 <li><a href="#_properties_for_documenting_data_resources">6.7.1. Properties for documenting data resources</a></li>
 <li><a href="#_properties_for_documenting_related_data">6.7.2. Properties for documenting related data.</a></li>
 <li><a href="#_properties_for_relating_non_information_resources">6.7.3. Properties for relating non-information resources</a></li>
 </ul>
 </li>
-<li><a href="#_data_content">6.8. Data content</a></li>
-<li><a href="#_relationship_to_ogc_api">6.9. Relationship to OGC-API</a></li>
-<li><a href="#_properties_relations">6.10. Properties / Relations</a>
+<li><a href="#dataContent">6.8. Data content</a></li>
+<li><a href="#ogcApi">6.9. Relationship to OGC-API</a></li>
+<li><a href="#propertiresRelations">6.10. Properties / Relations</a>
 <ul class="sectlevel3">
 <li><a href="#_schema_org">6.10.1. Schema.org:</a></li>
 <li><a href="#_dublin_core">6.10.2. Dublin Core:</a></li>
@@ -564,8 +564,8 @@ To obtain additional rights of use, visit <a href="http://www.opengeospatial.org
 <li><a href="#_owl_time">6.10.6. OWL-time:</a></li>
 </ul>
 </li>
-<li><a href="#_summary_and_outcomes">6.11. Summary and outcomes</a></li>
-<li><a href="#_issues_and_recommendations">6.12. Issues and recommendations.</a>
+<li><a href="#summary">6.11. Summary and outcomes</a></li>
+<li><a href="#issues">6.12. Issues and recommendations.</a>
 <ul class="sectlevel3">
 <li><a href="#_landing_content_type_and_the_url_14_resource">6.12.1. Landing content type and the URL-14 resource</a></li>
 <li><a href="#_in_band_and_out_of_band_resources">6.12.2. In band and out of band resources</a></li>
@@ -904,44 +904,64 @@ To obtain additional rights of use, visit <a href="http://www.opengeospatial.org
 <div class="sect1">
 <h2 id="Overview"><a class="anchor" href="#Overview"></a>5. Overview</h2>
 <div class="sectionbody">
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">
-<div class="title">Instructions</div>
 <div class="paragraph">
-<p>This 4-overview.adoc file helps the reader to better understand the various sections of the ER. It should be written like an extended table of contents.</p>
-</div>
-</td>
-</tr>
-</table>
+<p><a href="#objectives">Objectives</a> provides a high-level overview of how the first ELFIE&#8217;s outcomes provide context for the objectives of the SELFIE.</p>
 </div>
 <div class="paragraph">
-<p>TODO</p>
+<p><a href="#usecases">Domain Use Cases</a> describes how domain use cases and more general technical use cases were used in SELFIE.</p>
 </div>
 <div class="paragraph">
-<p>Example:</p>
+<p><a href="#ResourceContentModel">Resource / Content Model</a> is the core discussion of the SELFIE experiment. It includes four subsections:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="#w3cResources">W3C Resources Summary</a></p>
+</li>
+<li>
+<p><a href="#ELFIEResources">ELFIE Resources</a></p>
+</li>
+<li>
+<p><a href="#inBandoutofBand">"In band" and "out of band" resources</a></p>
+</li>
+<li>
+<p><a href="#resourceResolutionAlternatives">Resource Resolution Alternatives</a></p>
+</li>
+</ol>
 </div>
 <div class="paragraph">
-<p>Section 5 introduces the problem of vector tiling. It describes the situation prior to the testbed and discusses the requirements set by the sponsors.</p>
+<p>Detailed descriptions of the technical outcomes of the experiment are provided in:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#contexts">Contexts</a></p>
+</li>
+<li>
+<p><a href="#nir">Non-information resources</a></p>
+</li>
+<li>
+<p><a href="#landingContent">Landing content</a></p>
+</li>
+<li>
+<p><a href="#dataContent">Data content</a></p>
+</li>
+<li>
+<p><a href="#ogcApi">Relationship to OGC-API</a></p>
+</li>
+<li>
+<p><a href="#propertiresRelations">Properties / Relations</a></p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>Section 6 discusses the mathematical model behind the various tiling strategies. It provides recommendations on preferred strategies.</p>
+<p>The report wraps up with <a href="#summary">Summary and outcomes</a> and <a href="#issues">Issues and recommendations.</a> that wrap up and illustrate issues for future work respectively.</p>
 </div>
 <div class="paragraph">
-<p>Section 7 presents the solution developed in this testbed. A clear mapping of requirements to solutions is provided. The section shows additional work is required to implement 3D tiles, which could not be addressed in this activity.</p>
-</div>
-<div class="paragraph">
-<p>Section 8 provides a summary of the main findings and discusses links to other tasks such as WFS 3.0 and WMTS 2.3.</p>
-</div>
-<div class="paragraph">
-<p>Annex A provides code snippets that illustrate the functionality of the Vector Tiling Engine and shall help to implement similar technology. It briefly discusses the key issues we experienced during implementation.</p>
+<p>Finally, <a href="#DomainUseCases">Domain Use Cases</a> provides summaries of selected domain use cases contributed by SELFIE participants.</p>
 </div>
 <div class="sect2">
-<h3 id="_objectives"><a class="anchor" href="#_objectives"></a>5.1. Objectives</h3>
+<h3 id="objectives"><a class="anchor" href="#objectives"></a>5.1. Objectives</h3>
 <div class="paragraph">
 <p>The first Environmental Linked Features Interoperability Experiment (ELFIE) sought to answer the question, <em>"what linked data content should be included in a landing page describing an environmental feature and its relationship to other features and data?".</em> Limiting scope in this way allowed the team to avoid the complex issues related to network behavior and the semantics of requesting default or alternate representations of a feature, representations of it, or other features and data in some way related to it. These issues were discussed in the first ELFIE&#8201;&#8212;&#8201;but often only briefly or in the context of defining what was expressly out of scope for the project. The Second Environmental Linked Features Interoperability Experiment (SELFIE) took these issues on in earnest.</p>
 </div>
@@ -983,7 +1003,7 @@ These can be summarized with the question, <em>"what is the expected network beh
 </div>
 </div>
 <div class="sect2">
-<h3 id="_domain_use_cases"><a class="anchor" href="#_domain_use_cases"></a>5.2. Domain Use Cases</h3>
+<h3 id="usecases"><a class="anchor" href="#usecases"></a>5.2. Domain Use Cases</h3>
 <div class="paragraph">
 <p>The SELFIE relied on participant&#8217;s domain-specific use cases to provide context and drive decision making in the context of the IE. The use cases included hydrogeology, soils, hydrology, and land-survey information. Common to these use cases was the need to work with identifiers for environmental features for which multiple representations are available. Each of the use cases was implemented to one extent or another. Full details of the use cases are included in <a href="#DomainUseCases">Domain Use Cases</a>, domain use cases. Taken together and harmonized, these domain-specific use cases provided sufficient scope to determine a useful set of general use cases are summarized in the following sections.</p>
 </div>
@@ -1100,7 +1120,7 @@ This diversity required some careful consideration and handling and the solution
 <p>Resources are the stuff of the internet. Is <em>a resource</em> 1) its identifier, 2) content retrieved by dereferencing its identifier, or 3) some abstract notion identified by a URI and described by dereferenced content? The problems pursued by SELFIE made the importance of these distinctions clear and, to some extent, found some answers. More often than finding answers, the SELFIE found that the technical baseline pertaining to the problem is rich and relatively un-explored for environmental data use cases. That is to say that given the technical baseline available to the community, implementation and building an understanding of modern technologies should proceed in order to better understand pain points and find where additional complexity really is required vs. where existing technologies can satisfy the real need.</p>
 </div>
 <div class="sect2">
-<h3 id="_w3c_resources_summary"><a class="anchor" href="#_w3c_resources_summary"></a>6.1. W3C Resources Summary</h3>
+<h3 id="w3cResources"><a class="anchor" href="#w3cResources"></a>6.1. W3C Resources Summary</h3>
 <div class="paragraph">
 <p>The SELFIE model for web resources is based on the notion of <em>information resources</em> and <em>non-information resources</em> as defined by the W3C document <a href="https://www.w3.org/2001/tag/doc/httpRange-14/2007-08-31/HttpRange-14.html">‘Dereferencing HTTP URIs’</a>. This summarises the so-called ‘Range-14’ decision that, while unofficial, is useful especially when read in conjunction with <a href="https://www.w3.org/TR/cooluris/">‘Cool URIs for the Semantic Web’</a>.</p>
 </div>
@@ -1203,7 +1223,7 @@ This diversity required some careful consideration and handling and the solution
 </div>
 </div>
 <div class="sect2">
-<h3 id="inBandoutofBand"><a class="anchor" href="#inBandoutofBand"></a>6.3. "In band" and "out of band" resources.</h3>
+<h3 id="inBandoutofBand"><a class="anchor" href="#inBandoutofBand"></a>6.3. "In band" and "out of band" resources</h3>
 <div class="paragraph">
 <p>The idea of "in-band" and "out-of-band" has been brought up as a useful distinction between resource representations that can provide information that is useful to a given application (in-band) and resource representations that are opaque to an application (out-of-band). In reality, there are many bands that correspond to various applications. Here, we define the SELFIE-band which is intended to foster interoperability toward the goals of the IE.</p>
 </div>
@@ -1296,7 +1316,7 @@ This limited set of criteria covers the important architectural concerns. It imp
 </div>
 </div>
 <div class="sect2">
-<h3 id="_resource_resolution_alternatives"><a class="anchor" href="#_resource_resolution_alternatives"></a>6.4. Resource Resolution Alternatives</h3>
+<h3 id="resourceResolutionAlternatives"><a class="anchor" href="#resourceResolutionAlternatives"></a>6.4. Resource Resolution Alternatives</h3>
 <div class="paragraph">
 <p>The Range-14 decision, to identify real world features with URIs that HTTP-303 redirect to resources providing information about the real world feature, was accepted by SELFIE. <a href="#img_range14">Figure 3</a> illustrates the complete solution.</p>
 </div>
@@ -1338,7 +1358,7 @@ This limited set of criteria covers the important architectural concerns. It imp
 </div>
 </div>
 <div class="sect2">
-<h3 id="_contexts"><a class="anchor" href="#_contexts"></a>6.5. Contexts</h3>
+<h3 id="contexts"><a class="anchor" href="#contexts"></a>6.5. Contexts</h3>
 <div class="paragraph">
 <p>The SELFIE evolved several JSON-LD contexts that were initially created for the first ELFIE. IE participants also worked to establish a number of contexts containing UML classes and associations (used as feature types and property associations in RDF/JSON-LD) from domain feature models such as GWML2 and HY_Features. The content of the SELFIE-contexts is described in the meta-content section below. The purpose of the domain-specific contexts is to provide semantics that describe the basic associations between non-information resources (e.g. upstream/downstream associations) and domain-specific type (e.g. a feature is a water well). In order to ensure the contexts are usable by a broad audience and to foster adoption, the contexts and ontologies that they reference were kept purposefully focused and minimal; including feature types and associations from the normative UML models only.</p>
 </div>
@@ -1353,7 +1373,7 @@ This limited set of criteria covers the important architectural concerns. It imp
 </div>
 </div>
 <div class="sect2">
-<h3 id="_non_information_resources"><a class="anchor" href="#_non_information_resources"></a>6.6. Non-information resources</h3>
+<h3 id="nir"><a class="anchor" href="#nir"></a>6.6. Non-information resources</h3>
 <div class="paragraph">
 <p>The SELFIE content model, with its loosely-defined non-information, meta, and data tiers, is focused on the nature of a resource and not the structure of the identifier used to dereference the resource. However, there is a need to establish expected behavior when dereferencing URIs for information at each of these three tiers. As discussed in <a href="#ELFIEResources">ELFIE Resources</a>, the SELFIE project found that the distinction between meta and data tiers is loose and should be the subject of future work. The IE considered two behaviors between non-information and information resources that provide landing content: 1) A 303 redirect from a URI-14 to a URL-14, and 2) Indirect identification of the non-information resource where the URI-14 and URL-14 are identical.<br>
 The distinction between non-information resources and resources that provide landing-content located with different URIs introduces the potential for confusion. This confusion was anticipated to produce two issues:</p>
@@ -1377,7 +1397,7 @@ SELFIE participants tested the former by exposing a pilot infrastructure to the 
 </div>
 </div>
 <div class="sect2">
-<h3 id="_landing_content"><a class="anchor" href="#_landing_content"></a>6.7. Landing content</h3>
+<h3 id="landingContent"><a class="anchor" href="#landingContent"></a>6.7. Landing content</h3>
 <div class="paragraph">
 <p>The following sections describe the purpose and some logic for SELFIE landing content. <br>
 As an overview, <a href="#table_content_groups">Table 1</a> contains the most precise use-case descriptions the SELFIE team was able to craft that pertain to URL-14 landing-content "groups". These groups can be seen as building blocks that are used to construct landing-content structured data.</p>
@@ -1473,7 +1493,7 @@ These properties are useful for documenting any information resource in structur
 </div>
 </div>
 <div class="paragraph">
-<p>As is shown in examples in the <a href="#inBandoutofBand">"In band" and "out of band" resources.</a>, these properties can be used in two ways. <br>
+<p>As is shown in examples in the <a href="#inBandoutofBand">"In band" and "out of band" resources</a>, these properties can be used in two ways. <br>
 An in-band resource might be documented as follows:<br></p>
 </div>
 <div class="listingblock">
@@ -1565,7 +1585,7 @@ An in-band resource might be documented as follows:<br></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_data_content"><a class="anchor" href="#_data_content"></a>6.8. Data content</h3>
+<h3 id="dataContent"><a class="anchor" href="#dataContent"></a>6.8. Data content</h3>
 <div class="paragraph">
 <p>Resources containing data content are extremely diverse. Examples include but are by no means limited to geospatial feature data whether a feature of interest or a reference feature, monitoring result data, monitoring location data, and related remote sensing data. As described above, such data can be said to be "in-band" or "out-of-band". The former would be a data resource that generally conforms to the system of linked data, GeoJSON, and HTML prescribed by the W3C Spatial Data on the Web best practices and emerging practices such as is described here. The latter is any other data resource that, while of interest and associated with a non-information resource, does not conform to linked data / semantic web practices.<br></p>
 </div>
@@ -1577,13 +1597,13 @@ An in-band resource might be documented as follows:<br></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_relationship_to_ogc_api"><a class="anchor" href="#_relationship_to_ogc_api"></a>6.9. Relationship to OGC-API</h3>
+<h3 id="ogcApi"><a class="anchor" href="#ogcApi"></a>6.9. Relationship to OGC-API</h3>
 <div class="paragraph">
 <p>OGC API-Features was evaluated for providing both URL-14 landing-content and URL-200 data-content and found to be largely compatible with both. For provision of landing content, a feature would be provided as JSON-LD and html with JSON-LD structured data in a <code>&lt;script&gt;</code> element containing the URI-14 as its primary subject. In this case, hypermedia containing links to items in a feature-collection would contain links to URI-14s rather than display any URL-14s. Since OGC API-Features supports feature-level access by item id (<code>/collections/{collectionid}/items/{itemid}</code>) or a feature attribute (<code>/collections/{collectionid}/items?uri=https://id.com/id</code>) it can be used as a flexible building block in linked data architectures.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_properties_relations"><a class="anchor" href="#_properties_relations"></a>6.10. Properties / Relations</h3>
+<h3 id="propertiresRelations"><a class="anchor" href="#propertiresRelations"></a>6.10. Properties / Relations</h3>
 <div class="paragraph">
 <p>The logic for selection of relations in SELFIE followed from the more content-focused ELFIE. That logic is described in detail in the <a href="https://docs.opengeospatial.org/per/18-097.html">ELFIE engineering report</a> and on the <a href="https://opengeospatial.github.io/ELFIE/json-ld/">ELFIE contexts web page.</a> To summarize, broad adoption and commonality on the web was the primary driver of selection of relations. Spatial topology, temporal, and monitoring concepts were taken from established OGC and W3C ontologies, and domain concepts were sought from OGC domain feature models. The following lists relations by source with comments for selected relations as necessary.</p>
 </div>
@@ -1723,7 +1743,7 @@ An in-band resource might be documented as follows:<br></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_summary_and_outcomes"><a class="anchor" href="#_summary_and_outcomes"></a>6.11. Summary and outcomes</h3>
+<h3 id="summary"><a class="anchor" href="#summary"></a>6.11. Summary and outcomes</h3>
 <div class="paragraph">
 <p>SELFIE participants experienced difficulty communicating about the nature of the issues at hand. Examples included, but were not limited to:
 . complexity introduced by the relationships between domain feature models
@@ -1746,7 +1766,7 @@ An in-band resource might be documented as follows:<br></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_issues_and_recommendations"><a class="anchor" href="#_issues_and_recommendations"></a>6.12. Issues and recommendations.</h3>
+<h3 id="issues"><a class="anchor" href="#issues"></a>6.12. Issues and recommendations.</h3>
 <div class="sect3">
 <h4 id="_landing_content_type_and_the_url_14_resource"><a class="anchor" href="#_landing_content_type_and_the_url_14_resource"></a>6.12.1. Landing content type and the URL-14 resource</h4>
 <div class="paragraph">
@@ -1782,7 +1802,7 @@ An in-band resource might be documented as follows:<br></p>
 <div class="sect3">
 <h4 id="_in_band_and_out_of_band_resources"><a class="anchor" href="#_in_band_and_out_of_band_resources"></a>6.12.2. In band and out of band resources</h4>
 <div class="paragraph">
-<p>As discussed in <a href="#inBandoutofBand">"In band" and "out of band" resources.</a>, the nature of a resource that is the object of a linked-data triple is important. What qualifies as an "in band" resource or a "semantic" resource is entirely in the eyes of the beholder. In the context of SELFIE, it was decided that a URL-14 resource that could provide an HTML representation with JSON-LD linked data in a <code>&lt;script&gt;</code> tag is considered "in band". Format and/or profile content negotiation, while of great interest, was deemed beyond the scope of what SELFIE could make firm recommendations about.</p>
+<p>As discussed in <a href="#inBandoutofBand">"In band" and "out of band" resources</a>, the nature of a resource that is the object of a linked-data triple is important. What qualifies as an "in band" resource or a "semantic" resource is entirely in the eyes of the beholder. In the context of SELFIE, it was decided that a URL-14 resource that could provide an HTML representation with JSON-LD linked data in a <code>&lt;script&gt;</code> tag is considered "in band". Format and/or profile content negotiation, while of great interest, was deemed beyond the scope of what SELFIE could make firm recommendations about.</p>
 </div>
 <div class="paragraph">
 <p>Extension of what is "in band" for environmental linked features should be the subject of future work. How content negotiation, either on format or profile, layers on top of 303 redirection is an open question. How links to resources that have both "in band" and "out of band" representations should be handled is another. The key here is that future work will need to have implementation of the outcomes of SELFIE as hindsight to treat as evidence for future experiments.</p>
@@ -1915,14 +1935,7 @@ An in-band resource might be documented as follows:<br></p>
 <div class="sect3">
 <h4 id="_demo_findings_and_potential_next_steps"><a class="anchor" href="#_demo_findings_and_potential_next_steps"></a>A.1.3. Demo findings and potential next steps</h4>
 <div class="paragraph">
-<p>TODO:</p>
-</div>
-<div class="paragraph">
-<p>Discuss issues that this demo works around or would otherwise need to be solved to take
-it from demonstration/experiment to production. Talk about how the SELFIE core of 303
-redirection and use of JSON-LD in HTML landing pages works in the context of the complete
-technical setting of your use case. Discussion of what future experimentation is needed
-should go here.</p>
+<p>This demo demonstrates that the core SELFIE technical solution rooted in URI-14 &#8594; URL-14 redirection works well. Links to representations and associated features are operable but additional implementations will be needed to gain needed experience before any strong conclusions can be made. Availability of domain feature models (classes and associations) continues to be an issue the community needs to address before full-fledged implementation of domain-data-model linked data will be possible.</p>
 </div>
 </div>
 </div>
@@ -1968,7 +1981,7 @@ Datasets and Sources</p>
 <p>The demo is a web map application showing water related features. The map application operates on top of a linked data infrastructure (node) hosted on both side on the US-Canada border.  Each  GSIP node exposes a catalogue of water features from their respective jurisdiction, some cross-border (shared) features and establishes relations between water features on its side and features on the other side.</p>
 </div>
 <div class="paragraph">
-<p>The GSIP resolver is build on top of a RDF catalog, containing water features description and links to other features and representation.  GSIP deals with content negotiation and 303 redirect of NIR or other representation if necessary.  This figure show the overall intéraction with GSIP node</p>
+<p>The GSIP resolver is build on top of a RDF catalog, containing water features description and links to other features and representation.  GSIP deals with content negotiation and 303 redirect of NIR or other representation if necessary.  This figure show the overall interaction with GSIP node</p>
 </div>
 <div id="img_gsipSequence" class="imageblock text-center">
 <div class="content">
