@@ -84,13 +84,7 @@ flowlines and boundary are intended to provide a visual representation and could
 
 ==== Demo findings and potential next steps
 
-TODO:
-
-Discuss issues that this demo works around or would otherwise need to be solved to take
-it from demonstration/experiment to production. Talk about how the SELFIE core of 303
-redirection and use of JSON-LD in HTML landing pages works in the context of the complete
-technical setting of your use case. Discussion of what future experimentation is needed
-should go here.
+This demo demonstrates that the core SELFIE technical solution rooted in URI-14 -> URL-14 redirection works well. Links to representations and associated features are operable but additional implementations will be needed to gain needed experience before any strong conclusions can be made. Availability of domain feature models (classes and associations) continues to be an issue the community needs to address before full-fledged implementation of domain-data-model linked data will be possible.
 
 === Groundwater Surface Water Interoperability Pilot - SELFIE Demonstration
 
@@ -114,7 +108,7 @@ Datasets and Sources
 
 The demo is a web map application showing water related features. The map application operates on top of a linked data infrastructure (node) hosted on both side on the US-Canada border.  Each  GSIP node exposes a catalogue of water features from their respective jurisdiction, some cross-border (shared) features and establishes relations between water features on its side and features on the other side. 
 
-The GSIP resolver is build on top of a RDF catalog, containing water features description and links to other features and representation.  GSIP deals with content negotiation and 303 redirect of NIR or other representation if necessary.  This figure show the overall intéraction with GSIP node
+The GSIP resolver is build on top of a RDF catalog, containing water features description and links to other features and representation.  GSIP deals with content negotiation and 303 redirect of NIR or other representation if necessary.  This figure show the overall interaction with GSIP node
 
 [#img_gsipSequence,reftext='{figure-caption} {counter:figure-num}']
 .GSIP sequence diagram
@@ -128,7 +122,6 @@ The application then offers the option of
 * traverse a link to another water feature;
 * open a representation in one of the proposed format;
 * leave the map application and browse resources directly in the browser.
-
 
 The application recognizes specifically Geojson representations and when available, the application can load it and add the content to the map.  If the uploaded feature has a `uri` property, the application assumes it’s a NIR and behave accordingly.
 
