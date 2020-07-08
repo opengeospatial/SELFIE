@@ -91,13 +91,23 @@ A common or garden URL. So called because the most likely HTTP response code is 
 
 ===	Abbreviated terms
 
-TODO
-
-.NOTE: The abbreviated terms clause gives a list of the abbreviated terms and the symbols necessary for understanding this document. All symbols should be listed in alphabetical order. Some more frequently used abbreviated terms are provided below as examples.
-
-* COM	Component Object Model
-* CORBA	Common Object Request Broker Architecture
-* COTS	Commercial Off The Shelf
-* DCE	Distributed Computing Environment
-* DCOM	Distributed Component Object Model
-* IDL	Interface Definition Language
+* API - Application Programming Interface
+* CURI - Compact Uniform Resource Identifier
+* ELFIE - Environmental Linked Features Interoperability Experiment
+* HTML - HyperText Markup Language
+* HTTP URI - HyperText Transfer Protocol
+* IE - Interoperability Experiment
+* GML - Geography Markup Language
+* GWML2 - Groundwater Markup Language 2
+* HY_Features - Surface Hydrologic Features Conceptual Model
+* OWL - Web Ontology Language
+* RDF - Resource Description Format
+* URI - Uniform Resource Identifier
+* URL - Uniform Resource Locator
+* SELFIE - Second Environmental Linked Features Interoperability Experiment
+* XML - eXtensible Markup Language
+* CSV - Comma Separated Values
+* JSON - Javascript Object Notation
+* JSON-LD - Javascript Object Notation for Linked Data
+* TTL - Terse RDF Triple Language
+* GeoJSON - Geographic Javascript Object Notation
