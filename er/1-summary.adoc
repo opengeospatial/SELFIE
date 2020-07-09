@@ -1,30 +1,60 @@
 == Subject
 
-TODO
-
-(( The following is, as all texts in double parentheses, a helper text. Please remove this and all other helper texts once done. ))
-
-(( The Subject clause shall define without ambiguity the topic of this document and the aspect(s) covered. It shall be succinct so that it can be used as a text for bibliographic purposes. ))
-
-(( This section shall be between 2-3 sentences and not longer than 140 words total.))
-
-Focus on building blocks SELFIE provides: URI-14, URL-14, Landing-content basics. Relationship to OGC API-features. Note scope limit related to links between landing-content and data (multiple representation relations, related observations, describing variation in resource content). Need for more domain data models and examples of practice remains.
+This report documents the Second Environmental Linked Features Interoperability Experiment (SELFIE). SELFIE evaluated a proposed Web resource model and HTTP behavior for linked data about and among environmental features. The outcomes are building blocks to establish a system of real-world feature identifiers and landing pages that document them. OGC API - Features was found to be a useful component for systems implementing both landing content and representations of linked-features. More work is needed to establish best practices related to negotiation between varied representations of a feature, observations related to a feature, and for expressing and mediating between varied content from a given resource. These technical / meta-model details were found to be difficult to evaluate given the small number of example implementations and limited number of domain-feature models available for use with linked data.
 
 == Executive Summary
 
-TODO
+At the outset of the SELFIE project, the team stated:
 
-(( The following is, as all texts in double square brackets, a helper text. Please remove this and all other helper texts once done. ))
+----
+SELFIE aims to answer the question, what is the Web architecture that will allow us to use linked data for environmental features and observations in a way that is easily adoptable and compatible with W3C best practices and leverages OGC standards? The experiment aims for focused simplicity, representing resources built from potentially complex data for easy use on the Web. While the IE will be focused on testing a specific resource model and will follow W3C best practices and OGC standards, a wide range of participant-provided domain use cases will be used for testing. Ultimately, this work is intended to satisfy the needs of many use cases and many kinds of features, from disaster response and resilience to environmental health and the built environment.
+----
 
-(( The Executive Summary clause shall contain the key findings and results in a concise form. A more detailed description of the findings should be in the body of the report. ))
+The business case for the SELFIE can be illustrated considering two use cases: 
+1) indexing and discovering models and research from public sector, private sector, or academic projects about a particular place or environmental feature.
+2) building a federated multi-organization monitoring network in which all member-systems reference common monitored features and are discoverable through a community index.
 
-(( The Executive Summary shall contain a business value statement that should describe the value of this Engineering Report to improve interoperability, advance location-based technologies or realize innovations. ))
+These use cases imply needs along several dimensions: 
+. a shared reference network of environmental features,
+. the ability to use the reference network to index and provide access to information resources from many organizations,
+. support for multiple disciplines' information models, conceptual models, research topics, and monitoring practices.
 
-(( This section shall include precise descriptions of the requirements that have been addressed by the work documented in this Engineering Report; together with the research motivation that answers the fundamental question: What motivated us to address this topic in this report? ))
+While the IE did not come to conclusion on all these fronts, it did show that the core Web architecture to support identification of real-world features and retrieving information about them exists and should be pursued in earnest. The architecture has three basic components; referred to here as URI-14, URL-14, and URL-200 resources. 
 
-(( This section provides an overview of recommendations on how to further proceed with the achievements documented in this ER. ))
+. A URI-14 resource is one that has an identifier and is itself a real-world entity.
+. A URL-14 resource is one that is the target of a redirect from a URI-14 and provides information about a URI-14 resource.
+. a URL-200 resource is any other resource that would be linked to by a URL-14's content.
 
-(( This section shall be between 1-3 pages.))
+These three resource types can be hosted in a wide variety of organizational architectures and/or governance schemes. No one right or wrong solution was found on this front, and the technical solutions explored proved flexible and capable of adapting to many architectural patterns.
+
+These resources were applied in the context of five functionalities:
+
+. Publication of identified non-information resources
+. Describing a network of linked features
+. Providing landing content about non-information resources
+. Providing structured-data to support search indexing
+. Providing links to representations and related data
+
+These functionalities were seen to be satisfied by four technical use cases that are loosely aligned with the functionalities:
+
+. Real-world feature identification
+. Landing content and links to other features
+. Structured data for search indexing
+. Links to representations and other data
+
+The details of the URL-14 resource's content was the main subject of debate in the IE. Some important outcomes include:
+
+. A URL-14's HTTP URL should almost never be the subject or object of a linked data triple. It is a convenience resource about the URI-14. The URI-14 should be referenced rather than the URL-14.
+. The content of a URL-14 should, at the top level, be a set of statements about a single URI-14. While nested, or complex information about the URI-14 could be included, the document should be centered on one real-world feature.
+. Spatial topology, monitoring relationships, and domain-specific associations between real world features should be expressed as relationships between URI-14 identifiers.
+. Associations between URI-14 resources and representations of the feature should be expressed with a `https://schema.org/subjectOf` relationship. Additional nuances of URI-14 to URL-200 resources should be the subject of future work.
+. URL-200 resources with a semantic representation (JSON-LD) can be the object of a `https://schema.org/subjectOf` relation. URL-200 resources that do not have a semantic representation should be represented as a https://en.wikipedia.org/wiki/Blank_node["blank node"] with a `https://schema.org/url` association to the URL-200 resource.
+
+OGC API - Features was found to be compatible with all of the above and can be used as a core enabling Web API as networks of linked environmental features are established.
+
+At the outset of SELFIE, the team hoped to experiment to cases related to variation of available content and multiple data providers for URL-200 resources about a single URI-14 resource. Gaining an appreciation for the nuances of the functionalities and technical use cases required in the context of the broadly varied organizational architectures considered was a large task. Further, some basic characteristics of URL-14 resources and the landing content to include in URL-14 landing content needed to be established before further investigation could continue. Given that, future work should investigate issues such as variation of content for a single URL-200 resource, multiple URL-200 representations of the same feature with variation of content across the providers, and content negotiation of URL-14 resources to either directly access URL-200 resources or access differing profiles of URL-14 landing content. 
+
+The IE also aimed to make progress on technical solutions with observational data models and domain feature models. This work was largely deferred for the same reasons as discussed above and because publication of domain feature models and domain features themselves is a pre-requisite to meaningfully testing how to work with them in the context of observations data models. The technical baseline provided by the first and second ELFIE now sets the stage for this work to move forward.
 
 ===	Document contributor contact points
 

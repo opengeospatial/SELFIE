@@ -18,13 +18,13 @@ This diversity required some careful consideration and handling and the solution
 
 ==== SELFIE Functionalities
 
-The linked data architecture that resulted from SELFIE is based on the four functionalities that are described below. These are described as functional use cases that loosely align with the general use cases. These functions were common across practically all the examples considered by the experiment and are presented here as a general set of functions for linked environmental features and related data.
+The linked data architecture that resulted from SELFIE is based on the five functionalities that are described below. These are described as functional use cases that loosely align with the general use cases. These functions were common across practically all the examples considered by the experiment and are presented here as a general set of functions for linked environmental features and related data.
 
 *Publication of identified non-information resources* is a prerequisite for establishing links between features and related data. Persistence and long-term uniqueness of URIs used to identify non-information resources is helpful but cannot be guaranteed. A robust system of linked data must be able to deal with changes to identifiers through re-indexing or similarity relationships. Similarly, use of common identifiers across organizations is helpful but cannot be guaranteed. Systems of linked data must be able to handle when organizations use different identifiers to refer to the same real-world feature.
 
 A *network of linked features* is formed when considering topological and domain-specific linked data associations between identified features. From an indexing perspective, this network can be "crawled" and indexed by both domain-specific and general web search crawlers. While a rich graph of linked features can be resolved or may exist within a linked data system, the functionality required here is exposure of direct links from one feature to its nearest neighbors such that the linked-feature network can be traversed by a human user or Web crawler.
 
-*Landing content *is common metadata about a feature and data associated with it. In addition to this common-core metadata, landing content might also include:
+*Landing content* is common metadata about a feature and data associated with it. In addition to this common-core metadata, landing content might also include:
 
 * A multi-organization index of information about the feature
 * Links to multiple or alternative representations of the feature
