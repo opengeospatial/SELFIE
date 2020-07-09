@@ -1,0 +1,19 @@
+{
+  "0": {
+    "OGC_doc_number": "20-067",
+    "urn": "http://www.opengis.net/doc/PER/SELFIE-ID",
+    "title": "Second Environmental Linked Features Experiment",
+    "path": "er/er.adoc",
+    "options": [
+      "--trace"
+    ],
+    "a": [
+      "data-uri",
+      "stylesdir=./resources/stylesheets",
+      "dot=/usr/bin/dot"
+    ],
+    "r": [
+      "asciidoctor-diagram"
+    ]
+  }
+}

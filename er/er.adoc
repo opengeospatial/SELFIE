@@ -49,7 +49,7 @@
 // https://portal.opengeospatial.org/?m=public&subtab=request&tab=1.
 // *****************************************************************************
 
-:docReference: OGC XX-XXX
+:docReference: OGC 20-067
 
 // *****************************************************************************
 // Date posted to OGC Portal>Pending Documents, with format: yyyy-mm-dd.
