@@ -44,7 +44,9 @@ An information resource providing a representation of a non-information resource
 
 Per https://www.fgdc.gov/standards/organization/FGDC-SWG/meetings/2005/2005-12-20/ISO%2019135.ppt[ISO 19135, Geographic information, Procedures for item registration]: An information system that manages a set of files containing identifiers assigned to items with descriptions of the associated items.
 
-&#9679; _Resource Model_: A taxonomy and functional description of the system of non-information, index and data resources.
+&#9679; Resource Model :: 
+
+A taxonomy and functional description of the system of non-information, index and data resources.
 
 &#9679; Node ::
 
@@ -92,22 +94,23 @@ A common or garden URL. So called because the most likely HTTP response code is 
 ===	Abbreviated terms
 
 * API - Application Programming Interface
+* CSV - Comma Separated Values
 * CURI - Compact Uniform Resource Identifier
 * ELFIE - Environmental Linked Features Interoperability Experiment
-* HTML - HyperText Markup Language
-* HTTP URI - HyperText Transfer Protocol
-* IE - Interoperability Experiment
+* GeoJSON - Geographic Javascript Object Notation
 * GML - Geography Markup Language
 * GWML2 - Groundwater Markup Language 2
+* HTML - HyperText Markup Language
+* HTTP URI - HyperText Transfer Protocol
 * HY_Features - Surface Hydrologic Features Conceptual Model
-* OWL - Web Ontology Language
-* RDF - Resource Description Format
-* URI - Uniform Resource Identifier
-* URL - Uniform Resource Locator
-* SELFIE - Second Environmental Linked Features Interoperability Experiment
-* XML - eXtensible Markup Language
-* CSV - Comma Separated Values
+* IE - Interoperability Experiment
 * JSON - Javascript Object Notation
 * JSON-LD - Javascript Object Notation for Linked Data
+* OWL - Web Ontology Language
+* RDF - Resource Description Format
+* SELFIE - Second Environmental Linked Features Interoperability Experiment
 * TTL - Terse RDF Triple Language
-* GeoJSON - Geographic Javascript Object Notation
+* URI - Uniform Resource Identifier
+* URL - Uniform Resource Locator
+* XML - eXtensible Markup Language
+

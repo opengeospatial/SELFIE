@@ -619,19 +619,7 @@ To obtain additional rights of use, visit <a href="http://www.opengeospatial.org
 <h2 id="_subject"><a class="anchor" href="#_subject"></a>1. Subject</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>TODO</p>
-</div>
-<div class="paragraph">
-<p>The following is, as all texts in double parentheses, a helper text. Please remove this and all other helper texts once done.</p>
-</div>
-<div class="paragraph">
-<p>The Subject clause shall define without ambiguity the topic of this document and the aspect(s) covered. It shall be succinct so that it can be used as a text for bibliographic purposes.</p>
-</div>
-<div class="paragraph">
-<p>This section shall be between 2-3 sentences and not longer than 140 words total.</p>
-</div>
-<div class="paragraph">
-<p>Focus on building blocks SELFIE provides: URI-14, URL-14, Landing-content basics. Relationship to OGC API-features. Note scope limit related to links between landing-content and data (multiple representation relations, related observations, describing variation in resource content). Need for more domain data models and examples of practice remains.</p>
+<p>This report documents the Second Environmental Linked Features Interoperability Experiment (SELFIE). SELFIE evaluated a proposed Web resource model and HTTP behavior for linked data about and among environmental features. The outcomes are building blocks to establish a system of real-world feature identifiers and landing pages that document them. OGC API - Features was found to be a useful component for systems implementing both landing content and representations of linked-features. More work is needed to establish best practices related to negotiation between varied representations of a feature, observations related to a feature, and for expressing and mediating between varied content from a given resource. These technical / meta-model details were found to be difficult to evaluate given the small number of example implementations and limited number of domain-feature models available for use with linked data.</p>
 </div>
 </div>
 </div>
@@ -639,25 +627,114 @@ To obtain additional rights of use, visit <a href="http://www.opengeospatial.org
 <h2 id="_executive_summary"><a class="anchor" href="#_executive_summary"></a>2. Executive Summary</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>TODO</p>
+<p>At the outset of the SELFIE project, the team stated:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>SELFIE aims to answer the question, what is the Web architecture that will allow us to use linked data for environmental features and observations in a way that is easily adoptable and compatible with W3C best practices and leverages OGC standards? The experiment aims for focused simplicity, representing resources built from potentially complex data for easy use on the Web. While the IE will be focused on testing a specific resource model and will follow W3C best practices and OGC standards, a wide range of participant-provided domain use cases will be used for testing. Ultimately, this work is intended to satisfy the needs of many use cases and many kinds of features, from disaster response and resilience to environmental health and the built environment.</pre>
+</div>
 </div>
 <div class="paragraph">
-<p>The following is, as all texts in double square brackets, a helper text. Please remove this and all other helper texts once done.</p>
+<p>The business case for the SELFIE can be illustrated considering two use cases:
+1) indexing and discovering models and research from public sector, private sector, or academic projects about a particular place or environmental feature.
+2) building a federated multi-organization monitoring network in which all member-systems reference common monitored features and are discoverable through a community index.</p>
 </div>
 <div class="paragraph">
-<p>The Executive Summary clause shall contain the key findings and results in a concise form. A more detailed description of the findings should be in the body of the report.</p>
+<p>These use cases imply needs along several dimensions:
+. a shared reference network of environmental features,
+. the ability to use the reference network to index and provide access to information resources from many organizations,
+. support for multiple disciplines' information models, conceptual models, research topics, and monitoring practices.</p>
 </div>
 <div class="paragraph">
-<p>The Executive Summary shall contain a business value statement that should describe the value of this Engineering Report to improve interoperability, advance location-based technologies or realize innovations.</p>
+<p>While the IE did not come to conclusion on all these fronts, it did show that the core Web architecture to support identification of real-world features and retrieving information about them exists and should be pursued in earnest. The architecture has three basic components; referred to here as URI-14, URL-14, and URL-200 resources.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>A URI-14 resource is one that has an identifier and is itself a real-world entity.</p>
+</li>
+<li>
+<p>A URL-14 resource is one that is the target of a redirect from a URI-14 and provides information about a URI-14 resource.</p>
+</li>
+<li>
+<p>a URL-200 resource is any other resource that would be linked to by a URL-14&#8217;s content.</p>
+</li>
+</ol>
 </div>
 <div class="paragraph">
-<p>This section shall include precise descriptions of the requirements that have been addressed by the work documented in this Engineering Report; together with the research motivation that answers the fundamental question: What motivated us to address this topic in this report?</p>
+<p>These three resource types can be hosted in a wide variety of organizational architectures and/or governance schemes. No one right or wrong solution was found on this front, and the technical solutions explored proved flexible and capable of adapting to many architectural patterns.</p>
 </div>
 <div class="paragraph">
-<p>This section provides an overview of recommendations on how to further proceed with the achievements documented in this ER.</p>
+<p>These resources were applied in the context of five functionalities:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Publication of identified non-information resources</p>
+</li>
+<li>
+<p>Describing a network of linked features</p>
+</li>
+<li>
+<p>Providing landing content about non-information resources</p>
+</li>
+<li>
+<p>Providing structured-data to support search indexing</p>
+</li>
+<li>
+<p>Providing links to representations and related data</p>
+</li>
+</ol>
 </div>
 <div class="paragraph">
-<p>This section shall be between 1-3 pages.</p>
+<p>These functionalities were seen to be satisfied by four technical use cases that are loosely aligned with the functionalities:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Real-world feature identification</p>
+</li>
+<li>
+<p>Landing content and links to other features</p>
+</li>
+<li>
+<p>Structured data for search indexing</p>
+</li>
+<li>
+<p>Links to representations and other data</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>The details of the URL-14 resource&#8217;s content was the main subject of debate in the IE. Some important outcomes include:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>A URL-14&#8217;s HTTP URL should almost never be the subject or object of a linked data triple. It is a convenience resource about the URI-14. The URI-14 should be referenced rather than the URL-14.</p>
+</li>
+<li>
+<p>The content of a URL-14 should, at the top level, be a set of statements about a single URI-14. While nested, or complex information about the URI-14 could be included, the document should be centered on one real-world feature.</p>
+</li>
+<li>
+<p>Spatial topology, monitoring relationships, and domain-specific associations between real world features should be expressed as relationships between URI-14 identifiers.</p>
+</li>
+<li>
+<p>Associations between URI-14 resources and representations of the feature should be expressed with a <code><a href="https://schema.org/subjectOf" class="bare">https://schema.org/subjectOf</a></code> relationship. Additional nuances of URI-14 to URL-200 resources should be the subject of future work.</p>
+</li>
+<li>
+<p>URL-200 resources with a semantic representation (JSON-LD) can be the object of a <code><a href="https://schema.org/subjectOf" class="bare">https://schema.org/subjectOf</a></code> relation. URL-200 resources that do not have a semantic representation should be represented as a <a href="https://en.wikipedia.org/wiki/Blank_node">"blank node"</a> with a <code><a href="https://schema.org/url" class="bare">https://schema.org/url</a></code> association to the URL-200 resource.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>OGC API - Features was found to be compatible with all of the above and can be used as a core enabling Web API as networks of linked environmental features are established.</p>
+</div>
+<div class="paragraph">
+<p>At the outset of SELFIE, the team hoped to experiment with use cases related to variation of available content and multiple data providers for URL-200 resources about a single URI-14 resource. Gaining an appreciation for the nuances of the functionalities and technical use cases required in the context of the broadly varied organizational architectures considered was a large task. Further, some basic characteristics of URL-14 resources and the landing content to include in URL-14 landing content needed to be established before further investigation could continue. Given that, future work should investigate issues such as variation of content for a single URL-200 resource, multiple URL-200 representations of the same feature with variation of content across the providers, and content negotiation of URL-14 resources to either directly access URL-200 resources or access differing profiles of URL-14 landing content.</p>
+</div>
+<div class="paragraph">
+<p>The IE also aimed to make progress on technical solutions with observational data models and domain feature models. This work was largely deferred for the same reasons as discussed above and because publication of domain feature models and domain features themselves is a pre-requisite to meaningfully testing how to work with them in the context of observations data models. The technical baseline provided by the first and second ELFIE now sets the stage for this work to move forward.</p>
 </div>
 <div class="sect2">
 <h3 id="_document_contributor_contact_points"><a class="anchor" href="#_document_contributor_contact_points"></a>2.1. Document contributor contact points</h3>
@@ -779,13 +856,10 @@ To obtain additional rights of use, visit <a href="http://www.opengeospatial.org
 <dd>
 <p>Per <a href="https://www.fgdc.gov/standards/organization/FGDC-SWG/meetings/2005/2005-12-20/ISO%2019135.ppt">ISO 19135, Geographic information, Procedures for item registration</a>: An information system that manages a set of files containing identifiers assigned to items with descriptions of the associated items.</p>
 </dd>
-</dl>
-</div>
-<div class="paragraph">
-<p>&#9679; <em>Resource Model</em>: A taxonomy and functional description of the system of non-information, index and data resources.</p>
-</div>
-<div class="dlist">
-<dl>
+<dt class="hdlist1">&#9679; Resource Model </dt>
+<dd>
+<p>A taxonomy and functional description of the system of non-information, index and data resources.</p>
+</dd>
 <dt class="hdlist1">&#9679; Node </dt>
 <dd>
 <p>A source of information about real world features. May be specific to a geospatial or scientific application domain. Acts as a node in a system of linked data providers.</p>
@@ -840,19 +914,16 @@ To obtain additional rights of use, visit <a href="http://www.opengeospatial.org
 <p>API - Application Programming Interface</p>
 </li>
 <li>
+<p>CSV - Comma Separated Values</p>
+</li>
+<li>
 <p>CURI - Compact Uniform Resource Identifier</p>
 </li>
 <li>
 <p>ELFIE - Environmental Linked Features Interoperability Experiment</p>
 </li>
 <li>
-<p>HTML - HyperText Markup Language</p>
-</li>
-<li>
-<p>HTTP URI - HyperText Transfer Protocol</p>
-</li>
-<li>
-<p>IE - Interoperability Experiment</p>
+<p>GeoJSON - Geographic Javascript Object Notation</p>
 </li>
 <li>
 <p>GML - Geography Markup Language</p>
@@ -861,28 +932,16 @@ To obtain additional rights of use, visit <a href="http://www.opengeospatial.org
 <p>GWML2 - Groundwater Markup Language 2</p>
 </li>
 <li>
+<p>HTML - HyperText Markup Language</p>
+</li>
+<li>
+<p>HTTP URI - HyperText Transfer Protocol</p>
+</li>
+<li>
 <p>HY_Features - Surface Hydrologic Features Conceptual Model</p>
 </li>
 <li>
-<p>OWL - Web Ontology Language</p>
-</li>
-<li>
-<p>RDF - Resource Description Format</p>
-</li>
-<li>
-<p>URI - Uniform Resource Identifier</p>
-</li>
-<li>
-<p>URL - Uniform Resource Locator</p>
-</li>
-<li>
-<p>SELFIE - Second Environmental Linked Features Interoperability Experiment</p>
-</li>
-<li>
-<p>XML - eXtensible Markup Language</p>
-</li>
-<li>
-<p>CSV - Comma Separated Values</p>
+<p>IE - Interoperability Experiment</p>
 </li>
 <li>
 <p>JSON - Javascript Object Notation</p>
@@ -891,10 +950,25 @@ To obtain additional rights of use, visit <a href="http://www.opengeospatial.org
 <p>JSON-LD - Javascript Object Notation for Linked Data</p>
 </li>
 <li>
+<p>OWL - Web Ontology Language</p>
+</li>
+<li>
+<p>RDF - Resource Description Format</p>
+</li>
+<li>
+<p>SELFIE - Second Environmental Linked Features Interoperability Experiment</p>
+</li>
+<li>
 <p>TTL - Terse RDF Triple Language</p>
 </li>
 <li>
-<p>GeoJSON - Geographic Javascript Object Notation</p>
+<p>URI - Uniform Resource Identifier</p>
+</li>
+<li>
+<p>URL - Uniform Resource Locator</p>
+</li>
+<li>
+<p>XML - eXtensible Markup Language</p>
 </li>
 </ul>
 </div>
@@ -1036,7 +1110,7 @@ This diversity required some careful consideration and handling and the solution
 <div class="sect3">
 <h4 id="_selfie_functionalities"><a class="anchor" href="#_selfie_functionalities"></a>5.3.2. SELFIE Functionalities</h4>
 <div class="paragraph">
-<p>The linked data architecture that resulted from SELFIE is based on the four functionalities that are described below. These are described as functional use cases that loosely align with the general use cases. These functions were common across practically all the examples considered by the experiment and are presented here as a general set of functions for linked environmental features and related data.</p>
+<p>The linked data architecture that resulted from SELFIE is based on the five functionalities that are described below. These are described as functional use cases that loosely align with the general use cases. These functions were common across practically all the examples considered by the experiment and are presented here as a general set of functions for linked environmental features and related data.</p>
 </div>
 <div class="paragraph">
 <p><strong>Publication of identified non-information resources</strong> is a prerequisite for establishing links between features and related data. Persistence and long-term uniqueness of URIs used to identify non-information resources is helpful but cannot be guaranteed. A robust system of linked data must be able to deal with changes to identifiers through re-indexing or similarity relationships. Similarly, use of common identifiers across organizations is helpful but cannot be guaranteed. Systems of linked data must be able to handle when organizations use different identifiers to refer to the same real-world feature.</p>
@@ -1045,7 +1119,7 @@ This diversity required some careful consideration and handling and the solution
 <p>A <strong>network of linked features</strong> is formed when considering topological and domain-specific linked data associations between identified features. From an indexing perspective, this network can be "crawled" and indexed by both domain-specific and general web search crawlers. While a rich graph of linked features can be resolved or may exist within a linked data system, the functionality required here is exposure of direct links from one feature to its nearest neighbors such that the linked-feature network can be traversed by a human user or Web crawler.</p>
 </div>
 <div class="paragraph">
-<p>*Landing content *is common metadata about a feature and data associated with it. In addition to this common-core metadata, landing content might also include:</p>
+<p><strong>Landing content</strong> is common metadata about a feature and data associated with it. In addition to this common-core metadata, landing content might also include:</p>
 </div>
 <div class="ulist">
 <ul>
