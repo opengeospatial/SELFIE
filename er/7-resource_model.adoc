@@ -6,9 +6,9 @@ Resources are the stuff of the internet. Is _a resource_ 1) its identifier, 2) c
 [[w3cResources]]
 === W3C Resources Summary
 
-The SELFIE model for web resources is based on the notion of _information resources_ and _non-information resources_ as defined by the W3C document https://www.w3.org/2001/tag/doc/httpRange-14/2007-08-31/HttpRange-14.html[‘Dereferencing HTTP URIs’]. This summarises the so-called ‘Range-14’ decision that, while unofficial, is useful especially when read in conjunction with https://www.w3.org/TR/cooluris/[‘Cool URIs for the Semantic Web’].
+The SELFIE model for web resources is based on the notion of _information resources_ and _non-information resources_ as defined by the W3C document https://www.w3.org/2001/tag/doc/httpRange-14/2007-08-31/HttpRange-14.html[‘Dereferencing HTTP URIs’]. This summarises the so-called ‘Range-14’ decision that, while unofficial, is useful especially when read in conjunction with https://www.w3.org/TR/cooluris/[‘Cool URIs for the Semantic Web’]. (*EB* : There another side of the discussion about opaque URI though)
 
-Information resources are the currency of the web - the pages and data served in a digital form to be consumed by web browsers and applications. Non-information resources are the things these information resources may describe (for example people, mountains, or Aristotelian philosophical constructs). For SELFIE, the critical distinction between them is that an information resource has a location (expressed as a URL) while a non-information resource has identity, expressed as an HTTP URI.
+Information resources are the currency of the web - the pages and data served in a digital form to be consumed by web browsers and applications. Non-information resources are the things these information resources may describe (for example people, mountains, or Aristotelian philosophical constructs). For SELFIE, the critical distinction between them is that an information resource has a location (expressed as a URL) while a non-information resource has identity, expressed as an HTTP URI. (*EB*: hmmm...this is a new definition to me.  URI are concretely either URL or URN, so IR are also URI.  Not sure distinction between real world features and data is based in web architecture )
 
 HTTP URIs have two roles: 
 
@@ -19,11 +19,12 @@ Several representative information resources describing given non-information re
 
 The Environmental Linked Features in S+++<u>+++*ELF*+++</u>+++IE are non-information resources.These can be thought of in the following groups (in the following, all ‘features’ are ‘non-information resources’):
 
-. Domain features - identifiable environmental things in the world.
+. Domain features - identifiable environmental things in the world. (*EB* do we need to make a distinction between "natural" and "human" ?)
 . Sampling features - human-created representative samples of domain features. These features exist to provide metadata about how the feature was described and how robust/representative that description is. An information resource describing a domain feature would logically use, link to, or summarize data related to sampling features.
 . Semantic resources: the ontologies and vocabularies used to structure and populate the descriptions of domain and sampling features. These are formalized using OWL and RDF.
 
 Each of these groups occupy different meta-levels but can be interlinked. For example, allowing an agent traversing a knowledge graph to move from the description of a domain feature to how that description was obtained (sampling features). The links between the domain and sampling features are described with https://www.w3.org/TR/vocab-ssn/[ontologies such as SOSA]. Given that SELFIE has adopted JSON-LD as its RDF encoding syntax, links to semantic resources are provided via JSON-LD contexts that map JSON keys and types to RDF ontology property and class HTTP URIs.
+(*EB*: I will just shut up)
 
 For SELFIE, nodes in a knowledge graph are non-information resources, and the nodes of most interest are those that identify domain features. Sampling and semantic resources provide metadata that describe those features and organise available knowledge about them. Therefore, the SELFIE knowledge graph describes relationships between non-information resources in the ‘real world’. The links between information resources that describe them +++<u>+++*is an important but separate concern*+++</u>+++. In SELFIE, how to transition from non-information resources in the knowledge graph to those in the web of information resources was an important consideration where further work is needed.
 
@@ -38,11 +39,13 @@ Everything in this scheme is identified by a HTTP URI. In general, we have three
 . digital things that provide meta-information about non-information things, and
 . digital things that are information representing or characterizing other things.
 
+(*EB*: in preceeding text, you also considered cases where NIR and MIR are the same, a.k.a BRGM implementation, without 300 series redirect)
 Tier 1. is clear -- there should be URIs that only ever return a 300 series redirect and are identifiers for real-world features. Tier 2. is hard to define precisely. It can only be defined strictly by the application retrieving it rather than by specific characteristics of its content. Tier 3. is clear in most cases but has potential overlap with tier 2 in that some applications may consider metadata about a feature to actually be data representing the feature. Since self describing data always contains metadata, we would expect most if not all of tier 2 to be contained in tier 3. +
 
 If we think about it this way, then tier 2 is a convenience layer. In SELFIE, tier 2 is a convenience layer for search-engine crawlers and humans looking for an idea of what a real-world feature is, what it's related to, and if there's interesting data available representing it. +
 
 This should make it clear that resource is the wrong word to describe the distinction being drawn here. It is ok for tier 1, but it breaks down for tier 2 and 3. A single URL may have one or more representations designed to be metadata and one or more representations intended to be data -- each intended for a different use pertaining to the same real-world feature. This is not saying that tier 2 and tier 3 are always to be represented variously based on the same URL -- they very well may be represented as different resources. This technical diversity is what SELFIE sought to enable. +
+(*EB*. Again, we kept thinking of MIR and DIR and different "resources".  It's because we are looking into two functions.  1 which is the generic data linkage stuff, where we are concerned with connecting stuff to other stuff regardless of the domain ontology - this is where we chose schemas.org as top level ontology and 2 environmental stuff, that is only relevant to a specific community -be it hypermedia or not)
 
 Consider a typical use case considered by the SELFIE:
 
@@ -55,6 +58,7 @@ As the project dissected this use case the HTTP-Range 14 (303 redirects), OGC-AP
 However, the IE recognized the potential to bring structure to data (including semantically enabled data) underlying the landing page content. Going further, the SELFIE was premised on the idea that html landing pages are layered on top of a potentially wide range of data systems that need such a discovery layer. Given this, while not addressed specifically in SELFIE,  alternative media types and content negotiation are expected in a system that the SELFIE model is applied to. However, the complexity and lack of broad implementation made making progress on this front difficult. +
 
 Participants in the IE agreed that they would avoid specifying how to use content negotiation between the "meta" and "data" tiers. Standards for content negotiation by profile are emerging but we have not been able to evaluate them rigorously. Instead, SELFIE was limited to describing how to advertise that multiple content-types are available for a given URL in structured JSON-LD data. The scope and summary architecture are described in <<img_architecture>>.
+
 
 [#img_architecture,reftext='{figure-caption} {counter:figure-num}']
 .Summary of the SELFIE resource / content model showing that there are Non-information resources which 303 redirect to a resource intended to provide "landing content". The distinction between landing-content and data-content is use-case specific and methods for negotiating between the two is left for future work.
@@ -73,10 +77,11 @@ There are three defining characteristics of the SELFIE "band":
 
 A SELFIE resource is recognizable because:
 
+
 . it has an `@id`;
 . it has a format property that includes application/ld+json;
 This limited set of criteria covers the important architectural concerns. It implies an 'architectural profile' that encompasses `@id`, `schema:url`, `dct:format`, and `rdfs:label` and therefore basic resource description and linking. 
-
+(*EB* wait.. if it has identity ("@id") it does not need schema:url, as shown in the example actually)
 To illustrate the distinction, consider the following JSON-LD example which has one `schema:sameAs` and one `schema:subjectOf` property for an identified feature: 
 
 ----
@@ -113,6 +118,7 @@ Alternatively, when we resolve +`https://feature.id`+ we might get a more limite
 }
 ----
 Which would mean we would need to resolve and interrogate +`https://someresource`+ to retrieve information needed to decide whether it is of interest, which is possible with the "in-band" +`https://someresource`+, and might give us the JSON-LD below, but impossible with the "out-of-band" +`https://blobby`+ which might only return xml.
+(*EB*: it can be json-ld and still be "out of band")
 
 ----
 {
@@ -134,7 +140,7 @@ The Range-14 decision, to identify real world features with URIs that HTTP-303 r
 .Complete range-14 resolution behavior.
 image::images/SELFIE_fig3.svg[width=500,align="left"]
 
-However, to simplify implementation, some landing resource providers skip the 303 redirect entirely, using a URL for a landing resource as an indirect identifier of a real world feature. <<img_indirect_id>> Illustrates this less complicated, but limited approach.
+However, to simplify implementation, some landing resource providers skip the 303 redirect entirely, using a URL for a landing resource as an indirect identifier of a real world feature. <<img_indirect_id>> Illustrates this less complicated, but limited approach. (*EB* contradicts line 43, or is it formal SHOULD (recommendation) vs SHALL (obligation) ?)
 
 [#img_indirect_id,reftext='{figure-caption} {counter:figure-num}']
 .Indirect identification of a feature where a URL is used as an indirect identifier for a real world feature.
