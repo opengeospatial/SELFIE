@@ -6,7 +6,9 @@ an item of interest in the distributed network of environmental data.
 
 &#9679; Non-Information Resource ::
 
-A real-world or conceptual object of interest that is identified by a Uniform Resource Identifier bound to the HTTP protocol (HTTP URI). (*EB*: is it retricted to HTTP ?)
+A real-world or conceptual object of interest that is identified by a Uniform Resource Identifier bound to the HTTP protocol (HTTP URI). 
+
+NOTE: In the context of this document, Non-Information Resources are strictly identified by HTTP URIs. In other contexts, a Non-Information Resource may be identified using other protocols such as Uniform Resource Names.
 
 &#9679; Information Resource ::
 
