@@ -338,18 +338,21 @@ addressed this problem by federating these disparate data services into a spatia
 that allows the user to access ALL the information regardless of the source or duplication. https://www.vvg.org.au/cb_pages/history_of_bore_data.php[**History of Bore data in Victoria**]  
 
 Information about a borehole exists at one or more of:
+
 * Geological Survey of Victoria (GSV)
 * Department of Environment, Land, Water and Planning (DELWP)
 * State Library of Victoria (SLV)
 * Federation Univesity Australia (FedUni)
 
 These are services deliver one or more of:
+
 * HTML
 * GML
 * JSON
 * Documents / multimedia
 
 The data from these services may be about:
+
 * Geology / Aquifers
 * Groundwater (water quality, levels)
 * Borehole construction
@@ -376,7 +379,7 @@ The user (including machines) can navigate via the links in the MR to request da
 
 ==== Demo Description and Links
 
-What have we done so far: The demo is currently designed to expose a single borehole via its real-world identifier. 
+What have we done: The demo is currently designed to expose a single borehole via its real-world identifier. 
 . The application resolves a URI pattern for the real-world-feature of the form https://geo.org.au/id/well/46217 which performs a 303 redirect to a SELFIE Meta Resource (MR)
 https://geo.org.au/info/46217
 . The application then uses a lookup tool (rosetta stone) to determine which of the various data providers 
@@ -384,34 +387,6 @@ have a corresponding borehole and the source-specific ID needed to access that d
 . Basic Content Negotiation via accepts header caters for both HTML (with embedded JSON-LD) and straight JSON-LD.
 The format can be overrided with either a .json or ?f=json in the URI   
 For the JSON-LD the MR encodes the various representations (DRs) into the SubjectOf block. 
-
-JSON LD Example
-https://geo.org.au/info/well/46217?f=json[**https://geo.org.au/info/well/46217?f=json**]  
-
-We have included Images and Reports where they are available
-
-Photos/Reports: https://geo.org.au/info/well/WA1[**https://geo.org.au/info/well/WA1**]  
-
-State library Archives https://geo.org.au/info/well/326217[**https://geo.org.au/info/well/326217**]
-
-For the data resources (DRs) in most cases we were starting with existing WFS services delivering complex features as GML. 
-We have made use of Alistair Ritchie's WFS mediator to allow on-the-fly conversion of the GML into JSON-LD and HTML (as implemented in ELFIE-1)
-We have not been able to validate these yet apart from checking that they generate something that looks like JSON-LD. 
-
-These DRs follow a URI scheme `/sourceprovider/data/datatype/featuretype/id`
-
-WMIS Service
-https://id.cerdi.edu.au/wmis/data/gwml2/well/46217?f=json[**https://id.cerdi.edu.au/wmis/data/gwml2/well/46217?f=json**]  
-
-GSV service
-https://id.cerdi.edu.au/gsv/data/gsml2/borehole/46217?f=json[**https://id.cerdi.edu.au/gsv/data/gsml2/borehole/46217?f=json**]  
-
-We have attempted to generate an sosa:ObservationCollection to provide access to lab data (water quality) via bore ID
-https://id.cerdi.edu.au/wmis/data/sosa/observationcollection/46217?f=json[**https://id.cerdi.edu.au/wmis/data/sosa/observationcollection/46217?f=json**]  
- 
-What we have not done (yet): There are some fairly major parts of the SELFIE puzzle missing at the moment. 
-* At the moment we have not exposed the catalogue of bores (or a way for a search engine to index all bores)  
-* We are only in the preliminary stages of generating RDF or TTL formats. Or determining if we need to provide these formats. 
 
 ===== Demo Screenshot(s)
 
@@ -421,15 +396,51 @@ image::images/SELFIE_MR_Well_html.png[width=600,align="center"]
 
 ===== Links to Demo Resources
 
-Add links to source files, code used, example JSON-LD files, etc. Add descriptive text so 
-people can walk through the demo themselves without much prior knowledge. Describe how 
-the links in the data can be traversed, especially how the links are/were traversed by the demo
-application.
+[#table_feduni,reftext='{table-caption} {counter:table-num}']
+.FedUni Meta Resource (MR) Examples
+[cols="50e,50e",width="90%",options="header",align="center"]
+|===
+|Demo | Link
+|JSON LD Example |https://geo.org.au/info/well/46217?f=json[**https://geo.org.au/info/well/46217?f=json**]
+|Photos/Reports |https://geo.org.au/info/well/WA1[**https://geo.org.au/info/well/WA1**]
+|State library Archives |https://geo.org.au/info/well/326217[**https://geo.org.au/info/well/326217**]
+|===
+
+For the data resources (DRs) in most cases we were starting with existing WFS services delivering complex features as GML. 
+We have made use of Alistair Ritchie's WFS mediator to allow on-the-fly conversion of the GML into JSON-LD and HTML (as implemented in ELFIE-1)
+We have not been able to validate these yet apart from checking that they generate something that looks like JSON-LD. 
+
+These DRs follow a URI scheme `/sourceprovider/data/datatype/featuretype/id`
+
+[#table_feduni2,reftext='{table-caption} {counter:table-num}']
+.FedUni Data Resource (DR) Examples
+[cols="50e,50e",width="90%",options="header",align="center"]
+|===
+|Demo | Link
+|WMIS Service |https://id.cerdi.edu.au/wmis/data/gwml2/well/46217?f=json[**https://id.cerdi.edu.au/wmis/data/gwml2/well/46217?f=json**]  
+|GSV service |https://id.cerdi.edu.au/gsv/data/gsml2/borehole/46217?f=json[**https://id.cerdi.edu.au/gsv/data/gsml2/borehole/46217?f=json**] 
+|Lab data (water quality) ObservationCollection via bore ID|https://id.cerdi.edu.au/wmis/data/sosa/observationcollection/46217?f=json[**https://id.cerdi.edu.au/wmis/data/sosa/observationcollection/46217?f=json**]
+|===
+
 
 ==== Demo findings and potential next steps
+The Federation University Use Case was that information about a single real world feature (a Non-Information Resource, which in this case was a ‘Borehole’) was available online, in multiple formats and representations; and from multiple authoritative sources. SELFIE would provide a mechanism whereby these various resources would be related to each other in a way that was discoverable and machine navigable e.g. search engines. The proposed SELFIE solution was a JSON-LD Meta-Resource that linked these various online resources together.
+SELFIE achieved all Federation University’s Use Case requirements, except in one crucial area. There was no satisfactory solution to encoding the Meta-Resource for different data content. For example, different resources about a single borehole may contain data that is structured according to various domain models, i.e. different ‘profiles’, such as GeoSciML:Borehole, GroundWaterML2:Borehole or GroundWaterML2: GW_Well.
+Four options were considered as part of the experiment:
 
-Discuss issues that this demo works around or would otherwise need to be solved to take
-it from demonstration/experiment to production.
+.	Use schema.org:sameAs
+* The understanding of the IE was that sameAs, whether schema.org or the more rigorous owl:sameAs, asserts that the two resources are literally the same. That is, either resource could be used and the same outcome would result. This is clearly not the case in the Federation University example where the three domain models are providing significantly different data content about the same resource.
+.	Use schema.org:subjectOf
+* Other representations of the NIR, such as links to images, pdf reports, html pages etc. all comfortably fit under this property. However, FedUni felt that it did not adequately capture the fact that the domain model data was structured according to defined models and that the relationship between them was significant, and potentially navigable, compared to the other representations, which were more ‘here is a link, but we don’t know what you will find there’. Nor is there any one of the three profiles that could be considered a ‘master’ representation for the NIR and the other two subsidiary and under the ‘subjectOf’ property. Rather all three are primary representations of the NIR.
+.	Use W3C profiles (e.g. https://w3c.github.io/dxwg/profiles/)
+* The Federation University Use Case could be met by using content negotiation by profile. However, this was considered outside of SELFIE scope. Even so, it is unclear how practical this solution is. It requires domain groups to establishing and maintain (govern) domain models (already a difficult and perhaps unsuccessful endeavour), and then establishing and maintaining profiles of these domain models that can be referenced by data providers. During the IE even the relatively simple case of generating a JSON-LD context of a simplified GeoSciML model ran afoul of the Domain Group who manage the XML encoded model. Establishing and maintaining JSON-LD contexts for the required profiles is well beyond the capacity and remit of FedUni.
+.	Use domain model properties
+* This was suggested as a mechanism to encode collections of observations about the NIR, so for example the property sosa:isFeatureOfInterestOf could contain the link to sosa:ObservationCollection. For the FedUni Use Case, gwWellConstruction could contain gwml:Borehole, but it is unclear what the property is that would contain the top level domain features such as gwml:GW_Well and gsml:Borehole. Investigating this further was considered out of scope for the IE.
+
+What we have not done: There are some fairly major parts still missing from this Demo. 
+
+* We have not exposed the catalogue of resources (bores). There is no provision for a search engine to crawl and index all bores and their data resources.   
+* We are only in the preliminary stages of generating RDF or TTL format options. 
 
 === SELFIE Demonstration Write Up: Loc-I
 
