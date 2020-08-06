@@ -6,7 +6,9 @@ an item of interest in the distributed network of environmental data.
 
 &#9679; Non-Information Resource ::
 
-A real-world or conceptual object of interest that is identified by a Uniform Resource Identifier bound to the HTTP protocol (HTTP URI).
+A real-world or conceptual object of interest that is identified by a Uniform Resource Identifier bound to the HTTP protocol (HTTP URI). 
+
+NOTE: In the context of this document, Non-Information Resources are strictly identified by HTTP URIs. In other contexts, a Non-Information Resource may be identified using other protocols such as Uniform Resource Names.
 
 &#9679; Information Resource ::
 
@@ -26,7 +28,7 @@ An in band resource is one that can provide information according to a given tec
 
 &#9679; Out-of-band resource ::
 
-An out-of-band resource is one that does not adhere to the technical architecture from which it is found. A resource that can provide observation result graphs, XML, CSV, and JSON representations but no linked-data representation would be considered out-of-band if linked from a linked-data document. Out-of-band resources can not extend the linked data graph.
+An out-of-band resource is one that does not adhere to the technical architecture from which it is found. A resource that can provide observation result graphs, XML, CSV, PNG, PDF and JSON representations but no linked-data representation would be considered out-of-band if linked from a linked-data document. Out-of-band resources can not extend the linked data graph.
 
 &#9679; HyperText Transfer Protocol Uniform Resource Identifier (HTTP URI) ::
 

@@ -8,4 +8,5 @@
 |Date |Editor |Release | Primary clauses modified |Descriptions
 |July 4, 2020 |D. Blodgett | .1 |all |transfer from google doc
 |July 6, 2020 | D. Blodgett | .2 |all |fix formatting and add images
+|July 19, 2020 | E. Boisvert | .2 |all |comments for editor consideration 
 |====================
