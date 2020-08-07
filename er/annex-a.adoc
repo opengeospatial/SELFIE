@@ -326,13 +326,13 @@ No content available at the time of publication.
 ==== Use Case Description
 
 To provide a means whereby all the relevant information (resources) about a real world feature (in this case a borehole or well) 
-can be brought together via a machine readable (and indexable) 'page/not a page'  
+can be brought together via machine readable (and indexable) web available information.
 
 https://geo.org.au/info/well/46217[**CeRDI SELFIE testbed**]
 
 ===== User Story
 
-Groundwater bore data management in Victoria is split across a number of Government departments, research agencies and community groups. 
+Groundwater borehole data management in Victoria is split across a number of Government departments, research agencies and community groups. 
 Information about the same real-world entity borehole may exist in multiple databases.  The VVG web portal partly 
 addressed this problem by federating these disparate data services into a spatial web portal 
 that allows the user to access ALL the information regardless of the source or duplication. https://www.vvg.org.au/cb_pages/history_of_bore_data.php[**History of Bore data in Victoria**]  
@@ -359,15 +359,13 @@ The data from these services may be about:
 * Reports
 * Observations made on things intersected in the bore
 
-Currently the user must individually discover and access these different data services 
+Currently a person or automated client must individually discover and access these different data services 
 and compile the relevant information about a Borehole manually. Where the same borehole 
-exists aross multiple data sources its is not readily apparent that they are the same real world feature (there is no common identifier across these services). Additionally 
+exists across multiple data sources it is not readily apparent that they are the same real world feature (there is no common identifier across these services). Additionally, 
 there is no mechanism to identify the different types of information available.
 
-Through this demonstration a user should be able to use a standard search engine to discover the availability of these various sources, formats and contents via a MetaResource (MR).
-The user (including machines) can navigate via the links in the MR to request data from the various providers in one of the available formats.
-
-
+Through this demonstration, a user should be able to use a standard search engine to discover the availability of these various sources, formats and contents via URL-14 landing content.
+The user (including machines) can navigate via the links in the landing content to request data from the various providers in one of the available formats.
 
 ===== Datasets
 
@@ -380,13 +378,12 @@ The user (including machines) can navigate via the links in the MR to request da
 ==== Demo Description and Links
 
 What have we done: The demo is currently designed to expose a single borehole via its real-world identifier. 
-. The application resolves a URI pattern for the real-world-feature of the form https://geo.org.au/id/well/46217 which performs a 303 redirect to a SELFIE Meta Resource (MR)
-https://geo.org.au/info/46217
+. The application resolves a URI-14 URI pattern for the real-world-feature of the form https://geo.org.au/id/well/46217 which performs a 303 redirect to URL-14 landing content at: https://geo.org.au/info/46217
 . The application then uses a lookup tool (rosetta stone) to determine which of the various data providers 
-have a corresponding borehole and the source-specific ID needed to access that data resource (DR). 
+have a corresponding borehole and the source-specific ID needed to access URL-200 data resource for that borehole. 
 . Basic Content Negotiation via accepts header caters for both HTML (with embedded JSON-LD) and straight JSON-LD.
-The format can be overrided with either a .json or ?f=json in the URI   
-For the JSON-LD the MR encodes the various representations (DRs) into the SubjectOf block. 
+The format can be overriden with either a .json or ?f=json in the URI   
+For the JSON-LD the landing-content encodes links to various representations as URL-200s in a SubjectOf block of associations. 
 
 ===== Demo Screenshot(s)
 
@@ -397,7 +394,7 @@ image::images/SELFIE_MR_Well_html.png[width=600,align="center"]
 ===== Links to Demo Resources
 
 [#table_feduni,reftext='{table-caption} {counter:table-num}']
-.FedUni Meta Resource (MR) Examples
+.FedUni Meta Resource landing-content Examples
 [cols="50e,50e",width="90%",options="header",align="center"]
 |===
 |Demo | Link
@@ -406,14 +403,14 @@ image::images/SELFIE_MR_Well_html.png[width=600,align="center"]
 |State library Archives |https://geo.org.au/info/well/326217[**https://geo.org.au/info/well/326217**]
 |===
 
-For the data resources (DRs) in most cases we were starting with existing WFS services delivering complex features as GML. 
-We have made use of Alistair Ritchie's WFS mediator to allow on-the-fly conversion of the GML into JSON-LD and HTML (as implemented in ELFIE-1)
+For the URL-200 data resources, in most cases, we were starting with existing WFS services delivering complex features as GML. 
+We have made use of Alistair Ritchie's WFS mediator to allow on-the-fly conversion of the GML into JSON-LD and HTML (as implemented in ELFIE)
 We have not been able to validate these yet apart from checking that they generate something that looks like JSON-LD. 
 
-These DRs follow a URI scheme `/sourceprovider/data/datatype/featuretype/id`
+These data resources follow a URI scheme `/sourceprovider/data/datatype/featuretype/id`
 
 [#table_feduni2,reftext='{table-caption} {counter:table-num}']
-.FedUni Data Resource (DR) Examples
+.FedUni Data Resource Examples
 [cols="50e,50e",width="90%",options="header",align="center"]
 |===
 |Demo | Link
@@ -422,20 +419,19 @@ These DRs follow a URI scheme `/sourceprovider/data/datatype/featuretype/id`
 |Lab data (water quality) ObservationCollection via bore ID|https://id.cerdi.edu.au/wmis/data/sosa/observationcollection/46217?f=json[**https://id.cerdi.edu.au/wmis/data/sosa/observationcollection/46217?f=json**]
 |===
 
-
 ==== Demo findings and potential next steps
-The Federation University Use Case was that information about a single real world feature (a Non-Information Resource, which in this case was a ‘Borehole’) was available online, in multiple formats and representations; and from multiple authoritative sources. SELFIE would provide a mechanism whereby these various resources would be related to each other in a way that was discoverable and machine navigable e.g. search engines. The proposed SELFIE solution was a JSON-LD Meta-Resource that linked these various online resources together.
-SELFIE achieved all Federation University’s Use Case requirements, except in one crucial area. There was no satisfactory solution to encoding the Meta-Resource for different data content. For example, different resources about a single borehole may contain data that is structured according to various domain models, i.e. different ‘profiles’, such as GeoSciML:Borehole, GroundWaterML2:Borehole or GroundWaterML2: GW_Well.
+The Federation University Use Case was that information about a single real world feature (a Non-Information Resource, which in this case was a ‘Borehole’) was available online, in multiple formats and representations; and from multiple authoritative sources. SELFIE sought a mechanism whereby these various resources could be related to each other in a way that was discoverable and machine navigable e.g. search engines. The proposed SELFIE solution was JSON-LD landing-content that linked these various online resources together.
+SELFIE achieved all Federation University’s Use Case requirements, except in one crucial area. There was no satisfactory solution to encoding landing content for different data content. For example, different resources about a single borehole may contain data that is structured according to various domain models, i.e. different ‘profiles’, such as GeoSciML:Borehole, GroundWaterML2:Borehole or GroundWaterML2: GW_Well.
 Four options were considered as part of the experiment:
 
 .	Use schema.org:sameAs
 * The understanding of the IE was that sameAs, whether schema.org or the more rigorous owl:sameAs, asserts that the two resources are literally the same. That is, either resource could be used and the same outcome would result. This is clearly not the case in the Federation University example where the three domain models are providing significantly different data content about the same resource.
 .	Use schema.org:subjectOf
-* Other representations of the NIR, such as links to images, pdf reports, html pages etc. all comfortably fit under this property. However, FedUni felt that it did not adequately capture the fact that the domain model data was structured according to defined models and that the relationship between them was significant, and potentially navigable, compared to the other representations, which were more ‘here is a link, but we don’t know what you will find there’. Nor is there any one of the three profiles that could be considered a ‘master’ representation for the NIR and the other two subsidiary and under the ‘subjectOf’ property. Rather all three are primary representations of the NIR.
+* Other representations of the URI-14 (borehole), such as links to images, pdf reports, html pages etc. all comfortably fit under this property. However, FedUni felt that it did not adequately capture the fact that the domain model data was structured according to defined models and that the relationship between them was significant, and potentially navigable, compared to the other representations, which were more ‘here is a link, but we don’t know what you will find there’. Nor is there any one of the three profiles that could be considered a ‘primary’ representation for the URI-14 (borehole) and the other two subsidiary and under the ‘subjectOf’ property. Rather, all three are primary representations of the URI-14 (borehole).
 .	Use W3C profiles (e.g. https://w3c.github.io/dxwg/profiles/)
-* The Federation University Use Case could be met by using content negotiation by profile. However, this was considered outside of SELFIE scope. Even so, it is unclear how practical this solution is. It requires domain groups to establishing and maintain (govern) domain models (already a difficult and perhaps unsuccessful endeavour), and then establishing and maintaining profiles of these domain models that can be referenced by data providers. During the IE even the relatively simple case of generating a JSON-LD context of a simplified GeoSciML model ran afoul of the Domain Group who manage the XML encoded model. Establishing and maintaining JSON-LD contexts for the required profiles is well beyond the capacity and remit of FedUni.
+* The Federation University Use Case could be met by using content negotiation by profile. However, this was considered outside of SELFIE scope. Even so, it is unclear how practical this solution is. It requires domain groups to establishing and maintain (govern) domain models (already a difficult and perhaps unsuccessful endeavor), and then establishing and maintaining profiles of these domain models that can be referenced by data providers. During the IE even the relatively simple case of generating a JSON-LD context of a simplified GeoSciML model ran afoul of the Domain Group who manage the XML encoded model. Establishing and maintaining JSON-LD contexts for the required profiles is well beyond the capacity and remit of FedUni.
 .	Use domain model properties
-* This was suggested as a mechanism to encode collections of observations about the NIR, so for example the property sosa:isFeatureOfInterestOf could contain the link to sosa:ObservationCollection. For the FedUni Use Case, gwWellConstruction could contain gwml:Borehole, but it is unclear what the property is that would contain the top level domain features such as gwml:GW_Well and gsml:Borehole. Investigating this further was considered out of scope for the IE.
+* This was suggested as a mechanism to encode collections of observations about the URI-14. For example, the property sosa:isFeatureOfInterestOf could contain the link to sosa:ObservationCollection. For the FedUni Use Case, gwWellConstruction could contain gwml:Borehole, but it is unclear what the property is that would contain the top level domain features such as gwml:GW_Well and gsml:Borehole. Investigating this further was considered out of scope for the IE.
 
 What we have not done: There are some fairly major parts still missing from this Demo. 
 
