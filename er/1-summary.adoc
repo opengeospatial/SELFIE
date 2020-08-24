@@ -6,9 +6,9 @@ This report documents the Second Environmental Linked Features Interoperability 
 
 At the outset of the SELFIE project, the team stated:
 
-----
+____
 SELFIE aims to answer the question, what is the Web architecture that will allow us to use linked data for environmental features and observations in a way that is easily adoptable and compatible with W3C best practices and leverages OGC standards? The experiment aims for focused simplicity, representing resources built from potentially complex data for easy use on the Web. While the IE will be focused on testing a specific resource model and will follow W3C best practices and OGC standards, a wide range of participant-provided domain use cases will be used for testing. Ultimately, this work is intended to satisfy the needs of many use cases and many kinds of features, from disaster response and resilience to environmental health and the built environment.
-----
+____
 
 The business case for the SELFIE can be illustrated considering two use cases: 
 1) indexing and discovering models and research from public sector, private sector, or academic projects about a particular place or environmental feature.
