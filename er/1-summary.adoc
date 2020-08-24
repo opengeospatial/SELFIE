@@ -68,6 +68,8 @@ All questions regarding this document should be directed to the editor or the co
 |Alistair Ritchie | Manaaki Whenua | Contributor
 |Bruce Simons | Federation University Australia | Contributor
 |Eric Boisvert | Natural Resources Canada | Contributor
+|Abdelfettah Feliachi | BRGM - INSIDE environmental information systems research center | Contributor
+|Sylvain Grellet | BRGM - INSIDE environmental information systems research center | Contributor
 |====================
 
 

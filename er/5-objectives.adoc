@@ -7,12 +7,17 @@ Objectives of SELFIE, from the project charter were:
 
 . Evaluate a proposed resource model for multi-provider environmental feature and observation registries
 . Evaluate proposed HTTP behavior for non information resources and their representations
-. Design and evaluate linked data feature information index resources with media-type, language, and profile content negotiation as an extension of the building blocks provided by WFS3.
+. Design and evaluate linked data feature information index resources with media-type, language, and profile content negotiation as an extension of the building blocks provided by WFS3 / OGC API - Features.
 Within the context of these objectives, the https://docs.opengeospatial.org/per/18-097.html#Objectives[functional and operational goals of the first ELFIE] were upheld.
 
 . linked-data content for describing and linking features and associated data and
 . maintaining the rigor of OGC and W3C standards and best practices while providing easily-adopted approaches
 These can be summarized with the question, _"what is the expected network behavior and resource model when resolving a Web identifier for a non-information resource?"._ While fairly simple on its face, this question proved to be challenging on a number of levels:
+
+(*SG:* 
+the next three one do not come from the charter and are more written as 'conclusion' rather than as 'objectives'. Proposal to introduce them differently). 
+
+Objectives added during the IE:
 
 . At a high level, we found that the architectural resource model that seemed to fit our understanding of the problem -- a three-tiered resource model of Non-information resources, Meta-resources, and Data-resources -- broke down when implemented in web-resources. The distinction between metadata and data is ultimately defined by the use of information and not the information itself. 
 . Semantic web technology and the rigor required for systems that support reasoning over a graph presented great opportunity and potential while introducing a level of complexity and technical specificity that was challenging to navigate as a group. The diverse backgrounds and levels of understanding of technologies made communication break-downs all too frequent.

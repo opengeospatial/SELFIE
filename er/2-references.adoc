@@ -4,3 +4,6 @@
 The following normative documents are referenced in this document.
 
 * http://docs.opengeospatial.org/is/17-069r3/17-069r3.html[OGC 17-069r3, OGC API - Features - Part 1: Core]
+* https://docs.opengeospatial.org/is/16-008/16-008.html[OGC 16-008 GeoSciML - version 4.1 0]
+* http://docs.opengeospatial.org/is/16-032r2/16-032r2.html[OGC 16-032r2 WaterML 2: Part 4 – GroundWaterML 2 (GWML2) – Version 2.2]
+*  https://docs.opengeospatial.org/is/14-111r6/14-111r6.html[OGC 14-111r6 WaterML 2: Part 3 - Surface Hydrology Features (HY_Features) - Conceptual Model   ]
