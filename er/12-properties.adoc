@@ -1,7 +1,7 @@
 [[propertiresRelations]]
 === Properties / Relations
 
-The logic for selection of relations in SELFIE followed from the more content-focused ELFIE. That logic is described in detail in the https://docs.opengeospatial.org/per/18-097.html[ELFIE engineering report] and on the https://opengeospatial.github.io/ELFIE/json-ld/[ELFIE contexts web page.] To summarize, broad adoption and commonality on the web was the primary driver of selection of relations. Spatial topology, temporal, and monitoring concepts were taken from established OGC and W3C ontologies, and domain concepts were sought from OGC domain feature models. The following lists relations by source with comments for selected relations as necessary.
+The logic for selection of relations in SELFIE followed from the more content-focused ELFIE. That logic is described in detail in the https://docs.opengeospatial.org/per/18-097.html[ELFIE engineering report] and on the https://opengeospatial.github.io/ELFIE/json-ld/[ELFIE contexts web page.] To summarize, broad adoption and commonality on the web was the primary driver of selection of relations. Spatial topology, temporal, and monitoring concepts were taken from established OGC and W3C ontologies, and domain concepts were sought from OGC domain feature models (GeoSciML, GWML2, HY_Features). The following lists relations by source with comments for selected relations as necessary.
 
 ==== Schema.org:
 

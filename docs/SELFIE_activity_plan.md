@@ -20,11 +20,11 @@ The OGC members who are initiators of this Interoperability Experiment are:
 
 * Landcare Research New Zealand Ltd (Manaaki Whenua)
 
-* Bureau de Recherches Géologiques et Minières
+* Bureau de Recherches Géologiques et Minières (BRGM)
 
 ## Participants
 
-The following OGC member organizations will participate in the ELFIE
+The following OGC member organizations will participate in the SELFIE
 
 * U.S. Geological Survey
 

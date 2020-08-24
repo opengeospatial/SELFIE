@@ -317,9 +317,87 @@ hy:HY_Catchment>
                 <http://www.w3.org/2002/07/owl#Thing> .
 ----
 
-=== EU Surface Water Groundwater Linked Data
+=== BRGM - INSIDE research center - Surface / Ground water linked data gazetteer 
 
-No content available at the time of publication.
+==== Use Case Description 
+
+This use case builds on the one set up for the OGC ELFIE and tries to test a system coping with two specific requirements: 
+
+* A°/ clients that dereference a URI asking for a specific media-type, content model etc...
+* B°/ clients that dereference the same URI without knowing beforehand the available media-type, content model etc...: kind of "probing" or "discovery" behaviour 
+
+
+===== User Story
+
+Clients from group A can be very diverse 
+
+* linked data centered application : in this case BLiV (BRGM Linked data Viewer) is considered. BLiV  (https://data.geoscience.fr/Bliv/) is developped to ingest 
+        ** natively, linked data serialization
+        ** if not available, ask the end-user (human being), if he wants to interact with the other representations/serialisations available
+* desktop GIS : QGIS with GML Application Schema Toolbox which expects responses that are GML application schema compliant (https://plugins.qgis.org/plugins/gml_application_schema_toolbox/)
+* search engines crawlers  : which expect HTML with JSON-LD in the `<script>` header 
+* etc...
+
+Client from group B don't correspond to the vast majority of the clients considered in Linked Data oriented approaches because, most of the time, specific implementation environements are considered (ex: linking Non Information Resources together and somehow expecting a specific serialization content-model paradigm, web interfaces, reasoning, ... ). 
+However, this need should not be overlooked as in running production environments, especially when linking information about Non Information Resources together with another system, (linked) data manager and their associated system(s) need to know what's is available 'behind' a URI. At least to cross-check they are linking to the relevant resource. Just knowing the URI-14 is not always sufficient for disambiguation.
+
+The client dereferences a URI whithout specifying any media-type, content model etc... and retrieves what combination of information is available.
+
+From this
+
+* Client from group B: check that they are linking to the relevant resource
+* Client from group A : assess whether they can consider the data content available provided in-band or out-of-band and interact with what suits them the most (or no).
+
+Clients from group A follow a 1 step approach from URI-14 to the data content skipping the URL-14 landing content whereas clients from group B may apply the complete URI-14 -> URL-14 -> data content pattern.
+
+===== Datasets & APIs
+* BRGM BD LISA : French Aquifer dataset provided using international semantic and technical interoperability approaches. BRGM already provides an OGC API Feature implementation on top of BD LISA that exposes the content according to OGC:GWML2 in GML, GeoJSON, JSON-LD with a URI resolver on top.
+
+* SANDRE Aquifer reference dataset : The French Aquifer dataset is provided according to French Water Information System conceptual model (semantics), and interchange format(XML serialization) etc... Note : in both cases the source dataset (instances) is the same.
+
+===== Demo Description and Links
+The use case corresponds somehow to set up what could be called a LinkedDataGazetteer along with the corresponding URI configuration
+
+In order to fulfill it, the following steps have been carried out
+
+* define a model that allows to know in which media-type, content model etc... a given instance is available. This mode is a level of abstraction higher than SELFIE content model (https://data.geoscience.fr/def/LinkedDataGazetteer.xsd)
+* populate it for the French Aquifer dataset
+* implement that model on an OGC API Features using Geoserver
+* fund and drive the necessary evolutions so that Geoserver OGC API - Features implementation is capable of serving JSON-LD content and ultimately deploy within BRGM infrastructure.
+
+The API endpoint is the following : https://data.geoscience.fr/api/LDGazetteerFAPI and allows to search within the French Aquifer dataset
+
+===== Demo Screenshot(s)
+Group B use case leads to dereferencing the same URI asking for nothing (ex : using cURL) and loading URI-14 landing content into BLIV
+
+Then traversing "in-band" to fetch the Aquifer description in BLIV (ex : JSON-LD) or move to other content model, media-types...  (GWML2 in GML, SANDRE in XML) and use it in another application.
+
+[#121AS01_inBLiV,reftext='{figure-caption} {counter:figure-num}']
+.French Hydrogeologic unit 121AS01 landing data in BLiV
+image::images/121AS01_inBLiV.png[width=600,align="center"]
+
+Group A use case leads to dereferencing the same URI asking for
+
+* application/ld+json : that Aquifer in BLiV in JSON-LD (see ELFIE demos on https://opengeospatial.github.io/ELFIE/)
+* application/gml+xml : that Aquifer in QGIS with GML Application Schema Toolbox (see demos under https://github.com/BRGM/gml_application_schema_toolbox/tree/master/presentations)
+* text/html (or variations around this): resolver logs clearly show that Google Bots (or Bing or other crawlers) ask for text/html (or variations around this) ask for and receive the corresponding content. The plan is then to refine the embeded JSON-LD content in the `<script>` header of this representation.
+
+===== Demo findings and potential next steps
+The implementation of the LinkedDataGazetteer serving SELFIE content model compliang payload clearly demonstrates 
+
+* that SELFIE proposed content model fills a gap in LinkedData systems enabling to describe the various representations available for a given URI-14
+* the importance of the in-band / out-of-band distinction to better understand what client actually expects. The introduction of that terminology within SELFIE members discussions clearly helped move forward towards a common understanding
+* the evolution of how content negotiation is being considered (ex : adding notion of profiles), will change how LinkedData systems are designed and implemented (on both client & server side). When this evolution becomes mainstream in the implementations, it will become more natural for (Linked) Data managers to link resource together using a URI-14.
+
+Several potential next steps have been identified
+
+* Hypermedia-driven resource resolution versus content negotiation-driven resource resolution needs to be further discussed as both approaches have their pros & cons. An issue is created to compare SELFIE content model with W3C DXWG ConnegP. A quick cross-check seems to identify the following elements (but more in depth work is required)
+        ** connegP 'type' seems to map to SELFIE choice of 'format'
+        ** connegP 'profile' seems to map to SELFIE choice of 'conformsTo'
+        ** but there is no notion of "primaryTopic" and no "provider" in connegP
+* the 'dc:partOf' in SELFIE content model could also be a specific view/profile (a data content) and not embedded in the URL-14 landing content. It seems to us that we are mixing two different use cases : "URI-14 to data content probing and discovery" VS "exploring a domain graph of linked feature". We may consider serving  this domain graph in a data content latter on
+* what to respond to a client trying to dereference a URI-14 and asking for specific media-type, content model etc... that cannot be served. It would make sense to respond back with what is actually knowned to be available using SELFIE content model but have not been implemented in our system.
+* in its current version (1.2.0), QGIS GML Application Schema Toolbox plugin "identifies" itself when dereferencing a URI (default behaviour is to have the HTTP Use-Agent named "QGIS GML Application Schema Toolbox"). This allows to know at the resolver level that the expected media-type to be used is application/gml+xml. This mechanism, should be revised and it is already planned to have this QGIS plugin evolve to a better implementation of content negotiation, explicitely stating what the client wants to retrieve
 
 === CeRDI VVG - SELFIE Demonstration
 

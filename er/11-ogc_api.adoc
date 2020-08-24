@@ -1,5 +1,12 @@
 [[ogcApi]]
 === Relationship to OGC-API
 
-OGC API-Features was evaluated for providing both URL-14 landing-content and URL-200 data-content and found to be largely compatible with both. For provision of landing content, a feature would be provided as JSON-LD and html with JSON-LD structured data in a `<script>` element containing the URI-14 as its primary subject. In this case, hypermedia containing links to items in a feature-collection would contain links to URI-14s rather than display any URL-14s. Since OGC API-Features supports feature-level access by item id (`/collections/{collectionid}/items/{itemid}`) or a feature attribute (`/collections/{collectionid}/items?uri=https://id.com/id`) it can be used as a flexible building block in linked data architectures.
-  
+OGC API - Features was evaluated for providing both URL-14 landing-content and URL-200 data-content and found to be largely compatible with both. For provision of landing content, a feature would be provided as JSON-LD and html with JSON-LD structured data in a `<script>` element containing the URI-14 as its primary subject. In this case, hypermedia containing links to items in a feature-collection would contain links to URI-14s rather than display any URL-14s. Since OGC API-Features supports feature-level access by item id (`/collections/{collectionid}/items/{itemid}`) or a feature attribute (`/collections/{collectionid}/items?uri=https://id.com/id`) it can be used as a flexible building block in linked data architectures.
+
+During the IE, SELFIE participants funded, drove, tested, enhanced (depending on the cases) the support for JSON-LD in two major implementations of OGC API - Features namely:
+
+* PyGeoAPI
+    ** Since 0.7.0 version : https://docs.pygeoapi.io/en/latest/configuration.html#linked-data
+    ** https://github.com/geopython/pygeoapi/pull/246
+* Geoserver
+    **  JSON-LD community plugin is available since Geoserver 2.16.2 release (http://blog.geoserver.org/2020/01/22/geoserver-2-16-2-released/.)

@@ -50,7 +50,7 @@ ____
 *_As a Web user, I want to find all the information available for an environmental feature, so I can find what I'm looking for and retrieve it._* +
 ____
 
-As the project dissected this use case the HTTP-Range 14 (303 redirects), OGC-API Features (html landing pages for features), and schema.org JSON-LD in a `<script>` tag of a landing page were all embraced as useful technical solutions that serve it. None of the above requires alternative resource representations (media types). With an HTML landing page, a human user or crawler designed around natural language and schema.org are satisfied. +
+As the project dissected this use case the HTTP-Range 14 (303 redirects), OGC API - Features (html landing pages for features), and schema.org JSON-LD in a `<script>` tag of a landing page were all embraced as useful technical solutions that serve it. None of the above requires alternative resource representations (media types). With an HTML landing page, a human user or crawler designed around natural language and schema.org are satisfied. +
 
 However, the IE recognized the potential to bring structure to data (including semantically enabled data) underlying the landing page content. Going further, the SELFIE was premised on the idea that html landing pages are layered on top of a potentially wide range of data systems that need such a discovery layer. Given this, while not addressed specifically in SELFIE,  alternative media types and content negotiation are expected in a system that the SELFIE model is applied to. However, the complexity and lack of broad implementation made making progress on this front difficult. +
 
