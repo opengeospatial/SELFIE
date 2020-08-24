@@ -64,6 +64,7 @@ An originating source of data.
 &#9679; Resolver ::
 
 A registry system that provides 303 redirection from URI-14s to URL-14. 
+(@Abdel: Could we make this definition broader please. IMHO a resolver can be more than just a 303 registry system, it depends on the different behaviours intended for the server. It could play a role of proxy (in a http200 fashion.). Broadly It could be an intelligent function that adapts the reponse of the server to the context of request. )
 
 &#9679; Landing resource ::
 
