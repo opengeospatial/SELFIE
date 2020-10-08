@@ -10,9 +10,9 @@ At the time of publication, these use cases were also available as web resources
 
 The Internet of Water (IoW) is an initiative https://www.aspeninstitute.org/tag/internet-of-water/[proposed by a multi-stakeholder workshop] that has been supported by a foundation and has a https://internetofwater.org/about/[non-profit organization] by the same name working toward the initiative's goals. The initiative proposes a federated system of data providers and consumers that are aggregated into domain-specific "hub" organizations and coordinated by a single "umbrella" organization. Data producers are to maintain ownership and control of their information and federation is intended to be cache-only in that information ownership should never be transferred if the data producer wants to maintain ownership.
 
-This use case applies to all types of water data--hydrography, hydrometric observations, hydrologic model results, water quality, hydrodynamics, etc. Ultimately, the hub and umbrella model requires construction of a linked-data system that references common environmental features throughout. Data providers' services should use consistent methods to reference those features to facilite automated discovery of newly available or changed data.
+This use case applies to all types of water data--hydrography, hydrometric observations, hydrologic model results, water quality, hydrodynamics, etc. Ultimately, the hub and umbrella model requires construction of a linked-data system that references common environmental features throughout. Data providers' services should use consistent methods to reference those features to facilitate automated discovery of newly available or changed data.
 
-https://github.com/internetofwater/geoconnex.us[**See this github repository for more.**]
+https://github.com/internetofwater/geoconnex.us[**See this GitHub repository for more.**]
 https://github.com/opengeospatial/SELFIE/tree/master/docs/usgs[**See the demo resources here for initial SELFIE content in this use case.**]
 https://geoconnex.us/SELFIE/usgs/huc/huc12obs/070900020601[**Use this JSON-LD demo page as an entry-point.**]
 
@@ -90,7 +90,7 @@ This demo demonstrates that the core SELFIE technical solution rooted in URI-14 
 
 ==== Use Case Description
 
-Link various heterogeneous datasets from various sources under a common water ontology using linked data across Canada and USA.  The web application demonstrate how a linked data enabled application can use a predefined ontology to navigate across water related real world features potentially managed by various organizations within and across national jurisdictions.
+Link various heterogeneous datasets from various sources under a common water ontology using linked data across Canada and USA.  The web application demonstrates how a linked data enabled application can use a predefined ontology to navigate across water related real world features potentially managed by various organizations within and across national jurisdictions.
 
 ===== User Story
 
@@ -106,24 +106,25 @@ Datasets and Sources
 
 ===== Demo Description and Links
 
-The demo is a web map application showing water related features. The map application operates on top of a linked data infrastructure (node) hosted on both side on the US-Canada border.  Each  GSIP node exposes a catalogue of water features from their respective jurisdiction, some cross-border (shared) features and establishes relations between water features on its side and features on the other side.
+The demo is a web map application showing water related features. The map application operates on top of a linked data infrastructure (node) hosted on both side on the US-Canada border.  Each Groundwater Surface water Interoperability Pilot (GSIP) node exposes a catalogue of water features from their respective jurisdiction, some cross-border (shared) features and establishes relations between water features on its side and features on the other side.
 
-The GSIP resolver is build on top of a RDF catalog, containing water features description and links to other features and representation.  GSIP deals with content negotiation and 303 redirect of NIR or other representation if necessary.  This figure show the overall interaction with GSIP node
+The GSIP resolver is built on top of an RDF catalog, containing water features description and links to other features and representation.  GSIP deals with content negotiation and 303 redirect of NIR or other representation if necessary.  This figure show the overall interaction with GSIP node
 
 [#img_gsipSequence,reftext='{figure-caption} {counter:figure-num}']
 .GSIP sequence diagram
 image::images/gsip_sequence.png[width=600,align="center"]
 
-The linked data infrastructure operates on its own and can be access using a regular browser.  The map application leverages this infrastructure by adding new functionalities.
+The linked data infrastructure operates on its own and can be accessed using a regular browser.  The map application leverages this infrastructure by adding new functionalities.
 
-Features on the map are spatial representations of "real things" (Non-Information) in the world and assigned a URI as their identifier.   At this point, this is all the web application has (feature with their NIR). The map is pre-loaded with a set of watersheds around Lake Champlain. Canadian version of the application shows feature north of the border and vice-versa for US.  Note that NIR of water features can point anywhere (the canadian version can consume data from US node and vice and versa). When requested, the application attempts to resolve the feature’s NIR by issuing a HTTP GET request using the NIR URI and process the document and do something useful with it.  The application expects a RDF document conformant to the model (ontology) defined in this interoperability experiment. The application is robust as it will try to process whatever is returned by the resolution of the NIR.  If the RDF document does not contain any schema.org or RDFS or HY_Feature, etc.., it will simply do nothing.
+Features on the map are spatial representations of "real things" (Non-Information) in the world and assigned a URI as their identifier.   At this point, this is all the web application has (feature with their NIR). The map is pre-loaded with a set of watersheds around Lake Champlain. Canadian version of the application shows feature north of the border and vice-versa for US.  Note that NIR of water features can point anywhere (the Canadian version can consume data from the US node and vice and versa). When requested, the application attempts to resolve the feature’s NIR by issuing a HTTP GET request using the NIR URI and process the document and do something useful with it.  The application expects an RDF document conformant to the model (ontology) defined in this interoperability experiment. The application is robust as it will try to process whatever is returned by the resolution of the NIR.  If the RDF document does not contain any schema.org or RDFS or HY_Feature, etc.., it will simply do nothing.
 
-The application then offers the option of
+The application then offers the option of:
+
 * traverse a link to another water feature;
 * open a representation in one of the proposed format;
 * leave the map application and browse resources directly in the browser.
 
-The application recognizes specifically Geojson representations and when available, the application can load it and add the content to the map.  If the uploaded feature has a `uri` property, the application assumes it’s a NIR and behave accordingly.
+The application recognizes specifically GeoJSON representations and when available, the application can load it and add the content to the map.  If the uploaded feature has a `uri` property, the application assumes it’s a NIR and behave accordingly.
 
 A typical session goes through a variation of these steps
 
@@ -138,11 +139,11 @@ A typical session goes through a variation of these steps
 
 ===== Harvesting
 
-While not explicitly demonstrated in the web application, the architecture relies on a series of nodes to resolve NIR. The current demonstration relies on 2 nodes (a.k.a geoconnex.ca and geoconnex.us) but it is totally agnostic of the number of nodes that can eventually be use while traversing from one water feature to another. Nodes are autonomous and are not “aware” that a statement refers to a resource managed by another “GSIP” node (they are just NIR that will be resolved by the client).  But the a node might be interested in those statements, specially when it can create a reciprocate statement (if A in US is upstream of B in Canada, B  is downstream of A).  When such a statement is added to either node, the node of interest needs to be updated to reflect that change.  The GSIP architecture includes a harvester that probe known nodes (the Canadian harvester knows the location of the US node) and extract relevant cross border (cross node) statements and update its copy of the catalog.  The harvesting is done periodically.
+While not explicitly demonstrated in the web application, the architecture relies on a series of nodes to resolve NIR. The current demonstration relies on 2 nodes (a.k.a geoconnex.ca and geoconnex.us) but it is totally agnostic of the number of nodes that can eventually be use while traversing from one water feature to another. Nodes are autonomous and are not “aware” that a statement refers to a resource managed by another “GSIP” node (they are just NIR that will be resolved by the client).  But the node might be interested in those statements, especially when it can create a reciprocate statement (if A in US is upstream of B in Canada, B  is downstream of A).  When such a statement is added to either node, the node of interest needs to be updated to reflect that change.  The GSIP architecture includes a harvester that probe known nodes (the Canadian harvester knows the location of the US node) and extract relevant cross border (cross node) statements and update its copy of the catalog.  The harvesting is done periodically.
 
 ==== Links to Demo Resources
 
-The demo instances are located at https://geoconnex.ca/gsip/app/index.html and https://info.geoconnex.us/chyld-pilot/app/index.html .  The web application is a map where water related features are shown.  The map has watershed delimitation permanently displayed.  Other features are displayed if a geojson representation is available and the user requests it.
+The demo instances are located at https://geoconnex.ca/gsip/app/index.html and https://info.geoconnex.us/chyld-pilot/app/index.html .  The web application is a map where water related features are shown.  The map has watershed delimitation permanently displayed.  Other features are displayed if a GeoJSON representation is available and the user requests it.
 
 [#img_gsipMap,reftext='{figure-caption} {counter:figure-num}']
 .GSIP web application
@@ -154,7 +155,7 @@ Clicking on a feature displays an information bubble containing names and linkag
 .GSIP information bubble
 image::images/gsip_info.png[width=600,align="center"]
 
-Resources having a geojson representation show a “pushpin” icon. Clicking the pushpin loads the geojson representation of that resource into the map in red [figure 3].  The loaded feature can also be clicked and if it has a “uri” property, the application will try to dereference it.  If it succeeds, an information bubble is displayed.
+Resources having a GeoJSON representation show a “pushpin” icon. Clicking the pushpin loads the GeoJSON representation of that resource into the map in red [figure 3].  The loaded feature can also be clicked and if it has a “uri” property, the application will try to dereference it.  If it succeeds, an information bubble is displayed.
 
 [#img_gsipGeoJSON,reftext='{figure-caption} {counter:figure-num}']
 .GeoJSON loaded on the map
@@ -162,7 +163,7 @@ image::images/gsip_geojson.png[width=600,align="center"]
 
 A typical NIR URI : https://geoconnex.ca/gsip/id/catchment/02OJ*BA will be redirected to MIR https://geoconnex.ca/gsip/info/catchment/02OJ*BA containing, among other things, the information used to populate the information bubble.
 
-The key elements of interest that is reflected in the information bubble are presented here in RDF TTL (a full MIR is available in annex.  Note that statements were manually reorganised here to illustrate the key statements)
+The key elements of interest that is reflected in the information bubble are presented here in RDF TTL (a full MIR is available in annex.  Note that statements were manually reorganized here to illustrate the key statements).
 
 ----
 @prefix schema: <http://schema.org/> .
@@ -194,7 +195,7 @@ The key elements of interest that is reflected in the information bubble are pre
         schema:provider  <http://gin.gw-info.net> .
 ----
 
-For example, a US watershed might state that it is upstream of a canadian watershed.
+For example, a US watershed might state that it is upstream of a Canadian watershed.
 
 eg:
 
@@ -205,18 +206,18 @@ eg:
 ----
 
 [#img_gsipCAN_US,reftext='{figure-caption} {counter:figure-num}']
-.Canadian watershed pulled from canadian node shown on US instance
+.Canadian watershed pulled from Canadian node shown on US instance
 image::images/gsip_aq_can_on_us.png[width=600,align="center"]
 
 ==== Demo findings and potential next steps
 
-This demo explores the possibility of developing software on top of linked data infrastructure. It is slightly different from the common web heavy demonstration of search engines + web browser + html.  The web application perform operations that are not usually done by browsers alone (such as manipulation spatial data and display them). Another demo implementation has been created in a non-browser environment (QGIS), with the same capabilities
+This demo explores the possibility of developing software on top of linked data infrastructure. It is slightly different from the common web heavy demonstration of search engines + web browser + html.  The web application performs operations that are not usually done by browsers alone (such as manipulation spatial data and display them). Another demo implementation has been created in a non-browser environment (QGIS), with the same capabilities
 
 [#img_QGIS,reftext='{figure-caption} {counter:figure-num}']
 .Same demo implemented in QGIS
 image::images/gsip_qgis.png[width=600,align="center"]
 
-Because the application has prior knowledge of the model, or more accurately put, is able to recognize some specialized content, it can act upon it. We could envision more specific application, such as a tool that is HY_Feature aware rebuilding complete watershed from one point by traversing “upperCatchment” predicate or a GWML aware application locating recharge area from of an aquifer, or a GeoSciML aware application all dataset relevant to a stratigraphic columns (as an ‘aspatial’ exemple).  Because the landing page can mix predicates and classes from many ontology, many application can be built on over the same linked data infrastructure.
+Because the application has prior knowledge of the model, or more accurately put, is able to recognize some specialized content, it can act upon it. We could envision more specific application, such as a tool that is HY_Feature aware rebuilding complete watershed from one point by traversing an “upperCatchment” predicate or a GWML aware application locating a recharge area from of an aquifer, or a GeoSciML aware application loading all datasets that are relevant to stratigraphic columns (as an ‘aspatial’ exemple).  Because the landing page can mix predicates and classes from many ontology, many application can be built on over the same linked data infrastructure.
 
 ==== Annex
 ----
@@ -324,31 +325,31 @@ hy:HY_Catchment>
 This use case builds on the one set up for the OGC ELFIE and tries to test a system coping with two specific requirements:
 
 [upperalpha]
-. clients that dereference a URI asking for a specific media-type, content model etc...
-. clients that dereference the same URI without knowing beforehand the available media-type, content model etc. in a kind of "probing" or "discovery" behaviour
+. clients that dereference a URI asking for a specific media-type, content model etc.
+. clients that dereference the same URI without knowing beforehand the available media-type, content model etc. in a kind of "probing" or "discovery" behavior.
 
 ===== User Story
 
-Clients from group A can be very diverse
+Clients from Group A can be very diverse
 
-* linked data centered application : in this case BLiV (BRGM Linked data Viewer) is considered. BLiV  (https://data.geoscience.fr/Bliv/) is developped to ingest
+* linked data centered application : in this case BLiV (BRGM Linked data Viewer) is considered. BLiV  (https://data.geoscience.fr/Bliv/) is developed to ingest
 ** natively, linked data serialization
-** if not available, ask the end-user (human being), if he wants to interact with the other representations/serialisations available
+** if not available, ask the end-user (human being), if he wants to interact with the other representations/serializations available
 * desktop GIS : QGIS with GML Application Schema Toolbox which expects responses that are GML application schema compliant (e.g. https://plugins.qgis.org/plugins/gml_application_schema_toolbox/)
 * search engines crawlers  : which expect HTML with JSON-LD in the `<script>` header
 
-Clients from group B don't correspond to the vast majority of the clients considered in Linked Data oriented approaches because, most of the time, specific implementation environments are considered (e.g. linking Non Information Resources together and somehow expecting a specific serialization content-model paradigm, web interfaces, reasoning).
+Clients from Group B do not correspond to the vast majority of the clients considered in Linked Data oriented approaches because, most of the time, specific implementation environments are considered (e.g. linking Non-Information Resources together and somehow expecting a specific serialization content-model paradigm, web interfaces, reasoning).
 
-However, this need should not be overlooked as in running production environments, especially when linking information about Non Information Resources together with another system, (linked) data manager and their associated system(s) need to know what's is available 'behind' a URI. At least to cross-check they are linking to the relevant resource. Just knowing the URI-14 is not always sufficient for disambiguation.
+However, this need should not be overlooked as in running production environments, especially when linking information about Non-Information Resources together with another system, (linked) data manager and their associated system(s) need to know what's is available 'behind' a URI. At least to cross-check they are linking to the relevant resource. Just knowing the URI-14 is not always sufficient for disambiguation.
 
 The client dereferences a URI without specifying any media-type, content model, etc. and retrieves what combination of information is available.
 
 From this
 
-* Client from group B: checks that they are linking to the relevant resource.
-* Client from group A: assesses whether they can consider the data content available provided in-band or out-of-band and interact with what suits them the most (or not).
+* Client from Group B: checks that they are linking to the relevant resource.
+* Client from Group A: assesses whether they can consider the data content available provided in-band or out-of-band and interact with what suits them the most (or not).
 
-Clients from group A follow a 1 step approach from URI-14 to the data content skipping the URL-14 landing content whereas clients from group B may apply the complete URI-14 -> URL-14 -> data content pattern.
+Clients from Group A follow a 1 step approach from URI-14 to the data content skipping the URL-14 landing content whereas clients from group B may apply the complete URI-14 -> URL-14 -> data content pattern.
 
 ===== Datasets & APIs
 
@@ -364,8 +365,8 @@ In order to fulfill it, the following steps have been carried out
 
 * define a model that allows to know in which media-type, content model etc. a given instance is available. This mode is a level of abstraction higher than SELFIE content model (https://data.geoscience.fr/def/LinkedDataGazetteer.xsd)
 * populate it for the French Aquifer dataset
-* implement that model on an OGC API Features using Geoserver
-* fund and drive the necessary evolutions so that Geoserver OGC API - Features implementation is capable of serving JSON-LD content and ultimately deploy within BRGM infrastructure.
+* implement that model on an OGC API – Features interface using GeoServer
+* fund and drive the necessary evolutions so that GeoServer’s OGC API - Features implementation is capable of serving JSON-LD content and ultimately deploy within BRGM infrastructure.
 
 The API endpoint is the following: https://data.geoscience.fr/api/LDGazetteerFAPI and allows to search within the French Aquifer dataset
 
@@ -392,21 +393,21 @@ The implementation of the linked-data-gazetteer serving SELFIE content model com
 * the importance of the in-band / out-of-band distinction to better understand what client actually expects. The introduction of that terminology within SELFIE members discussions clearly helped move forward towards a common understanding
 * the evolution of how content negotiation is being considered (ex: adding notion of profiles), will change how linked data systems are designed and implemented (on both client & server side). When this evolution becomes mainstream in the implementations, it will become more natural for (linked) data managers to link resource together using a URI-14.
 
-Several potential next steps have been identified
+Several potential next steps have been identified:
 
 * Hypermedia-driven resource resolution versus content negotiation-driven resource resolution needs to be further discussed as both approaches have their pros & cons. An issue is created to compare SELFIE content model with W3C DXWG ConnegP. A quick cross-check seems to identify the following elements (but more in depth work is required)
 ** connegP 'type' seems to map to SELFIE choice of 'format'
 ** connegP 'profile' seems to map to SELFIE choice of 'conformsTo'
 ** but there is no notion of "primaryTopic" and no "provider" in connegP
-* the 'dc:partOf' in SELFIE content model could also be a specific view/profile (a data content) and not embedded in the URL-14 landing content. It seems to us that we are mixing two different use cases : "URI-14 to data content probing and discovery" VS "exploring a domain graph of linked feature". We may consider serving this domain graph in a data content later on.
+* the 'dc:partOf' in SELFIE content model could also be a specific view/profile (a data content) and not embedded in the URL-14 landing content. It seems to us that we are mixing two different use cases : "URI-14 to data content probing and discovery" VS "exploring a domain graph of linked feature". We may consider serving this domain graph in data content later on.
 * what response should be provided to a client trying to dereference a URI-14 and asking for specific media-type, content model etc. that cannot be provided? It would make sense to respond back with what is actually known to be available using SELFIE content model but have not been implemented in our system.
-* in its current version (1.2.0), QGIS GML Application Schema Toolbox plugin "identifies" itself when dereferencing a URI (default behaviour is to have the HTTP Use-Agent named "QGIS GML Application Schema Toolbox"). This allows to know at the resolver level that the expected media-type to be used is `application/gml+xml`. This mechanism, should be revised and it is already planned to have this QGIS plugin evolve to a better implementation of content negotiation, explicitly stating what the client wants to retrieve
+* in its current version (1.2.0), QGIS GML Application Schema Toolbox plugin "identifies" itself when dereferencing a URI (default behavior is to have the HTTP Use-Agent named "QGIS GML Application Schema Toolbox"). This allows to know at the resolver level that the expected media-type to be used is `application/gml+xml`. This mechanism, should be revised and it is already planned to have this QGIS plugin evolve to a better implementation of content negotiation, explicitly stating what the client wants to retrieve
 
 === CeRDI VVG - SELFIE Demonstration
 
 ==== Use Case Description
 
-To provide a means whereby all the relevant information (resources) about a real world feature (in this case a borehole or well)
+To provide a means whereby all the relevant information (resources) about a real-world feature (in this case a borehole or well)
 can be brought together via machine readable (and indexable) web available information.
 
 https://geo.org.au/info/well/46217[**CeRDI SELFIE testbed**]
@@ -423,9 +424,9 @@ Information about a borehole exists at one or more of:
 * Geological Survey of Victoria (GSV)
 * Department of Environment, Land, Water and Planning (DELWP)
 * State Library of Victoria (SLV)
-* Federation Univesity Australia (FedUni)
+* Federation University Australia (FedUni)
 
-These are services deliver one or more of:
+These are services that deliver one or more of:
 
 * HTML
 * GML
@@ -442,7 +443,7 @@ The data from these services may be about:
 
 Currently a person or automated client must individually discover and access these different data services
 and compile the relevant information about a Borehole manually. Where the same borehole
-exists across multiple data sources it is not readily apparent that they are the same real world feature (there is no common identifier across these services). Additionally,
+exists across multiple data sources it is not readily apparent that they are the same real-world feature (there is no common identifier across these services). Additionally,
 there is no mechanism to identify the different types of information available.
 
 Through this demonstration, a user should be able to use a standard search engine to discover the availability of these various sources, formats and contents via URL-14 landing content.
@@ -458,12 +459,13 @@ The user (including machines) can navigate via the links in the landing content 
 
 ==== Demo Description and Links
 
-What have we done: The demo is currently designed to expose a single borehole via its real-world identifier.
-. The application resolves a URI-14 URI pattern for the real-world-feature of the form https://geo.org.au/id/well/46217 which performs a 303 redirect to URL-14 landing content at: https://geo.org.au/info/46217
-. The application then uses a lookup tool (rosetta stone) to determine which of the various data providers
+What have we done?:
+
+* The demo is currently designed to expose a single borehole via its real-world identifier.
+* The application resolves a URI-14 URI pattern for the real-world-feature of the form https://geo.org.au/id/well/46217 which performs a 303 redirect to URL-14 landing content at: https://geo.org.au/info/46217
+* The application then uses a lookup tool (rosetta stone) to determine which of the various data providers
 have a corresponding borehole and the source-specific ID needed to access URL-200 data resource for that borehole.
-. Basic Content Negotiation via accepts header caters for both HTML (with embedded JSON-LD) and straight JSON-LD.
-The format can be overriden with either a .json or ?f=json in the URI
+* Basic Content Negotiation via accepts header caters for both HTML (with embedded JSON-LD) and straight JSON-LD. The format can be overridden with either a .json or ?f=json in the URI
 For the JSON-LD the landing-content encodes links to various representations as URL-200s in a SubjectOf block of associations.
 
 ===== Demo Screenshot(s)
@@ -501,7 +503,7 @@ These data resources follow a URI scheme `/sourceprovider/data/datatype/featuret
 |===
 
 ==== Demo findings and potential next steps
-The Federation University Use Case was that information about a single real world feature (a Non-Information Resource, which in this case was a ‘Borehole’) was available online, in multiple formats and representations; and from multiple authoritative sources. SELFIE sought a mechanism whereby these various resources could be related to each other in a way that was discoverable and machine navigable e.g. search engines. The proposed SELFIE solution was JSON-LD landing-content that linked these various online resources together.
+The Federation University Use Case was that information about a single real-world feature (a Non-Information Resource, which in this case was a ‘Borehole’) was available online, in multiple formats and representations; and from multiple authoritative sources. SELFIE sought a mechanism whereby these various resources could be related to each other in a way that was discoverable and machine navigable e.g. search engines. The proposed SELFIE solution was JSON-LD landing-content that linked these various online resources together.
 SELFIE achieved all Federation University’s Use Case requirements, except in one crucial area. There was no satisfactory solution to encoding landing content for different data content. For example, different resources about a single borehole may contain data that is structured according to various domain models, i.e. different ‘profiles’, such as GeoSciML:Borehole, GroundWaterML2:Borehole or GroundWaterML2: GW_Well.
 Four options were considered as part of the experiment:
 
@@ -523,9 +525,9 @@ What we have not done: There are some fairly major parts still missing from this
 
 ==== Use Case Description
 
-The http://locationindex.org[Location Index] (Loc-I) project aims to enable capability for integrating and analysis of spatio-temporal data in a reliable, effective and efficient manner across information domains and organisations, initially focusing on the public sector agencies in Australia.
+The http://locationindex.org[Location Index] (Loc-I) project aims to enable capability for integrating and analysis of spatio-temporal data in a reliable, effective and efficient manner across information domains and organizations, initially focusing on the public sector agencies in Australia.
 These include social, economic, business, and environmental data with location references embedded within the data (e.g. census district, water drainage regions, and address identifiers).
-Loc-I is part of the Data Integration Partnership for Australia (DIPA) initiative, which seeks to maximise government data to improve policy advice.
+Loc-I is part of the Data Integration Partnership for Australia (DIPA) initiative, which seeks to maximize government data to improve policy advice.
 
 [#table_loci,reftext='{table-caption} {counter:table-num}']
 .LOCI Demo URLs
@@ -542,11 +544,11 @@ Loc-I is part of the Data Integration Partnership for Australia (DIPA) initiativ
 
 ===== User Story
 
-Helga is an *Enterprise data warehouse manager* that manages data warehouse of a public sector organisation.
-The data warehouse contains observation data which is captured by researchers in her organisation.
+Helga is an *Enterprise data warehouse manager* that manages data warehouse of a public sector organization.
+The data warehouse contains observation data which is captured by researchers in her organization.
 The observation database captures data and includes a field for  location.
 The location information values captured is varied and can include: textual description, place name, region according to a specific geographic classification, GPS location (lat-long).
-Helga would like to harmonise location information so that they are consistently and precisely captured and requires a tool for searching, resolving and consistently referring to the location.
+Helga would like to harmonize location information so that they are consistently and precisely captured and requires a tool for searching, resolving and consistently referring to the location.
 
 ===== Datasets and Sources
 
@@ -586,6 +588,6 @@ The intention was to provide flexibility in case the implementation sites needed
 The status of `asgsld.net` is a research operations grade resource, and we are exploring production operations grade hosting arrangements.
 However, the advantage of the way Loc-I NIRs are minted means that we should not need to change once the production operations grade hosting arrangements are determined.
 
-In this case, it is important that any downstream applications and clients to use the NIRs and resolve them so the applications and clients are not affected by any changes to the underlying implementations.
+In this case, it is important that any downstream applications and clients to use the NIRs and resolve them so that the applications and clients are not affected by any changes to the underlying implementations.
 
 A limitation of the current demo is that the current ASGS landing page doesn't embed any JSON-LD (with  schema.org tags). For indexing by search engines for discovery by search engines (e.g. Google), we would like to explore adding this in as per the ELFIE/SELFIE recommended discovery profile view.

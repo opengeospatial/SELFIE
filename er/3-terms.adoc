@@ -6,7 +6,7 @@ an item of interest in the distributed network of environmental data.
 
 &#9679; Non-Information Resource ::
 
-A real-world or conceptual object of interest that is identified by a Uniform Resource Identifier bound to the HTTP protocol (HTTP URI). 
+A real-world or conceptual object of interest that is identified by a Uniform Resource Identifier bound to the HTTP protocol (HTTP URI).
 
 NOTE: In the context of this document, Non-Information Resources are strictly identified by HTTP URIs. In other contexts, a Non-Information Resource may be identified using other protocols such as Uniform Resource Names.
 
@@ -14,21 +14,21 @@ NOTE: In the context of this document, Non-Information Resources are strictly id
 
 A digital resource that can be sent as a message over the internet using a protocol such as HTTP. Located using a Uniform Resource Locator (URL).
 
-&#9679; Information Index Resource :: 
+&#9679; Information Index Resource ::
 
 An information resource that provides an index of annotated (metadata) links to information and non-information resources that describe or are related to the non-information resource of interest.
 
 &#9679; Indirect Identifier ::
 
-As defined in the https://www.w3.org/TR/2004/REC-webarch-20041215/#indirect-identification[W3C Architecture of the World Wide Web, Volume 1 Section 2.2.3]. In the context of SELFIE, a URI that would usually be used to identify a digital resource is sometimes used as an indirect identifier of a real world feature.
+As defined in the https://www.w3.org/TR/2004/REC-webarch-20041215/#indirect-identification[W3C Architecture of the World Wide Web, Volume 1 Section 2.2.3]. In the context of SELFIE, a URI that would usually be used to identify a digital resource is sometimes used as an indirect identifier of a real-world feature.
 
 &#9679; In-band resource ::
 
-An in band resource is one that can provide information according to a given technical architecture. In the context of linked data, an in-band resource can provide html and json-ld/rdf representations. Other representations may also be considered in-band if the specified architecture expects them (GeoJSON for example). In-band resources can extend the linked-data graph.
+An in-band resource is one that can provide information according to a given technical architecture. In the context of linked data, an in-band resource can provide Hypertext Markup Language (HTML) and Resource Description Framework (RDF) content serialized as JavaScript Object Notation for Linked Data (JSON-LD) representations. Other representations may also be considered in-band if the specified architecture expects them (GeoJSON for example). In-band resources can extend the linked-data graph.
 
 &#9679; Out-of-band resource ::
 
-An out-of-band resource is one that does not adhere to the technical architecture from which it is found. A resource that can provide observation result graphs, XML, CSV, PNG, PDF and JSON representations but no linked-data representation would be considered out-of-band if linked from a linked-data document. Out-of-band resources can not extend the linked data graph.
+An out-of-band resource is one that does not adhere to the technical architecture from which it is found. A resource that can provide observation result graphs, XML, CSV, PNG, PDF and JSON representations but no linked-data representation would be considered out-of-band if linked from a linked-data document. Out-of-band resources cannot extend the linked data graph.
 
 &#9679; HyperText Transfer Protocol Uniform Resource Identifier (HTTP URI) ::
 
@@ -46,7 +46,7 @@ An information resource providing a representation of a non-information resource
 
 Per https://www.fgdc.gov/standards/organization/FGDC-SWG/meetings/2005/2005-12-20/ISO%2019135.ppt[ISO 19135, Geographic information, Procedures for item registration]: An information system that manages a set of files containing identifiers assigned to items with descriptions of the associated items.
 
-&#9679; Resource Model :: 
+&#9679; Resource Model ::
 
 A taxonomy and functional description of the system of non-information, index and data resources.
 
@@ -63,7 +63,7 @@ An originating source of data.
 
 &#9679; Resolver ::
 
-A registry system that provides 303 redirection from URI-14s to URL-14. 
+A registry system that provides 303 redirection from URI-14s to URL-14.
 
 NOTE: In general, outside the scope of this document and depending on the intent of a given system, a resolver can be more than a 303 registry system. Broadly It could be any intelligent function that adapts the response of a server to the context of request
 
@@ -85,7 +85,7 @@ As per Google: https://developers.google.com/search/docs/guides/intro-structured
 
 &#9679; URI-14 ::
 
-The HTTP URI identifying a non-information resource. When dereferenced the host will respond with 303 redirect to a URL for an information resource. Content can be negotiated. 
+The HTTP URI identifying a non-information resource. When dereferenced the host will respond with 303 redirect to a URL for an information resource. Content can be negotiated.
 
 &#9679; URL-14 ::
 
@@ -101,15 +101,15 @@ A common or garden URL. So called because the most likely HTTP response code is 
 * CSV - Comma Separated Values
 * CURI - Compact Uniform Resource Identifier
 * ELFIE - Environmental Linked Features Interoperability Experiment
-* GeoJSON - Geographic Javascript Object Notation
+* GeoJSON - Geographic JavaScript Object Notation
 * GML - Geography Markup Language
 * GWML2 - Groundwater Markup Language 2
 * HTML - HyperText Markup Language
 * HTTP URI - HyperText Transfer Protocol
 * HY_Features - Surface Hydrologic Features Conceptual Model
 * IE - Interoperability Experiment
-* JSON - Javascript Object Notation
-* JSON-LD - Javascript Object Notation for Linked Data
+* JSON - JavaScript Object Notation
+* JSON-LD - JavaScript Object Notation for Linked Data
 * OWL - Web Ontology Language
 * RDF - Resource Description Format
 * SELFIE - Second Environmental Linked Features Interoperability Experiment
@@ -117,4 +117,3 @@ A common or garden URL. So called because the most likely HTTP response code is 
 * URI - Uniform Resource Identifier
 * URL - Uniform Resource Locator
 * XML - eXtensible Markup Language
-

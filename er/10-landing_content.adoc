@@ -43,7 +43,7 @@ https://opengeospatial.github.io/ELFIE/contexts/elfie-2/elf-index.jsonld[`elf-in
 
 ==== Properties for documenting related data.
 
-The https://opengeospatial.github.io/ELFIE/contexts/elfie-2/elf-index.jsonld[`elf-index.jsonld`] context contains a set of properties to be used to document data about a non-information resource. These can be thought of as "pre-fetched" information about an information resource. As described below, these can be used as properties of an "in-band" information resource or properties of a blank node that describes an "out-of-band" information resource. conformsTo is included here to be complete but the specifics of their use for interoperability should be the subject of future work. +
+The https://opengeospatial.github.io/ELFIE/contexts/elfie-2/elf-index.jsonld[`elf-index.jsonld`] context contains a set of properties to be used to document data about a non-information resource. These can be thought of as "pre-fetched" information about an information resource. As described below, these can be used as properties of an "in-band" information resource or properties of a blank node that describes an "out-of-band" information resource. `conformsTo` is included here to be complete but the specifics of their use for interoperability should be the subject of future work. +
 These properties are useful for documenting any information resource in structured data whether a feature-representation, associated with a schema:subjectOf or schema:sameAs property, or other related data, associated with a more specific property such as a sampling relationship.  +
 
 ----
@@ -56,7 +56,7 @@ These properties are useful for documenting any information resource in structur
         "conformsTo": "dct:conformsTo",
         "format": "dct:format",
     }
-} 
+}
 ----
 
 As is shown in examples in the <<inBandoutofBand>>, these properties can be used in two ways.  +
@@ -74,8 +74,8 @@ An in-band resource might be documented as follows: +
 	"conformsTo": "https://identifier-of-conformance-target",
 	"format": [
 		"mime-type-1",
-		"mime-type-2"	
-	]	
+		"mime-type-2"
+	]
 }
 ----
 
@@ -93,8 +93,8 @@ An out-of-band resource might be documented similarly but using a blank node as 
 	"conformsTo": "https://identifier-of-conformance-target",
 	"format": [
 		"mime-type-1",
-		"mime-type-2"	
-	]	
+		"mime-type-2"
+	]
 }
 ----
 
@@ -142,7 +142,7 @@ Many other contexts based on domain data models were created as part of the SELF
 [[dataContent]]
 === Data content
 
-Resources containing data content are extremely diverse. Examples include but are by no means limited to geospatial feature data whether a feature of interest or a reference feature, monitoring result data, monitoring location data, and related remote sensing data. As described above, such data can be said to be "in-band" or "out-of-band". The former would be a data resource that generally conforms to the system of linked data, GeoJSON, and HTML prescribed by the W3C Spatial Data on the Web best practices and emerging practices such as is described here. The latter is any other data resource that, while of interest and associated with a non-information resource, does not conform to linked data / semantic web practices. +
+Resources containing data content are extremely diverse. Examples include but are by no means limited to geospatial feature data whether a feature of interest or a reference feature, monitoring result data, monitoring location data, and related remote sensing data. As described above, such data can be said to be "in-band" or "out-of-band". The former would be a data resource that generally conforms to the system of linked data, GeoJSON, and HTML prescribed by the OGC-W3C Spatial Data on the Web best practices and emerging practices such as is described here. The latter is any other data resource that, while of interest and associated with a non-information resource, does not conform to linked data / semantic web practices. +
 
 The distinction between what is landing content and what is data content depends on the context in which the resource is being accessed. That is, in one context, landing content will be seen as data about a non-information resource; in another context, that same landing content will be used merely as hypermedia and metadata to help choose data content of interest. Because of this, semantic annotation of data will look very similar to landing content except that the URL for a resource that is intended to provide landing content (a URL-14) will not appear in the subject or object of linked data. The URL of a resource that provides data content (a URL-200) must appear in the subject or object of linked data. +
 
