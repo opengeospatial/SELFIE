@@ -1,23 +1,24 @@
 [[objectives]]
 === Objectives
 
-The first Environmental Linked Features Interoperability Experiment (ELFIE) sought to answer the question, _"what linked data content should be included in a landing page describing an environmental feature and its relationship to other features and data?"._ Limiting scope in this way allowed the team to avoid the complex issues related to network behavior and the semantics of requesting default or alternate representations of a feature, representations of it, or other features and data in some way related to it. These issues were discussed in the first ELFIE -- but often only briefly or in the context of defining what was expressly out of scope for the project. The Second Environmental Linked Features Interoperability Experiment (SELFIE) took these issues on in earnest.
+The first Environmental Linked Features Interoperability Experiment (ELFIE) sought to answer the question, _"what linked data content should be included in a landing page describing an environmental feature and its relationship to other features and data?"._ Limiting scope in this way allowed the team to avoid the complex issues related to network behavior and the semantics of requesting default or alternate representations of a feature, representations of it, or other features and data in some way related to it. These issues were discussed in the first ELFIE -- but often only briefly or in the context of defining what was expressly out of scope for the project cite:[OGC18_097]. The Second Environmental Linked Features Interoperability Experiment (SELFIE) took these issues on in earnest.
 
 Objectives of SELFIE, from the project charter were:
 
-. Evaluate a proposed resource model for multi-provider environmental feature and observation registries
-. Evaluate proposed HTTP behavior for non information resources and their representations
-. Design and evaluate linked data feature information index resources with media-type, language, and profile content negotiation as an extension of the building blocks provided by WFS3 / OGC API - Features.
-Within the context of these objectives, the https://docs.opengeospatial.org/per/18-097.html#Objectives[functional and operational goals of the first ELFIE] were upheld.
+. Evaluate a proposed resource model for multi-provider environmental feature and observation registries.
+. Evaluate proposed HTTP behavior for non-information resources and their representations.
+. Design and evaluate linked data feature information index resources with media-type, language, and profile content negotiation as an extension of the building blocks provided by OGC API – Features (formerly called WFS3). Within the context of these objectives, the https://docs.opengeospatial.org/per/18-097.html#Objectives[functional and operational goals of the first ELFIE] were upheld.
 
 . linked-data content for describing and linking features and associated data and
-. maintaining the rigor of OGC and W3C standards and best practices while providing easily-adopted approaches
-These can be summarized with the question, _"what is the expected network behavior and resource model when resolving a Web identifier for a non-information resource?"._ While fairly simple on its face, this question proved to be challenging on a number of levels:
+. maintaining the rigor of OGC and W3C standards and best practices while providing easily-adopted approaches.
+
+These can be summarized with the question, _"what is the expected network behavior and resource model when resolving a Web identifier for a non-information resource?"._ While fairly simple on its face, this question proved to be challenging on a number of levels.
 
 Objectives added during the IE:
 
-. At a high level, we found that the architectural resource model that seemed to fit our understanding of the problem -- a three-tiered resource model of Non-information resources, Meta-resources, and Data-resources -- broke down when implemented in web-resources. The distinction between metadata and data is ultimately defined by the use of information and not the information itself. 
+[start=6]
+. At a high level, we found that the architectural resource model that seemed to fit our understanding of the problem -- a three-tiered resource model of Non-information resources, Meta-resources, and Data-resources -- broke down when implemented in web-resources. The distinction between metadata and data is ultimately defined by the use of information and not the information itself.
 . Semantic web technology and the rigor required for systems that support reasoning over a graph presented great opportunity and potential while introducing a level of complexity and technical specificity that was challenging to navigate as a group. The diverse backgrounds and levels of understanding of technologies made communication break-downs all too frequent.
-. There are very few example systems that have implemented solutions to the problem pursued in SELFIE -- Web-friendly landing pages for spatial features and related data. Where systems do approach the problem, they have used wide ranging technical and architectural approaches that proved difficult to compare and harmonize. The general lack of common language, standard web-resource models, or common implementation patterns meant the team often felt they were forging their own path through a thicket.  
+. There are very few example systems that have implemented solutions to the problem pursued in SELFIE -- Web-friendly landing pages for spatial features and related data. Where systems do approach the problem, they have used wide ranging technical and architectural approaches that proved difficult to compare and harmonize. The general lack of common language, standard web-resource models, or common implementation patterns meant the team often felt they were forging their own path through a thicket.
 
 Due to these challenges, many issues discussed in SELFIE were tabled for later once more example implementations have had a chance to experiment and understand what works and why we might choose some approaches over others.

@@ -7,19 +7,23 @@ This report documents the Second Environmental Linked Features Interoperability 
 At the outset of the SELFIE project, the team stated:
 
 ____
-SELFIE aims to answer the question, what is the Web architecture that will allow us to use linked data for environmental features and observations in a way that is easily adoptable and compatible with W3C best practices and leverages OGC standards? The experiment aims for focused simplicity, representing resources built from potentially complex data for easy use on the Web. While the IE will be focused on testing a specific resource model and will follow W3C best practices and OGC standards, a wide range of participant-provided domain use cases will be used for testing. Ultimately, this work is intended to satisfy the needs of many use cases and many kinds of features, from disaster response and resilience to environmental health and the built environment.
+SELFIE aims to answer the question, what is the Web architecture that will allow us to use linked data for environmental features and observations in a way that is easily adoptable and compatible with World Wide Web Consortium (W3C) best practices and leverages OGC standards? The experiment aims for focused simplicity, representing resources built from potentially complex data for easy use on the Web. While the IE was focused on testing a specific resource model and followed W3C best practices and OGC standards, a wide range of participant-provided domain use cases will be used for testing. Ultimately, this work is intended to satisfy the needs of many use cases and many kinds of features, from disaster response and resilience to environmental health and the built environment.
 ____
 
-The business case for the SELFIE can be illustrated considering two use cases: 
-1) indexing and discovering models and research from public sector, private sector, or academic projects about a particular place or environmental feature.
-2) building a federated multi-organization monitoring network in which all member-systems reference common monitored features and are discoverable through a community index.
+The business case for the SELFIE can be illustrated considering two use cases:
 
-These use cases imply needs along several dimensions: 
+[start=1]
+. indexing and discovering models and research from public sector, private sector, or academic projects about a particular place or environmental feature.
+. building a federated multi-organization monitoring network in which all member-systems reference common monitored features and are discoverable through a community index.
+
+These use cases imply needs along several dimensions:
+
+[start=1]
 . a shared reference network of environmental features,
 . the ability to use the reference network to index and provide access to information resources from many organizations,
 . support for multiple disciplines' information models, conceptual models, research topics, and monitoring practices.
 
-While the IE did not come to conclusion on all these fronts, it did show that the core Web architecture to support identification of real-world features and retrieving information about them exists and should be pursued in earnest. The architecture has three basic components; referred to here as URI-14, URL-14, and URL-200 resources. 
+While the IE did not come to conclusion on all these fronts, it did show that the core Web architecture to support identification of real-world features and retrieving information about them exists and should be pursued in earnest. The architecture has three basic components; referred to here as URI-14, URL-14, and URL-200 resources.
 
 . A URI-14 resource is one that has an identifier and is itself a real-world entity.
 . A URL-14 resource is one that is the target of a redirect from a URI-14 and provides information about a URI-14 resource.
@@ -42,7 +46,7 @@ These functionalities were seen to be satisfied by four technical use cases that
 . Structured data for search indexing
 . Links to representations and other data
 
-The details of the URL-14 resource's content was the main subject of debate in the IE. Some important outcomes include:
+The details of the URL-14 resource's content were the main subject of debate in the IE. Some important outcomes include:
 
 . A URL-14's HTTP URL should almost never be the subject or object of a linked data triple. It is a convenience resource about the URI-14. The URI-14 should be referenced rather than the URL-14.
 . The content of a URL-14 should, at the top level, be a set of statements about a single URI-14. While nested, or complex information about the URI-14 could be included, the document should be centered on one real-world feature.
@@ -52,7 +56,7 @@ The details of the URL-14 resource's content was the main subject of debate in t
 
 OGC API - Features was found to be compatible with all of the above and can be used as a core enabling Web API as networks of linked environmental features are established.
 
-At the outset of SELFIE, the team hoped to experiment with use cases related to variation of available content and multiple data providers for URL-200 resources about a single URI-14 resource. Gaining an appreciation for the nuances of the functionalities and technical use cases required in the context of the broadly varied organizational architectures considered was a large task. Further, some basic characteristics of URL-14 resources and the landing content to include in URL-14 landing content needed to be established before further investigation could continue. Given that, future work should investigate issues such as variation of content for a single URL-200 resource, multiple URL-200 representations of the same feature with variation of content across the providers, and content negotiation of URL-14 resources to either directly access URL-200 resources or access differing profiles of URL-14 landing content. 
+At the outset of SELFIE, the team hoped to experiment with use cases related to variation of available content and multiple data providers for URL-200 resources about a single URI-14 resource. Gaining an appreciation for the nuances of the functionalities and technical use cases required in the context of the broadly varied organizational architectures considered was a large task. Further, some basic characteristics of URL-14 resources and the landing content to include in URL-14 landing content needed to be established before further investigation could continue. Given that, future work should investigate issues such as variation of content for a single URL-200 resource, multiple URL-200 representations of the same feature with variation of content across the providers, and content negotiation of URL-14 resources to either directly access URL-200 resources or access differing profiles of URL-14 landing content.
 
 The IE also aimed to make progress on technical solutions with observational data models and domain feature models. This work was largely deferred for the same reasons as discussed above and because publication of domain feature models and domain features themselves is a pre-requisite to meaningfully testing how to work with them in the context of observations data models. The technical baseline provided by the first and second ELFIE now sets the stage for this work to move forward.
 
