@@ -55,7 +55,7 @@
 // Date posted to OGC Portal>Pending Documents, with format: yyyy-mm-dd.
 // *****************************************************************************
 
-:submissionDate: YYYY-MM-DD
+:submissionDate: 2020-08-24
 
 // *****************************************************************************
 // Names of all editors, comma-separated (e.g., John Doe, Sue Smith)
@@ -78,9 +78,9 @@
 // Editors please do not alter the administrative front matter below.
 // *****************************************************************************
 :category: OGC Public Engineering Report
-:publicationDate: YYYY-MM-DD
-:approvalDate: YYYY-MM-DD
-:referenceURLID: ID
+:publicationDate: 2020-10-22
+:approvalDate: 2020-09-23
+:referenceURLID: ER
 :copyrightYear: 2020
 //
 :titletext: {title}
