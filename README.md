@@ -1,6 +1,6 @@
 # Second Environmental Linked Features Interoperability Experiment
 
-## The SELFIE is wrapping up. A DRAFT engineering report is available here: http://docs.ogc.org/DRAFTS/20-067.html
+## The SELFIE is complete. The Engineering Report is available here: https://docs.ogc.org/per/20-067.html
 
 The initial Environmental Linked Features Interoperability Experiment sought sustainable and automatable solutions to link multi-disciplinary, multi-organization environmental data without the requirement to transfer custody or burden of maintenance of data. It built on W3C best practices, providing guidance and a common approach for encoding environmental feature data and links between and among features and observational data about them. Using these technologies, it bridged the divide between the great flexibility and power of OGC services and the more focused and specific technologies that drive modern web development. 
 
